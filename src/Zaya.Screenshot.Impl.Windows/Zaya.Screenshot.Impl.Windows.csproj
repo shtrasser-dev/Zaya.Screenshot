@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>13</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Version>0.3.0</Version>
+
+    <PackageId>Zaya.Screenshot.Impl.Windows</PackageId>
+    <Description>High-performance screen capture library for Windows using Windows Graphics Capture API and Direct3D 11.</Description>
+    <PackageTags>screenshot;capture;screen;d3d11;windows;graphics-capture</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Authors>SHTrassEr</Authors>
+    <RepositoryUrl>https://github.com/shtrasser-dev/Zaya.Screenshot</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://shtrasser-dev.github.io/Zaya.Screenshot</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Zaya.Screenshot\Zaya.Screenshot.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Windows.CsWinRT" Version="2.2.0" />
+  </ItemGroup>
+
+</Project>

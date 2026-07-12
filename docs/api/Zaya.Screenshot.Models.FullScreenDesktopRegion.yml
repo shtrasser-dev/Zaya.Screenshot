@@ -1,0 +1,488 @@
+### YamlMime:ManagedReference
+items:
+- uid: Zaya.Screenshot.Models.FullScreenDesktopRegion
+  commentId: T:Zaya.Screenshot.Models.FullScreenDesktopRegion
+  id: FullScreenDesktopRegion
+  parent: Zaya.Screenshot.Models
+  children:
+  - Zaya.Screenshot.Models.FullScreenDesktopRegion.DisplayIndex
+  - Zaya.Screenshot.Models.FullScreenDesktopRegion.PixelFormat
+  langs:
+  - csharp
+  - vb
+  name: FullScreenDesktopRegion
+  nameWithType: FullScreenDesktopRegion
+  fullName: Zaya.Screenshot.Models.FullScreenDesktopRegion
+  type: Class
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/FullScreenDesktopRegion.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: FullScreenDesktopRegion
+    path: src/Zaya.Screenshot/Models/FullScreenDesktopRegion.cs
+    startLine: 7
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Represents a region that captures the entire desktop of a specific display.
+  example: []
+  syntax:
+    content: 'public sealed record FullScreenDesktopRegion : ICaptureRegion, IEquatable<FullScreenDesktopRegion>'
+    content.vb: Public NotInheritable Class FullScreenDesktopRegion Implements ICaptureRegion, IEquatable(Of FullScreenDesktopRegion)
+  inheritance:
+  - System.Object
+  implements:
+  - Zaya.Screenshot.Models.ICaptureRegion
+  - System.IEquatable{Zaya.Screenshot.Models.FullScreenDesktopRegion}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Zaya.Screenshot.Models.FullScreenDesktopRegion.PixelFormat
+  commentId: P:Zaya.Screenshot.Models.FullScreenDesktopRegion.PixelFormat
+  id: PixelFormat
+  parent: Zaya.Screenshot.Models.FullScreenDesktopRegion
+  langs:
+  - csharp
+  - vb
+  name: PixelFormat
+  nameWithType: FullScreenDesktopRegion.PixelFormat
+  fullName: Zaya.Screenshot.Models.FullScreenDesktopRegion.PixelFormat
+  type: Property
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/FullScreenDesktopRegion.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: PixelFormat
+    path: src/Zaya.Screenshot/Models/FullScreenDesktopRegion.cs
+    startLine: 13
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: >-
+    Gets the desired pixel format for the captured frame.
+
+    Default is <xref href="Zaya.Primitives.PixelFormat.Bgra32" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public PixelFormat PixelFormat { get; init; }
+    parameters: []
+    return:
+      type: Zaya.Primitives.PixelFormat
+    content.vb: Public Property PixelFormat As PixelFormat
+  overload: Zaya.Screenshot.Models.FullScreenDesktopRegion.PixelFormat*
+  implements:
+  - Zaya.Screenshot.Models.ICaptureRegion.PixelFormat
+- uid: Zaya.Screenshot.Models.FullScreenDesktopRegion.DisplayIndex
+  commentId: P:Zaya.Screenshot.Models.FullScreenDesktopRegion.DisplayIndex
+  id: DisplayIndex
+  parent: Zaya.Screenshot.Models.FullScreenDesktopRegion
+  langs:
+  - csharp
+  - vb
+  name: DisplayIndex
+  nameWithType: FullScreenDesktopRegion.DisplayIndex
+  fullName: Zaya.Screenshot.Models.FullScreenDesktopRegion.DisplayIndex
+  type: Property
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/FullScreenDesktopRegion.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: DisplayIndex
+    path: src/Zaya.Screenshot/Models/FullScreenDesktopRegion.cs
+    startLine: 18
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Gets the index of the target display. Default is 0 (primary display).
+  example: []
+  syntax:
+    content: public int DisplayIndex { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DisplayIndex As Integer
+  overload: Zaya.Screenshot.Models.FullScreenDesktopRegion.DisplayIndex*
+references:
+- uid: Zaya.Screenshot.Models
+  commentId: N:Zaya.Screenshot.Models
+  href: Zaya.html
+  name: Zaya.Screenshot.Models
+  nameWithType: Zaya.Screenshot.Models
+  fullName: Zaya.Screenshot.Models
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Zaya.Screenshot.Models.ICaptureRegion
+  commentId: T:Zaya.Screenshot.Models.ICaptureRegion
+  parent: Zaya.Screenshot.Models
+  href: Zaya.Screenshot.Models.ICaptureRegion.html
+  name: ICaptureRegion
+  nameWithType: ICaptureRegion
+  fullName: Zaya.Screenshot.Models.ICaptureRegion
+- uid: System.IEquatable{Zaya.Screenshot.Models.FullScreenDesktopRegion}
+  commentId: T:System.IEquatable{Zaya.Screenshot.Models.FullScreenDesktopRegion}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<FullScreenDesktopRegion>
+  nameWithType: IEquatable<FullScreenDesktopRegion>
+  fullName: System.IEquatable<Zaya.Screenshot.Models.FullScreenDesktopRegion>
+  nameWithType.vb: IEquatable(Of FullScreenDesktopRegion)
+  fullName.vb: System.IEquatable(Of Zaya.Screenshot.Models.FullScreenDesktopRegion)
+  name.vb: IEquatable(Of FullScreenDesktopRegion)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Zaya.Screenshot.Models.FullScreenDesktopRegion
+    name: FullScreenDesktopRegion
+    href: Zaya.Screenshot.Models.FullScreenDesktopRegion.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Zaya.Screenshot.Models.FullScreenDesktopRegion
+    name: FullScreenDesktopRegion
+    href: Zaya.Screenshot.Models.FullScreenDesktopRegion.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Zaya.Primitives.PixelFormat.Bgra32
+  commentId: F:Zaya.Primitives.PixelFormat.Bgra32
+  isExternal: true
+  name: Bgra32
+  nameWithType: PixelFormat.Bgra32
+  fullName: Zaya.Primitives.PixelFormat.Bgra32
+- uid: Zaya.Screenshot.Models.FullScreenDesktopRegion.PixelFormat*
+  commentId: Overload:Zaya.Screenshot.Models.FullScreenDesktopRegion.PixelFormat
+  href: Zaya.Screenshot.Models.FullScreenDesktopRegion.html#Zaya_Screenshot_Models_FullScreenDesktopRegion_PixelFormat
+  name: PixelFormat
+  nameWithType: FullScreenDesktopRegion.PixelFormat
+  fullName: Zaya.Screenshot.Models.FullScreenDesktopRegion.PixelFormat
+- uid: Zaya.Screenshot.Models.ICaptureRegion.PixelFormat
+  commentId: P:Zaya.Screenshot.Models.ICaptureRegion.PixelFormat
+  parent: Zaya.Screenshot.Models.ICaptureRegion
+  href: Zaya.Screenshot.Models.ICaptureRegion.html#Zaya_Screenshot_Models_ICaptureRegion_PixelFormat
+  name: PixelFormat
+  nameWithType: ICaptureRegion.PixelFormat
+  fullName: Zaya.Screenshot.Models.ICaptureRegion.PixelFormat
+- uid: Zaya.Primitives.PixelFormat
+  commentId: T:Zaya.Primitives.PixelFormat
+  parent: Zaya.Primitives
+  isExternal: true
+  name: PixelFormat
+  nameWithType: PixelFormat
+  fullName: Zaya.Primitives.PixelFormat
+- uid: Zaya.Primitives
+  commentId: N:Zaya.Primitives
+  isExternal: true
+  name: Zaya.Primitives
+  nameWithType: Zaya.Primitives
+  fullName: Zaya.Primitives
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    isExternal: true
+  - name: .
+  - uid: Zaya.Primitives
+    name: Primitives
+    isExternal: true
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    isExternal: true
+  - name: .
+  - uid: Zaya.Primitives
+    name: Primitives
+    isExternal: true
+- uid: Zaya.Screenshot.Models.FullScreenDesktopRegion.DisplayIndex*
+  commentId: Overload:Zaya.Screenshot.Models.FullScreenDesktopRegion.DisplayIndex
+  href: Zaya.Screenshot.Models.FullScreenDesktopRegion.html#Zaya_Screenshot_Models_FullScreenDesktopRegion_DisplayIndex
+  name: DisplayIndex
+  nameWithType: FullScreenDesktopRegion.DisplayIndex
+  fullName: Zaya.Screenshot.Models.FullScreenDesktopRegion.DisplayIndex
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

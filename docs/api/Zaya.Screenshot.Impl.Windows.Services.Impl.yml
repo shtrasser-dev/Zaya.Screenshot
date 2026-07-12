@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl
+  commentId: N:Zaya.Screenshot.Impl.Windows.Services.Impl
+  id: Zaya.Screenshot.Impl.Windows.Services.Impl
+  children:
+  - Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService
+  langs:
+  - csharp
+  - vb
+  name: Zaya.Screenshot.Impl.Windows.Services.Impl
+  nameWithType: Zaya.Screenshot.Impl.Windows.Services.Impl
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl
+  type: Namespace
+  assemblies:
+  - Zaya.Screenshot.Impl.Windows
+references:
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService
+  commentId: T:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService
+  href: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html
+  name: CaptureService
+  nameWithType: CaptureService
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService

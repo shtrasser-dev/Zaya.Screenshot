@@ -1,0 +1,490 @@
+### YamlMime:ManagedReference
+items:
+- uid: Zaya.Screenshot.Models.PixelFormatExtensions
+  commentId: T:Zaya.Screenshot.Models.PixelFormatExtensions
+  id: PixelFormatExtensions
+  parent: Zaya.Screenshot.Models
+  children:
+  - Zaya.Screenshot.Models.PixelFormatExtensions.ToImageSharpPixelType(Zaya.Primitives.PixelFormat)
+  - Zaya.Screenshot.Models.PixelFormatExtensions.ToImageSharpPixelTypeName(Zaya.Primitives.PixelFormat)
+  - Zaya.Screenshot.Models.PixelFormatExtensions.ToSkiaSharpColorTypeValue(Zaya.Primitives.PixelFormat)
+  langs:
+  - csharp
+  - vb
+  name: PixelFormatExtensions
+  nameWithType: PixelFormatExtensions
+  fullName: Zaya.Screenshot.Models.PixelFormatExtensions
+  type: Class
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: PixelFormatExtensions
+    path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
+    startLine: 7
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Extension methods for <xref href="Zaya.Primitives.PixelFormat" data-throw-if-not-resolved="false"></xref> to convert to SkiaSharp and ImageSharp types.
+  example: []
+  syntax:
+    content: public static class PixelFormatExtensions
+    content.vb: Public Module PixelFormatExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Zaya.Screenshot.Models.PixelFormatExtensions.ToSkiaSharpColorTypeValue(Zaya.Primitives.PixelFormat)
+  commentId: M:Zaya.Screenshot.Models.PixelFormatExtensions.ToSkiaSharpColorTypeValue(Zaya.Primitives.PixelFormat)
+  id: ToSkiaSharpColorTypeValue(Zaya.Primitives.PixelFormat)
+  isExtensionMethod: true
+  parent: Zaya.Screenshot.Models.PixelFormatExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToSkiaSharpColorTypeValue(PixelFormat)
+  nameWithType: PixelFormatExtensions.ToSkiaSharpColorTypeValue(PixelFormat)
+  fullName: Zaya.Screenshot.Models.PixelFormatExtensions.ToSkiaSharpColorTypeValue(Zaya.Primitives.PixelFormat)
+  type: Method
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: ToSkiaSharpColorTypeValue
+    path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
+    startLine: 12
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Converts to SkiaSharp color type value (int).
+  example: []
+  syntax:
+    content: public static int ToSkiaSharpColorTypeValue(this PixelFormat format)
+    parameters:
+    - id: format
+      type: Zaya.Primitives.PixelFormat
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function ToSkiaSharpColorTypeValue(format As PixelFormat) As Integer
+  overload: Zaya.Screenshot.Models.PixelFormatExtensions.ToSkiaSharpColorTypeValue*
+- uid: Zaya.Screenshot.Models.PixelFormatExtensions.ToImageSharpPixelTypeName(Zaya.Primitives.PixelFormat)
+  commentId: M:Zaya.Screenshot.Models.PixelFormatExtensions.ToImageSharpPixelTypeName(Zaya.Primitives.PixelFormat)
+  id: ToImageSharpPixelTypeName(Zaya.Primitives.PixelFormat)
+  isExtensionMethod: true
+  parent: Zaya.Screenshot.Models.PixelFormatExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToImageSharpPixelTypeName(PixelFormat)
+  nameWithType: PixelFormatExtensions.ToImageSharpPixelTypeName(PixelFormat)
+  fullName: Zaya.Screenshot.Models.PixelFormatExtensions.ToImageSharpPixelTypeName(Zaya.Primitives.PixelFormat)
+  type: Method
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: ToImageSharpPixelTypeName
+    path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
+    startLine: 27
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Gets the ImageSharp pixel type name.
+  example: []
+  syntax:
+    content: public static string ToImageSharpPixelTypeName(this PixelFormat format)
+    parameters:
+    - id: format
+      type: Zaya.Primitives.PixelFormat
+    return:
+      type: System.String
+    content.vb: Public Shared Function ToImageSharpPixelTypeName(format As PixelFormat) As String
+  overload: Zaya.Screenshot.Models.PixelFormatExtensions.ToImageSharpPixelTypeName*
+- uid: Zaya.Screenshot.Models.PixelFormatExtensions.ToImageSharpPixelType(Zaya.Primitives.PixelFormat)
+  commentId: M:Zaya.Screenshot.Models.PixelFormatExtensions.ToImageSharpPixelType(Zaya.Primitives.PixelFormat)
+  id: ToImageSharpPixelType(Zaya.Primitives.PixelFormat)
+  isExtensionMethod: true
+  parent: Zaya.Screenshot.Models.PixelFormatExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToImageSharpPixelType(PixelFormat)
+  nameWithType: PixelFormatExtensions.ToImageSharpPixelType(PixelFormat)
+  fullName: Zaya.Screenshot.Models.PixelFormatExtensions.ToImageSharpPixelType(Zaya.Primitives.PixelFormat)
+  type: Method
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: ToImageSharpPixelType
+    path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
+    startLine: 42
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Gets the ImageSharp pixel Type object.
+  example: []
+  syntax:
+    content: public static Type? ToImageSharpPixelType(this PixelFormat format)
+    parameters:
+    - id: format
+      type: Zaya.Primitives.PixelFormat
+    return:
+      type: System.Type
+    content.vb: Public Shared Function ToImageSharpPixelType(format As PixelFormat) As Type
+  overload: Zaya.Screenshot.Models.PixelFormatExtensions.ToImageSharpPixelType*
+references:
+- uid: Zaya.Primitives.PixelFormat
+  commentId: T:Zaya.Primitives.PixelFormat
+  parent: Zaya.Primitives
+  isExternal: true
+  name: PixelFormat
+  nameWithType: PixelFormat
+  fullName: Zaya.Primitives.PixelFormat
+- uid: Zaya.Screenshot.Models
+  commentId: N:Zaya.Screenshot.Models
+  href: Zaya.html
+  name: Zaya.Screenshot.Models
+  nameWithType: Zaya.Screenshot.Models
+  fullName: Zaya.Screenshot.Models
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Zaya.Primitives
+  commentId: N:Zaya.Primitives
+  isExternal: true
+  name: Zaya.Primitives
+  nameWithType: Zaya.Primitives
+  fullName: Zaya.Primitives
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    isExternal: true
+  - name: .
+  - uid: Zaya.Primitives
+    name: Primitives
+    isExternal: true
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    isExternal: true
+  - name: .
+  - uid: Zaya.Primitives
+    name: Primitives
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Zaya.Screenshot.Models.PixelFormatExtensions.ToSkiaSharpColorTypeValue*
+  commentId: Overload:Zaya.Screenshot.Models.PixelFormatExtensions.ToSkiaSharpColorTypeValue
+  href: Zaya.Screenshot.Models.PixelFormatExtensions.html#Zaya_Screenshot_Models_PixelFormatExtensions_ToSkiaSharpColorTypeValue_Zaya_Primitives_PixelFormat_
+  name: ToSkiaSharpColorTypeValue
+  nameWithType: PixelFormatExtensions.ToSkiaSharpColorTypeValue
+  fullName: Zaya.Screenshot.Models.PixelFormatExtensions.ToSkiaSharpColorTypeValue
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Zaya.Screenshot.Models.PixelFormatExtensions.ToImageSharpPixelTypeName*
+  commentId: Overload:Zaya.Screenshot.Models.PixelFormatExtensions.ToImageSharpPixelTypeName
+  href: Zaya.Screenshot.Models.PixelFormatExtensions.html#Zaya_Screenshot_Models_PixelFormatExtensions_ToImageSharpPixelTypeName_Zaya_Primitives_PixelFormat_
+  name: ToImageSharpPixelTypeName
+  nameWithType: PixelFormatExtensions.ToImageSharpPixelTypeName
+  fullName: Zaya.Screenshot.Models.PixelFormatExtensions.ToImageSharpPixelTypeName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Zaya.Screenshot.Models.PixelFormatExtensions.ToImageSharpPixelType*
+  commentId: Overload:Zaya.Screenshot.Models.PixelFormatExtensions.ToImageSharpPixelType
+  href: Zaya.Screenshot.Models.PixelFormatExtensions.html#Zaya_Screenshot_Models_PixelFormatExtensions_ToImageSharpPixelType_Zaya_Primitives_PixelFormat_
+  name: ToImageSharpPixelType
+  nameWithType: PixelFormatExtensions.ToImageSharpPixelType
+  fullName: Zaya.Screenshot.Models.PixelFormatExtensions.ToImageSharpPixelType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type

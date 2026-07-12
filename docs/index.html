@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Zaya.Screenshot </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Zaya.Screenshot ">
+    
+    
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" href="styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="styles/docfx.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <meta property="docfx:navrel" content="toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="zayascreenshot">Zaya.Screenshot</h1>
+
+<p>High-performance screen capture library for Windows .NET 8.0+ applications. Captures windows and monitors using Direct3D 11 with efficient <code>ReadOnlySpan&lt;byte&gt;</code> pixel data access and configurable output formats.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Capture full desktops, individual windows, or rectangular sub-regions</li>
+<li>Multiple pixel formats: BGRA32, RGB24, BGR24, Gray8</li>
+<li>High-performance <code>ReadOnlySpan&lt;byte&gt;</code> access to pixel data</li>
+<li>Frame-level pause/resume control</li>
+<li>Built-in SkiaSharp and ImageSharp format conversion helpers</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;Zaya.Screenshot&quot; Version=&quot;0.2.0&quot; /&gt;
+</code></pre>
+<h2 id="platform">Platform</h2>
+<ul>
+<li>Windows 10 version 19041 (20H1) or later</li>
+<li>Direct3D 11 compatible GPU with BGRA support</li>
+</ul>
+<h2 id="quick-start">Quick Start</h2>
+<pre><code class="lang-csharp">using Zaya.Screenshot.Impl.Windows.Services.Impl;
+using Zaya.Screenshot.Models;
+
+using var service = new CaptureService();
+
+// Capture entire primary monitor
+var region = new FullScreenDesktopRegion();
+using var session = await service.CreateSessionAsync(region);
+using var frame = await session.CaptureAsync();
+
+var pixelData = frame.GetPixelData();
+Console.WriteLine($&quot;Captured {frame.Width}x{frame.Height}, format: {frame.Format.Name}&quot;);
+
+// Copy to byte array for persistence
+byte[] copy = frame.ToByteArray();
+</code></pre>
+<h2 id="next-steps">Next Steps</h2>
+<ul>
+<li><strong>Getting Started</strong> — detailed usage guide and capture scenarios</li>
+<li><strong>API Reference</strong> — complete API documentation generated from source code</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/docs/index.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

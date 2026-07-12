@@ -1,0 +1,317 @@
+### YamlMime:ManagedReference
+items:
+- uid: Zaya.Screenshot.Services.ICaptureService
+  commentId: T:Zaya.Screenshot.Services.ICaptureService
+  id: ICaptureService
+  parent: Zaya.Screenshot.Services
+  children:
+  - Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: ICaptureService
+  nameWithType: ICaptureService
+  fullName: Zaya.Screenshot.Services.ICaptureService
+  type: Interface
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Services/ICaptureService.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: ICaptureService
+    path: src/Zaya.Screenshot/Services/ICaptureService.cs
+    startLine: 7
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Services
+  summary: Service for creating screen capture sessions targeting a specific window or monitor region.
+  example: []
+  syntax:
+    content: 'public interface ICaptureService : IDisposable'
+    content.vb: Public Interface ICaptureService Inherits IDisposable
+  derivedClasses:
+  - Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService
+  inheritedMembers:
+  - System.IDisposable.Dispose
+- uid: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+  commentId: M:Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+  id: CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+  parent: Zaya.Screenshot.Services.ICaptureService
+  langs:
+  - csharp
+  - vb
+  name: CreateSessionAsync(ICaptureRegion, CancellationToken)
+  nameWithType: ICaptureService.CreateSessionAsync(ICaptureRegion, CancellationToken)
+  fullName: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Services/ICaptureService.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: CreateSessionAsync
+    path: src/Zaya.Screenshot/Services/ICaptureService.cs
+    startLine: 15
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Services
+  summary: Creates a new capture session for the specified region.
+  example: []
+  syntax:
+    content: Task<ICaptureSession> CreateSessionAsync(ICaptureRegion region, CancellationToken cancellationToken = default)
+    parameters:
+    - id: region
+      type: Zaya.Screenshot.Models.ICaptureRegion
+      description: The region to capture (window or monitor, full-screen or rect).
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Token to cancel the session creation.
+    return:
+      type: System.Threading.Tasks.Task{Zaya.Screenshot.Services.ICaptureSession}
+      description: An active capture session ready to produce frames.
+    content.vb: Function CreateSessionAsync(region As ICaptureRegion, cancellationToken As CancellationToken = Nothing) As Task(Of ICaptureSession)
+  overload: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync*
+references:
+- uid: Zaya.Screenshot.Services
+  commentId: N:Zaya.Screenshot.Services
+  href: Zaya.html
+  name: Zaya.Screenshot.Services
+  nameWithType: Zaya.Screenshot.Services
+  fullName: Zaya.Screenshot.Services
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Services
+    name: Services
+    href: Zaya.Screenshot.Services.html
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Services
+    name: Services
+    href: Zaya.Screenshot.Services.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync*
+  commentId: Overload:Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync
+  href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_
+  name: CreateSessionAsync
+  nameWithType: ICaptureService.CreateSessionAsync
+  fullName: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync
+- uid: Zaya.Screenshot.Models.ICaptureRegion
+  commentId: T:Zaya.Screenshot.Models.ICaptureRegion
+  parent: Zaya.Screenshot.Models
+  href: Zaya.Screenshot.Models.ICaptureRegion.html
+  name: ICaptureRegion
+  nameWithType: ICaptureRegion
+  fullName: Zaya.Screenshot.Models.ICaptureRegion
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{Zaya.Screenshot.Services.ICaptureSession}
+  commentId: T:System.Threading.Tasks.Task{Zaya.Screenshot.Services.ICaptureSession}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ICaptureSession>
+  nameWithType: Task<ICaptureSession>
+  fullName: System.Threading.Tasks.Task<Zaya.Screenshot.Services.ICaptureSession>
+  nameWithType.vb: Task(Of ICaptureSession)
+  fullName.vb: System.Threading.Tasks.Task(Of Zaya.Screenshot.Services.ICaptureSession)
+  name.vb: Task(Of ICaptureSession)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Zaya.Screenshot.Services.ICaptureSession
+    name: ICaptureSession
+    href: Zaya.Screenshot.Services.ICaptureSession.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Zaya.Screenshot.Services.ICaptureSession
+    name: ICaptureSession
+    href: Zaya.Screenshot.Services.ICaptureSession.html
+  - name: )
+- uid: Zaya.Screenshot.Models
+  commentId: N:Zaya.Screenshot.Models
+  href: Zaya.html
+  name: Zaya.Screenshot.Models
+  nameWithType: Zaya.Screenshot.Models
+  fullName: Zaya.Screenshot.Models
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

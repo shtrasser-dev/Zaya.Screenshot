@@ -1,0 +1,843 @@
+### YamlMime:ManagedReference
+items:
+- uid: Zaya.Screenshot.Models.PixelFormat
+  commentId: T:Zaya.Screenshot.Models.PixelFormat
+  id: PixelFormat
+  parent: Zaya.Screenshot.Models
+  children:
+  - Zaya.Screenshot.Models.PixelFormat.Bgr24
+  - Zaya.Screenshot.Models.PixelFormat.Bgra32
+  - Zaya.Screenshot.Models.PixelFormat.BytesPerPixel
+  - Zaya.Screenshot.Models.PixelFormat.Equals(System.Object)
+  - Zaya.Screenshot.Models.PixelFormat.GetHashCode
+  - Zaya.Screenshot.Models.PixelFormat.Gray8
+  - Zaya.Screenshot.Models.PixelFormat.Name
+  - Zaya.Screenshot.Models.PixelFormat.Rgb24
+  - Zaya.Screenshot.Models.PixelFormat.ToImageSharpPixelType
+  - Zaya.Screenshot.Models.PixelFormat.ToImageSharpPixelTypeName
+  - Zaya.Screenshot.Models.PixelFormat.ToSkiaSharpColorTypeValue
+  - Zaya.Screenshot.Models.PixelFormat.op_Equality(Zaya.Screenshot.Models.PixelFormat,Zaya.Screenshot.Models.PixelFormat)
+  - Zaya.Screenshot.Models.PixelFormat.op_Inequality(Zaya.Screenshot.Models.PixelFormat,Zaya.Screenshot.Models.PixelFormat)
+  langs:
+  - csharp
+  - vb
+  name: PixelFormat
+  nameWithType: PixelFormat
+  fullName: Zaya.Screenshot.Models.PixelFormat
+  type: Struct
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormat.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: PixelFormat
+    path: src/Zaya.Screenshot/Models/PixelFormat.cs
+    startLine: 5
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Represents a pixel format with conversion methods.
+  example: []
+  syntax:
+    content: public readonly struct PixelFormat
+    content.vb: Public Structure PixelFormat
+  inheritedMembers:
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Zaya.Screenshot.Models.PixelFormat.BytesPerPixel
+  commentId: P:Zaya.Screenshot.Models.PixelFormat.BytesPerPixel
+  id: BytesPerPixel
+  parent: Zaya.Screenshot.Models.PixelFormat
+  langs:
+  - csharp
+  - vb
+  name: BytesPerPixel
+  nameWithType: PixelFormat.BytesPerPixel
+  fullName: Zaya.Screenshot.Models.PixelFormat.BytesPerPixel
+  type: Property
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormat.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: BytesPerPixel
+    path: src/Zaya.Screenshot/Models/PixelFormat.cs
+    startLine: 20
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Gets the number of bytes per pixel.
+  example: []
+  syntax:
+    content: public int BytesPerPixel { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property BytesPerPixel As Integer
+  overload: Zaya.Screenshot.Models.PixelFormat.BytesPerPixel*
+- uid: Zaya.Screenshot.Models.PixelFormat.Name
+  commentId: P:Zaya.Screenshot.Models.PixelFormat.Name
+  id: Name
+  parent: Zaya.Screenshot.Models.PixelFormat
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: PixelFormat.Name
+  fullName: Zaya.Screenshot.Models.PixelFormat.Name
+  type: Property
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormat.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: Name
+    path: src/Zaya.Screenshot/Models/PixelFormat.cs
+    startLine: 25
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Gets the name of the format.
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: Zaya.Screenshot.Models.PixelFormat.Name*
+- uid: Zaya.Screenshot.Models.PixelFormat.Bgra32
+  commentId: F:Zaya.Screenshot.Models.PixelFormat.Bgra32
+  id: Bgra32
+  parent: Zaya.Screenshot.Models.PixelFormat
+  langs:
+  - csharp
+  - vb
+  name: Bgra32
+  nameWithType: PixelFormat.Bgra32
+  fullName: Zaya.Screenshot.Models.PixelFormat.Bgra32
+  type: Field
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormat.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: Bgra32
+    path: src/Zaya.Screenshot/Models/PixelFormat.cs
+    startLine: 31
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: >-
+    32-bit BGRA: 8 bits each for Blue, Green, Red, Alpha.
+
+    Standard format returned by DirectX capture.
+  example: []
+  syntax:
+    content: public static readonly PixelFormat Bgra32
+    return:
+      type: Zaya.Screenshot.Models.PixelFormat
+    content.vb: Public Shared ReadOnly Bgra32 As PixelFormat
+- uid: Zaya.Screenshot.Models.PixelFormat.Rgb24
+  commentId: F:Zaya.Screenshot.Models.PixelFormat.Rgb24
+  id: Rgb24
+  parent: Zaya.Screenshot.Models.PixelFormat
+  langs:
+  - csharp
+  - vb
+  name: Rgb24
+  nameWithType: PixelFormat.Rgb24
+  fullName: Zaya.Screenshot.Models.PixelFormat.Rgb24
+  type: Field
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormat.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: Rgb24
+    path: src/Zaya.Screenshot/Models/PixelFormat.cs
+    startLine: 37
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: >-
+    24-bit RGB: 8 bits each for Red, Green, Blue. No alpha.
+
+    Common format for OCR and image processing.
+  example: []
+  syntax:
+    content: public static readonly PixelFormat Rgb24
+    return:
+      type: Zaya.Screenshot.Models.PixelFormat
+    content.vb: Public Shared ReadOnly Rgb24 As PixelFormat
+- uid: Zaya.Screenshot.Models.PixelFormat.Bgr24
+  commentId: F:Zaya.Screenshot.Models.PixelFormat.Bgr24
+  id: Bgr24
+  parent: Zaya.Screenshot.Models.PixelFormat
+  langs:
+  - csharp
+  - vb
+  name: Bgr24
+  nameWithType: PixelFormat.Bgr24
+  fullName: Zaya.Screenshot.Models.PixelFormat.Bgr24
+  type: Field
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormat.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: Bgr24
+    path: src/Zaya.Screenshot/Models/PixelFormat.cs
+    startLine: 43
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: >-
+    24-bit BGR: 8 bits each for Blue, Green, Red. No alpha.
+
+    Some OCR libraries (like PaddleOCR) expect BGR order.
+  example: []
+  syntax:
+    content: public static readonly PixelFormat Bgr24
+    return:
+      type: Zaya.Screenshot.Models.PixelFormat
+    content.vb: Public Shared ReadOnly Bgr24 As PixelFormat
+- uid: Zaya.Screenshot.Models.PixelFormat.Gray8
+  commentId: F:Zaya.Screenshot.Models.PixelFormat.Gray8
+  id: Gray8
+  parent: Zaya.Screenshot.Models.PixelFormat
+  langs:
+  - csharp
+  - vb
+  name: Gray8
+  nameWithType: PixelFormat.Gray8
+  fullName: Zaya.Screenshot.Models.PixelFormat.Gray8
+  type: Field
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormat.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: Gray8
+    path: src/Zaya.Screenshot/Models/PixelFormat.cs
+    startLine: 49
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: >-
+    8-bit grayscale: 1 byte per pixel.
+
+    Fastest for OCR, reduces memory usage by 75% compared to BGRA.
+  example: []
+  syntax:
+    content: public static readonly PixelFormat Gray8
+    return:
+      type: Zaya.Screenshot.Models.PixelFormat
+    content.vb: Public Shared ReadOnly Gray8 As PixelFormat
+- uid: Zaya.Screenshot.Models.PixelFormat.ToSkiaSharpColorTypeValue
+  commentId: M:Zaya.Screenshot.Models.PixelFormat.ToSkiaSharpColorTypeValue
+  id: ToSkiaSharpColorTypeValue
+  parent: Zaya.Screenshot.Models.PixelFormat
+  langs:
+  - csharp
+  - vb
+  name: ToSkiaSharpColorTypeValue()
+  nameWithType: PixelFormat.ToSkiaSharpColorTypeValue()
+  fullName: Zaya.Screenshot.Models.PixelFormat.ToSkiaSharpColorTypeValue()
+  type: Method
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormat.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: ToSkiaSharpColorTypeValue
+    path: src/Zaya.Screenshot/Models/PixelFormat.cs
+    startLine: 54
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Converts to SkiaSharp color type value (int).
+  example: []
+  syntax:
+    content: public int ToSkiaSharpColorTypeValue()
+    return:
+      type: System.Int32
+    content.vb: Public Function ToSkiaSharpColorTypeValue() As Integer
+  overload: Zaya.Screenshot.Models.PixelFormat.ToSkiaSharpColorTypeValue*
+- uid: Zaya.Screenshot.Models.PixelFormat.ToImageSharpPixelTypeName
+  commentId: M:Zaya.Screenshot.Models.PixelFormat.ToImageSharpPixelTypeName
+  id: ToImageSharpPixelTypeName
+  parent: Zaya.Screenshot.Models.PixelFormat
+  langs:
+  - csharp
+  - vb
+  name: ToImageSharpPixelTypeName()
+  nameWithType: PixelFormat.ToImageSharpPixelTypeName()
+  fullName: Zaya.Screenshot.Models.PixelFormat.ToImageSharpPixelTypeName()
+  type: Method
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormat.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: ToImageSharpPixelTypeName
+    path: src/Zaya.Screenshot/Models/PixelFormat.cs
+    startLine: 69
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Gets the ImageSharp pixel type name.
+  example: []
+  syntax:
+    content: public string ToImageSharpPixelTypeName()
+    return:
+      type: System.String
+    content.vb: Public Function ToImageSharpPixelTypeName() As String
+  overload: Zaya.Screenshot.Models.PixelFormat.ToImageSharpPixelTypeName*
+- uid: Zaya.Screenshot.Models.PixelFormat.ToImageSharpPixelType
+  commentId: M:Zaya.Screenshot.Models.PixelFormat.ToImageSharpPixelType
+  id: ToImageSharpPixelType
+  parent: Zaya.Screenshot.Models.PixelFormat
+  langs:
+  - csharp
+  - vb
+  name: ToImageSharpPixelType()
+  nameWithType: PixelFormat.ToImageSharpPixelType()
+  fullName: Zaya.Screenshot.Models.PixelFormat.ToImageSharpPixelType()
+  type: Method
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormat.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: ToImageSharpPixelType
+    path: src/Zaya.Screenshot/Models/PixelFormat.cs
+    startLine: 84
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Gets the ImageSharp pixel Type object.
+  example: []
+  syntax:
+    content: public Type? ToImageSharpPixelType()
+    return:
+      type: System.Type
+    content.vb: Public Function ToImageSharpPixelType() As Type
+  overload: Zaya.Screenshot.Models.PixelFormat.ToImageSharpPixelType*
+- uid: Zaya.Screenshot.Models.PixelFormat.Equals(System.Object)
+  commentId: M:Zaya.Screenshot.Models.PixelFormat.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Zaya.Screenshot.Models.PixelFormat
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: PixelFormat.Equals(object?)
+  fullName: Zaya.Screenshot.Models.PixelFormat.Equals(object?)
+  type: Method
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormat.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: Equals
+    path: src/Zaya.Screenshot/Models/PixelFormat.cs
+    startLine: 94
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Indicates whether this instance and a specified object are equal.
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: The object to compare with the current instance.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Zaya.Screenshot.Models.PixelFormat.Equals*
+  nameWithType.vb: PixelFormat.Equals(Object)
+  fullName.vb: Zaya.Screenshot.Models.PixelFormat.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Zaya.Screenshot.Models.PixelFormat.GetHashCode
+  commentId: M:Zaya.Screenshot.Models.PixelFormat.GetHashCode
+  id: GetHashCode
+  parent: Zaya.Screenshot.Models.PixelFormat
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: PixelFormat.GetHashCode()
+  fullName: Zaya.Screenshot.Models.PixelFormat.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormat.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: GetHashCode
+    path: src/Zaya.Screenshot/Models/PixelFormat.cs
+    startLine: 96
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Returns the hash code for this instance.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A 32-bit signed integer that is the hash code for this instance.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Zaya.Screenshot.Models.PixelFormat.GetHashCode*
+- uid: Zaya.Screenshot.Models.PixelFormat.op_Equality(Zaya.Screenshot.Models.PixelFormat,Zaya.Screenshot.Models.PixelFormat)
+  commentId: M:Zaya.Screenshot.Models.PixelFormat.op_Equality(Zaya.Screenshot.Models.PixelFormat,Zaya.Screenshot.Models.PixelFormat)
+  id: op_Equality(Zaya.Screenshot.Models.PixelFormat,Zaya.Screenshot.Models.PixelFormat)
+  parent: Zaya.Screenshot.Models.PixelFormat
+  langs:
+  - csharp
+  - vb
+  name: operator ==(PixelFormat, PixelFormat)
+  nameWithType: PixelFormat.operator ==(PixelFormat, PixelFormat)
+  fullName: Zaya.Screenshot.Models.PixelFormat.operator ==(Zaya.Screenshot.Models.PixelFormat, Zaya.Screenshot.Models.PixelFormat)
+  type: Operator
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormat.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: op_Equality
+    path: src/Zaya.Screenshot/Models/PixelFormat.cs
+    startLine: 100
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Determines whether two <xref href="Zaya.Screenshot.Models.PixelFormat" data-throw-if-not-resolved="false"></xref> values are equal.
+  example: []
+  syntax:
+    content: public static bool operator ==(PixelFormat left, PixelFormat right)
+    parameters:
+    - id: left
+      type: Zaya.Screenshot.Models.PixelFormat
+    - id: right
+      type: Zaya.Screenshot.Models.PixelFormat
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As PixelFormat, right As PixelFormat) As Boolean
+  overload: Zaya.Screenshot.Models.PixelFormat.op_Equality*
+  nameWithType.vb: PixelFormat.=(PixelFormat, PixelFormat)
+  fullName.vb: Zaya.Screenshot.Models.PixelFormat.=(Zaya.Screenshot.Models.PixelFormat, Zaya.Screenshot.Models.PixelFormat)
+  name.vb: =(PixelFormat, PixelFormat)
+- uid: Zaya.Screenshot.Models.PixelFormat.op_Inequality(Zaya.Screenshot.Models.PixelFormat,Zaya.Screenshot.Models.PixelFormat)
+  commentId: M:Zaya.Screenshot.Models.PixelFormat.op_Inequality(Zaya.Screenshot.Models.PixelFormat,Zaya.Screenshot.Models.PixelFormat)
+  id: op_Inequality(Zaya.Screenshot.Models.PixelFormat,Zaya.Screenshot.Models.PixelFormat)
+  parent: Zaya.Screenshot.Models.PixelFormat
+  langs:
+  - csharp
+  - vb
+  name: operator !=(PixelFormat, PixelFormat)
+  nameWithType: PixelFormat.operator !=(PixelFormat, PixelFormat)
+  fullName: Zaya.Screenshot.Models.PixelFormat.operator !=(Zaya.Screenshot.Models.PixelFormat, Zaya.Screenshot.Models.PixelFormat)
+  type: Operator
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/PixelFormat.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: op_Inequality
+    path: src/Zaya.Screenshot/Models/PixelFormat.cs
+    startLine: 104
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Determines whether two <xref href="Zaya.Screenshot.Models.PixelFormat" data-throw-if-not-resolved="false"></xref> values are not equal.
+  example: []
+  syntax:
+    content: public static bool operator !=(PixelFormat left, PixelFormat right)
+    parameters:
+    - id: left
+      type: Zaya.Screenshot.Models.PixelFormat
+    - id: right
+      type: Zaya.Screenshot.Models.PixelFormat
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As PixelFormat, right As PixelFormat) As Boolean
+  overload: Zaya.Screenshot.Models.PixelFormat.op_Inequality*
+  nameWithType.vb: PixelFormat.<>(PixelFormat, PixelFormat)
+  fullName.vb: Zaya.Screenshot.Models.PixelFormat.<>(Zaya.Screenshot.Models.PixelFormat, Zaya.Screenshot.Models.PixelFormat)
+  name.vb: <>(PixelFormat, PixelFormat)
+references:
+- uid: Zaya.Screenshot.Models
+  commentId: N:Zaya.Screenshot.Models
+  href: Zaya.html
+  name: Zaya.Screenshot.Models
+  nameWithType: Zaya.Screenshot.Models
+  fullName: Zaya.Screenshot.Models
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Zaya.Screenshot.Models.PixelFormat.BytesPerPixel*
+  commentId: Overload:Zaya.Screenshot.Models.PixelFormat.BytesPerPixel
+  href: Zaya.Screenshot.Models.PixelFormat.html#Zaya_Screenshot_Models_PixelFormat_BytesPerPixel
+  name: BytesPerPixel
+  nameWithType: PixelFormat.BytesPerPixel
+  fullName: Zaya.Screenshot.Models.PixelFormat.BytesPerPixel
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Zaya.Screenshot.Models.PixelFormat.Name*
+  commentId: Overload:Zaya.Screenshot.Models.PixelFormat.Name
+  href: Zaya.Screenshot.Models.PixelFormat.html#Zaya_Screenshot_Models_PixelFormat_Name
+  name: Name
+  nameWithType: PixelFormat.Name
+  fullName: Zaya.Screenshot.Models.PixelFormat.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Zaya.Screenshot.Models.PixelFormat
+  commentId: T:Zaya.Screenshot.Models.PixelFormat
+  parent: Zaya.Screenshot.Models
+  href: Zaya.Screenshot.Models.PixelFormat.html
+  name: PixelFormat
+  nameWithType: PixelFormat
+  fullName: Zaya.Screenshot.Models.PixelFormat
+- uid: Zaya.Screenshot.Models.PixelFormat.ToSkiaSharpColorTypeValue*
+  commentId: Overload:Zaya.Screenshot.Models.PixelFormat.ToSkiaSharpColorTypeValue
+  href: Zaya.Screenshot.Models.PixelFormat.html#Zaya_Screenshot_Models_PixelFormat_ToSkiaSharpColorTypeValue
+  name: ToSkiaSharpColorTypeValue
+  nameWithType: PixelFormat.ToSkiaSharpColorTypeValue
+  fullName: Zaya.Screenshot.Models.PixelFormat.ToSkiaSharpColorTypeValue
+- uid: Zaya.Screenshot.Models.PixelFormat.ToImageSharpPixelTypeName*
+  commentId: Overload:Zaya.Screenshot.Models.PixelFormat.ToImageSharpPixelTypeName
+  href: Zaya.Screenshot.Models.PixelFormat.html#Zaya_Screenshot_Models_PixelFormat_ToImageSharpPixelTypeName
+  name: ToImageSharpPixelTypeName
+  nameWithType: PixelFormat.ToImageSharpPixelTypeName
+  fullName: Zaya.Screenshot.Models.PixelFormat.ToImageSharpPixelTypeName
+- uid: Zaya.Screenshot.Models.PixelFormat.ToImageSharpPixelType*
+  commentId: Overload:Zaya.Screenshot.Models.PixelFormat.ToImageSharpPixelType
+  href: Zaya.Screenshot.Models.PixelFormat.html#Zaya_Screenshot_Models_PixelFormat_ToImageSharpPixelType
+  name: ToImageSharpPixelType
+  nameWithType: PixelFormat.ToImageSharpPixelType
+  fullName: Zaya.Screenshot.Models.PixelFormat.ToImageSharpPixelType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Zaya.Screenshot.Models.PixelFormat.Equals*
+  commentId: Overload:Zaya.Screenshot.Models.PixelFormat.Equals
+  href: Zaya.Screenshot.Models.PixelFormat.html#Zaya_Screenshot_Models_PixelFormat_Equals_System_Object_
+  name: Equals
+  nameWithType: PixelFormat.Equals
+  fullName: Zaya.Screenshot.Models.PixelFormat.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Zaya.Screenshot.Models.PixelFormat.GetHashCode*
+  commentId: Overload:Zaya.Screenshot.Models.PixelFormat.GetHashCode
+  href: Zaya.Screenshot.Models.PixelFormat.html#Zaya_Screenshot_Models_PixelFormat_GetHashCode
+  name: GetHashCode
+  nameWithType: PixelFormat.GetHashCode
+  fullName: Zaya.Screenshot.Models.PixelFormat.GetHashCode
+- uid: Zaya.Screenshot.Models.PixelFormat.op_Equality*
+  commentId: Overload:Zaya.Screenshot.Models.PixelFormat.op_Equality
+  href: Zaya.Screenshot.Models.PixelFormat.html#Zaya_Screenshot_Models_PixelFormat_op_Equality_Zaya_Screenshot_Models_PixelFormat_Zaya_Screenshot_Models_PixelFormat_
+  name: operator ==
+  nameWithType: PixelFormat.operator ==
+  fullName: Zaya.Screenshot.Models.PixelFormat.operator ==
+  nameWithType.vb: PixelFormat.=
+  fullName.vb: Zaya.Screenshot.Models.PixelFormat.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Zaya.Screenshot.Models.PixelFormat.op_Equality*
+    name: ==
+    href: Zaya.Screenshot.Models.PixelFormat.html#Zaya_Screenshot_Models_PixelFormat_op_Equality_Zaya_Screenshot_Models_PixelFormat_Zaya_Screenshot_Models_PixelFormat_
+- uid: Zaya.Screenshot.Models.PixelFormat.op_Inequality*
+  commentId: Overload:Zaya.Screenshot.Models.PixelFormat.op_Inequality
+  href: Zaya.Screenshot.Models.PixelFormat.html#Zaya_Screenshot_Models_PixelFormat_op_Inequality_Zaya_Screenshot_Models_PixelFormat_Zaya_Screenshot_Models_PixelFormat_
+  name: operator !=
+  nameWithType: PixelFormat.operator !=
+  fullName: Zaya.Screenshot.Models.PixelFormat.operator !=
+  nameWithType.vb: PixelFormat.<>
+  fullName.vb: Zaya.Screenshot.Models.PixelFormat.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Zaya.Screenshot.Models.PixelFormat.op_Inequality*
+    name: '!='
+    href: Zaya.Screenshot.Models.PixelFormat.html#Zaya_Screenshot_Models_PixelFormat_op_Inequality_Zaya_Screenshot_Models_PixelFormat_Zaya_Screenshot_Models_PixelFormat_

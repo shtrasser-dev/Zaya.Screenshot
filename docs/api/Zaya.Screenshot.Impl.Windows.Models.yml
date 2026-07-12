@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Zaya.Screenshot.Impl.Windows.Models
+  commentId: N:Zaya.Screenshot.Impl.Windows.Models
+  id: Zaya.Screenshot.Impl.Windows.Models
+  children:
+  - Zaya.Screenshot.Impl.Windows.Models.CapturedFrame
+  langs:
+  - csharp
+  - vb
+  name: Zaya.Screenshot.Impl.Windows.Models
+  nameWithType: Zaya.Screenshot.Impl.Windows.Models
+  fullName: Zaya.Screenshot.Impl.Windows.Models
+  type: Namespace
+  assemblies:
+  - Zaya.Screenshot.Impl.Windows
+references:
+- uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame
+  commentId: T:Zaya.Screenshot.Impl.Windows.Models.CapturedFrame
+  href: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.html
+  name: CapturedFrame
+  nameWithType: CapturedFrame
+  fullName: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame

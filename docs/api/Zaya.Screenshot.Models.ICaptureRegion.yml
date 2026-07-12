@@ -1,0 +1,133 @@
+### YamlMime:ManagedReference
+items:
+- uid: Zaya.Screenshot.Models.ICaptureRegion
+  commentId: T:Zaya.Screenshot.Models.ICaptureRegion
+  id: ICaptureRegion
+  parent: Zaya.Screenshot.Models
+  children:
+  - Zaya.Screenshot.Models.ICaptureRegion.PixelFormat
+  langs:
+  - csharp
+  - vb
+  name: ICaptureRegion
+  nameWithType: ICaptureRegion
+  fullName: Zaya.Screenshot.Models.ICaptureRegion
+  type: Interface
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/ICaptureRegion.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: ICaptureRegion
+    path: src/Zaya.Screenshot/Models/ICaptureRegion.cs
+    startLine: 7
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Represents a capture region with a specified output pixel format.
+  example: []
+  syntax:
+    content: public interface ICaptureRegion
+    content.vb: Public Interface ICaptureRegion
+  derivedClasses:
+  - Zaya.Screenshot.Models.FullScreenDesktopRegion
+  - Zaya.Screenshot.Models.FullScreenWindowRegion
+  - Zaya.Screenshot.Models.RectDesktopRegion
+  - Zaya.Screenshot.Models.RectWindowRegion
+- uid: Zaya.Screenshot.Models.ICaptureRegion.PixelFormat
+  commentId: P:Zaya.Screenshot.Models.ICaptureRegion.PixelFormat
+  id: PixelFormat
+  parent: Zaya.Screenshot.Models.ICaptureRegion
+  langs:
+  - csharp
+  - vb
+  name: PixelFormat
+  nameWithType: ICaptureRegion.PixelFormat
+  fullName: Zaya.Screenshot.Models.ICaptureRegion.PixelFormat
+  type: Property
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/ICaptureRegion.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: PixelFormat
+    path: src/Zaya.Screenshot/Models/ICaptureRegion.cs
+    startLine: 12
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Gets the desired pixel format for the captured frame.
+  example: []
+  syntax:
+    content: PixelFormat PixelFormat { get; }
+    parameters: []
+    return:
+      type: Zaya.Primitives.PixelFormat
+    content.vb: ReadOnly Property PixelFormat As PixelFormat
+  overload: Zaya.Screenshot.Models.ICaptureRegion.PixelFormat*
+references:
+- uid: Zaya.Screenshot.Models
+  commentId: N:Zaya.Screenshot.Models
+  href: Zaya.html
+  name: Zaya.Screenshot.Models
+  nameWithType: Zaya.Screenshot.Models
+  fullName: Zaya.Screenshot.Models
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html
+- uid: Zaya.Screenshot.Models.ICaptureRegion.PixelFormat*
+  commentId: Overload:Zaya.Screenshot.Models.ICaptureRegion.PixelFormat
+  href: Zaya.Screenshot.Models.ICaptureRegion.html#Zaya_Screenshot_Models_ICaptureRegion_PixelFormat
+  name: PixelFormat
+  nameWithType: ICaptureRegion.PixelFormat
+  fullName: Zaya.Screenshot.Models.ICaptureRegion.PixelFormat
+- uid: Zaya.Primitives.PixelFormat
+  commentId: T:Zaya.Primitives.PixelFormat
+  parent: Zaya.Primitives
+  isExternal: true
+  name: PixelFormat
+  nameWithType: PixelFormat
+  fullName: Zaya.Primitives.PixelFormat
+- uid: Zaya.Primitives
+  commentId: N:Zaya.Primitives
+  isExternal: true
+  name: Zaya.Primitives
+  nameWithType: Zaya.Primitives
+  fullName: Zaya.Primitives
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    isExternal: true
+  - name: .
+  - uid: Zaya.Primitives
+    name: Primitives
+    isExternal: true
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    isExternal: true
+  - name: .
+  - uid: Zaya.Primitives
+    name: Primitives
+    isExternal: true

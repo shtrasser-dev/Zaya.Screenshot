@@ -1,0 +1,94 @@
+name: Publish
+
+on:
+  push:
+    tags: ['v*']
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Pack
+        run: dotnet pack Zaya.Screenshot.Windows.sln -c Release
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nuget-package
+          path: src/**/bin/Release/*.nupkg
+          retention-days: 1
+
+  publish-github:
+    needs: pack
+    if: contains(github.server_url, 'github.com')
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: nuget-package
+          path: packages
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Push to GitHub Packages
+        run: |
+          dotnet nuget push packages/*.nupkg \
+            --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json \
+            --api-key ${{ secrets.GITHUB_TOKEN }} \
+            --skip-duplicate
+
+  publish-gitverse:
+    needs: pack
+    if: contains(github.server_url, 'gitverse.ru')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: nuget-package
+          path: packages
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Push to GitVerse Packages
+        run: |
+          dotnet nuget push packages/*.nupkg \
+            --source https://gitverse.ru/api/packages/${{ github.repository_owner }}/nuget/index.json \
+            --api-key ${{ secrets.NUGET_TOKEN }} \
+            --skip-duplicate
+
+  publish-nuget:
+    needs: pack
+    if: contains(github.server_url, 'github.com')
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: nuget-package
+          path: packages
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: NuGet login (OIDC)
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: shtrasser
+
+      - name: Push to NuGet.org
+        run: dotnet nuget push packages/*.nupkg --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate

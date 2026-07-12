@@ -1,0 +1,796 @@
+### YamlMime:ManagedReference
+items:
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService
+  commentId: T:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService
+  id: CaptureService
+  parent: Zaya.Screenshot.Impl.Windows.Services.Impl
+  children:
+  - Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.#ctor
+  - Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+  - Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Dispose
+  langs:
+  - csharp
+  - vb
+  name: CaptureService
+  nameWithType: CaptureService
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService
+  type: Class
+  source:
+    remote:
+      path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: CaptureService
+    path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
+    startLine: 15
+  assemblies:
+  - Zaya.Screenshot.Impl.Windows
+  namespace: Zaya.Screenshot.Impl.Windows.Services.Impl
+  summary: >-
+    Implementation of <xref href="Zaya.Screenshot.Services.ICaptureService" data-throw-if-not-resolved="false"></xref> using Windows Graphics Capture API and Direct3D 11.
+
+    Supports capturing windows and monitors in full-screen or rectangular regions.
+  example: []
+  syntax:
+    content: 'public sealed class CaptureService : ICaptureService, IDisposable'
+    content.vb: Public NotInheritable Class CaptureService Implements ICaptureService, IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - Zaya.Screenshot.Services.ICaptureService
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.#ctor
+  commentId: M:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.#ctor
+  id: '#ctor'
+  parent: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService
+  langs:
+  - csharp
+  - vb
+  name: CaptureService()
+  nameWithType: CaptureService.CaptureService()
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CaptureService()
+  type: Constructor
+  source:
+    remote:
+      path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: .ctor
+    path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
+    startLine: 26
+  assemblies:
+  - Zaya.Screenshot.Impl.Windows
+  namespace: Zaya.Screenshot.Impl.Windows.Services.Impl
+  summary: >-
+    Initializes a new instance of the <xref href="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService" data-throw-if-not-resolved="false"></xref> class.
+
+    Creates a Direct3D 11 device and converter.
+  example: []
+  syntax:
+    content: public CaptureService()
+    content.vb: Public Sub New()
+  overload: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.#ctor*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: Thrown when Windows Graphics Capture is not supported on this system.
+  - type: System.Runtime.InteropServices.COMException
+    commentId: T:System.Runtime.InteropServices.COMException
+    description: Thrown when the Direct3D device cannot be created.
+  nameWithType.vb: CaptureService.New()
+  fullName.vb: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.New()
+  name.vb: New()
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+  commentId: M:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+  id: CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+  parent: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService
+  langs:
+  - csharp
+  - vb
+  name: CreateSessionAsync(ICaptureRegion, CancellationToken)
+  nameWithType: CaptureService.CreateSessionAsync(ICaptureRegion, CancellationToken)
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: CreateSessionAsync
+    path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
+    startLine: 45
+  assemblies:
+  - Zaya.Screenshot.Impl.Windows
+  namespace: Zaya.Screenshot.Impl.Windows.Services.Impl
+  summary: >-
+    Creates a new capture session for the specified region.
+
+    For monitor captures, the first few frames are discarded to avoid initial black frames.
+  example: []
+  syntax:
+    content: public Task<ICaptureSession> CreateSessionAsync(ICaptureRegion region, CancellationToken cancellationToken = default)
+    parameters:
+    - id: region
+      type: Zaya.Screenshot.Models.ICaptureRegion
+      description: >-
+        The region to capture. Must be one of <xref href="Zaya.Screenshot.Models.FullScreenWindowRegion" data-throw-if-not-resolved="false"></xref>,
+            <xref href="Zaya.Screenshot.Models.RectWindowRegion" data-throw-if-not-resolved="false"></xref>, <xref href="Zaya.Screenshot.Models.FullScreenDesktopRegion" data-throw-if-not-resolved="false"></xref>, or <xref href="Zaya.Screenshot.Models.RectDesktopRegion" data-throw-if-not-resolved="false"></xref>.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Token to cancel the session creation.
+    return:
+      type: System.Threading.Tasks.Task{Zaya.Screenshot.Services.ICaptureSession}
+      description: An active capture session ready to produce frames.
+    content.vb: Public Function CreateSessionAsync(region As ICaptureRegion, cancellationToken As CancellationToken = Nothing) As Task(Of ICaptureSession)
+  overload: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code class="paramref">region</code> is null.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown when the GraphicsCaptureItem cannot be created.
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: Thrown when the region type is not recognized.
+  implements:
+  - Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Dispose
+  commentId: M:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Dispose
+  id: Dispose
+  parent: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: CaptureService.Dispose()
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Dispose()
+  type: Method
+  source:
+    remote:
+      path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: Dispose
+    path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
+    startLine: 209
+  assemblies:
+  - Zaya.Screenshot.Impl.Windows
+  namespace: Zaya.Screenshot.Impl.Windows.Services.Impl
+  summary: Releases the underlying Direct3D resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: Zaya.Screenshot.Services.ICaptureService
+  commentId: T:Zaya.Screenshot.Services.ICaptureService
+  parent: Zaya.Screenshot.Services
+  href: Zaya.Screenshot.Services.ICaptureService.html
+  name: ICaptureService
+  nameWithType: ICaptureService
+  fullName: Zaya.Screenshot.Services.ICaptureService
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl
+  commentId: N:Zaya.Screenshot.Impl.Windows.Services.Impl
+  href: Zaya.html
+  name: Zaya.Screenshot.Impl.Windows.Services.Impl
+  nameWithType: Zaya.Screenshot.Impl.Windows.Services.Impl
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Impl
+    name: Impl
+    href: Zaya.Screenshot.Impl.html
+  - name: .
+  - uid: Zaya.Screenshot.Impl.Windows
+    name: Windows
+    href: Zaya.Screenshot.Impl.Windows.html
+  - name: .
+  - uid: Zaya.Screenshot.Impl.Windows.Services
+    name: Services
+    href: Zaya.Screenshot.Impl.Windows.Services.html
+  - name: .
+  - uid: Zaya.Screenshot.Impl.Windows.Services.Impl
+    name: Impl
+    href: Zaya.Screenshot.Impl.Windows.Services.Impl.html
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Impl
+    name: Impl
+    href: Zaya.Screenshot.Impl.html
+  - name: .
+  - uid: Zaya.Screenshot.Impl.Windows
+    name: Windows
+    href: Zaya.Screenshot.Impl.Windows.html
+  - name: .
+  - uid: Zaya.Screenshot.Impl.Windows.Services
+    name: Services
+    href: Zaya.Screenshot.Impl.Windows.Services.html
+  - name: .
+  - uid: Zaya.Screenshot.Impl.Windows.Services.Impl
+    name: Impl
+    href: Zaya.Screenshot.Impl.Windows.Services.Impl.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Zaya.Screenshot.Services
+  commentId: N:Zaya.Screenshot.Services
+  href: Zaya.html
+  name: Zaya.Screenshot.Services
+  nameWithType: Zaya.Screenshot.Services
+  fullName: Zaya.Screenshot.Services
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Services
+    name: Services
+    href: Zaya.Screenshot.Services.html
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Services
+    name: Services
+    href: Zaya.Screenshot.Services.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService
+  commentId: T:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService
+  href: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html
+  name: CaptureService
+  nameWithType: CaptureService
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService
+- uid: System.NotSupportedException
+  commentId: T:System.NotSupportedException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.notsupportedexception
+  name: NotSupportedException
+  nameWithType: NotSupportedException
+  fullName: System.NotSupportedException
+- uid: System.Runtime.InteropServices.COMException
+  commentId: T:System.Runtime.InteropServices.COMException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.comexception
+  name: COMException
+  nameWithType: COMException
+  fullName: System.Runtime.InteropServices.COMException
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.#ctor*
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.#ctor
+  href: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService__ctor
+  name: CaptureService
+  nameWithType: CaptureService.CaptureService
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CaptureService
+  nameWithType.vb: CaptureService.New
+  fullName.vb: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.New
+  name.vb: New
+- uid: Zaya.Screenshot.Models.FullScreenWindowRegion
+  commentId: T:Zaya.Screenshot.Models.FullScreenWindowRegion
+  href: Zaya.Screenshot.Models.FullScreenWindowRegion.html
+  name: FullScreenWindowRegion
+  nameWithType: FullScreenWindowRegion
+  fullName: Zaya.Screenshot.Models.FullScreenWindowRegion
+- uid: Zaya.Screenshot.Models.RectWindowRegion
+  commentId: T:Zaya.Screenshot.Models.RectWindowRegion
+  href: Zaya.Screenshot.Models.RectWindowRegion.html
+  name: RectWindowRegion
+  nameWithType: RectWindowRegion
+  fullName: Zaya.Screenshot.Models.RectWindowRegion
+- uid: Zaya.Screenshot.Models.FullScreenDesktopRegion
+  commentId: T:Zaya.Screenshot.Models.FullScreenDesktopRegion
+  href: Zaya.Screenshot.Models.FullScreenDesktopRegion.html
+  name: FullScreenDesktopRegion
+  nameWithType: FullScreenDesktopRegion
+  fullName: Zaya.Screenshot.Models.FullScreenDesktopRegion
+- uid: Zaya.Screenshot.Models.RectDesktopRegion
+  commentId: T:Zaya.Screenshot.Models.RectDesktopRegion
+  href: Zaya.Screenshot.Models.RectDesktopRegion.html
+  name: RectDesktopRegion
+  nameWithType: RectDesktopRegion
+  fullName: Zaya.Screenshot.Models.RectDesktopRegion
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync*
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync
+  href: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_
+  name: CreateSessionAsync
+  nameWithType: CaptureService.CreateSessionAsync
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync
+- uid: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+  commentId: M:Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+  parent: Zaya.Screenshot.Services.ICaptureService
+  isExternal: true
+  href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_
+  name: CreateSessionAsync(ICaptureRegion, CancellationToken)
+  nameWithType: ICaptureService.CreateSessionAsync(ICaptureRegion, CancellationToken)
+  fullName: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+    name: CreateSessionAsync
+    href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_
+  - name: (
+  - uid: Zaya.Screenshot.Models.ICaptureRegion
+    name: ICaptureRegion
+    href: Zaya.Screenshot.Models.ICaptureRegion.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+    name: CreateSessionAsync
+    href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_
+  - name: (
+  - uid: Zaya.Screenshot.Models.ICaptureRegion
+    name: ICaptureRegion
+    href: Zaya.Screenshot.Models.ICaptureRegion.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Zaya.Screenshot.Models.ICaptureRegion
+  commentId: T:Zaya.Screenshot.Models.ICaptureRegion
+  parent: Zaya.Screenshot.Models
+  href: Zaya.Screenshot.Models.ICaptureRegion.html
+  name: ICaptureRegion
+  nameWithType: ICaptureRegion
+  fullName: Zaya.Screenshot.Models.ICaptureRegion
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{Zaya.Screenshot.Services.ICaptureSession}
+  commentId: T:System.Threading.Tasks.Task{Zaya.Screenshot.Services.ICaptureSession}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ICaptureSession>
+  nameWithType: Task<ICaptureSession>
+  fullName: System.Threading.Tasks.Task<Zaya.Screenshot.Services.ICaptureSession>
+  nameWithType.vb: Task(Of ICaptureSession)
+  fullName.vb: System.Threading.Tasks.Task(Of Zaya.Screenshot.Services.ICaptureSession)
+  name.vb: Task(Of ICaptureSession)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Zaya.Screenshot.Services.ICaptureSession
+    name: ICaptureSession
+    href: Zaya.Screenshot.Services.ICaptureSession.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Zaya.Screenshot.Services.ICaptureSession
+    name: ICaptureSession
+    href: Zaya.Screenshot.Services.ICaptureSession.html
+  - name: )
+- uid: Zaya.Screenshot.Models
+  commentId: N:Zaya.Screenshot.Models
+  href: Zaya.html
+  name: Zaya.Screenshot.Models
+  nameWithType: Zaya.Screenshot.Models
+  fullName: Zaya.Screenshot.Models
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Dispose*
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Dispose
+  href: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Dispose
+  name: Dispose
+  nameWithType: CaptureService.Dispose
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

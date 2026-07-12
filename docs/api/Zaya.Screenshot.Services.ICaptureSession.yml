@@ -1,0 +1,420 @@
+### YamlMime:ManagedReference
+items:
+- uid: Zaya.Screenshot.Services.ICaptureSession
+  commentId: T:Zaya.Screenshot.Services.ICaptureSession
+  id: ICaptureSession
+  parent: Zaya.Screenshot.Services
+  children:
+  - Zaya.Screenshot.Services.ICaptureSession.CaptureAsync(System.Threading.CancellationToken)
+  - Zaya.Screenshot.Services.ICaptureSession.Pause
+  - Zaya.Screenshot.Services.ICaptureSession.Region
+  - Zaya.Screenshot.Services.ICaptureSession.Resume
+  langs:
+  - csharp
+  - vb
+  name: ICaptureSession
+  nameWithType: ICaptureSession
+  fullName: Zaya.Screenshot.Services.ICaptureSession
+  type: Interface
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Services/ICaptureSession.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: ICaptureSession
+    path: src/Zaya.Screenshot/Services/ICaptureSession.cs
+    startLine: 7
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Services
+  summary: Represents an active capture session.
+  example: []
+  syntax:
+    content: 'public interface ICaptureSession : IDisposable'
+    content.vb: Public Interface ICaptureSession Inherits IDisposable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+- uid: Zaya.Screenshot.Services.ICaptureSession.Region
+  commentId: P:Zaya.Screenshot.Services.ICaptureSession.Region
+  id: Region
+  parent: Zaya.Screenshot.Services.ICaptureSession
+  langs:
+  - csharp
+  - vb
+  name: Region
+  nameWithType: ICaptureSession.Region
+  fullName: Zaya.Screenshot.Services.ICaptureSession.Region
+  type: Property
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Services/ICaptureSession.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: Region
+    path: src/Zaya.Screenshot/Services/ICaptureSession.cs
+    startLine: 12
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Services
+  summary: Gets the region being captured.
+  example: []
+  syntax:
+    content: ICaptureRegion Region { get; }
+    parameters: []
+    return:
+      type: Zaya.Screenshot.Models.ICaptureRegion
+    content.vb: ReadOnly Property Region As ICaptureRegion
+  overload: Zaya.Screenshot.Services.ICaptureSession.Region*
+- uid: Zaya.Screenshot.Services.ICaptureSession.CaptureAsync(System.Threading.CancellationToken)
+  commentId: M:Zaya.Screenshot.Services.ICaptureSession.CaptureAsync(System.Threading.CancellationToken)
+  id: CaptureAsync(System.Threading.CancellationToken)
+  parent: Zaya.Screenshot.Services.ICaptureSession
+  langs:
+  - csharp
+  - vb
+  name: CaptureAsync(CancellationToken)
+  nameWithType: ICaptureSession.CaptureAsync(CancellationToken)
+  fullName: Zaya.Screenshot.Services.ICaptureSession.CaptureAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Services/ICaptureSession.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: CaptureAsync
+    path: src/Zaya.Screenshot/Services/ICaptureSession.cs
+    startLine: 19
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Services
+  summary: Captures the next available frame.
+  example: []
+  syntax:
+    content: Task<ICapturedFrame?> CaptureAsync(CancellationToken cancellationToken = default)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation token.
+    return:
+      type: System.Threading.Tasks.Task{Zaya.Screenshot.Models.ICapturedFrame}
+      description: The captured frame, or null if no frame is available.
+    content.vb: Function CaptureAsync(cancellationToken As CancellationToken = Nothing) As Task(Of ICapturedFrame)
+  overload: Zaya.Screenshot.Services.ICaptureSession.CaptureAsync*
+- uid: Zaya.Screenshot.Services.ICaptureSession.Resume
+  commentId: M:Zaya.Screenshot.Services.ICaptureSession.Resume
+  id: Resume
+  parent: Zaya.Screenshot.Services.ICaptureSession
+  langs:
+  - csharp
+  - vb
+  name: Resume()
+  nameWithType: ICaptureSession.Resume()
+  fullName: Zaya.Screenshot.Services.ICaptureSession.Resume()
+  type: Method
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Services/ICaptureSession.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: Resume
+    path: src/Zaya.Screenshot/Services/ICaptureSession.cs
+    startLine: 24
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Services
+  summary: Resumes the capture session if paused.
+  example: []
+  syntax:
+    content: void Resume()
+    content.vb: Sub [Resume]()
+  overload: Zaya.Screenshot.Services.ICaptureSession.Resume*
+- uid: Zaya.Screenshot.Services.ICaptureSession.Pause
+  commentId: M:Zaya.Screenshot.Services.ICaptureSession.Pause
+  id: Pause
+  parent: Zaya.Screenshot.Services.ICaptureSession
+  langs:
+  - csharp
+  - vb
+  name: Pause()
+  nameWithType: ICaptureSession.Pause()
+  fullName: Zaya.Screenshot.Services.ICaptureSession.Pause()
+  type: Method
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Services/ICaptureSession.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: Pause
+    path: src/Zaya.Screenshot/Services/ICaptureSession.cs
+    startLine: 29
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Services
+  summary: Pauses the capture session.
+  example: []
+  syntax:
+    content: void Pause()
+    content.vb: Sub Pause()
+  overload: Zaya.Screenshot.Services.ICaptureSession.Pause*
+references:
+- uid: Zaya.Screenshot.Services
+  commentId: N:Zaya.Screenshot.Services
+  href: Zaya.html
+  name: Zaya.Screenshot.Services
+  nameWithType: Zaya.Screenshot.Services
+  fullName: Zaya.Screenshot.Services
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Services
+    name: Services
+    href: Zaya.Screenshot.Services.html
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Services
+    name: Services
+    href: Zaya.Screenshot.Services.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Zaya.Screenshot.Services.ICaptureSession.Region*
+  commentId: Overload:Zaya.Screenshot.Services.ICaptureSession.Region
+  href: Zaya.Screenshot.Services.ICaptureSession.html#Zaya_Screenshot_Services_ICaptureSession_Region
+  name: Region
+  nameWithType: ICaptureSession.Region
+  fullName: Zaya.Screenshot.Services.ICaptureSession.Region
+- uid: Zaya.Screenshot.Models.ICaptureRegion
+  commentId: T:Zaya.Screenshot.Models.ICaptureRegion
+  parent: Zaya.Screenshot.Models
+  href: Zaya.Screenshot.Models.ICaptureRegion.html
+  name: ICaptureRegion
+  nameWithType: ICaptureRegion
+  fullName: Zaya.Screenshot.Models.ICaptureRegion
+- uid: Zaya.Screenshot.Models
+  commentId: N:Zaya.Screenshot.Models
+  href: Zaya.html
+  name: Zaya.Screenshot.Models
+  nameWithType: Zaya.Screenshot.Models
+  fullName: Zaya.Screenshot.Models
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html
+- uid: Zaya.Screenshot.Services.ICaptureSession.CaptureAsync*
+  commentId: Overload:Zaya.Screenshot.Services.ICaptureSession.CaptureAsync
+  href: Zaya.Screenshot.Services.ICaptureSession.html#Zaya_Screenshot_Services_ICaptureSession_CaptureAsync_System_Threading_CancellationToken_
+  name: CaptureAsync
+  nameWithType: ICaptureSession.CaptureAsync
+  fullName: Zaya.Screenshot.Services.ICaptureSession.CaptureAsync
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{Zaya.Screenshot.Models.ICapturedFrame}
+  commentId: T:System.Threading.Tasks.Task{Zaya.Screenshot.Models.ICapturedFrame}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ICapturedFrame>
+  nameWithType: Task<ICapturedFrame>
+  fullName: System.Threading.Tasks.Task<Zaya.Screenshot.Models.ICapturedFrame>
+  nameWithType.vb: Task(Of ICapturedFrame)
+  fullName.vb: System.Threading.Tasks.Task(Of Zaya.Screenshot.Models.ICapturedFrame)
+  name.vb: Task(Of ICapturedFrame)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Zaya.Screenshot.Models.ICapturedFrame
+    name: ICapturedFrame
+    href: Zaya.Screenshot.Models.ICapturedFrame.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Zaya.Screenshot.Models.ICapturedFrame
+    name: ICapturedFrame
+    href: Zaya.Screenshot.Models.ICapturedFrame.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Zaya.Screenshot.Services.ICaptureSession.Resume*
+  commentId: Overload:Zaya.Screenshot.Services.ICaptureSession.Resume
+  href: Zaya.Screenshot.Services.ICaptureSession.html#Zaya_Screenshot_Services_ICaptureSession_Resume
+  name: Resume
+  nameWithType: ICaptureSession.Resume
+  fullName: Zaya.Screenshot.Services.ICaptureSession.Resume
+- uid: Zaya.Screenshot.Services.ICaptureSession.Pause*
+  commentId: Overload:Zaya.Screenshot.Services.ICaptureSession.Pause
+  href: Zaya.Screenshot.Services.ICaptureSession.html#Zaya_Screenshot_Services_ICaptureSession_Pause
+  name: Pause
+  nameWithType: ICaptureSession.Pause
+  fullName: Zaya.Screenshot.Services.ICaptureSession.Pause

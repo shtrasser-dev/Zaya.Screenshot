@@ -1,0 +1,304 @@
+{
+  "source_base_path": "D:/p/Zaya/Zaya.Screenshot",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Impl.Windows.Models.CapturedFrame",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.yml\" sourcestartlinenumber=\"1\">Implementation of <xref href=\"Zaya.Screenshot.Models.ICapturedFrame\" data-throw-if-not-resolved=\"false\"></xref> with direct pixel data access.\nOwns a byte array rented from <xref href=\"System.Buffers.ArrayPool%601.Shared\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Impl.Windows.Models.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Impl.Windows.Models",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.yml\" sourcestartlinenumber=\"1\">Implementation of <xref href=\"Zaya.Screenshot.Services.ICaptureService\" data-throw-if-not-resolved=\"false\"></xref> using Windows Graphics Capture API and Direct3D 11.\nSupports capturing windows and monitors in full-screen or rectangular regions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.Services.Impl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Impl.Windows.Services.Impl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Impl.Windows.Services.Impl",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Models.FullScreenDesktopRegion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Models.FullScreenDesktopRegion.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Models.FullScreenDesktopRegion",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Models.FullScreenDesktopRegion.yml\" sourcestartlinenumber=\"1\">Represents a region that captures the entire desktop of a specific display.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Models.FullScreenWindowRegion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Models.FullScreenWindowRegion.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Models.FullScreenWindowRegion",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Models.FullScreenWindowRegion.yml\" sourcestartlinenumber=\"1\">Represents a region that captures the entire client area of a window.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Models.ICaptureRegion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Models.ICaptureRegion.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Models.ICaptureRegion",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Models.ICaptureRegion.yml\" sourcestartlinenumber=\"1\">Represents a capture region with a specified output pixel format.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Models.ICapturedFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Models.ICapturedFrame.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Models.ICapturedFrame",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Models.ICapturedFrame.yml\" sourcestartlinenumber=\"1\">Represents a captured frame with direct pixel data access.\nThe frame owns the underlying memory and releases it when disposed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Models.PixelFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Models.PixelFormat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Models.PixelFormat",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Models.PixelFormat.yml\" sourcestartlinenumber=\"1\">Represents a pixel format with conversion methods.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Models.PixelFormatExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Models.PixelFormatExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Models.PixelFormatExtensions",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Models.PixelFormatExtensions.yml\" sourcestartlinenumber=\"1\">Extension methods for <xref href=\"Zaya.Primitives.PixelFormat\" data-throw-if-not-resolved=\"false\"></xref> to convert to SkiaSharp and ImageSharp types.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Models.RectDesktopRegion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Models.RectDesktopRegion.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Models.RectDesktopRegion",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Models.RectDesktopRegion.yml\" sourcestartlinenumber=\"1\">Represents a rectangular region on a specific display.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Models.RectWindowRegion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Models.RectWindowRegion.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Models.RectWindowRegion",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Models.RectWindowRegion.yml\" sourcestartlinenumber=\"1\">Represents a rectangular region within a specific window.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Models.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Models",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Services.ICaptureService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Services.ICaptureService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Services.ICaptureService",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Services.ICaptureService.yml\" sourcestartlinenumber=\"1\">Service for creating screen capture sessions targeting a specific window or monitor region.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Services.ICaptureSession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Services.ICaptureSession.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Services.ICaptureSession",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Services.ICaptureSession.yml\" sourcestartlinenumber=\"1\">Represents an active capture session.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Services.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Services",
+      "Summary": null
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/articles/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

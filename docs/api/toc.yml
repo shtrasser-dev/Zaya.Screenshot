@@ -1,0 +1,52 @@
+### YamlMime:TableOfContent
+items:
+- uid: Zaya.Screenshot.Impl.Windows.Models
+  name: Zaya.Screenshot.Impl.Windows.Models
+  type: Namespace
+  items:
+  - uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame
+    name: CapturedFrame
+    type: Class
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl
+  name: Zaya.Screenshot.Impl.Windows.Services.Impl
+  type: Namespace
+  items:
+  - uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService
+    name: CaptureService
+    type: Class
+- uid: Zaya.Screenshot.Models
+  name: Zaya.Screenshot.Models
+  type: Namespace
+  items:
+  - uid: Zaya.Screenshot.Models.FullScreenDesktopRegion
+    name: FullScreenDesktopRegion
+    type: Class
+  - uid: Zaya.Screenshot.Models.FullScreenWindowRegion
+    name: FullScreenWindowRegion
+    type: Class
+  - uid: Zaya.Screenshot.Models.ICaptureRegion
+    name: ICaptureRegion
+    type: Interface
+  - uid: Zaya.Screenshot.Models.ICapturedFrame
+    name: ICapturedFrame
+    type: Interface
+  - uid: Zaya.Screenshot.Models.PixelFormatExtensions
+    name: PixelFormatExtensions
+    type: Class
+  - uid: Zaya.Screenshot.Models.RectDesktopRegion
+    name: RectDesktopRegion
+    type: Class
+  - uid: Zaya.Screenshot.Models.RectWindowRegion
+    name: RectWindowRegion
+    type: Class
+- uid: Zaya.Screenshot.Services
+  name: Zaya.Screenshot.Services
+  type: Namespace
+  items:
+  - uid: Zaya.Screenshot.Services.ICaptureService
+    name: ICaptureService
+    type: Interface
+  - uid: Zaya.Screenshot.Services.ICaptureSession
+    name: ICaptureSession
+    type: Interface
+memberLayout: SamePage

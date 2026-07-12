@@ -1,0 +1,470 @@
+### YamlMime:ManagedReference
+items:
+- uid: Zaya.Screenshot.Models.ICapturedFrame
+  commentId: T:Zaya.Screenshot.Models.ICapturedFrame
+  id: ICapturedFrame
+  parent: Zaya.Screenshot.Models
+  children:
+  - Zaya.Screenshot.Models.ICapturedFrame.Format
+  - Zaya.Screenshot.Models.ICapturedFrame.GetPixelData
+  - Zaya.Screenshot.Models.ICapturedFrame.Height
+  - Zaya.Screenshot.Models.ICapturedFrame.Stride
+  - Zaya.Screenshot.Models.ICapturedFrame.ToByteArray
+  - Zaya.Screenshot.Models.ICapturedFrame.Width
+  langs:
+  - csharp
+  - vb
+  name: ICapturedFrame
+  nameWithType: ICapturedFrame
+  fullName: Zaya.Screenshot.Models.ICapturedFrame
+  type: Interface
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: ICapturedFrame
+    path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
+    startLine: 8
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: >-
+    Represents a captured frame with direct pixel data access.
+
+    The frame owns the underlying memory and releases it when disposed.
+  example: []
+  syntax:
+    content: 'public interface ICapturedFrame : IDisposable'
+    content.vb: Public Interface ICapturedFrame Inherits IDisposable
+  derivedClasses:
+  - Zaya.Screenshot.Impl.Windows.Models.CapturedFrame
+  inheritedMembers:
+  - System.IDisposable.Dispose
+- uid: Zaya.Screenshot.Models.ICapturedFrame.Width
+  commentId: P:Zaya.Screenshot.Models.ICapturedFrame.Width
+  id: Width
+  parent: Zaya.Screenshot.Models.ICapturedFrame
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: ICapturedFrame.Width
+  fullName: Zaya.Screenshot.Models.ICapturedFrame.Width
+  type: Property
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: Width
+    path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
+    startLine: 13
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Gets the width of the frame in pixels.
+  example: []
+  syntax:
+    content: int Width { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property Width As Integer
+  overload: Zaya.Screenshot.Models.ICapturedFrame.Width*
+- uid: Zaya.Screenshot.Models.ICapturedFrame.Height
+  commentId: P:Zaya.Screenshot.Models.ICapturedFrame.Height
+  id: Height
+  parent: Zaya.Screenshot.Models.ICapturedFrame
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: ICapturedFrame.Height
+  fullName: Zaya.Screenshot.Models.ICapturedFrame.Height
+  type: Property
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: Height
+    path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
+    startLine: 18
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: Gets the height of the frame in pixels.
+  example: []
+  syntax:
+    content: int Height { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property Height As Integer
+  overload: Zaya.Screenshot.Models.ICapturedFrame.Height*
+- uid: Zaya.Screenshot.Models.ICapturedFrame.Stride
+  commentId: P:Zaya.Screenshot.Models.ICapturedFrame.Stride
+  id: Stride
+  parent: Zaya.Screenshot.Models.ICapturedFrame
+  langs:
+  - csharp
+  - vb
+  name: Stride
+  nameWithType: ICapturedFrame.Stride
+  fullName: Zaya.Screenshot.Models.ICapturedFrame.Stride
+  type: Property
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: Stride
+    path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
+    startLine: 24
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: >-
+    Gets the number of bytes per row (stride).
+
+    May be larger than Width * BytesPerPixel due to memory alignment.
+  example: []
+  syntax:
+    content: int Stride { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property Stride As Integer
+  overload: Zaya.Screenshot.Models.ICapturedFrame.Stride*
+- uid: Zaya.Screenshot.Models.ICapturedFrame.Format
+  commentId: P:Zaya.Screenshot.Models.ICapturedFrame.Format
+  id: Format
+  parent: Zaya.Screenshot.Models.ICapturedFrame
+  langs:
+  - csharp
+  - vb
+  name: Format
+  nameWithType: ICapturedFrame.Format
+  fullName: Zaya.Screenshot.Models.ICapturedFrame.Format
+  type: Property
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: Format
+    path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
+    startLine: 30
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: >-
+    Gets the pixel format of the frame.
+
+    Provides information about pixel layout and bytes per pixel.
+  example: []
+  syntax:
+    content: PixelFormat Format { get; }
+    parameters: []
+    return:
+      type: Zaya.Primitives.PixelFormat
+    content.vb: ReadOnly Property Format As PixelFormat
+  overload: Zaya.Screenshot.Models.ICapturedFrame.Format*
+- uid: Zaya.Screenshot.Models.ICapturedFrame.GetPixelData
+  commentId: M:Zaya.Screenshot.Models.ICapturedFrame.GetPixelData
+  id: GetPixelData
+  parent: Zaya.Screenshot.Models.ICapturedFrame
+  langs:
+  - csharp
+  - vb
+  name: GetPixelData()
+  nameWithType: ICapturedFrame.GetPixelData()
+  fullName: Zaya.Screenshot.Models.ICapturedFrame.GetPixelData()
+  type: Method
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: GetPixelData
+    path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
+    startLine: 36
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: >-
+    Gets the raw pixel data as a read-only span.
+
+    Direct access to the underlying buffer without additional allocations.
+  example: []
+  syntax:
+    content: ReadOnlySpan<byte> GetPixelData()
+    return:
+      type: System.ReadOnlySpan{System.Byte}
+    content.vb: Function GetPixelData() As ReadOnlySpan(Of Byte)
+  overload: Zaya.Screenshot.Models.ICapturedFrame.GetPixelData*
+- uid: Zaya.Screenshot.Models.ICapturedFrame.ToByteArray
+  commentId: M:Zaya.Screenshot.Models.ICapturedFrame.ToByteArray
+  id: ToByteArray
+  parent: Zaya.Screenshot.Models.ICapturedFrame
+  langs:
+  - csharp
+  - vb
+  name: ToByteArray()
+  nameWithType: ICapturedFrame.ToByteArray()
+  fullName: Zaya.Screenshot.Models.ICapturedFrame.ToByteArray()
+  type: Method
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+    id: ToByteArray
+    path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
+    startLine: 43
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Models
+  summary: >-
+    Creates a copy of the pixel data as a byte array.
+
+    Useful when the data needs to outlive the frame instance.
+  example: []
+  syntax:
+    content: byte[] ToByteArray()
+    return:
+      type: System.Byte[]
+      description: A new byte array containing a copy of the pixel data.
+    content.vb: Function ToByteArray() As Byte()
+  overload: Zaya.Screenshot.Models.ICapturedFrame.ToByteArray*
+references:
+- uid: Zaya.Screenshot.Models
+  commentId: N:Zaya.Screenshot.Models
+  href: Zaya.html
+  name: Zaya.Screenshot.Models
+  nameWithType: Zaya.Screenshot.Models
+  fullName: Zaya.Screenshot.Models
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Zaya.Screenshot.Models.ICapturedFrame.Width*
+  commentId: Overload:Zaya.Screenshot.Models.ICapturedFrame.Width
+  href: Zaya.Screenshot.Models.ICapturedFrame.html#Zaya_Screenshot_Models_ICapturedFrame_Width
+  name: Width
+  nameWithType: ICapturedFrame.Width
+  fullName: Zaya.Screenshot.Models.ICapturedFrame.Width
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Zaya.Screenshot.Models.ICapturedFrame.Height*
+  commentId: Overload:Zaya.Screenshot.Models.ICapturedFrame.Height
+  href: Zaya.Screenshot.Models.ICapturedFrame.html#Zaya_Screenshot_Models_ICapturedFrame_Height
+  name: Height
+  nameWithType: ICapturedFrame.Height
+  fullName: Zaya.Screenshot.Models.ICapturedFrame.Height
+- uid: Zaya.Screenshot.Models.ICapturedFrame.Stride*
+  commentId: Overload:Zaya.Screenshot.Models.ICapturedFrame.Stride
+  href: Zaya.Screenshot.Models.ICapturedFrame.html#Zaya_Screenshot_Models_ICapturedFrame_Stride
+  name: Stride
+  nameWithType: ICapturedFrame.Stride
+  fullName: Zaya.Screenshot.Models.ICapturedFrame.Stride
+- uid: Zaya.Screenshot.Models.ICapturedFrame.Format*
+  commentId: Overload:Zaya.Screenshot.Models.ICapturedFrame.Format
+  href: Zaya.Screenshot.Models.ICapturedFrame.html#Zaya_Screenshot_Models_ICapturedFrame_Format
+  name: Format
+  nameWithType: ICapturedFrame.Format
+  fullName: Zaya.Screenshot.Models.ICapturedFrame.Format
+- uid: Zaya.Primitives.PixelFormat
+  commentId: T:Zaya.Primitives.PixelFormat
+  parent: Zaya.Primitives
+  isExternal: true
+  name: PixelFormat
+  nameWithType: PixelFormat
+  fullName: Zaya.Primitives.PixelFormat
+- uid: Zaya.Primitives
+  commentId: N:Zaya.Primitives
+  isExternal: true
+  name: Zaya.Primitives
+  nameWithType: Zaya.Primitives
+  fullName: Zaya.Primitives
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    isExternal: true
+  - name: .
+  - uid: Zaya.Primitives
+    name: Primitives
+    isExternal: true
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    isExternal: true
+  - name: .
+  - uid: Zaya.Primitives
+    name: Primitives
+    isExternal: true
+- uid: Zaya.Screenshot.Models.ICapturedFrame.GetPixelData*
+  commentId: Overload:Zaya.Screenshot.Models.ICapturedFrame.GetPixelData
+  href: Zaya.Screenshot.Models.ICapturedFrame.html#Zaya_Screenshot_Models_ICapturedFrame_GetPixelData
+  name: GetPixelData
+  nameWithType: ICapturedFrame.GetPixelData
+  fullName: Zaya.Screenshot.Models.ICapturedFrame.GetPixelData
+- uid: System.ReadOnlySpan{System.Byte}
+  commentId: T:System.ReadOnlySpan{System.Byte}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<byte>
+  nameWithType: ReadOnlySpan<byte>
+  fullName: System.ReadOnlySpan<byte>
+  nameWithType.vb: ReadOnlySpan(Of Byte)
+  fullName.vb: System.ReadOnlySpan(Of Byte)
+  name.vb: ReadOnlySpan(Of Byte)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Zaya.Screenshot.Models.ICapturedFrame.ToByteArray*
+  commentId: Overload:Zaya.Screenshot.Models.ICapturedFrame.ToByteArray
+  href: Zaya.Screenshot.Models.ICapturedFrame.html#Zaya_Screenshot_Models_ICapturedFrame_ToByteArray
+  name: ToByteArray
+  nameWithType: ICapturedFrame.ToByteArray
+  fullName: Zaya.Screenshot.Models.ICapturedFrame.ToByteArray
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )

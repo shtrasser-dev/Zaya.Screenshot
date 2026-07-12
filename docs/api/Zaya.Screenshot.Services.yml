@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: Zaya.Screenshot.Services
+  commentId: N:Zaya.Screenshot.Services
+  id: Zaya.Screenshot.Services
+  children:
+  - Zaya.Screenshot.Services.ICaptureService
+  - Zaya.Screenshot.Services.ICaptureSession
+  langs:
+  - csharp
+  - vb
+  name: Zaya.Screenshot.Services
+  nameWithType: Zaya.Screenshot.Services
+  fullName: Zaya.Screenshot.Services
+  type: Namespace
+  assemblies:
+  - Zaya.Screenshot
+references:
+- uid: Zaya.Screenshot.Services.ICaptureService
+  commentId: T:Zaya.Screenshot.Services.ICaptureService
+  parent: Zaya.Screenshot.Services
+  href: Zaya.Screenshot.Services.ICaptureService.html
+  name: ICaptureService
+  nameWithType: ICaptureService
+  fullName: Zaya.Screenshot.Services.ICaptureService
+- uid: Zaya.Screenshot.Services.ICaptureSession
+  commentId: T:Zaya.Screenshot.Services.ICaptureSession
+  href: Zaya.Screenshot.Services.ICaptureSession.html
+  name: ICaptureSession
+  nameWithType: ICaptureSession
+  fullName: Zaya.Screenshot.Services.ICaptureSession
+- uid: Zaya.Screenshot.Services
+  commentId: N:Zaya.Screenshot.Services
+  href: Zaya.html
+  name: Zaya.Screenshot.Services
+  nameWithType: Zaya.Screenshot.Services
+  fullName: Zaya.Screenshot.Services
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Services
+    name: Services
+    href: Zaya.Screenshot.Services.html
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Services
+    name: Services
+    href: Zaya.Screenshot.Services.html

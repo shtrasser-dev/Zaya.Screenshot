@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Version>0.2.0</Version>
+
+    <PackageId>Zaya.Screenshot</PackageId>
+    <Description>Core abstractions for Zaya.Screenshot: interfaces, pixel formats, and capture region types.</Description>
+    <PackageTags>screenshot;capture;screen;graphics-capture</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Authors>SHTrassEr</Authors>
+    <RepositoryUrl>https://github.com/shtrasser-dev/Zaya.Screenshot</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://shtrasser-dev.github.io/Zaya.Screenshot</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Zaya.Primitives" Version="0.1.0" />
+  </ItemGroup>
+
+  <Target Name="Docs">
+    <Exec Command="dotnet docfx docfx.json" WorkingDirectory="$(MSBuildThisFileDirectory)..\.." />
+  </Target>
+
+</Project>

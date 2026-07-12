@@ -1,0 +1,97 @@
+### YamlMime:ManagedReference
+items:
+- uid: Zaya.Screenshot.Models
+  commentId: N:Zaya.Screenshot.Models
+  id: Zaya.Screenshot.Models
+  children:
+  - Zaya.Screenshot.Models.FullScreenDesktopRegion
+  - Zaya.Screenshot.Models.FullScreenWindowRegion
+  - Zaya.Screenshot.Models.ICaptureRegion
+  - Zaya.Screenshot.Models.ICapturedFrame
+  - Zaya.Screenshot.Models.PixelFormatExtensions
+  - Zaya.Screenshot.Models.RectDesktopRegion
+  - Zaya.Screenshot.Models.RectWindowRegion
+  langs:
+  - csharp
+  - vb
+  name: Zaya.Screenshot.Models
+  nameWithType: Zaya.Screenshot.Models
+  fullName: Zaya.Screenshot.Models
+  type: Namespace
+  assemblies:
+  - Zaya.Screenshot
+references:
+- uid: Zaya.Screenshot.Models.FullScreenDesktopRegion
+  commentId: T:Zaya.Screenshot.Models.FullScreenDesktopRegion
+  href: Zaya.Screenshot.Models.FullScreenDesktopRegion.html
+  name: FullScreenDesktopRegion
+  nameWithType: FullScreenDesktopRegion
+  fullName: Zaya.Screenshot.Models.FullScreenDesktopRegion
+- uid: Zaya.Screenshot.Models.FullScreenWindowRegion
+  commentId: T:Zaya.Screenshot.Models.FullScreenWindowRegion
+  href: Zaya.Screenshot.Models.FullScreenWindowRegion.html
+  name: FullScreenWindowRegion
+  nameWithType: FullScreenWindowRegion
+  fullName: Zaya.Screenshot.Models.FullScreenWindowRegion
+- uid: Zaya.Screenshot.Models.ICapturedFrame
+  commentId: T:Zaya.Screenshot.Models.ICapturedFrame
+  parent: Zaya.Screenshot.Models
+  href: Zaya.Screenshot.Models.ICapturedFrame.html
+  name: ICapturedFrame
+  nameWithType: ICapturedFrame
+  fullName: Zaya.Screenshot.Models.ICapturedFrame
+- uid: Zaya.Screenshot.Models.ICaptureRegion
+  commentId: T:Zaya.Screenshot.Models.ICaptureRegion
+  parent: Zaya.Screenshot.Models
+  href: Zaya.Screenshot.Models.ICaptureRegion.html
+  name: ICaptureRegion
+  nameWithType: ICaptureRegion
+  fullName: Zaya.Screenshot.Models.ICaptureRegion
+- uid: Zaya.Screenshot.Models.PixelFormatExtensions
+  commentId: T:Zaya.Screenshot.Models.PixelFormatExtensions
+  href: Zaya.Screenshot.Models.PixelFormatExtensions.html
+  name: PixelFormatExtensions
+  nameWithType: PixelFormatExtensions
+  fullName: Zaya.Screenshot.Models.PixelFormatExtensions
+- uid: Zaya.Screenshot.Models.RectDesktopRegion
+  commentId: T:Zaya.Screenshot.Models.RectDesktopRegion
+  href: Zaya.Screenshot.Models.RectDesktopRegion.html
+  name: RectDesktopRegion
+  nameWithType: RectDesktopRegion
+  fullName: Zaya.Screenshot.Models.RectDesktopRegion
+- uid: Zaya.Screenshot.Models.RectWindowRegion
+  commentId: T:Zaya.Screenshot.Models.RectWindowRegion
+  href: Zaya.Screenshot.Models.RectWindowRegion.html
+  name: RectWindowRegion
+  nameWithType: RectWindowRegion
+  fullName: Zaya.Screenshot.Models.RectWindowRegion
+- uid: Zaya.Screenshot.Models
+  commentId: N:Zaya.Screenshot.Models
+  href: Zaya.html
+  name: Zaya.Screenshot.Models
+  nameWithType: Zaya.Screenshot.Models
+  fullName: Zaya.Screenshot.Models
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    href: Zaya.html
+  - name: .
+  - uid: Zaya.Screenshot
+    name: Screenshot
+    href: Zaya.Screenshot.html
+  - name: .
+  - uid: Zaya.Screenshot.Models
+    name: Models
+    href: Zaya.Screenshot.Models.html

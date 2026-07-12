@@ -1,0 +1,63 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": ["src/Zaya.Screenshot/Zaya.Screenshot.csproj", "src/Zaya.Screenshot.Impl.Windows/Zaya.Screenshot.Impl.Windows.csproj", "../Zaya.Primitives/src/Zaya.Primitives/Zaya.Primitives.csproj"],
+          "src": "."
+        }
+      ],
+      "dest": "docs/api",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/index.md"
+        ],
+        "src": "docs"
+      },
+      {
+        "files": [
+          "articles/**.md",
+          "articles/**/toc.yml",
+          "toc.yml",
+          "*.md"
+        ],
+        "src": "docs"
+      }
+    ],
+    "resource": [
+      {
+        "files": ["images/**"],
+        "src": "docs"
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "apidoc/**.md"
+        ],
+        "exclude": [
+          "apidoc/toc.yml"
+        ]
+      }
+    ],
+    "dest": "docs",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default"
+    ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  }
+}
