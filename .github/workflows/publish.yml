@@ -17,11 +17,16 @@ jobs:
       - name: Pack
         run: dotnet pack Zaya.Screenshot.Windows.sln -c Release -p:EnableWindowsTargeting=true
 
+      - name: Flatten packages
+        run: |
+          mkdir _packages
+          Get-ChildItem -Recurse -Filter *.nupkg -Path src | Move-Item -Destination _packages
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: nuget-package
-          path: src/**/bin/Release/*.nupkg
+          path: _packages
           retention-days: 1
 
   publish-github:
