@@ -18,7 +18,7 @@ High-performance screen capture library for Windows .NET 8.0+ applications. Capt
 ## Installation
 
 ```xml
-<PackageReference Include="Zaya.Screenshot.Impl.Windows" Version="0.3.0" />
+<PackageReference Include="Zaya.Screenshot.Impl.Windows" Version="0.1.0" />
 ```
 
 ## Quick Start

@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <LangVersion>13</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Version>0.3.0</Version>
+    <Version>0.1.0</Version>
 
     <PackageId>Zaya.Screenshot.Impl.Windows</PackageId>
     <Description>High-performance screen capture library for Windows using Windows Graphics Capture API and Direct3D 11.</Description>
