@@ -19,7 +19,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: PixelFormatExtensions
     path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
     startLine: 7
@@ -57,7 +57,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: ToSkiaSharpColorTypeValue
     path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
     startLine: 12
@@ -91,7 +91,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: ToImageSharpPixelTypeName
     path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
     startLine: 27
@@ -125,7 +125,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: ToImageSharpPixelType
     path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
     startLine: 42

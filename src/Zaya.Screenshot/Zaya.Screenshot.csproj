@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
 
     <PackageId>Zaya.Screenshot</PackageId>
     <Description>Core abstractions for Zaya.Screenshot: interfaces, pixel formats, and capture region types.</Description>

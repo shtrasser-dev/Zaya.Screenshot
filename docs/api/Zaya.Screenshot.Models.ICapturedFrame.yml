@@ -22,7 +22,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: ICapturedFrame
     path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
     startLine: 8
@@ -56,7 +56,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Width
     path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
     startLine: 13
@@ -87,7 +87,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Height
     path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
     startLine: 18
@@ -118,7 +118,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Stride
     path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
     startLine: 24
@@ -152,7 +152,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Format
     path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
     startLine: 30
@@ -186,7 +186,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: GetPixelData
     path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
     startLine: 36
@@ -219,7 +219,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: ToByteArray
     path: src/Zaya.Screenshot/Models/ICapturedFrame.cs
     startLine: 43

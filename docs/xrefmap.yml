@@ -180,6 +180,32 @@ references:
   isSpec: "True"
   fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Dispose
   nameWithType: CaptureService.Dispose
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.EngineId
+  name: EngineId
+  href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_EngineId
+  commentId: P:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.EngineId
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.EngineId
+  nameWithType: CaptureService.EngineId
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.EngineId*
+  name: EngineId
+  href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_EngineId_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.EngineId
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.EngineId
+  nameWithType: CaptureService.EngineId
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.IsAvailable
+  name: IsAvailable
+  href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_IsAvailable
+  commentId: P:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.IsAvailable
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.IsAvailable
+  nameWithType: CaptureService.IsAvailable
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.IsAvailable*
+  name: IsAvailable
+  href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_IsAvailable_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.IsAvailable
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.IsAvailable
+  nameWithType: CaptureService.IsAvailable
 - uid: Zaya.Screenshot.Models
   name: Zaya.Screenshot.Models
   href: api/Zaya.Screenshot.Models.html
@@ -675,6 +701,32 @@ references:
   isSpec: "True"
   fullName: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync
   nameWithType: ICaptureService.CreateSessionAsync
+- uid: Zaya.Screenshot.Services.ICaptureService.EngineId
+  name: EngineId
+  href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_EngineId
+  commentId: P:Zaya.Screenshot.Services.ICaptureService.EngineId
+  fullName: Zaya.Screenshot.Services.ICaptureService.EngineId
+  nameWithType: ICaptureService.EngineId
+- uid: Zaya.Screenshot.Services.ICaptureService.EngineId*
+  name: EngineId
+  href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_EngineId_
+  commentId: Overload:Zaya.Screenshot.Services.ICaptureService.EngineId
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Services.ICaptureService.EngineId
+  nameWithType: ICaptureService.EngineId
+- uid: Zaya.Screenshot.Services.ICaptureService.IsAvailable
+  name: IsAvailable
+  href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_IsAvailable
+  commentId: P:Zaya.Screenshot.Services.ICaptureService.IsAvailable
+  fullName: Zaya.Screenshot.Services.ICaptureService.IsAvailable
+  nameWithType: ICaptureService.IsAvailable
+- uid: Zaya.Screenshot.Services.ICaptureService.IsAvailable*
+  name: IsAvailable
+  href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_IsAvailable_
+  commentId: Overload:Zaya.Screenshot.Services.ICaptureService.IsAvailable
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Services.ICaptureService.IsAvailable
+  nameWithType: ICaptureService.IsAvailable
 - uid: Zaya.Screenshot.Services.ICaptureSession
   name: ICaptureSession
   href: api/Zaya.Screenshot.Services.ICaptureSession.html

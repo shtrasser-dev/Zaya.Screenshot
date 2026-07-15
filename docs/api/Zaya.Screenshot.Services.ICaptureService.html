@@ -86,6 +86,73 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface ICaptureService : IDisposable</code></pre>
   </div>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Services_ICaptureService_EngineId.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Services.ICaptureService.EngineId%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot/Services/ICaptureService.cs/#L14">View Source</a>
+  </span>
+  <a id="Zaya_Screenshot_Services_ICaptureService_EngineId_" data-uid="Zaya.Screenshot.Services.ICaptureService.EngineId*"></a>
+  <h4 id="Zaya_Screenshot_Services_ICaptureService_EngineId" data-uid="Zaya.Screenshot.Services.ICaptureService.EngineId">EngineId</h4>
+  <div class="markdown level1 summary"><p>Gets a unique identifier for this capture engine (e.g., &quot;graphics-capture&quot;).
+Used for profile serialization and engine lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string EngineId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Services_ICaptureService_IsAvailable.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Services.ICaptureService.IsAvailable%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot/Services/ICaptureService.cs/#L21">View Source</a>
+  </span>
+  <a id="Zaya_Screenshot_Services_ICaptureService_IsAvailable_" data-uid="Zaya.Screenshot.Services.ICaptureService.IsAvailable*"></a>
+  <h4 id="Zaya_Screenshot_Services_ICaptureService_IsAvailable" data-uid="Zaya.Screenshot.Services.ICaptureService.IsAvailable">IsAvailable</h4>
+  <div class="markdown level1 summary"><p>Gets whether this capture engine is available on the current system.
+A lightweight check that does not initialize any resources.
+Returns <code>false</code> when the required platform APIs are not present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsAvailable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
@@ -93,7 +160,7 @@
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot/Services/ICaptureService.cs/#L16">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot/Services/ICaptureService.cs/#L29">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_" data-uid="Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync*"></a>
   <h4 id="Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_" data-uid="Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)">CreateSessionAsync(ICaptureRegion, CancellationToken)</h4>

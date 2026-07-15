@@ -6,6 +6,8 @@ items:
   parent: Zaya.Screenshot.Services
   children:
   - Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+  - Zaya.Screenshot.Services.ICaptureService.EngineId
+  - Zaya.Screenshot.Services.ICaptureService.IsAvailable
   langs:
   - csharp
   - vb
@@ -17,7 +19,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Services/ICaptureService.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: ICaptureService
     path: src/Zaya.Screenshot/Services/ICaptureService.cs
     startLine: 7
@@ -33,6 +35,76 @@ items:
   - Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService
   inheritedMembers:
   - System.IDisposable.Dispose
+- uid: Zaya.Screenshot.Services.ICaptureService.EngineId
+  commentId: P:Zaya.Screenshot.Services.ICaptureService.EngineId
+  id: EngineId
+  parent: Zaya.Screenshot.Services.ICaptureService
+  langs:
+  - csharp
+  - vb
+  name: EngineId
+  nameWithType: ICaptureService.EngineId
+  fullName: Zaya.Screenshot.Services.ICaptureService.EngineId
+  type: Property
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Services/ICaptureService.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
+    id: EngineId
+    path: src/Zaya.Screenshot/Services/ICaptureService.cs
+    startLine: 13
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Services
+  summary: >-
+    Gets a unique identifier for this capture engine (e.g., "graphics-capture").
+
+    Used for profile serialization and engine lookup.
+  example: []
+  syntax:
+    content: string EngineId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property EngineId As String
+  overload: Zaya.Screenshot.Services.ICaptureService.EngineId*
+- uid: Zaya.Screenshot.Services.ICaptureService.IsAvailable
+  commentId: P:Zaya.Screenshot.Services.ICaptureService.IsAvailable
+  id: IsAvailable
+  parent: Zaya.Screenshot.Services.ICaptureService
+  langs:
+  - csharp
+  - vb
+  name: IsAvailable
+  nameWithType: ICaptureService.IsAvailable
+  fullName: Zaya.Screenshot.Services.ICaptureService.IsAvailable
+  type: Property
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Services/ICaptureService.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
+    id: IsAvailable
+    path: src/Zaya.Screenshot/Services/ICaptureService.cs
+    startLine: 20
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Services
+  summary: >-
+    Gets whether this capture engine is available on the current system.
+
+    A lightweight check that does not initialize any resources.
+
+    Returns <code>false</code> when the required platform APIs are not present.
+  example: []
+  syntax:
+    content: bool IsAvailable { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property IsAvailable As Boolean
+  overload: Zaya.Screenshot.Services.ICaptureService.IsAvailable*
 - uid: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
   commentId: M:Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
   id: CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
@@ -48,10 +120,10 @@ items:
     remote:
       path: src/Zaya.Screenshot/Services/ICaptureService.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: CreateSessionAsync
     path: src/Zaya.Screenshot/Services/ICaptureService.cs
-    startLine: 15
+    startLine: 28
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Services
@@ -139,6 +211,40 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Zaya.Screenshot.Services.ICaptureService.EngineId*
+  commentId: Overload:Zaya.Screenshot.Services.ICaptureService.EngineId
+  href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_EngineId
+  name: EngineId
+  nameWithType: ICaptureService.EngineId
+  fullName: Zaya.Screenshot.Services.ICaptureService.EngineId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Zaya.Screenshot.Services.ICaptureService.IsAvailable*
+  commentId: Overload:Zaya.Screenshot.Services.ICaptureService.IsAvailable
+  href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_IsAvailable
+  name: IsAvailable
+  nameWithType: ICaptureService.IsAvailable
+  fullName: Zaya.Screenshot.Services.ICaptureService.IsAvailable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync*
   commentId: Overload:Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync
   href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_

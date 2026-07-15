@@ -19,7 +19,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/RectWindowRegion.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: RectWindowRegion
     path: src/Zaya.Screenshot/Models/RectWindowRegion.cs
     startLine: 9
@@ -58,7 +58,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/RectWindowRegion.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: PixelFormat
     path: src/Zaya.Screenshot/Models/RectWindowRegion.cs
     startLine: 15
@@ -94,7 +94,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/RectWindowRegion.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: WindowHandle
     path: src/Zaya.Screenshot/Models/RectWindowRegion.cs
     startLine: 20
@@ -125,7 +125,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/RectWindowRegion.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Rectangle
     path: src/Zaya.Screenshot/Models/RectWindowRegion.cs
     startLine: 25

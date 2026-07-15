@@ -119,7 +119,7 @@ Supports capturing windows and monitors in full-screen or rectangular regions.</
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService__ctor.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.%23ctor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L27">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L33">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService__ctor_" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.#ctor*"></a>
   <h4 id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService__ctor" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.#ctor">CaptureService()</h4>
@@ -152,6 +152,73 @@ Creates a Direct3D 11 device and converter.</p>
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_EngineId.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.EngineId%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L22">View Source</a>
+  </span>
+  <a id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_EngineId_" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.EngineId*"></a>
+  <h4 id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_EngineId" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.EngineId">EngineId</h4>
+  <div class="markdown level1 summary"><p>Gets a unique identifier for this capture engine (e.g., &quot;graphics-capture&quot;).
+Used for profile serialization and engine lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string EngineId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_IsAvailable.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.IsAvailable%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L25">View Source</a>
+  </span>
+  <a id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_IsAvailable_" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.IsAvailable*"></a>
+  <h4 id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_IsAvailable" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.IsAvailable">IsAvailable</h4>
+  <div class="markdown level1 summary"><p>Gets whether this capture engine is available on the current system.
+A lightweight check that does not initialize any resources.
+Returns <code>false</code> when the required platform APIs are not present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAvailable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
@@ -159,7 +226,7 @@ Creates a Direct3D 11 device and converter.</p>
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L46">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L52">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_CreateSessionAsync_" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync*"></a>
   <h4 id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)">CreateSessionAsync(ICaptureRegion, CancellationToken)</h4>
@@ -243,7 +310,7 @@ For monitor captures, the first few frames are discarded to avoid initial black 
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Dispose.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Dispose%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L210">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L216">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Dispose_" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Dispose*"></a>
   <h4 id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Dispose" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Dispose">Dispose()</h4>

@@ -18,7 +18,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/FullScreenWindowRegion.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: FullScreenWindowRegion
     path: src/Zaya.Screenshot/Models/FullScreenWindowRegion.cs
     startLine: 7
@@ -57,7 +57,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/FullScreenWindowRegion.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: PixelFormat
     path: src/Zaya.Screenshot/Models/FullScreenWindowRegion.cs
     startLine: 13
@@ -93,7 +93,7 @@ items:
     remote:
       path: src/Zaya.Screenshot/Models/FullScreenWindowRegion.cs
       branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot.git
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: WindowHandle
     path: src/Zaya.Screenshot/Models/FullScreenWindowRegion.cs
     startLine: 18
