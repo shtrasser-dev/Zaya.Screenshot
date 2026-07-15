@@ -18,6 +18,12 @@ public sealed class CaptureService : ICaptureService
     private readonly Direct3DConverterService _converter;
     private bool _disposed;
 
+    /// <inheritdoc />
+    public string EngineId => "graphics-capture";
+
+    /// <inheritdoc />
+    public bool IsAvailable => GraphicsCaptureSession.IsSupported();
+
     /// <summary>
     /// Initializes a new instance of the <see cref="CaptureService"/> class.
     /// Creates a Direct3D 11 device and converter.

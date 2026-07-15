@@ -15,3 +15,5 @@ TestResults/
 
 # DocFX source maps
 docs/**/*.js.map
+
+out/

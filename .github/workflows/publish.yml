@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  pack:
+  build:
     runs-on: windows-2022
     steps:
       - uses: actions/checkout@v4
@@ -13,23 +13,25 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
-      - name: Pack
-        run: dotnet pack Zaya.Screenshot.Windows.sln -c Release -p:EnableWindowsTargeting=true
+      - name: Build plugin & NuGet
+        run: build.cmd
 
-      - name: Flatten packages
-        run: |
-          mkdir _packages
-          Get-ChildItem -Recurse -Filter *.nupkg -Path src | Move-Item -Destination _packages
-
-      - name: Upload artifact
+      - name: Upload NuGet artifact
         uses: actions/upload-artifact@v4
         with:
-          name: nuget-package
-          path: _packages
+          name: nuget
+          path: out/*.nupkg
+          retention-days: 1
+
+      - name: Upload plugin artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: plugin
+          path: out/*.zip
           retention-days: 1
 
   publish-github:
-    needs: pack
+    needs: build
     if: contains(github.server_url, 'github.com')
     runs-on: ubuntu-latest
     permissions:
@@ -37,7 +39,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with:
-          name: nuget-package
+          name: nuget
           path: packages
 
       - uses: actions/setup-dotnet@v4
@@ -52,13 +54,13 @@ jobs:
             --skip-duplicate
 
   publish-gitverse:
-    needs: pack
+    needs: build
     if: contains(github.server_url, 'gitverse.ru')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
         with:
-          name: nuget-package
+          name: nuget
           path: packages
 
       - uses: actions/setup-dotnet@v4
@@ -73,7 +75,7 @@ jobs:
             --skip-duplicate
 
   publish-nuget:
-    needs: pack
+    needs: build
     if: contains(github.server_url, 'github.com')
     runs-on: ubuntu-latest
     permissions:
@@ -81,7 +83,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with:
-          name: nuget-package
+          name: nuget
           path: packages
 
       - uses: actions/setup-dotnet@v4
@@ -95,4 +97,48 @@ jobs:
           user: shtrasser
 
       - name: Push to NuGet.org
-        run: dotnet nuget push packages/*.nupkg --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+        run: |
+          dotnet nuget push packages/*.nupkg \
+            --api-key ${{ steps.login.outputs.NUGET_API_KEY }} \
+            --source https://api.nuget.org/v3/index.json \
+            --skip-duplicate
+
+  create-release:
+    needs: build
+    if: contains(github.server_url, 'github.com')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: plugin
+          path: plugin
+
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const zipFile = fs.readdirSync('plugin').find(f => f.endsWith('.zip'));
+            if (!zipFile) { core.setFailed('No zip file found'); return; }
+
+            const version = zipFile.replace(/.*-(\d+\.\d+\.\d+)\.zip$/, '$1');
+            const tag = `plugin-v${version}`;
+
+            const release = await github.rest.repos.createRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag_name: tag,
+              name: `Plugin v${version}`,
+              body: `Plugin release for Zaya.Screenshot v${version}.`,
+              generate_release_notes: true
+            });
+
+            await github.rest.repos.uploadReleaseAsset({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              release_id: release.data.id,
+              name: zipFile,
+              data: fs.readFileSync(path.join('plugin', zipFile))
+            });
