@@ -4,6 +4,20 @@
   "files": [
     {
       "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.CaptureConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Impl.Windows.CaptureConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Impl.Windows.CaptureConfig",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.CaptureConfig.yml\" sourcestartlinenumber=\"1\">Typed configuration for <xref href=\"Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService\" data-throw-if-not-resolved=\"false\"></xref>.\nConverts to the dictionary format expected by <code>InitializeAsync</code>.\nEmpty for now — no engine-specific settings yet.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.yml",
       "output": {
         ".html": {
@@ -14,7 +28,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Zaya.Screenshot.Impl.Windows.Models.CapturedFrame",
-      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.yml\" sourcestartlinenumber=\"1\">Implementation of <xref href=\"Zaya.Screenshot.Models.ICapturedFrame\" data-throw-if-not-resolved=\"false\"></xref> with direct pixel data access.\nOwns a byte array rented from <xref href=\"System.Buffers.ArrayPool%601.Shared\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.yml\" sourcestartlinenumber=\"1\">Implementation of <xref href=\"Zaya.Primitives.IRawImage\" data-throw-if-not-resolved=\"false\"></xref> with direct pixel data access.\nOwns a byte array rented from <xref href=\"System.Buffers.ArrayPool%601.Shared\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -42,7 +56,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService",
-      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.yml\" sourcestartlinenumber=\"1\">Implementation of <xref href=\"Zaya.Screenshot.Services.ICaptureService\" data-throw-if-not-resolved=\"false\"></xref> using Windows Graphics Capture API and Direct3D 11.\nSupports capturing windows and monitors in full-screen or rectangular regions.</p>\n"
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.yml\" sourcestartlinenumber=\"1\">Implementation of <xref href=\"Zaya.Screenshot.Services.ICaptureService\" data-throw-if-not-resolved=\"false\"></xref> using Windows Graphics Capture API and Direct3D 11.\nSupports capturing windows and monitors in full-screen or rectangular regions.\nCall <xref href=\"Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary%7bSystem.String%2cSystem.Object%7d%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref> before creating sessions.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -56,6 +70,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Zaya.Screenshot.Impl.Windows.Services.Impl",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Impl.Windows.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Impl.Windows",
       "Summary": null
     },
     {
@@ -196,7 +224,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Zaya.Screenshot.Services.ICaptureService",
-      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Services.ICaptureService.yml\" sourcestartlinenumber=\"1\">Service for creating screen capture sessions targeting a specific window or monitor region.</p>\n"
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Services.ICaptureService.yml\" sourcestartlinenumber=\"1\">Service for creating screen capture sessions targeting a specific window or monitor region.\nCall <xref href=\"Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary%7bSystem.String%2cSystem.Object%7d%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref> before creating sessions.</p>\n"
     },
     {
       "type": "ManagedReference",

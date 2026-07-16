@@ -23,7 +23,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: ICaptureSession
     path: src/Zaya.Screenshot/Services/ICaptureSession.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Services
@@ -52,7 +52,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Region
     path: src/Zaya.Screenshot/Services/ICaptureSession.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Services
@@ -83,22 +83,22 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: CaptureAsync
     path: src/Zaya.Screenshot/Services/ICaptureSession.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Services
   summary: Captures the next available frame.
   example: []
   syntax:
-    content: Task<ICapturedFrame?> CaptureAsync(CancellationToken cancellationToken = default)
+    content: Task<IRawImage?> CaptureAsync(CancellationToken cancellationToken = default)
     parameters:
     - id: cancellationToken
       type: System.Threading.CancellationToken
       description: Cancellation token.
     return:
-      type: System.Threading.Tasks.Task{Zaya.Screenshot.Models.ICapturedFrame}
-      description: The captured frame, or null if no frame is available.
-    content.vb: Function CaptureAsync(cancellationToken As CancellationToken = Nothing) As Task(Of ICapturedFrame)
+      type: System.Threading.Tasks.Task{Zaya.Primitives.IRawImage}
+      description: The captured raw image, or null if no frame is available.
+    content.vb: Function CaptureAsync(cancellationToken As CancellationToken = Nothing) As Task(Of IRawImage)
   overload: Zaya.Screenshot.Services.ICaptureSession.CaptureAsync*
 - uid: Zaya.Screenshot.Services.ICaptureSession.Resume
   commentId: M:Zaya.Screenshot.Services.ICaptureSession.Resume
@@ -118,7 +118,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Resume
     path: src/Zaya.Screenshot/Services/ICaptureSession.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Services
@@ -146,7 +146,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Pause
     path: src/Zaya.Screenshot/Services/ICaptureSession.cs
-    startLine: 29
+    startLine: 30
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Services
@@ -281,26 +281,26 @@ references:
   name: CancellationToken
   nameWithType: CancellationToken
   fullName: System.Threading.CancellationToken
-- uid: System.Threading.Tasks.Task{Zaya.Screenshot.Models.ICapturedFrame}
-  commentId: T:System.Threading.Tasks.Task{Zaya.Screenshot.Models.ICapturedFrame}
+- uid: System.Threading.Tasks.Task{Zaya.Primitives.IRawImage}
+  commentId: T:System.Threading.Tasks.Task{Zaya.Primitives.IRawImage}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.Task`1
   href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<ICapturedFrame>
-  nameWithType: Task<ICapturedFrame>
-  fullName: System.Threading.Tasks.Task<Zaya.Screenshot.Models.ICapturedFrame>
-  nameWithType.vb: Task(Of ICapturedFrame)
-  fullName.vb: System.Threading.Tasks.Task(Of Zaya.Screenshot.Models.ICapturedFrame)
-  name.vb: Task(Of ICapturedFrame)
+  name: Task<IRawImage>
+  nameWithType: Task<IRawImage>
+  fullName: System.Threading.Tasks.Task<Zaya.Primitives.IRawImage>
+  nameWithType.vb: Task(Of IRawImage)
+  fullName.vb: System.Threading.Tasks.Task(Of Zaya.Primitives.IRawImage)
+  name.vb: Task(Of IRawImage)
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
     name: Task
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   - name: <
-  - uid: Zaya.Screenshot.Models.ICapturedFrame
-    name: ICapturedFrame
-    href: Zaya.Screenshot.Models.ICapturedFrame.html
+  - uid: Zaya.Primitives.IRawImage
+    name: IRawImage
+    isExternal: true
   - name: '>'
   spec.vb:
   - uid: System.Threading.Tasks.Task`1
@@ -310,9 +310,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: Zaya.Screenshot.Models.ICapturedFrame
-    name: ICapturedFrame
-    href: Zaya.Screenshot.Models.ICapturedFrame.html
+  - uid: Zaya.Primitives.IRawImage
+    name: IRawImage
+    isExternal: true
   - name: )
 - uid: System.Threading
   commentId: N:System.Threading

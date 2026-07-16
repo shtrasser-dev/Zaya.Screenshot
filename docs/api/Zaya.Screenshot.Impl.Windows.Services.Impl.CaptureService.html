@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class CaptureService ">
     
-    <meta name="description" content="Implementation of  using Windows Graphics Capture API and Direct3D 11. Supports capturing windows and monitors in full-screen or rectangular regions.">
+    <meta name="description" content="Implementation of  using Windows Graphics Capture API and Direct3D 11. Supports capturing windows and monitors in full-screen or rectangular regions. Call  before creating sessions.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -72,7 +72,8 @@
 
   <h1 id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService" class="text-break">Class CaptureService</h1>
   <div class="markdown level0 summary"><p>Implementation of <a class="xref" href="Zaya.Screenshot.Services.ICaptureService.html">ICaptureService</a> using Windows Graphics Capture API and Direct3D 11.
-Supports capturing windows and monitors in full-screen or rectangular regions.</p>
+Supports capturing windows and monitors in full-screen or rectangular regions.
+Call <a class="xref" href="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_InitializeAsync_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_">InitializeAsync(IReadOnlyDictionary&lt;string, object?&gt;?, CancellationToken)</a> before creating sessions.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -119,47 +120,88 @@ Supports capturing windows and monitors in full-screen or rectangular regions.</
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService__ctor.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.%23ctor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L33">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L45">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService__ctor_" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.#ctor*"></a>
   <h4 id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService__ctor" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.#ctor">CaptureService()</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html">CaptureService</a> class.
-Creates a Direct3D 11 device and converter.</p>
+The constructor is lightweight — Direct3D initialization is deferred to <a class="xref" href="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_InitializeAsync_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_">InitializeAsync(IReadOnlyDictionary&lt;string, object?&gt;?, CancellationToken)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CaptureService()</code></pre>
   </div>
-  <h5 class="exceptions">Exceptions</h5>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Description.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Description%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L33">View Source</a>
+  </span>
+  <a id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Description_" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Description*"></a>
+  <h4 id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Description" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Gets the UI description for this engine (localized).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LocalizedString Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Condition</th>
+        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></td>
-        <td><p>Thrown when Windows Graphics Capture is not supported on this system.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.comexception">COMException</a></td>
-        <td><p>Thrown when the Direct3D device cannot be created.</p>
-</td>
+        <td><span class="xref">LocalizedString</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_DisplayName.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.DisplayName%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L30">View Source</a>
+  </span>
+  <a id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_DisplayName_" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.DisplayName*"></a>
+  <h4 id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_DisplayName" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.DisplayName">DisplayName</h4>
+  <div class="markdown level1 summary"><p>Gets the UI display name for this engine (localized).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LocalizedString DisplayName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LocalizedString</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_EngineId.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.EngineId%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L22">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L27">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_EngineId_" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.EngineId*"></a>
   <h4 id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_EngineId" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.EngineId">EngineId</h4>
@@ -191,13 +233,12 @@ Used for profile serialization and engine lookup.</p>
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_IsAvailable.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.IsAvailable%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L25">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L39">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_IsAvailable_" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.IsAvailable*"></a>
   <h4 id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_IsAvailable" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.IsAvailable">IsAvailable</h4>
-  <div class="markdown level1 summary"><p>Gets whether this capture engine is available on the current system.
-A lightweight check that does not initialize any resources.
-Returns <code>false</code> when the required platform APIs are not present.</p>
+  <div class="markdown level1 summary"><p>Gets whether this capture engine is initialized and ready.
+Returns <code>true</code> only after successful <a class="xref" href="Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_InitializeAsync_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_">InitializeAsync(IReadOnlyDictionary&lt;string, object?&gt;?, CancellationToken)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -219,6 +260,37 @@ Returns <code>false</code> when the required platform APIs are not present.</p>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Settings.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Settings%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L36">View Source</a>
+  </span>
+  <a id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Settings_" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Settings*"></a>
+  <h4 id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Settings" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Settings">Settings</h4>
+  <div class="markdown level1 summary"><p>Gets the list of engine-specific settings that can be configured via UI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;SettingDescriptor&gt; Settings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<span class="xref">SettingDescriptor</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
@@ -226,12 +298,11 @@ Returns <code>false</code> when the required platform APIs are not present.</p>
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L52">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L64">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_CreateSessionAsync_" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync*"></a>
   <h4 id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)">CreateSessionAsync(ICaptureRegion, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Creates a new capture session for the specified region.
-For monitor captures, the first few frames are discarded to avoid initial black frames.</p>
+  <div class="markdown level1 summary"><p>Creates a new capture session for the specified region.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -251,8 +322,7 @@ For monitor captures, the first few frames are discarded to avoid initial black 
       <tr>
         <td><a class="xref" href="Zaya.Screenshot.Models.ICaptureRegion.html">ICaptureRegion</a></td>
         <td><span class="parametername">region</span></td>
-        <td><p>The region to capture. Must be one of <a class="xref" href="Zaya.Screenshot.Models.FullScreenWindowRegion.html">FullScreenWindowRegion</a>,
-<a class="xref" href="Zaya.Screenshot.Models.RectWindowRegion.html">RectWindowRegion</a>, <a class="xref" href="Zaya.Screenshot.Models.FullScreenDesktopRegion.html">FullScreenDesktopRegion</a>, or <a class="xref" href="Zaya.Screenshot.Models.RectDesktopRegion.html">RectDesktopRegion</a>.</p>
+        <td><p>The region to capture (window or monitor, full-screen or rect).</p>
 </td>
       </tr>
       <tr>
@@ -279,48 +349,76 @@ For monitor captures, the first few frames are discarded to avoid initial black 
       </tr>
     </tbody>
   </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p>Thrown when <code class="paramref">region</code> is null.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
-        <td><p>Thrown when the GraphicsCaptureItem cannot be created.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></td>
-        <td><p>Thrown when the region type is not recognized.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Dispose.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Dispose%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L216">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L227">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Dispose_" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Dispose*"></a>
   <h4 id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Dispose" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Dispose">Dispose()</h4>
-  <div class="markdown level1 summary"><p>Releases the underlying Direct3D resources.</p>
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_InitializeAsync_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary%7BSystem.String%2CSystem.Object%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L50">View Source</a>
+  </span>
+  <a id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_InitializeAsync_" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync*"></a>
+  <h4 id="Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_InitializeAsync_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_" data-uid="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)">InitializeAsync(IReadOnlyDictionary&lt;string, object?&gt;?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Initializes the engine with the specified settings.
+Must be called before <a class="xref" href="Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_">CreateSessionAsync(ICaptureRegion, CancellationToken)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task InitializeAsync(IReadOnlyDictionary&lt;string, object?&gt;? engineSettings, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td><span class="parametername">engineSettings</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Zaya.Screenshot.Services.ICaptureService.html">ICaptureService</a>
@@ -340,7 +438,7 @@ For monitor captures, the first few frames are discarded to avoid initial black 
                     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                   </li>
                   <li>
-                    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs/#L18" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

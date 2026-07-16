@@ -1,6 +1,31 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: Zaya.Screenshot.Impl.Windows
+  name: Zaya.Screenshot.Impl.Windows
+  href: api/Zaya.Screenshot.Impl.Windows.html
+  commentId: N:Zaya.Screenshot.Impl.Windows
+  fullName: Zaya.Screenshot.Impl.Windows
+  nameWithType: Zaya.Screenshot.Impl.Windows
+- uid: Zaya.Screenshot.Impl.Windows.CaptureConfig
+  name: CaptureConfig
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureConfig.html
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureConfig
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureConfig
+  nameWithType: CaptureConfig
+- uid: Zaya.Screenshot.Impl.Windows.CaptureConfig.ToDictionary
+  name: ToDictionary()
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureConfig.html#Zaya_Screenshot_Impl_Windows_CaptureConfig_ToDictionary
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureConfig.ToDictionary
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureConfig.ToDictionary()
+  nameWithType: CaptureConfig.ToDictionary()
+- uid: Zaya.Screenshot.Impl.Windows.CaptureConfig.ToDictionary*
+  name: ToDictionary
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureConfig.html#Zaya_Screenshot_Impl_Windows_CaptureConfig_ToDictionary_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureConfig.ToDictionary
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureConfig.ToDictionary
+  nameWithType: CaptureConfig.ToDictionary
 - uid: Zaya.Screenshot.Impl.Windows.Models
   name: Zaya.Screenshot.Impl.Windows.Models
   href: api/Zaya.Screenshot.Impl.Windows.Models.html
@@ -167,6 +192,32 @@ references:
   isSpec: "True"
   fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync
   nameWithType: CaptureService.CreateSessionAsync
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Description
+  name: Description
+  href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Description
+  commentId: P:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Description
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Description
+  nameWithType: CaptureService.Description
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Description*
+  name: Description
+  href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Description_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Description
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Description
+  nameWithType: CaptureService.Description
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.DisplayName
+  name: DisplayName
+  href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_DisplayName
+  commentId: P:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.DisplayName
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.DisplayName
+  nameWithType: CaptureService.DisplayName
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.DisplayName*
+  name: DisplayName
+  href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_DisplayName_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.DisplayName
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.DisplayName
+  nameWithType: CaptureService.DisplayName
 - uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Dispose
   name: Dispose()
   href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Dispose
@@ -193,6 +244,22 @@ references:
   isSpec: "True"
   fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.EngineId
   nameWithType: CaptureService.EngineId
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
+  name: InitializeAsync(IReadOnlyDictionary<string, object?>?, CancellationToken)
+  href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_InitializeAsync_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_
+  commentId: M:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
+  name.vb: InitializeAsync(IReadOnlyDictionary(Of String, Object), CancellationToken)
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary<string, object?>?, System.Threading.CancellationToken)
+  fullName.vb: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary(Of String, Object), System.Threading.CancellationToken)
+  nameWithType: CaptureService.InitializeAsync(IReadOnlyDictionary<string, object?>?, CancellationToken)
+  nameWithType.vb: CaptureService.InitializeAsync(IReadOnlyDictionary(Of String, Object), CancellationToken)
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync*
+  name: InitializeAsync
+  href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_InitializeAsync_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync
+  nameWithType: CaptureService.InitializeAsync
 - uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.IsAvailable
   name: IsAvailable
   href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_IsAvailable
@@ -206,6 +273,19 @@ references:
   isSpec: "True"
   fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.IsAvailable
   nameWithType: CaptureService.IsAvailable
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Settings
+  name: Settings
+  href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Settings
+  commentId: P:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Settings
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Settings
+  nameWithType: CaptureService.Settings
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Settings*
+  name: Settings
+  href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_Settings_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Settings
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.Settings
+  nameWithType: CaptureService.Settings
 - uid: Zaya.Screenshot.Models
   name: Zaya.Screenshot.Models
   href: api/Zaya.Screenshot.Models.html
@@ -701,6 +781,32 @@ references:
   isSpec: "True"
   fullName: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync
   nameWithType: ICaptureService.CreateSessionAsync
+- uid: Zaya.Screenshot.Services.ICaptureService.Description
+  name: Description
+  href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_Description
+  commentId: P:Zaya.Screenshot.Services.ICaptureService.Description
+  fullName: Zaya.Screenshot.Services.ICaptureService.Description
+  nameWithType: ICaptureService.Description
+- uid: Zaya.Screenshot.Services.ICaptureService.Description*
+  name: Description
+  href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_Description_
+  commentId: Overload:Zaya.Screenshot.Services.ICaptureService.Description
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Services.ICaptureService.Description
+  nameWithType: ICaptureService.Description
+- uid: Zaya.Screenshot.Services.ICaptureService.DisplayName
+  name: DisplayName
+  href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_DisplayName
+  commentId: P:Zaya.Screenshot.Services.ICaptureService.DisplayName
+  fullName: Zaya.Screenshot.Services.ICaptureService.DisplayName
+  nameWithType: ICaptureService.DisplayName
+- uid: Zaya.Screenshot.Services.ICaptureService.DisplayName*
+  name: DisplayName
+  href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_DisplayName_
+  commentId: Overload:Zaya.Screenshot.Services.ICaptureService.DisplayName
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Services.ICaptureService.DisplayName
+  nameWithType: ICaptureService.DisplayName
 - uid: Zaya.Screenshot.Services.ICaptureService.EngineId
   name: EngineId
   href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_EngineId
@@ -714,6 +820,22 @@ references:
   isSpec: "True"
   fullName: Zaya.Screenshot.Services.ICaptureService.EngineId
   nameWithType: ICaptureService.EngineId
+- uid: Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
+  name: InitializeAsync(IReadOnlyDictionary<string, object?>?, CancellationToken)
+  href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_InitializeAsync_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_
+  commentId: M:Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
+  name.vb: InitializeAsync(IReadOnlyDictionary(Of String, Object), CancellationToken)
+  fullName: Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary<string, object?>?, System.Threading.CancellationToken)
+  fullName.vb: Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary(Of String, Object), System.Threading.CancellationToken)
+  nameWithType: ICaptureService.InitializeAsync(IReadOnlyDictionary<string, object?>?, CancellationToken)
+  nameWithType.vb: ICaptureService.InitializeAsync(IReadOnlyDictionary(Of String, Object), CancellationToken)
+- uid: Zaya.Screenshot.Services.ICaptureService.InitializeAsync*
+  name: InitializeAsync
+  href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_InitializeAsync_
+  commentId: Overload:Zaya.Screenshot.Services.ICaptureService.InitializeAsync
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Services.ICaptureService.InitializeAsync
+  nameWithType: ICaptureService.InitializeAsync
 - uid: Zaya.Screenshot.Services.ICaptureService.IsAvailable
   name: IsAvailable
   href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_IsAvailable
@@ -727,6 +849,19 @@ references:
   isSpec: "True"
   fullName: Zaya.Screenshot.Services.ICaptureService.IsAvailable
   nameWithType: ICaptureService.IsAvailable
+- uid: Zaya.Screenshot.Services.ICaptureService.Settings
+  name: Settings
+  href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_Settings
+  commentId: P:Zaya.Screenshot.Services.ICaptureService.Settings
+  fullName: Zaya.Screenshot.Services.ICaptureService.Settings
+  nameWithType: ICaptureService.Settings
+- uid: Zaya.Screenshot.Services.ICaptureService.Settings*
+  name: Settings
+  href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_Settings_
+  commentId: Overload:Zaya.Screenshot.Services.ICaptureService.Settings
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Services.ICaptureService.Settings
+  nameWithType: ICaptureService.Settings
 - uid: Zaya.Screenshot.Services.ICaptureSession
   name: ICaptureSession
   href: api/Zaya.Screenshot.Services.ICaptureSession.html

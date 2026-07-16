@@ -1,4 +1,5 @@
-﻿using Zaya.Screenshot.Models;
+﻿using Zaya.Primitives;
+using Zaya.Screenshot.Models;
 
 namespace Zaya.Screenshot.Services;
 
@@ -16,8 +17,8 @@ public interface ICaptureSession : IDisposable
     /// Captures the next available frame.
     /// </summary>
     /// <param name="cancellationToken">Cancellation token.</param>
-    /// <returns>The captured frame, or null if no frame is available.</returns>
-    Task<ICapturedFrame?> CaptureAsync(CancellationToken cancellationToken = default);
+    /// <returns>The captured raw image, or null if no frame is available.</returns>
+    Task<IRawImage?> CaptureAsync(CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Resumes the capture session if paused.

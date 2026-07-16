@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Interface ICaptureService ">
     
-    <meta name="description" content="Service for creating screen capture sessions targeting a specific window or monitor region.">
+    <meta name="description" content="Service for creating screen capture sessions targeting a specific window or monitor region. Call  before creating sessions.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -71,7 +71,8 @@
 
 
   <h1 id="Zaya_Screenshot_Services_ICaptureService" data-uid="Zaya.Screenshot.Services.ICaptureService" class="text-break">Interface ICaptureService</h1>
-  <div class="markdown level0 summary"><p>Service for creating screen capture sessions targeting a specific window or monitor region.</p>
+  <div class="markdown level0 summary"><p>Service for creating screen capture sessions targeting a specific window or monitor region.
+Call <a class="xref" href="Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_InitializeAsync_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_">InitializeAsync(IReadOnlyDictionary&lt;string, object?&gt;?, CancellationToken)</a> before creating sessions.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
@@ -90,10 +91,72 @@
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Services_ICaptureService_Description.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Services.ICaptureService.Description%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot/Services/ICaptureService.cs/#L26">View Source</a>
+  </span>
+  <a id="Zaya_Screenshot_Services_ICaptureService_Description_" data-uid="Zaya.Screenshot.Services.ICaptureService.Description*"></a>
+  <h4 id="Zaya_Screenshot_Services_ICaptureService_Description" data-uid="Zaya.Screenshot.Services.ICaptureService.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Gets the UI description for this engine (localized).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">LocalizedString Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LocalizedString</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Services_ICaptureService_DisplayName.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Services.ICaptureService.DisplayName%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot/Services/ICaptureService.cs/#L21">View Source</a>
+  </span>
+  <a id="Zaya_Screenshot_Services_ICaptureService_DisplayName_" data-uid="Zaya.Screenshot.Services.ICaptureService.DisplayName*"></a>
+  <h4 id="Zaya_Screenshot_Services_ICaptureService_DisplayName" data-uid="Zaya.Screenshot.Services.ICaptureService.DisplayName">DisplayName</h4>
+  <div class="markdown level1 summary"><p>Gets the UI display name for this engine (localized).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">LocalizedString DisplayName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LocalizedString</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Services_ICaptureService_EngineId.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Services.ICaptureService.EngineId%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot/Services/ICaptureService.cs/#L14">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot/Services/ICaptureService.cs/#L16">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Services_ICaptureService_EngineId_" data-uid="Zaya.Screenshot.Services.ICaptureService.EngineId*"></a>
   <h4 id="Zaya_Screenshot_Services_ICaptureService_EngineId" data-uid="Zaya.Screenshot.Services.ICaptureService.EngineId">EngineId</h4>
@@ -125,13 +188,12 @@ Used for profile serialization and engine lookup.</p>
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Services_ICaptureService_IsAvailable.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Services.ICaptureService.IsAvailable%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot/Services/ICaptureService.cs/#L21">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot/Services/ICaptureService.cs/#L43">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Services_ICaptureService_IsAvailable_" data-uid="Zaya.Screenshot.Services.ICaptureService.IsAvailable*"></a>
   <h4 id="Zaya_Screenshot_Services_ICaptureService_IsAvailable" data-uid="Zaya.Screenshot.Services.ICaptureService.IsAvailable">IsAvailable</h4>
-  <div class="markdown level1 summary"><p>Gets whether this capture engine is available on the current system.
-A lightweight check that does not initialize any resources.
-Returns <code>false</code> when the required platform APIs are not present.</p>
+  <div class="markdown level1 summary"><p>Gets whether this capture engine is initialized and ready.
+Returns <code>true</code> only after successful <a class="xref" href="Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_InitializeAsync_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_">InitializeAsync(IReadOnlyDictionary&lt;string, object?&gt;?, CancellationToken)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -153,6 +215,37 @@ Returns <code>false</code> when the required platform APIs are not present.</p>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Services_ICaptureService_Settings.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Services.ICaptureService.Settings%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot/Services/ICaptureService.cs/#L31">View Source</a>
+  </span>
+  <a id="Zaya_Screenshot_Services_ICaptureService_Settings_" data-uid="Zaya.Screenshot.Services.ICaptureService.Settings*"></a>
+  <h4 id="Zaya_Screenshot_Services_ICaptureService_Settings" data-uid="Zaya.Screenshot.Services.ICaptureService.Settings">Settings</h4>
+  <div class="markdown level1 summary"><p>Gets the list of engine-specific settings that can be configured via UI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyList&lt;SettingDescriptor&gt; Settings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<span class="xref">SettingDescriptor</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
@@ -160,7 +253,7 @@ Returns <code>false</code> when the required platform APIs are not present.</p>
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot/Services/ICaptureService.cs/#L29">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot/Services/ICaptureService.cs/#L51">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_" data-uid="Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync*"></a>
   <h4 id="Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_" data-uid="Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)">CreateSessionAsync(ICaptureRegion, CancellationToken)</h4>
@@ -211,6 +304,60 @@ Returns <code>false</code> when the required platform APIs are not present.</p>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Services_ICaptureService_InitializeAsync_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary%7BSystem.String%2CSystem.Object%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot/Services/ICaptureService.cs/#L37">View Source</a>
+  </span>
+  <a id="Zaya_Screenshot_Services_ICaptureService_InitializeAsync_" data-uid="Zaya.Screenshot.Services.ICaptureService.InitializeAsync*"></a>
+  <h4 id="Zaya_Screenshot_Services_ICaptureService_InitializeAsync_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_" data-uid="Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)">InitializeAsync(IReadOnlyDictionary&lt;string, object?&gt;?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Initializes the engine with the specified settings.
+Must be called before <a class="xref" href="Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_">CreateSessionAsync(ICaptureRegion, CancellationToken)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task InitializeAsync(IReadOnlyDictionary&lt;string, object?&gt;? engineSettings, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td><span class="parametername">engineSettings</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
 </article>
           </div>
@@ -223,7 +370,7 @@ Returns <code>false</code> when the required platform APIs are not present.</p>
                     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Services_ICaptureService.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Services.ICaptureService%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                   </li>
                   <li>
-                    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot/Services/ICaptureService.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot/Services/ICaptureService.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

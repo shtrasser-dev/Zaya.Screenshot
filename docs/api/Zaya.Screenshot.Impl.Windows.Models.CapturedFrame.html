@@ -71,7 +71,7 @@
 
 
   <h1 id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame" data-uid="Zaya.Screenshot.Impl.Windows.Models.CapturedFrame" class="text-break">Class CapturedFrame</h1>
-  <div class="markdown level0 summary"><p>Implementation of <a class="xref" href="Zaya.Screenshot.Models.ICapturedFrame.html">ICapturedFrame</a> with direct pixel data access.
+  <div class="markdown level0 summary"><p>Implementation of <span class="xref">Zaya.Primitives.IRawImage</span> with direct pixel data access.
 Owns a byte array rented from <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.arraypool-1.shared">Shared</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -82,7 +82,7 @@ Owns a byte array rented from <a class="xref" href="https://learn.microsoft.com/
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Zaya.Screenshot.Models.ICapturedFrame.html">ICapturedFrame</a></div>
+    <div><span class="xref">IRawImage</span></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
@@ -110,7 +110,7 @@ Owns a byte array rented from <a class="xref" href="https://learn.microsoft.com/
   <h6><strong>Assembly</strong>: Zaya.Screenshot.Impl.Windows.dll</h6>
   <h5 id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class CapturedFrame : ICapturedFrame, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class CapturedFrame : IRawImage, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -119,7 +119,7 @@ Owns a byte array rented from <a class="xref" href="https://learn.microsoft.com/
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Models_CapturedFrame__ctor_System_Byte___System_Int32_System_Int32_System_Int32_Zaya_Primitives_PixelFormat_System_Boolean_.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.%23ctor(System.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CZaya.Primitives.PixelFormat%2CSystem.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L46">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L45">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame__ctor_" data-uid="Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.#ctor*"></a>
   <h4 id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame__ctor_System_Byte___System_Int32_System_Int32_System_Int32_Zaya_Primitives_PixelFormat_System_Boolean_" data-uid="Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.#ctor(System.Byte[],System.Int32,System.Int32,System.Int32,Zaya.Primitives.PixelFormat,System.Boolean)">CapturedFrame(byte[], int, int, int, PixelFormat, bool)</h4>
@@ -202,7 +202,7 @@ the buffer is returned to <a class="xref" href="https://learn.microsoft.com/dotn
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Format.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Format%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L33">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L32">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Format_" data-uid="Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Format*"></a>
   <h4 id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Format" data-uid="Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Format">Format</h4>
@@ -233,7 +233,7 @@ the buffer is returned to <a class="xref" href="https://learn.microsoft.com/dotn
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Height.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Height%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L24">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L23">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Height_" data-uid="Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Height*"></a>
   <h4 id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Height" data-uid="Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Height">Height</h4>
@@ -264,7 +264,7 @@ the buffer is returned to <a class="xref" href="https://learn.microsoft.com/dotn
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Stride.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Stride%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L29">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L28">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Stride_" data-uid="Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Stride*"></a>
   <h4 id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Stride" data-uid="Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Stride">Stride</h4>
@@ -296,7 +296,7 @@ May be larger than Width * BytesPerPixel due to memory alignment.</p>
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Width.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Width%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L20">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L19">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Width_" data-uid="Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Width*"></a>
   <h4 id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Width" data-uid="Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Width">Width</h4>
@@ -329,7 +329,7 @@ May be larger than Width * BytesPerPixel due to memory alignment.</p>
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Dispose.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Dispose%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L92">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L91">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Dispose_" data-uid="Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Dispose*"></a>
   <h4 id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Dispose" data-uid="Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Dispose">Dispose()</h4>
@@ -346,7 +346,7 @@ the buffer is returned to <a class="xref" href="https://learn.microsoft.com/dotn
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_GetPixelData.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.GetPixelData%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L70">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L69">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_GetPixelData_" data-uid="Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.GetPixelData*"></a>
   <h4 id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_GetPixelData" data-uid="Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.GetPixelData">GetPixelData()</h4>
@@ -395,7 +395,7 @@ Provides direct access to the underlying buffer without additional allocations.<
     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_ToByteArray.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.ToByteArray%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L82">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L81">View Source</a>
   </span>
   <a id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_ToByteArray_" data-uid="Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.ToByteArray*"></a>
   <h4 id="Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_ToByteArray" data-uid="Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.ToByteArray">ToByteArray()</h4>
@@ -441,7 +441,7 @@ Useful when the data needs to outlive the frame instance.</p>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Zaya.Screenshot.Models.ICapturedFrame.html">ICapturedFrame</a>
+      <span class="xref">Zaya.Primitives.IRawImage</span>
   </div>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
@@ -458,7 +458,7 @@ Useful when the data needs to outlive the frame instance.</p>
                     <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_Models_CapturedFrame.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.Models.CapturedFrame%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                   </li>
                   <li>
-                    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

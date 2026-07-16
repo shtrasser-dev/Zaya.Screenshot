@@ -6,8 +6,12 @@ items:
   parent: Zaya.Screenshot.Services
   children:
   - Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+  - Zaya.Screenshot.Services.ICaptureService.Description
+  - Zaya.Screenshot.Services.ICaptureService.DisplayName
   - Zaya.Screenshot.Services.ICaptureService.EngineId
+  - Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
   - Zaya.Screenshot.Services.ICaptureService.IsAvailable
+  - Zaya.Screenshot.Services.ICaptureService.Settings
   langs:
   - csharp
   - vb
@@ -22,11 +26,14 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: ICaptureService
     path: src/Zaya.Screenshot/Services/ICaptureService.cs
-    startLine: 7
+    startLine: 9
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Services
-  summary: Service for creating screen capture sessions targeting a specific window or monitor region.
+  summary: >-
+    Service for creating screen capture sessions targeting a specific window or monitor region.
+
+    Call <xref href="Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary%7bSystem.String%2cSystem.Object%7d%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref> before creating sessions.
   example: []
   syntax:
     content: 'public interface ICaptureService : IDisposable'
@@ -53,7 +60,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: EngineId
     path: src/Zaya.Screenshot/Services/ICaptureService.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Services
@@ -69,6 +76,140 @@ items:
       type: System.String
     content.vb: ReadOnly Property EngineId As String
   overload: Zaya.Screenshot.Services.ICaptureService.EngineId*
+- uid: Zaya.Screenshot.Services.ICaptureService.DisplayName
+  commentId: P:Zaya.Screenshot.Services.ICaptureService.DisplayName
+  id: DisplayName
+  parent: Zaya.Screenshot.Services.ICaptureService
+  langs:
+  - csharp
+  - vb
+  name: DisplayName
+  nameWithType: ICaptureService.DisplayName
+  fullName: Zaya.Screenshot.Services.ICaptureService.DisplayName
+  type: Property
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Services/ICaptureService.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
+    id: DisplayName
+    path: src/Zaya.Screenshot/Services/ICaptureService.cs
+    startLine: 20
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Services
+  summary: Gets the UI display name for this engine (localized).
+  example: []
+  syntax:
+    content: LocalizedString DisplayName { get; }
+    parameters: []
+    return:
+      type: Zaya.Primitives.LocalizedString
+    content.vb: ReadOnly Property DisplayName As LocalizedString
+  overload: Zaya.Screenshot.Services.ICaptureService.DisplayName*
+- uid: Zaya.Screenshot.Services.ICaptureService.Description
+  commentId: P:Zaya.Screenshot.Services.ICaptureService.Description
+  id: Description
+  parent: Zaya.Screenshot.Services.ICaptureService
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: ICaptureService.Description
+  fullName: Zaya.Screenshot.Services.ICaptureService.Description
+  type: Property
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Services/ICaptureService.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
+    id: Description
+    path: src/Zaya.Screenshot/Services/ICaptureService.cs
+    startLine: 25
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Services
+  summary: Gets the UI description for this engine (localized).
+  example: []
+  syntax:
+    content: LocalizedString Description { get; }
+    parameters: []
+    return:
+      type: Zaya.Primitives.LocalizedString
+    content.vb: ReadOnly Property Description As LocalizedString
+  overload: Zaya.Screenshot.Services.ICaptureService.Description*
+- uid: Zaya.Screenshot.Services.ICaptureService.Settings
+  commentId: P:Zaya.Screenshot.Services.ICaptureService.Settings
+  id: Settings
+  parent: Zaya.Screenshot.Services.ICaptureService
+  langs:
+  - csharp
+  - vb
+  name: Settings
+  nameWithType: ICaptureService.Settings
+  fullName: Zaya.Screenshot.Services.ICaptureService.Settings
+  type: Property
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Services/ICaptureService.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
+    id: Settings
+    path: src/Zaya.Screenshot/Services/ICaptureService.cs
+    startLine: 30
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Services
+  summary: Gets the list of engine-specific settings that can be configured via UI.
+  example: []
+  syntax:
+    content: IReadOnlyList<SettingDescriptor> Settings { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{Zaya.Primitives.SettingDescriptor}
+    content.vb: ReadOnly Property Settings As IReadOnlyList(Of SettingDescriptor)
+  overload: Zaya.Screenshot.Services.ICaptureService.Settings*
+- uid: Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
+  commentId: M:Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
+  id: InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
+  parent: Zaya.Screenshot.Services.ICaptureService
+  langs:
+  - csharp
+  - vb
+  name: InitializeAsync(IReadOnlyDictionary<string, object?>?, CancellationToken)
+  nameWithType: ICaptureService.InitializeAsync(IReadOnlyDictionary<string, object?>?, CancellationToken)
+  fullName: Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary<string, object?>?, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/Zaya.Screenshot/Services/ICaptureService.cs
+      branch: main
+      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
+    id: InitializeAsync
+    path: src/Zaya.Screenshot/Services/ICaptureService.cs
+    startLine: 36
+  assemblies:
+  - Zaya.Screenshot
+  namespace: Zaya.Screenshot.Services
+  summary: >-
+    Initializes the engine with the specified settings.
+
+    Must be called before <xref href="Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: Task InitializeAsync(IReadOnlyDictionary<string, object?>? engineSettings, CancellationToken cancellationToken = default)
+    parameters:
+    - id: engineSettings
+      type: System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object}
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function InitializeAsync(engineSettings As IReadOnlyDictionary(Of String, Object), cancellationToken As CancellationToken = Nothing) As Task
+  overload: Zaya.Screenshot.Services.ICaptureService.InitializeAsync*
+  nameWithType.vb: ICaptureService.InitializeAsync(IReadOnlyDictionary(Of String, Object), CancellationToken)
+  fullName.vb: Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary(Of String, Object), System.Threading.CancellationToken)
+  name.vb: InitializeAsync(IReadOnlyDictionary(Of String, Object), CancellationToken)
 - uid: Zaya.Screenshot.Services.ICaptureService.IsAvailable
   commentId: P:Zaya.Screenshot.Services.ICaptureService.IsAvailable
   id: IsAvailable
@@ -87,16 +228,14 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: IsAvailable
     path: src/Zaya.Screenshot/Services/ICaptureService.cs
-    startLine: 20
+    startLine: 42
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Services
   summary: >-
-    Gets whether this capture engine is available on the current system.
+    Gets whether this capture engine is initialized and ready.
 
-    A lightweight check that does not initialize any resources.
-
-    Returns <code>false</code> when the required platform APIs are not present.
+    Returns <code>true</code> only after successful <xref href="Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary%7bSystem.String%2cSystem.Object%7d%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: bool IsAvailable { get; }
@@ -123,7 +262,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: CreateSessionAsync
     path: src/Zaya.Screenshot/Services/ICaptureService.cs
-    startLine: 28
+    startLine: 50
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Services
@@ -144,6 +283,75 @@ items:
     content.vb: Function CreateSessionAsync(region As ICaptureRegion, cancellationToken As CancellationToken = Nothing) As Task(Of ICaptureSession)
   overload: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync*
 references:
+- uid: Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
+  commentId: M:Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
+  parent: Zaya.Screenshot.Services.ICaptureService
+  isExternal: true
+  href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_InitializeAsync_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_
+  name: InitializeAsync(IReadOnlyDictionary<string, object>, CancellationToken)
+  nameWithType: ICaptureService.InitializeAsync(IReadOnlyDictionary<string, object>, CancellationToken)
+  fullName: Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary<string, object>, System.Threading.CancellationToken)
+  nameWithType.vb: ICaptureService.InitializeAsync(IReadOnlyDictionary(Of String, Object), CancellationToken)
+  fullName.vb: Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary(Of String, Object), System.Threading.CancellationToken)
+  name.vb: InitializeAsync(IReadOnlyDictionary(Of String, Object), CancellationToken)
+  spec.csharp:
+  - uid: Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
+    name: InitializeAsync
+    href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_InitializeAsync_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
+    name: InitializeAsync
+    href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_InitializeAsync_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
 - uid: Zaya.Screenshot.Services
   commentId: N:Zaya.Screenshot.Services
   href: Zaya.html
@@ -196,6 +404,13 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
   - name: (
   - name: )
+- uid: Zaya.Screenshot.Services.ICaptureService
+  commentId: T:Zaya.Screenshot.Services.ICaptureService
+  parent: Zaya.Screenshot.Services
+  href: Zaya.Screenshot.Services.ICaptureService.html
+  name: ICaptureService
+  nameWithType: ICaptureService
+  fullName: Zaya.Screenshot.Services.ICaptureService
 - uid: System.IDisposable
   commentId: T:System.IDisposable
   parent: System
@@ -228,6 +443,356 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: Zaya.Screenshot.Services.ICaptureService.DisplayName*
+  commentId: Overload:Zaya.Screenshot.Services.ICaptureService.DisplayName
+  href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_DisplayName
+  name: DisplayName
+  nameWithType: ICaptureService.DisplayName
+  fullName: Zaya.Screenshot.Services.ICaptureService.DisplayName
+- uid: Zaya.Primitives.LocalizedString
+  commentId: T:Zaya.Primitives.LocalizedString
+  parent: Zaya.Primitives
+  isExternal: true
+  name: LocalizedString
+  nameWithType: LocalizedString
+  fullName: Zaya.Primitives.LocalizedString
+- uid: Zaya.Primitives
+  commentId: N:Zaya.Primitives
+  isExternal: true
+  name: Zaya.Primitives
+  nameWithType: Zaya.Primitives
+  fullName: Zaya.Primitives
+  spec.csharp:
+  - uid: Zaya
+    name: Zaya
+    isExternal: true
+  - name: .
+  - uid: Zaya.Primitives
+    name: Primitives
+    isExternal: true
+  spec.vb:
+  - uid: Zaya
+    name: Zaya
+    isExternal: true
+  - name: .
+  - uid: Zaya.Primitives
+    name: Primitives
+    isExternal: true
+- uid: Zaya.Screenshot.Services.ICaptureService.Description*
+  commentId: Overload:Zaya.Screenshot.Services.ICaptureService.Description
+  href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_Description
+  name: Description
+  nameWithType: ICaptureService.Description
+  fullName: Zaya.Screenshot.Services.ICaptureService.Description
+- uid: Zaya.Screenshot.Services.ICaptureService.Settings*
+  commentId: Overload:Zaya.Screenshot.Services.ICaptureService.Settings
+  href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_Settings
+  name: Settings
+  nameWithType: ICaptureService.Settings
+  fullName: Zaya.Screenshot.Services.ICaptureService.Settings
+- uid: System.Collections.Generic.IReadOnlyList{Zaya.Primitives.SettingDescriptor}
+  commentId: T:System.Collections.Generic.IReadOnlyList{Zaya.Primitives.SettingDescriptor}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<SettingDescriptor>
+  nameWithType: IReadOnlyList<SettingDescriptor>
+  fullName: System.Collections.Generic.IReadOnlyList<Zaya.Primitives.SettingDescriptor>
+  nameWithType.vb: IReadOnlyList(Of SettingDescriptor)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of Zaya.Primitives.SettingDescriptor)
+  name.vb: IReadOnlyList(Of SettingDescriptor)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: Zaya.Primitives.SettingDescriptor
+    name: SettingDescriptor
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Zaya.Primitives.SettingDescriptor
+    name: SettingDescriptor
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+  commentId: M:Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+  parent: Zaya.Screenshot.Services.ICaptureService
+  isExternal: true
+  href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_
+  name: CreateSessionAsync(ICaptureRegion, CancellationToken)
+  nameWithType: ICaptureService.CreateSessionAsync(ICaptureRegion, CancellationToken)
+  fullName: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+    name: CreateSessionAsync
+    href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_
+  - name: (
+  - uid: Zaya.Screenshot.Models.ICaptureRegion
+    name: ICaptureRegion
+    href: Zaya.Screenshot.Models.ICaptureRegion.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
+    name: CreateSessionAsync
+    href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_
+  - name: (
+  - uid: Zaya.Screenshot.Models.ICaptureRegion
+    name: ICaptureRegion
+    href: Zaya.Screenshot.Models.ICaptureRegion.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Zaya.Screenshot.Services.ICaptureService.InitializeAsync*
+  commentId: Overload:Zaya.Screenshot.Services.ICaptureService.InitializeAsync
+  href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_InitializeAsync_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_
+  name: InitializeAsync
+  nameWithType: ICaptureService.InitializeAsync
+  fullName: Zaya.Screenshot.Services.ICaptureService.InitializeAsync
+- uid: System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<string, object>
+  nameWithType: IReadOnlyDictionary<string, object>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<string, object>
+  nameWithType.vb: IReadOnlyDictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of String, Object)
+  name.vb: IReadOnlyDictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Collections.Generic.IReadOnlyDictionary`2
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TValue>
+  nameWithType: IReadOnlyDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>
+  nameWithType.vb: IReadOnlyDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue)
+  name.vb: IReadOnlyDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
 - uid: Zaya.Screenshot.Services.ICaptureService.IsAvailable*
   commentId: Overload:Zaya.Screenshot.Services.ICaptureService.IsAvailable
   href: Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_IsAvailable
@@ -258,14 +823,6 @@ references:
   name: ICaptureRegion
   nameWithType: ICaptureRegion
   fullName: Zaya.Screenshot.Models.ICaptureRegion
-- uid: System.Threading.CancellationToken
-  commentId: T:System.Threading.CancellationToken
-  parent: System.Threading
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
-  name: CancellationToken
-  nameWithType: CancellationToken
-  fullName: System.Threading.CancellationToken
 - uid: System.Threading.Tasks.Task{Zaya.Screenshot.Services.ICaptureSession}
   commentId: T:System.Threading.Tasks.Task{Zaya.Screenshot.Services.ICaptureSession}
   parent: System.Threading.Tasks
@@ -329,33 +886,6 @@ references:
   - uid: Zaya.Screenshot.Models
     name: Models
     href: Zaya.Screenshot.Models.html
-- uid: System.Threading
-  commentId: N:System.Threading
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Threading
-  nameWithType: System.Threading
-  fullName: System.Threading
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
 - uid: System.Threading.Tasks.Task`1
   commentId: T:System.Threading.Tasks.Task`1
   isExternal: true
@@ -384,40 +914,3 @@ references:
   - name: " "
   - name: TResult
   - name: )
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
-  - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
-  - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

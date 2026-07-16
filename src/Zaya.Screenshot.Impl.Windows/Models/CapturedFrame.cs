@@ -1,14 +1,13 @@
 ﻿using System.Buffers;
 using Zaya.Primitives;
-using Zaya.Screenshot.Models;
 
 namespace Zaya.Screenshot.Impl.Windows.Models;
 
 /// <summary>
-/// Implementation of <see cref="ICapturedFrame"/> with direct pixel data access.
+/// Implementation of <see cref="IRawImage"/> with direct pixel data access.
 /// Owns a byte array rented from <see cref="ArrayPool{Byte}.Shared"/>.
 /// </summary>
-public sealed class CapturedFrame : ICapturedFrame
+public sealed class CapturedFrame : IRawImage
 {
     private readonly byte[] _pixelData;
     private readonly bool _returnToPool;

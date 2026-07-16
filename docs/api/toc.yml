@@ -1,5 +1,12 @@
 ### YamlMime:TableOfContent
 items:
+- uid: Zaya.Screenshot.Impl.Windows
+  name: Zaya.Screenshot.Impl.Windows
+  type: Namespace
+  items:
+  - uid: Zaya.Screenshot.Impl.Windows.CaptureConfig
+    name: CaptureConfig
+    type: Class
 - uid: Zaya.Screenshot.Impl.Windows.Models
   name: Zaya.Screenshot.Impl.Windows.Models
   type: Namespace
@@ -26,9 +33,6 @@ items:
     type: Class
   - uid: Zaya.Screenshot.Models.ICaptureRegion
     name: ICaptureRegion
-    type: Interface
-  - uid: Zaya.Screenshot.Models.ICapturedFrame
-    name: ICapturedFrame
     type: Interface
   - uid: Zaya.Screenshot.Models.PixelFormatExtensions
     name: PixelFormatExtensions

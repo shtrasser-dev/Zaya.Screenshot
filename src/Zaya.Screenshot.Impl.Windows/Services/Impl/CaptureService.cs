@@ -3,6 +3,7 @@ using Windows.Graphics;
 using Windows.Graphics.Capture;
 using Windows.Graphics.DirectX;
 using WinRT;
+using Zaya.Primitives;
 using Zaya.Screenshot.Impl.Windows.Services.Impl.WinApi;
 using Zaya.Screenshot.Models;
 using Zaya.Screenshot.Services;
@@ -12,47 +13,62 @@ namespace Zaya.Screenshot.Impl.Windows.Services.Impl;
 /// <summary>
 /// Implementation of <see cref="ICaptureService"/> using Windows Graphics Capture API and Direct3D 11.
 /// Supports capturing windows and monitors in full-screen or rectangular regions.
+/// Call <see cref="InitializeAsync"/> before creating sessions.
 /// </summary>
 public sealed class CaptureService : ICaptureService
 {
-    private readonly Direct3DConverterService _converter;
+    private Direct3DConverterService? _converter;
     private bool _disposed;
+
+    private static LocalizedString Loc(string key)
+        => new(key, culture => Properties.Resources.ResourceManager.GetString(key, culture)!);
 
     /// <inheritdoc />
     public string EngineId => "graphics-capture";
 
     /// <inheritdoc />
-    public bool IsAvailable => GraphicsCaptureSession.IsSupported();
+    public LocalizedString DisplayName => Loc("Cap_EngineName");
+
+    /// <inheritdoc />
+    public LocalizedString Description => Loc("Cap_EngineDesc");
+
+    /// <inheritdoc />
+    public IReadOnlyList<SettingDescriptor> Settings { get; } = [];
+
+    /// <inheritdoc />
+    public bool IsAvailable => _converter is not null;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="CaptureService"/> class.
-    /// Creates a Direct3D 11 device and converter.
+    /// The constructor is lightweight — Direct3D initialization is deferred to <see cref="InitializeAsync"/>.
     /// </summary>
-    /// <exception cref="NotSupportedException">Thrown when Windows Graphics Capture is not supported on this system.</exception>
-    /// <exception cref="COMException">Thrown when the Direct3D device cannot be created.</exception>
     public CaptureService()
     {
+    }
+
+    /// <inheritdoc />
+    public Task InitializeAsync(IReadOnlyDictionary<string, object?>? engineSettings, CancellationToken cancellationToken = default)
+    {
+        ObjectDisposedException.ThrowIf(_disposed, this);
+        if (_converter is not null)
+            return Task.CompletedTask;
+
         if (!GraphicsCaptureSession.IsSupported())
             throw new NotSupportedException("Windows Graphics Capture is not supported on this system.");
 
         _converter = Direct3DConverterService.Create();
+        return Task.CompletedTask;
     }
 
-    /// <summary>
-    /// Creates a new capture session for the specified region.
-    /// For monitor captures, the first few frames are discarded to avoid initial black frames.
-    /// </summary>
-    /// <param name="region">The region to capture. Must be one of <see cref="FullScreenWindowRegion"/>,
-    /// <see cref="RectWindowRegion"/>, <see cref="FullScreenDesktopRegion"/>, or <see cref="RectDesktopRegion"/>.</param>
-    /// <param name="cancellationToken">Token to cancel the session creation.</param>
-    /// <returns>An active capture session ready to produce frames.</returns>
-    /// <exception cref="ArgumentNullException">Thrown when <paramref name="region"/> is null.</exception>
-    /// <exception cref="InvalidOperationException">Thrown when the GraphicsCaptureItem cannot be created.</exception>
-    /// <exception cref="NotSupportedException">Thrown when the region type is not recognized.</exception>
+    /// <inheritdoc />
     public async Task<ICaptureSession> CreateSessionAsync(
         ICaptureRegion region,
         CancellationToken cancellationToken = default)
     {
+        ObjectDisposedException.ThrowIf(_disposed, this);
+        if (_converter is null)
+            throw new InvalidOperationException("Capture engine is not initialized. Call InitializeAsync first.");
+
         if (region == null)
             throw new ArgumentNullException(nameof(region));
 
@@ -61,7 +77,6 @@ public sealed class CaptureService : ICaptureService
         if (captureItem == null)
             throw new InvalidOperationException("Failed to create GraphicsCaptureItem.");
 
-        // Create frame pool
         var framePool = Direct3D11CaptureFramePool.CreateFreeThreaded(
             _converter.WinRTDevice,
             DirectXPixelFormat.B8G8R8A8UIntNormalized,
@@ -71,7 +86,6 @@ public sealed class CaptureService : ICaptureService
         var session = framePool.CreateCaptureSession(captureItem);
         try { session.IsCursorCaptureEnabled = false; } catch { }
 
-        // Start capture
         session.StartCapture();
 
         var captureSession = new CaptureSession(
@@ -80,7 +94,6 @@ public sealed class CaptureService : ICaptureService
             framePool,
             session);
 
-        // Wait for first non-black frame (only for monitor capture)
         if (isMonitorCapture)
         {
             for (var i = 0; i < 3; i++)
@@ -210,9 +223,7 @@ public sealed class CaptureService : ICaptureService
         return monitors[displayIndex];
     }
 
-    /// <summary>
-    /// Releases the underlying Direct3D resources.
-    /// </summary>
+    /// <inheritdoc />
     public void Dispose()
     {
         if (_disposed) return;

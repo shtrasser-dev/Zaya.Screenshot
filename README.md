@@ -8,7 +8,8 @@ High-performance screen capture library for Windows .NET 8.0+ applications. Capt
 - Multiple pixel formats: BGRA32, RGB24, BGR24, Gray8
 - High-performance `ReadOnlySpan<byte>` access to pixel data
 - Frame-level pause/resume control
-- Built-in SkiaSharp and ImageSharp format conversion helpers
+- Built-in localization (en, ru-RU)
+- Explicit engine initialization lifecycle
 
 ## Platform
 
@@ -18,7 +19,7 @@ High-performance screen capture library for Windows .NET 8.0+ applications. Capt
 ## Installation
 
 ```xml
-<PackageReference Include="Zaya.Screenshot.Impl.Windows" Version="0.1.0" />
+<PackageReference Include="Zaya.Screenshot.Impl.Windows" Version="0.2.0" />
 ```
 
 ## Quick Start
@@ -28,6 +29,9 @@ using Zaya.Screenshot.Impl.Windows.Services.Impl;
 using Zaya.Screenshot.Models;
 
 using var service = new CaptureService();
+
+// Initialize before use
+await service.InitializeAsync(null);
 
 // Capture entire primary monitor
 var region = new FullScreenDesktopRegion();
@@ -72,6 +76,22 @@ var region = new FullScreenDesktopRegion
 session.Pause();
 // ... capture can be suspended and resumed
 session.Resume();
+```
+
+### Engine Metadata
+
+```csharp
+using var service = new CaptureService();
+
+// Read metadata before initialization
+var name = service.DisplayName.GetValue(CultureInfo.CurrentUICulture);
+var settings = service.Settings; // IReadOnlyList<SettingDescriptor>
+
+// Initialize (heavy D3D device creation)
+await service.InitializeAsync(null);
+
+// Engine is ready
+Console.WriteLine(service.IsAvailable); // true
 ```
 
 ## Architecture

@@ -7,7 +7,6 @@ items:
   - Zaya.Screenshot.Models.FullScreenDesktopRegion
   - Zaya.Screenshot.Models.FullScreenWindowRegion
   - Zaya.Screenshot.Models.ICaptureRegion
-  - Zaya.Screenshot.Models.ICapturedFrame
   - Zaya.Screenshot.Models.PixelFormatExtensions
   - Zaya.Screenshot.Models.RectDesktopRegion
   - Zaya.Screenshot.Models.RectWindowRegion
@@ -33,13 +32,6 @@ references:
   name: FullScreenWindowRegion
   nameWithType: FullScreenWindowRegion
   fullName: Zaya.Screenshot.Models.FullScreenWindowRegion
-- uid: Zaya.Screenshot.Models.ICapturedFrame
-  commentId: T:Zaya.Screenshot.Models.ICapturedFrame
-  parent: Zaya.Screenshot.Models
-  href: Zaya.Screenshot.Models.ICapturedFrame.html
-  name: ICapturedFrame
-  nameWithType: ICapturedFrame
-  fullName: Zaya.Screenshot.Models.ICapturedFrame
 - uid: Zaya.Screenshot.Models.ICaptureRegion
   commentId: T:Zaya.Screenshot.Models.ICaptureRegion
   parent: Zaya.Screenshot.Models

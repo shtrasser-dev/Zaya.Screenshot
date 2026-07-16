@@ -27,22 +27,22 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: CapturedFrame
     path: src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs
-    startLine: 10
+    startLine: 9
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows.Models
   summary: >-
-    Implementation of <xref href="Zaya.Screenshot.Models.ICapturedFrame" data-throw-if-not-resolved="false"></xref> with direct pixel data access.
+    Implementation of <xref href="Zaya.Primitives.IRawImage" data-throw-if-not-resolved="false"></xref> with direct pixel data access.
 
     Owns a byte array rented from <xref href="System.Buffers.ArrayPool%601.Shared" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
-    content: 'public sealed class CapturedFrame : ICapturedFrame, IDisposable'
-    content.vb: Public NotInheritable Class CapturedFrame Implements ICapturedFrame, IDisposable
+    content: 'public sealed class CapturedFrame : IRawImage, IDisposable'
+    content.vb: Public NotInheritable Class CapturedFrame Implements IRawImage, IDisposable
   inheritance:
   - System.Object
   implements:
-  - Zaya.Screenshot.Models.ICapturedFrame
+  - Zaya.Primitives.IRawImage
   - System.IDisposable
   inheritedMembers:
   - System.Object.Equals(System.Object)
@@ -69,7 +69,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Width
     path: src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs
-    startLine: 19
+    startLine: 18
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows.Models
@@ -83,7 +83,7 @@ items:
     content.vb: Public ReadOnly Property Width As Integer
   overload: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Width*
   implements:
-  - Zaya.Screenshot.Models.ICapturedFrame.Width
+  - Zaya.Primitives.IRawImage.Width
 - uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Height
   commentId: P:Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Height
   id: Height
@@ -102,7 +102,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Height
     path: src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs
-    startLine: 23
+    startLine: 22
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows.Models
@@ -116,7 +116,7 @@ items:
     content.vb: Public ReadOnly Property Height As Integer
   overload: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Height*
   implements:
-  - Zaya.Screenshot.Models.ICapturedFrame.Height
+  - Zaya.Primitives.IRawImage.Height
 - uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Stride
   commentId: P:Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Stride
   id: Stride
@@ -135,7 +135,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Stride
     path: src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs
-    startLine: 28
+    startLine: 27
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows.Models
@@ -152,7 +152,7 @@ items:
     content.vb: Public ReadOnly Property Stride As Integer
   overload: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Stride*
   implements:
-  - Zaya.Screenshot.Models.ICapturedFrame.Stride
+  - Zaya.Primitives.IRawImage.Stride
 - uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Format
   commentId: P:Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Format
   id: Format
@@ -171,7 +171,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Format
     path: src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs
-    startLine: 32
+    startLine: 31
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows.Models
@@ -185,7 +185,7 @@ items:
     content.vb: Public ReadOnly Property Format As PixelFormat
   overload: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Format*
   implements:
-  - Zaya.Screenshot.Models.ICapturedFrame.Format
+  - Zaya.Primitives.IRawImage.Format
 - uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.#ctor(System.Byte[],System.Int32,System.Int32,System.Int32,Zaya.Primitives.PixelFormat,System.Boolean)
   commentId: M:Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.#ctor(System.Byte[],System.Int32,System.Int32,System.Int32,Zaya.Primitives.PixelFormat,System.Boolean)
   id: '#ctor(System.Byte[],System.Int32,System.Int32,System.Int32,Zaya.Primitives.PixelFormat,System.Boolean)'
@@ -204,7 +204,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: .ctor
     path: src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs
-    startLine: 45
+    startLine: 44
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows.Models
@@ -260,7 +260,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: GetPixelData
     path: src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs
-    startLine: 69
+    startLine: 68
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows.Models
@@ -281,7 +281,7 @@ items:
     commentId: T:System.ObjectDisposedException
     description: Thrown when the frame has been disposed.
   implements:
-  - Zaya.Screenshot.Models.ICapturedFrame.GetPixelData
+  - Zaya.Primitives.IRawImage.GetPixelData
 - uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.ToByteArray
   commentId: M:Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.ToByteArray
   id: ToByteArray
@@ -300,7 +300,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: ToByteArray
     path: src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs
-    startLine: 81
+    startLine: 80
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows.Models
@@ -321,7 +321,7 @@ items:
     commentId: T:System.ObjectDisposedException
     description: Thrown when the frame has been disposed.
   implements:
-  - Zaya.Screenshot.Models.ICapturedFrame.ToByteArray
+  - Zaya.Primitives.IRawImage.ToByteArray
 - uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Dispose
   commentId: M:Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Dispose
   id: Dispose
@@ -340,7 +340,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Dispose
     path: src/Zaya.Screenshot.Impl.Windows/Models/CapturedFrame.cs
-    startLine: 91
+    startLine: 90
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows.Models
@@ -356,13 +356,13 @@ items:
   implements:
   - System.IDisposable.Dispose
 references:
-- uid: Zaya.Screenshot.Models.ICapturedFrame
-  commentId: T:Zaya.Screenshot.Models.ICapturedFrame
-  parent: Zaya.Screenshot.Models
-  href: Zaya.Screenshot.Models.ICapturedFrame.html
-  name: ICapturedFrame
-  nameWithType: ICapturedFrame
-  fullName: Zaya.Screenshot.Models.ICapturedFrame
+- uid: Zaya.Primitives.IRawImage
+  commentId: T:Zaya.Primitives.IRawImage
+  parent: Zaya.Primitives
+  isExternal: true
+  name: IRawImage
+  nameWithType: IRawImage
+  fullName: Zaya.Primitives.IRawImage
 - uid: System.Buffers.ArrayPool`1.Shared
   commentId: P:System.Buffers.ArrayPool`1.Shared
   isExternal: true
@@ -632,113 +632,6 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
-- uid: Zaya.Screenshot.Models
-  commentId: N:Zaya.Screenshot.Models
-  href: Zaya.html
-  name: Zaya.Screenshot.Models
-  nameWithType: Zaya.Screenshot.Models
-  fullName: Zaya.Screenshot.Models
-  spec.csharp:
-  - uid: Zaya
-    name: Zaya
-    href: Zaya.html
-  - name: .
-  - uid: Zaya.Screenshot
-    name: Screenshot
-    href: Zaya.Screenshot.html
-  - name: .
-  - uid: Zaya.Screenshot.Models
-    name: Models
-    href: Zaya.Screenshot.Models.html
-  spec.vb:
-  - uid: Zaya
-    name: Zaya
-    href: Zaya.html
-  - name: .
-  - uid: Zaya.Screenshot
-    name: Screenshot
-    href: Zaya.Screenshot.html
-  - name: .
-  - uid: Zaya.Screenshot.Models
-    name: Models
-    href: Zaya.Screenshot.Models.html
-- uid: System
-  commentId: N:System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
-- uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Width*
-  commentId: Overload:Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Width
-  href: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.html#Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Width
-  name: Width
-  nameWithType: CapturedFrame.Width
-  fullName: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Width
-- uid: Zaya.Screenshot.Models.ICapturedFrame.Width
-  commentId: P:Zaya.Screenshot.Models.ICapturedFrame.Width
-  parent: Zaya.Screenshot.Models.ICapturedFrame
-  href: Zaya.Screenshot.Models.ICapturedFrame.html#Zaya_Screenshot_Models_ICapturedFrame_Width
-  name: Width
-  nameWithType: ICapturedFrame.Width
-  fullName: Zaya.Screenshot.Models.ICapturedFrame.Width
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Height*
-  commentId: Overload:Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Height
-  href: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.html#Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Height
-  name: Height
-  nameWithType: CapturedFrame.Height
-  fullName: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Height
-- uid: Zaya.Screenshot.Models.ICapturedFrame.Height
-  commentId: P:Zaya.Screenshot.Models.ICapturedFrame.Height
-  parent: Zaya.Screenshot.Models.ICapturedFrame
-  href: Zaya.Screenshot.Models.ICapturedFrame.html#Zaya_Screenshot_Models_ICapturedFrame_Height
-  name: Height
-  nameWithType: ICapturedFrame.Height
-  fullName: Zaya.Screenshot.Models.ICapturedFrame.Height
-- uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Stride*
-  commentId: Overload:Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Stride
-  href: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.html#Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Stride
-  name: Stride
-  nameWithType: CapturedFrame.Stride
-  fullName: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Stride
-- uid: Zaya.Screenshot.Models.ICapturedFrame.Stride
-  commentId: P:Zaya.Screenshot.Models.ICapturedFrame.Stride
-  parent: Zaya.Screenshot.Models.ICapturedFrame
-  href: Zaya.Screenshot.Models.ICapturedFrame.html#Zaya_Screenshot_Models_ICapturedFrame_Stride
-  name: Stride
-  nameWithType: ICapturedFrame.Stride
-  fullName: Zaya.Screenshot.Models.ICapturedFrame.Stride
-- uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Format*
-  commentId: Overload:Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Format
-  href: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.html#Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Format
-  name: Format
-  nameWithType: CapturedFrame.Format
-  fullName: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Format
-- uid: Zaya.Screenshot.Models.ICapturedFrame.Format
-  commentId: P:Zaya.Screenshot.Models.ICapturedFrame.Format
-  parent: Zaya.Screenshot.Models.ICapturedFrame
-  href: Zaya.Screenshot.Models.ICapturedFrame.html#Zaya_Screenshot_Models_ICapturedFrame_Format
-  name: Format
-  nameWithType: ICapturedFrame.Format
-  fullName: Zaya.Screenshot.Models.ICapturedFrame.Format
-- uid: Zaya.Primitives.PixelFormat
-  commentId: T:Zaya.Primitives.PixelFormat
-  parent: Zaya.Primitives
-  isExternal: true
-  name: PixelFormat
-  nameWithType: PixelFormat
-  fullName: Zaya.Primitives.PixelFormat
 - uid: Zaya.Primitives
   commentId: N:Zaya.Primitives
   isExternal: true
@@ -761,6 +654,83 @@ references:
   - uid: Zaya.Primitives
     name: Primitives
     isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Width*
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Width
+  href: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.html#Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Width
+  name: Width
+  nameWithType: CapturedFrame.Width
+  fullName: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Width
+- uid: Zaya.Primitives.IRawImage.Width
+  commentId: P:Zaya.Primitives.IRawImage.Width
+  parent: Zaya.Primitives.IRawImage
+  isExternal: true
+  name: Width
+  nameWithType: IRawImage.Width
+  fullName: Zaya.Primitives.IRawImage.Width
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Height*
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Height
+  href: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.html#Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Height
+  name: Height
+  nameWithType: CapturedFrame.Height
+  fullName: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Height
+- uid: Zaya.Primitives.IRawImage.Height
+  commentId: P:Zaya.Primitives.IRawImage.Height
+  parent: Zaya.Primitives.IRawImage
+  isExternal: true
+  name: Height
+  nameWithType: IRawImage.Height
+  fullName: Zaya.Primitives.IRawImage.Height
+- uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Stride*
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Stride
+  href: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.html#Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Stride
+  name: Stride
+  nameWithType: CapturedFrame.Stride
+  fullName: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Stride
+- uid: Zaya.Primitives.IRawImage.Stride
+  commentId: P:Zaya.Primitives.IRawImage.Stride
+  parent: Zaya.Primitives.IRawImage
+  isExternal: true
+  name: Stride
+  nameWithType: IRawImage.Stride
+  fullName: Zaya.Primitives.IRawImage.Stride
+- uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Format*
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Format
+  href: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.html#Zaya_Screenshot_Impl_Windows_Models_CapturedFrame_Format
+  name: Format
+  nameWithType: CapturedFrame.Format
+  fullName: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Format
+- uid: Zaya.Primitives.IRawImage.Format
+  commentId: P:Zaya.Primitives.IRawImage.Format
+  parent: Zaya.Primitives.IRawImage
+  isExternal: true
+  name: Format
+  nameWithType: IRawImage.Format
+  fullName: Zaya.Primitives.IRawImage.Format
+- uid: Zaya.Primitives.PixelFormat
+  commentId: T:Zaya.Primitives.PixelFormat
+  parent: Zaya.Primitives
+  isExternal: true
+  name: PixelFormat
+  nameWithType: PixelFormat
+  fullName: Zaya.Primitives.PixelFormat
 - uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame
   commentId: T:Zaya.Screenshot.Impl.Windows.Models.CapturedFrame
   href: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.html
@@ -830,23 +800,23 @@ references:
   name: GetPixelData
   nameWithType: CapturedFrame.GetPixelData
   fullName: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.GetPixelData
-- uid: Zaya.Screenshot.Models.ICapturedFrame.GetPixelData
-  commentId: M:Zaya.Screenshot.Models.ICapturedFrame.GetPixelData
-  parent: Zaya.Screenshot.Models.ICapturedFrame
-  href: Zaya.Screenshot.Models.ICapturedFrame.html#Zaya_Screenshot_Models_ICapturedFrame_GetPixelData
+- uid: Zaya.Primitives.IRawImage.GetPixelData
+  commentId: M:Zaya.Primitives.IRawImage.GetPixelData
+  parent: Zaya.Primitives.IRawImage
+  isExternal: true
   name: GetPixelData()
-  nameWithType: ICapturedFrame.GetPixelData()
-  fullName: Zaya.Screenshot.Models.ICapturedFrame.GetPixelData()
+  nameWithType: IRawImage.GetPixelData()
+  fullName: Zaya.Primitives.IRawImage.GetPixelData()
   spec.csharp:
-  - uid: Zaya.Screenshot.Models.ICapturedFrame.GetPixelData
+  - uid: Zaya.Primitives.IRawImage.GetPixelData
     name: GetPixelData
-    href: Zaya.Screenshot.Models.ICapturedFrame.html#Zaya_Screenshot_Models_ICapturedFrame_GetPixelData
+    isExternal: true
   - name: (
   - name: )
   spec.vb:
-  - uid: Zaya.Screenshot.Models.ICapturedFrame.GetPixelData
+  - uid: Zaya.Primitives.IRawImage.GetPixelData
     name: GetPixelData
-    href: Zaya.Screenshot.Models.ICapturedFrame.html#Zaya_Screenshot_Models_ICapturedFrame_GetPixelData
+    isExternal: true
   - name: (
   - name: )
 - uid: System.ReadOnlySpan{System.Byte}
@@ -918,23 +888,23 @@ references:
   name: ToByteArray
   nameWithType: CapturedFrame.ToByteArray
   fullName: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.ToByteArray
-- uid: Zaya.Screenshot.Models.ICapturedFrame.ToByteArray
-  commentId: M:Zaya.Screenshot.Models.ICapturedFrame.ToByteArray
-  parent: Zaya.Screenshot.Models.ICapturedFrame
-  href: Zaya.Screenshot.Models.ICapturedFrame.html#Zaya_Screenshot_Models_ICapturedFrame_ToByteArray
+- uid: Zaya.Primitives.IRawImage.ToByteArray
+  commentId: M:Zaya.Primitives.IRawImage.ToByteArray
+  parent: Zaya.Primitives.IRawImage
+  isExternal: true
   name: ToByteArray()
-  nameWithType: ICapturedFrame.ToByteArray()
-  fullName: Zaya.Screenshot.Models.ICapturedFrame.ToByteArray()
+  nameWithType: IRawImage.ToByteArray()
+  fullName: Zaya.Primitives.IRawImage.ToByteArray()
   spec.csharp:
-  - uid: Zaya.Screenshot.Models.ICapturedFrame.ToByteArray
+  - uid: Zaya.Primitives.IRawImage.ToByteArray
     name: ToByteArray
-    href: Zaya.Screenshot.Models.ICapturedFrame.html#Zaya_Screenshot_Models_ICapturedFrame_ToByteArray
+    isExternal: true
   - name: (
   - name: )
   spec.vb:
-  - uid: Zaya.Screenshot.Models.ICapturedFrame.ToByteArray
+  - uid: Zaya.Primitives.IRawImage.ToByteArray
     name: ToByteArray
-    href: Zaya.Screenshot.Models.ICapturedFrame.html#Zaya_Screenshot_Models_ICapturedFrame_ToByteArray
+    isExternal: true
   - name: (
   - name: )
 - uid: Zaya.Screenshot.Impl.Windows.Models.CapturedFrame.Dispose*

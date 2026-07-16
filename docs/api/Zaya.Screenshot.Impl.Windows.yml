@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Zaya.Screenshot.Impl.Windows
+  commentId: N:Zaya.Screenshot.Impl.Windows
+  id: Zaya.Screenshot.Impl.Windows
+  children:
+  - Zaya.Screenshot.Impl.Windows.CaptureConfig
+  langs:
+  - csharp
+  - vb
+  name: Zaya.Screenshot.Impl.Windows
+  nameWithType: Zaya.Screenshot.Impl.Windows
+  fullName: Zaya.Screenshot.Impl.Windows
+  type: Namespace
+  assemblies:
+  - Zaya.Screenshot.Impl.Windows
+references:
+- uid: Zaya.Screenshot.Impl.Windows.CaptureConfig
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureConfig
+  href: Zaya.Screenshot.Impl.Windows.CaptureConfig.html
+  name: CaptureConfig
+  nameWithType: CaptureConfig
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureConfig

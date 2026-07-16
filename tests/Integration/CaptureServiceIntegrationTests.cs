@@ -1,4 +1,5 @@
 using System.Drawing;
+using Zaya.Primitives;
 using Zaya.Screenshot.Impl.Windows.Services.Impl;
 using Zaya.Screenshot.Models;
 
@@ -9,8 +10,33 @@ public class CaptureServiceIntegrationTests : IAsyncDisposable
     private readonly CaptureService _captureService = new();
 
     [Fact]
+    public void DisplayName_ReturnsNonEmpty()
+    {
+        var name = _captureService.DisplayName.GetValue(System.Globalization.CultureInfo.InvariantCulture);
+        Assert.False(string.IsNullOrWhiteSpace(name));
+    }
+
+    [Fact]
+    public void Settings_ReturnsEmptyList()
+    {
+        var settings = _captureService.Settings;
+        Assert.NotNull(settings);
+        Assert.Empty(settings);
+    }
+
+    [Fact]
+    public async Task CreateSession_WithoutInitialize_Throws()
+    {
+        var region = new FullScreenDesktopRegion();
+        await Assert.ThrowsAsync<InvalidOperationException>(() =>
+            _captureService.CreateSessionAsync(region));
+    }
+
+    [Fact]
     public async Task CaptureFullScreen_ReturnsNonBlackFrame()
     {
+        await _captureService.InitializeAsync(null);
+
         var region = new FullScreenDesktopRegion();
 
         using var session = await _captureService.CreateSessionAsync(region);
@@ -25,6 +51,8 @@ public class CaptureServiceIntegrationTests : IAsyncDisposable
     [Fact]
     public async Task CaptureRectRegion_ReturnsCorrectSizeAndNonBlack()
     {
+        await _captureService.InitializeAsync(null);
+
         var rect = new Rectangle(100, 100, 200, 150);
         var region = new RectDesktopRegion
         {
@@ -41,7 +69,7 @@ public class CaptureServiceIntegrationTests : IAsyncDisposable
         AssertNonBlack(frame);
     }
 
-    private static void AssertNonBlack(ICapturedFrame frame)
+    private static void AssertNonBlack(IRawImage frame)
     {
         var pixelData = frame.GetPixelData();
 

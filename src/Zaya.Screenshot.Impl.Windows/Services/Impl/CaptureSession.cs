@@ -34,7 +34,7 @@ internal sealed class CaptureSession : ICaptureSession
         _session = session;
     }
 
-    public async Task<ICapturedFrame?> CaptureAsync(CancellationToken cancellationToken = default)
+    public async Task<IRawImage?> CaptureAsync(CancellationToken cancellationToken = default)
     {
         if (_disposed)
             throw new ObjectDisposedException(nameof(CaptureSession));
@@ -56,7 +56,7 @@ internal sealed class CaptureSession : ICaptureSession
         }
     }
 
-    private async Task<ICapturedFrame> ConvertFrameAsync(Direct3D11CaptureFrame frame)
+    private async Task<IRawImage> ConvertFrameAsync(Direct3D11CaptureFrame frame)
     {
         PixelFormat outputFormat = _region.PixelFormat;
 

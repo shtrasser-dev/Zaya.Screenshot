@@ -1,9 +1,11 @@
 ﻿using Zaya.Screenshot.Models;
+using Zaya.Primitives;
 
 namespace Zaya.Screenshot.Services;
 
 /// <summary>
 /// Service for creating screen capture sessions targeting a specific window or monitor region.
+/// Call <see cref="InitializeAsync"/> before creating sessions.
 /// </summary>
 public interface ICaptureService : IDisposable
 {
@@ -14,9 +16,29 @@ public interface ICaptureService : IDisposable
     string EngineId { get; }
 
     /// <summary>
-    /// Gets whether this capture engine is available on the current system.
-    /// A lightweight check that does not initialize any resources.
-    /// Returns <c>false</c> when the required platform APIs are not present.
+    /// Gets the UI display name for this engine (localized).
+    /// </summary>
+    LocalizedString DisplayName { get; }
+
+    /// <summary>
+    /// Gets the UI description for this engine (localized).
+    /// </summary>
+    LocalizedString Description { get; }
+
+    /// <summary>
+    /// Gets the list of engine-specific settings that can be configured via UI.
+    /// </summary>
+    IReadOnlyList<SettingDescriptor> Settings { get; }
+
+    /// <summary>
+    /// Initializes the engine with the specified settings.
+    /// Must be called before <see cref="CreateSessionAsync"/>.
+    /// </summary>
+    Task InitializeAsync(IReadOnlyDictionary<string, object?>? engineSettings, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Gets whether this capture engine is initialized and ready.
+    /// Returns <c>true</c> only after successful <see cref="InitializeAsync"/>.
     /// </summary>
     bool IsAvailable { get; }
 
