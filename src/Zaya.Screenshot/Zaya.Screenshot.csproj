@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Version>0.2.1</Version>
+    <Version>0.2.3</Version>
 
     <PackageId>Zaya.Screenshot</PackageId>
     <Description>Core abstractions for Zaya.Screenshot: interfaces, pixel formats, and capture region types.</Description>
@@ -23,10 +23,11 @@
   </ItemGroup>
 
   <ItemGroup>
-	  <PackageReference Include="Zaya.Primitives" Version="0.2.1" />
+	  <PackageReference Include="Zaya.Primitives" Version="0.2.3" />
   </ItemGroup>
 
   <Target Name="Docs">
+    <Exec Command="if exist docs\api (rmdir /S /Q docs\api)" WorkingDirectory="$(MSBuildThisFileDirectory)..\.." />
     <Exec Command="dotnet docfx docfx.json" WorkingDirectory="$(MSBuildThisFileDirectory)..\.." />
   </Target>
 

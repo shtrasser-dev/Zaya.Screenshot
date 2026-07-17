@@ -130,34 +130,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docs/api/Zaya.Screenshot.Models.ICapturedFrame.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Zaya.Screenshot.Models.ICapturedFrame.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Zaya.Screenshot.Models.ICapturedFrame",
-      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Models.ICapturedFrame.yml\" sourcestartlinenumber=\"1\">Represents a captured frame with direct pixel data access.\nThe frame owns the underlying memory and releases it when disposed.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "docs/api/Zaya.Screenshot.Models.PixelFormat.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Zaya.Screenshot.Models.PixelFormat.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Zaya.Screenshot.Models.PixelFormat",
-      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Models.PixelFormat.yml\" sourcestartlinenumber=\"1\">Represents a pixel format with conversion methods.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "docs/api/Zaya.Screenshot.Models.PixelFormatExtensions.yml",
       "output": {
         ".html": {
@@ -253,16 +225,6 @@
       "IsMRef": true,
       "Title": "Zaya.Screenshot.Services",
       "Summary": null
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/api/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "api/index.html"
-        }
-      },
-      "version": ""
     },
     {
       "type": "Toc",

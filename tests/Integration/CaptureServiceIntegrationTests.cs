@@ -29,18 +29,18 @@ public class CaptureServiceIntegrationTests : IAsyncDisposable
     {
         var region = new FullScreenDesktopRegion();
         await Assert.ThrowsAsync<InvalidOperationException>(() =>
-            _captureService.CreateSessionAsync(region));
+            _captureService.CreateSessionAsync(region, TestContext.Current.CancellationToken));
     }
 
     [Fact]
     public async Task CaptureFullScreen_ReturnsNonBlackFrame()
     {
-        await _captureService.InitializeAsync(null);
+        await _captureService.InitializeAsync(null, TestContext.Current.CancellationToken);
 
         var region = new FullScreenDesktopRegion();
 
-        using var session = await _captureService.CreateSessionAsync(region);
-        using var frame = await session.CaptureAsync();
+        using var session = await _captureService.CreateSessionAsync(region, TestContext.Current.CancellationToken);
+        using var frame = await session.CaptureAsync(TestContext.Current.CancellationToken);
 
         Assert.NotNull(frame);
         Assert.True(frame!.Width > 0);
@@ -51,7 +51,7 @@ public class CaptureServiceIntegrationTests : IAsyncDisposable
     [Fact]
     public async Task CaptureRectRegion_ReturnsCorrectSizeAndNonBlack()
     {
-        await _captureService.InitializeAsync(null);
+        await _captureService.InitializeAsync(null, TestContext.Current.CancellationToken);
 
         var rect = new Rectangle(100, 100, 200, 150);
         var region = new RectDesktopRegion
@@ -60,8 +60,8 @@ public class CaptureServiceIntegrationTests : IAsyncDisposable
             Rectangle = rect
         };
 
-        using var session = await _captureService.CreateSessionAsync(region);
-        using var frame = await session.CaptureAsync();
+        using var session = await _captureService.CreateSessionAsync(region, TestContext.Current.CancellationToken);
+        using var frame = await session.CaptureAsync(TestContext.Current.CancellationToken);
 
         Assert.NotNull(frame);
         Assert.Equal(rect.Width, frame!.Width);
