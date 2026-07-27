@@ -27,7 +27,7 @@ items:
   summary: >-
     Typed configuration for <xref href="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService" data-throw-if-not-resolved="false"></xref>.
 
-    Converts to the dictionary format expected by <code>InitializeAsync</code>.
+    Converts to the dictionary format expected by <code>CreateSessionAsync</code>.
 
     Empty for now — no engine-specific settings yet.
   example: []
@@ -66,7 +66,7 @@ items:
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows
-  summary: Converts the typed configuration to the dictionary format accepted by <code>InitializeAsync</code>.
+  summary: Converts the typed configuration to the dictionary format accepted by <code>CreateSessionAsync</code>.
   example: []
   syntax:
     content: public Dictionary<string, object?> ToDictionary()

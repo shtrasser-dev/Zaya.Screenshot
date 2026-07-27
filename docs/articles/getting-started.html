@@ -69,9 +69,14 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="getting-started">Getting Started</h1>
 
+<h2 id="overview">Overview</h2>
+<p>Zaya.Screenshot provides screen-capture abstractions (<code>ICaptureService</code>, <code>ICaptureSession</code>, <code>ICaptureRegion</code>) and a Windows implementation based on Graphics Capture + Direct3D 11. Frames are returned as <code>IRawImage</code> (<code>ReadOnlySpan&lt;byte&gt;</code> pixel data).</p>
 <h2 id="basic-capture-scenarios">Basic Capture Scenarios</h2>
 <h3 id="capture-entire-primary-monitor">Capture Entire Primary Monitor</h3>
-<pre><code class="lang-csharp">using var service = new CaptureService();
+<pre><code class="lang-csharp">using Zaya.Screenshot.Impl.Windows.Services.Impl;
+using Zaya.Screenshot.Models;
+
+using var service = new CaptureService();
 var region = new FullScreenDesktopRegion();
 using var session = await service.CreateSessionAsync(region);
 using var frame = await session.CaptureAsync();
@@ -87,6 +92,7 @@ var region = new FullScreenWindowRegion { WindowHandle = hwnd };
 <pre><code class="lang-csharp">var region = new RectDesktopRegion
 {
     DisplayIndex = 0,
+    // Origin is the top-left of the selected display, not the virtual screen
     Rectangle = new Rectangle(100, 100, 400, 300)
 };
 </code></pre>
@@ -97,13 +103,17 @@ var region = new FullScreenWindowRegion { WindowHandle = hwnd };
 };
 </code></pre>
 <p>Available formats: <code>Bgra32</code> (default), <code>Rgb24</code>, <code>Bgr24</code>, <code>Gray8</code>.</p>
-<h2 id="pause-and-resume">Pause and Resume</h2>
-<pre><code class="lang-csharp">session.Pause();
-// ... capture resumes when needed
-session.Resume();
+<h2 id="cancellation">Cancellation</h2>
+<pre><code class="lang-csharp">var cts = new CancellationTokenSource(TimeSpan.FromSeconds(5));
+using var session = await service.CreateSessionAsync(region, cts.Token);
+using var frame = await session.CaptureAsync(cts.Token);
 </code></pre>
 <h2 id="cleanup">Cleanup</h2>
-<p>Both <code>CaptureService</code> and <code>ICaptureSession</code> implement <code>IDisposable</code>. Each captured frame is also disposable — returned to the shared array pool on dispose for memory efficiency.</p>
+<p><code>ICaptureService</code>, <code>ICaptureSession</code>, and each captured <code>IRawImage</code> implement <code>IDisposable</code>. Dispose frames promptly so buffers can return to the shared array pool. Dispose sessions before disposing the service (the service owns the shared Direct3D device).</p>
+<h2 id="next-steps">Next steps</h2>
+<ul>
+<li><strong><a class="xref" href="../api/Zaya.Screenshot.Services.html">API Reference</a></strong> — generated from source</li>
+</ul>
 
 </article>
           </div>

@@ -2,6 +2,7 @@
 using Windows.Graphics.DirectX.Direct3D11;
 using Windows.Graphics.Imaging;
 using WinRT;
+using Zaya.Screenshot.Impl.Windows;
 using Zaya.Screenshot.Impl.Windows.Services.Impl.WinApi;
 using Zaya.Screenshot.Models;
 using Buffer = Windows.Storage.Streams.Buffer;
@@ -36,20 +37,20 @@ internal sealed class Direct3DConverterService : IDisposable
             out IntPtr d3dDevice, out _, out IntPtr d3dContext);
 
         if (hr != 0)
-            throw new COMException($"Failed to create D3D11 device (hr=0x{hr:X})", hr);
+            throw new CaptureDeviceException($"D3D11CreateDevice: 0x{hr:X}");
 
         try
         {
             Guid dxgiGuid = IID_IDXGIDevice;
             hr = Marshal.QueryInterface(d3dDevice, ref dxgiGuid, out IntPtr dxgiDevice);
             if (hr != 0)
-                throw new COMException("Failed to get IDXGIDevice", hr);
+                throw new CaptureDeviceException($"QueryInterface(IDXGIDevice): 0x{hr:X}");
 
             try
             {
                 hr = WinApiInterop.CreateDirect3D11DeviceFromDXGIDevice(dxgiDevice, out IntPtr inspectable);
                 if (hr != 0)
-                    throw new COMException("Failed to create WinRT Direct3D device", hr);
+                    throw new CaptureDeviceException($"CreateDirect3D11DeviceFromDXGIDevice: 0x{hr:X}");
 
                 try
                 {

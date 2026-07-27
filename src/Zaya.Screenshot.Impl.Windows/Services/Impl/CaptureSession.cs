@@ -15,10 +15,10 @@ internal sealed class CaptureSession : ICaptureSession
     private readonly ICaptureRegion _region;
     private readonly Direct3D11CaptureFramePool _framePool;
     private readonly GraphicsCaptureSession _session;
+    private readonly Action? _onDisposed;
     private static readonly TimeSpan DefaultFrameTimeout = TimeSpan.FromSeconds(5);
 
     private bool _disposed;
-    private bool _paused;
 
     public ICaptureRegion Region => _region;
 
@@ -26,21 +26,19 @@ internal sealed class CaptureSession : ICaptureSession
         Direct3DConverterService converter,
         ICaptureRegion region,
         Direct3D11CaptureFramePool framePool,
-        GraphicsCaptureSession session)
+        GraphicsCaptureSession session,
+        Action? onDisposed = null)
     {
         _converter = converter;
         _region = region;
         _framePool = framePool;
         _session = session;
+        _onDisposed = onDisposed;
     }
 
     public async Task<IRawImage?> CaptureAsync(CancellationToken cancellationToken = default)
     {
-        if (_disposed)
-            throw new ObjectDisposedException(nameof(CaptureSession));
-
-        if (_paused)
-            return null;
+        ObjectDisposedException.ThrowIf(_disposed, this);
 
         var frame = await WaitForFrameAsync(cancellationToken);
         if (frame == null)
@@ -77,57 +75,73 @@ internal sealed class CaptureSession : ICaptureSession
 
     private async Task<Direct3D11CaptureFrame?> WaitForFrameAsync(CancellationToken cancellationToken)
     {
-        var tcs = new TaskCompletionSource<Direct3D11CaptureFrame?>();
+        var tcs = new TaskCompletionSource<Direct3D11CaptureFrame?>(
+            TaskCreationOptions.RunContinuationsAsynchronously);
+        Direct3D11CaptureFrame? result = null;
 
         void OnFrameArrived(Direct3D11CaptureFramePool sender, object args)
         {
             try
             {
                 var frame = sender.TryGetNextFrame();
-                if (frame != null)
-                    tcs.TrySetResult(frame);
+                if (frame is null)
+                    return;
+
+                if (!tcs.TrySetResult(frame))
+                    frame.Dispose();
             }
-            catch (Exception ex) { tcs.TrySetException(ex); }
+            catch (Exception ex)
+            {
+                tcs.TrySetException(ex);
+            }
         }
 
         _framePool.FrameArrived += OnFrameArrived;
-
         try
         {
             var existingFrame = _framePool.TryGetNextFrame();
             if (existingFrame != null)
-                return existingFrame;
+            {
+                result = existingFrame;
+                return result;
+            }
 
             using var cts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
             cts.CancelAfter(DefaultFrameTimeout);
-            var completedTask = await Task.WhenAny(tcs.Task, Task.Delay(Timeout.Infinite, cts.Token));
-            if (completedTask != tcs.Task)
-                throw new TimeoutException("No frame received within timeout.");
-            return await tcs.Task;
+            try
+            {
+                result = await tcs.Task.WaitAsync(cts.Token);
+                return result;
+            }
+            catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+            {
+                throw;
+            }
+            catch (OperationCanceledException)
+            {
+                throw new CaptureFrameTimeoutException();
+            }
         }
         finally
         {
             _framePool.FrameArrived -= OnFrameArrived;
+
+            // Dispose a frame that completed on the TCS but was not returned to the caller.
+            if (tcs.Task.IsCompletedSuccessfully)
+            {
+                var leftover = tcs.Task.Result;
+                if (leftover is not null && !ReferenceEquals(leftover, result))
+                    leftover.Dispose();
+            }
         }
-    }
-
-    public void Pause()
-    {
-        if (!_disposed)
-            _paused = true;
-    }
-
-    public void Resume()
-    {
-        if (!_disposed)
-            _paused = false;
     }
 
     public void Dispose()
     {
         if (_disposed) return;
         _disposed = true;
-        try { _session?.Dispose(); } catch { }
-        try { _framePool?.Dispose(); } catch { }
+        try { _session.Dispose(); } catch { }
+        try { _framePool.Dispose(); } catch { }
+        _onDisposed?.Invoke();
     }
 }

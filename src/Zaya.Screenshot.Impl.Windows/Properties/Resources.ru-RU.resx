@@ -13,9 +13,39 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Cap_EngineName" xml:space="preserve">
-    <value>Windows Graphics Capture Engine</value>
+    <value>Движок Windows Graphics Capture</value>
   </data>
   <data name="Cap_EngineDesc" xml:space="preserve">
     <value>Высокопроизводительный захват экрана через Windows Graphics Capture API и Direct3D 11</value>
+  </data>
+  <data name="Cap_Err_NotSupported" xml:space="preserve">
+    <value>Windows Graphics Capture не поддерживается на этой системе.</value>
+  </data>
+  <data name="Cap_Err_ItemCreateFailed" xml:space="preserve">
+    <value>Не удалось создать GraphicsCaptureItem.</value>
+  </data>
+  <data name="Cap_Err_WindowItemCreateFailed" xml:space="preserve">
+    <value>Не удалось создать элемент захвата для окна {0}.</value>
+  </data>
+  <data name="Cap_Err_RegionNotSupported" xml:space="preserve">
+    <value>Тип региона '{0}' не поддерживается.</value>
+  </data>
+  <data name="Cap_Err_DisplayIndexOutOfRange" xml:space="preserve">
+    <value>Индекс дисплея {0} вне диапазона. Доступно мониторов: {1}.</value>
+  </data>
+  <data name="Cap_Err_FrameTimeout" xml:space="preserve">
+    <value>Кадр не получен в течение тайм-аута.</value>
+  </data>
+  <data name="Cap_Err_CropInvalid" xml:space="preserve">
+    <value>Недопустимый прямоугольник обрезки ({0},{1},{2},{3}).</value>
+  </data>
+  <data name="Cap_Err_CropExceedsBounds" xml:space="preserve">
+    <value>Прямоугольник обрезки ({0},{1},{2},{3}) выходит за границы источника ({4}x{5}).</value>
+  </data>
+  <data name="Cap_Err_PixelFormatNotSupported" xml:space="preserve">
+    <value>Формат пикселей '{0}' (Bpp={1}) не поддерживается.</value>
+  </data>
+  <data name="Cap_Err_DeviceFailed" xml:space="preserve">
+    <value>Ошибка устройства захвата: {0}</value>
   </data>
 </root>

@@ -26,6 +26,464 @@ references:
   isSpec: "True"
   fullName: Zaya.Screenshot.Impl.Windows.CaptureConfig.ToDictionary
   nameWithType: CaptureConfig.ToDictionary
+- uid: Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException
+  name: CaptureCropExceedsBoundsException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.html
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException
+  nameWithType: CaptureCropExceedsBoundsException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: CaptureCropExceedsBoundsException(int, int, int, int, int, int)
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.html#Zaya_Screenshot_Impl_Windows_CaptureCropExceedsBoundsException__ctor_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name.vb: New(Integer, Integer, Integer, Integer, Integer, Integer)
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.CaptureCropExceedsBoundsException(int, int, int, int, int, int)
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.New(Integer, Integer, Integer, Integer, Integer, Integer)
+  nameWithType: CaptureCropExceedsBoundsException.CaptureCropExceedsBoundsException(int, int, int, int, int, int)
+  nameWithType.vb: CaptureCropExceedsBoundsException.New(Integer, Integer, Integer, Integer, Integer, Integer)
+- uid: Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.#ctor*
+  name: CaptureCropExceedsBoundsException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.html#Zaya_Screenshot_Impl_Windows_CaptureCropExceedsBoundsException__ctor_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.CaptureCropExceedsBoundsException
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.New
+  nameWithType: CaptureCropExceedsBoundsException.CaptureCropExceedsBoundsException
+  nameWithType.vb: CaptureCropExceedsBoundsException.New
+- uid: Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  name: GetLocalizedMessage(CultureInfo)
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.html#Zaya_Screenshot_Impl_Windows_CaptureCropExceedsBoundsException_GetLocalizedMessage_System_Globalization_CultureInfo_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  nameWithType: CaptureCropExceedsBoundsException.GetLocalizedMessage(CultureInfo)
+- uid: Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.GetLocalizedMessage*
+  name: GetLocalizedMessage
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.html#Zaya_Screenshot_Impl_Windows_CaptureCropExceedsBoundsException_GetLocalizedMessage_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.GetLocalizedMessage
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.GetLocalizedMessage
+  nameWithType: CaptureCropExceedsBoundsException.GetLocalizedMessage
+- uid: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException
+  name: CaptureCropInvalidException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.html
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException
+  nameWithType: CaptureCropInvalidException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: CaptureCropInvalidException(int, int, int, int)
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.html#Zaya_Screenshot_Impl_Windows_CaptureCropInvalidException__ctor_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  name.vb: New(Integer, Integer, Integer, Integer)
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.CaptureCropInvalidException(int, int, int, int)
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.New(Integer, Integer, Integer, Integer)
+  nameWithType: CaptureCropInvalidException.CaptureCropInvalidException(int, int, int, int)
+  nameWithType.vb: CaptureCropInvalidException.New(Integer, Integer, Integer, Integer)
+- uid: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.#ctor*
+  name: CaptureCropInvalidException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.html#Zaya_Screenshot_Impl_Windows_CaptureCropInvalidException__ctor_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.CaptureCropInvalidException
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.New
+  nameWithType: CaptureCropInvalidException.CaptureCropInvalidException
+  nameWithType.vb: CaptureCropInvalidException.New
+- uid: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  name: GetLocalizedMessage(CultureInfo)
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.html#Zaya_Screenshot_Impl_Windows_CaptureCropInvalidException_GetLocalizedMessage_System_Globalization_CultureInfo_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  nameWithType: CaptureCropInvalidException.GetLocalizedMessage(CultureInfo)
+- uid: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.GetLocalizedMessage*
+  name: GetLocalizedMessage
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.html#Zaya_Screenshot_Impl_Windows_CaptureCropInvalidException_GetLocalizedMessage_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.GetLocalizedMessage
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.GetLocalizedMessage
+  nameWithType: CaptureCropInvalidException.GetLocalizedMessage
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDeviceException
+  name: CaptureDeviceException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureDeviceException.html
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureDeviceException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDeviceException
+  nameWithType: CaptureDeviceException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.#ctor(System.String)
+  name: CaptureDeviceException(string)
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureDeviceException.html#Zaya_Screenshot_Impl_Windows_CaptureDeviceException__ctor_System_String_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureDeviceException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.CaptureDeviceException(string)
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.New(String)
+  nameWithType: CaptureDeviceException.CaptureDeviceException(string)
+  nameWithType.vb: CaptureDeviceException.New(String)
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.#ctor*
+  name: CaptureDeviceException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureDeviceException.html#Zaya_Screenshot_Impl_Windows_CaptureDeviceException__ctor_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureDeviceException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.CaptureDeviceException
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.New
+  nameWithType: CaptureDeviceException.CaptureDeviceException
+  nameWithType.vb: CaptureDeviceException.New
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.Detail
+  name: Detail
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureDeviceException.html#Zaya_Screenshot_Impl_Windows_CaptureDeviceException_Detail
+  commentId: P:Zaya.Screenshot.Impl.Windows.CaptureDeviceException.Detail
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.Detail
+  nameWithType: CaptureDeviceException.Detail
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.Detail*
+  name: Detail
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureDeviceException.html#Zaya_Screenshot_Impl_Windows_CaptureDeviceException_Detail_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureDeviceException.Detail
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.Detail
+  nameWithType: CaptureDeviceException.Detail
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  name: GetLocalizedMessage(CultureInfo)
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureDeviceException.html#Zaya_Screenshot_Impl_Windows_CaptureDeviceException_GetLocalizedMessage_System_Globalization_CultureInfo_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureDeviceException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  nameWithType: CaptureDeviceException.GetLocalizedMessage(CultureInfo)
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.GetLocalizedMessage*
+  name: GetLocalizedMessage
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureDeviceException.html#Zaya_Screenshot_Impl_Windows_CaptureDeviceException_GetLocalizedMessage_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureDeviceException.GetLocalizedMessage
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.GetLocalizedMessage
+  nameWithType: CaptureDeviceException.GetLocalizedMessage
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException
+  name: CaptureDisplayIndexException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.html
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException
+  nameWithType: CaptureDisplayIndexException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.#ctor(System.Int32,System.Int32)
+  name: CaptureDisplayIndexException(int, int)
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.html#Zaya_Screenshot_Impl_Windows_CaptureDisplayIndexException__ctor_System_Int32_System_Int32_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.#ctor(System.Int32,System.Int32)
+  name.vb: New(Integer, Integer)
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.CaptureDisplayIndexException(int, int)
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.New(Integer, Integer)
+  nameWithType: CaptureDisplayIndexException.CaptureDisplayIndexException(int, int)
+  nameWithType.vb: CaptureDisplayIndexException.New(Integer, Integer)
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.#ctor*
+  name: CaptureDisplayIndexException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.html#Zaya_Screenshot_Impl_Windows_CaptureDisplayIndexException__ctor_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.CaptureDisplayIndexException
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.New
+  nameWithType: CaptureDisplayIndexException.CaptureDisplayIndexException
+  nameWithType.vb: CaptureDisplayIndexException.New
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.DisplayIndex
+  name: DisplayIndex
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.html#Zaya_Screenshot_Impl_Windows_CaptureDisplayIndexException_DisplayIndex
+  commentId: P:Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.DisplayIndex
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.DisplayIndex
+  nameWithType: CaptureDisplayIndexException.DisplayIndex
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.DisplayIndex*
+  name: DisplayIndex
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.html#Zaya_Screenshot_Impl_Windows_CaptureDisplayIndexException_DisplayIndex_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.DisplayIndex
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.DisplayIndex
+  nameWithType: CaptureDisplayIndexException.DisplayIndex
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  name: GetLocalizedMessage(CultureInfo)
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.html#Zaya_Screenshot_Impl_Windows_CaptureDisplayIndexException_GetLocalizedMessage_System_Globalization_CultureInfo_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  nameWithType: CaptureDisplayIndexException.GetLocalizedMessage(CultureInfo)
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.GetLocalizedMessage*
+  name: GetLocalizedMessage
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.html#Zaya_Screenshot_Impl_Windows_CaptureDisplayIndexException_GetLocalizedMessage_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.GetLocalizedMessage
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.GetLocalizedMessage
+  nameWithType: CaptureDisplayIndexException.GetLocalizedMessage
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.MonitorCount
+  name: MonitorCount
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.html#Zaya_Screenshot_Impl_Windows_CaptureDisplayIndexException_MonitorCount
+  commentId: P:Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.MonitorCount
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.MonitorCount
+  nameWithType: CaptureDisplayIndexException.MonitorCount
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.MonitorCount*
+  name: MonitorCount
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.html#Zaya_Screenshot_Impl_Windows_CaptureDisplayIndexException_MonitorCount_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.MonitorCount
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.MonitorCount
+  nameWithType: CaptureDisplayIndexException.MonitorCount
+- uid: Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException
+  name: CaptureFrameTimeoutException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.html
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException
+  nameWithType: CaptureFrameTimeoutException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.#ctor
+  name: CaptureFrameTimeoutException()
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.html#Zaya_Screenshot_Impl_Windows_CaptureFrameTimeoutException__ctor
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.#ctor
+  name.vb: New()
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.CaptureFrameTimeoutException()
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.New()
+  nameWithType: CaptureFrameTimeoutException.CaptureFrameTimeoutException()
+  nameWithType.vb: CaptureFrameTimeoutException.New()
+- uid: Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.#ctor*
+  name: CaptureFrameTimeoutException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.html#Zaya_Screenshot_Impl_Windows_CaptureFrameTimeoutException__ctor_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.CaptureFrameTimeoutException
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.New
+  nameWithType: CaptureFrameTimeoutException.CaptureFrameTimeoutException
+  nameWithType.vb: CaptureFrameTimeoutException.New
+- uid: Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  name: GetLocalizedMessage(CultureInfo)
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.html#Zaya_Screenshot_Impl_Windows_CaptureFrameTimeoutException_GetLocalizedMessage_System_Globalization_CultureInfo_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  nameWithType: CaptureFrameTimeoutException.GetLocalizedMessage(CultureInfo)
+- uid: Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.GetLocalizedMessage*
+  name: GetLocalizedMessage
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.html#Zaya_Screenshot_Impl_Windows_CaptureFrameTimeoutException_GetLocalizedMessage_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.GetLocalizedMessage
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.GetLocalizedMessage
+  nameWithType: CaptureFrameTimeoutException.GetLocalizedMessage
+- uid: Zaya.Screenshot.Impl.Windows.CaptureItemCreateException
+  name: CaptureItemCreateException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.html
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureItemCreateException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureItemCreateException
+  nameWithType: CaptureItemCreateException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.#ctor
+  name: CaptureItemCreateException()
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.html#Zaya_Screenshot_Impl_Windows_CaptureItemCreateException__ctor
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.#ctor
+  name.vb: New()
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.CaptureItemCreateException()
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.New()
+  nameWithType: CaptureItemCreateException.CaptureItemCreateException()
+  nameWithType.vb: CaptureItemCreateException.New()
+- uid: Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.#ctor*
+  name: CaptureItemCreateException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.html#Zaya_Screenshot_Impl_Windows_CaptureItemCreateException__ctor_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.CaptureItemCreateException
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.New
+  nameWithType: CaptureItemCreateException.CaptureItemCreateException
+  nameWithType.vb: CaptureItemCreateException.New
+- uid: Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  name: GetLocalizedMessage(CultureInfo)
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.html#Zaya_Screenshot_Impl_Windows_CaptureItemCreateException_GetLocalizedMessage_System_Globalization_CultureInfo_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  nameWithType: CaptureItemCreateException.GetLocalizedMessage(CultureInfo)
+- uid: Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.GetLocalizedMessage*
+  name: GetLocalizedMessage
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.html#Zaya_Screenshot_Impl_Windows_CaptureItemCreateException_GetLocalizedMessage_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.GetLocalizedMessage
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.GetLocalizedMessage
+  nameWithType: CaptureItemCreateException.GetLocalizedMessage
+- uid: Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException
+  name: CaptureNotSupportedException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.html
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException
+  nameWithType: CaptureNotSupportedException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.#ctor
+  name: CaptureNotSupportedException()
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.html#Zaya_Screenshot_Impl_Windows_CaptureNotSupportedException__ctor
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.#ctor
+  name.vb: New()
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.CaptureNotSupportedException()
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.New()
+  nameWithType: CaptureNotSupportedException.CaptureNotSupportedException()
+  nameWithType.vb: CaptureNotSupportedException.New()
+- uid: Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.#ctor*
+  name: CaptureNotSupportedException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.html#Zaya_Screenshot_Impl_Windows_CaptureNotSupportedException__ctor_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.CaptureNotSupportedException
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.New
+  nameWithType: CaptureNotSupportedException.CaptureNotSupportedException
+  nameWithType.vb: CaptureNotSupportedException.New
+- uid: Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  name: GetLocalizedMessage(CultureInfo)
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.html#Zaya_Screenshot_Impl_Windows_CaptureNotSupportedException_GetLocalizedMessage_System_Globalization_CultureInfo_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  nameWithType: CaptureNotSupportedException.GetLocalizedMessage(CultureInfo)
+- uid: Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.GetLocalizedMessage*
+  name: GetLocalizedMessage
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.html#Zaya_Screenshot_Impl_Windows_CaptureNotSupportedException_GetLocalizedMessage_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.GetLocalizedMessage
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.GetLocalizedMessage
+  nameWithType: CaptureNotSupportedException.GetLocalizedMessage
+- uid: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException
+  name: CapturePixelFormatNotSupportedException
+  href: api/Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.html
+  commentId: T:Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException
+  fullName: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException
+  nameWithType: CapturePixelFormatNotSupportedException
+- uid: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.#ctor(System.String,System.Int32)
+  name: CapturePixelFormatNotSupportedException(string, int)
+  href: api/Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.html#Zaya_Screenshot_Impl_Windows_CapturePixelFormatNotSupportedException__ctor_System_String_System_Int32_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.#ctor(System.String,System.Int32)
+  name.vb: New(String, Integer)
+  fullName: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.CapturePixelFormatNotSupportedException(string, int)
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.New(String, Integer)
+  nameWithType: CapturePixelFormatNotSupportedException.CapturePixelFormatNotSupportedException(string, int)
+  nameWithType.vb: CapturePixelFormatNotSupportedException.New(String, Integer)
+- uid: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.#ctor*
+  name: CapturePixelFormatNotSupportedException
+  href: api/Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.html#Zaya_Screenshot_Impl_Windows_CapturePixelFormatNotSupportedException__ctor_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.CapturePixelFormatNotSupportedException
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.New
+  nameWithType: CapturePixelFormatNotSupportedException.CapturePixelFormatNotSupportedException
+  nameWithType.vb: CapturePixelFormatNotSupportedException.New
+- uid: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.FormatName
+  name: FormatName
+  href: api/Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.html#Zaya_Screenshot_Impl_Windows_CapturePixelFormatNotSupportedException_FormatName
+  commentId: P:Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.FormatName
+  fullName: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.FormatName
+  nameWithType: CapturePixelFormatNotSupportedException.FormatName
+- uid: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.FormatName*
+  name: FormatName
+  href: api/Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.html#Zaya_Screenshot_Impl_Windows_CapturePixelFormatNotSupportedException_FormatName_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.FormatName
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.FormatName
+  nameWithType: CapturePixelFormatNotSupportedException.FormatName
+- uid: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  name: GetLocalizedMessage(CultureInfo)
+  href: api/Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.html#Zaya_Screenshot_Impl_Windows_CapturePixelFormatNotSupportedException_GetLocalizedMessage_System_Globalization_CultureInfo_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  fullName: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  nameWithType: CapturePixelFormatNotSupportedException.GetLocalizedMessage(CultureInfo)
+- uid: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.GetLocalizedMessage*
+  name: GetLocalizedMessage
+  href: api/Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.html#Zaya_Screenshot_Impl_Windows_CapturePixelFormatNotSupportedException_GetLocalizedMessage_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.GetLocalizedMessage
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.GetLocalizedMessage
+  nameWithType: CapturePixelFormatNotSupportedException.GetLocalizedMessage
+- uid: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException
+  name: CaptureRegionNotSupportedException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.html
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException
+  nameWithType: CaptureRegionNotSupportedException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.#ctor(System.String)
+  name: CaptureRegionNotSupportedException(string)
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.html#Zaya_Screenshot_Impl_Windows_CaptureRegionNotSupportedException__ctor_System_String_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.CaptureRegionNotSupportedException(string)
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.New(String)
+  nameWithType: CaptureRegionNotSupportedException.CaptureRegionNotSupportedException(string)
+  nameWithType.vb: CaptureRegionNotSupportedException.New(String)
+- uid: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.#ctor*
+  name: CaptureRegionNotSupportedException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.html#Zaya_Screenshot_Impl_Windows_CaptureRegionNotSupportedException__ctor_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.CaptureRegionNotSupportedException
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.New
+  nameWithType: CaptureRegionNotSupportedException.CaptureRegionNotSupportedException
+  nameWithType.vb: CaptureRegionNotSupportedException.New
+- uid: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  name: GetLocalizedMessage(CultureInfo)
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.html#Zaya_Screenshot_Impl_Windows_CaptureRegionNotSupportedException_GetLocalizedMessage_System_Globalization_CultureInfo_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  nameWithType: CaptureRegionNotSupportedException.GetLocalizedMessage(CultureInfo)
+- uid: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.GetLocalizedMessage*
+  name: GetLocalizedMessage
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.html#Zaya_Screenshot_Impl_Windows_CaptureRegionNotSupportedException_GetLocalizedMessage_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.GetLocalizedMessage
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.GetLocalizedMessage
+  nameWithType: CaptureRegionNotSupportedException.GetLocalizedMessage
+- uid: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.RegionType
+  name: RegionType
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.html#Zaya_Screenshot_Impl_Windows_CaptureRegionNotSupportedException_RegionType
+  commentId: P:Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.RegionType
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.RegionType
+  nameWithType: CaptureRegionNotSupportedException.RegionType
+- uid: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.RegionType*
+  name: RegionType
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.html#Zaya_Screenshot_Impl_Windows_CaptureRegionNotSupportedException_RegionType_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.RegionType
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.RegionType
+  nameWithType: CaptureRegionNotSupportedException.RegionType
+- uid: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException
+  name: CaptureWindowItemCreateException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.html
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException
+  nameWithType: CaptureWindowItemCreateException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.#ctor(System.IntPtr)
+  name: CaptureWindowItemCreateException(nint)
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.html#Zaya_Screenshot_Impl_Windows_CaptureWindowItemCreateException__ctor_System_IntPtr_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.#ctor(System.IntPtr)
+  name.vb: New(IntPtr)
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.CaptureWindowItemCreateException(nint)
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.New(System.IntPtr)
+  nameWithType: CaptureWindowItemCreateException.CaptureWindowItemCreateException(nint)
+  nameWithType.vb: CaptureWindowItemCreateException.New(IntPtr)
+- uid: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.#ctor*
+  name: CaptureWindowItemCreateException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.html#Zaya_Screenshot_Impl_Windows_CaptureWindowItemCreateException__ctor_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.CaptureWindowItemCreateException
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.New
+  nameWithType: CaptureWindowItemCreateException.CaptureWindowItemCreateException
+  nameWithType.vb: CaptureWindowItemCreateException.New
+- uid: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  name: GetLocalizedMessage(CultureInfo)
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.html#Zaya_Screenshot_Impl_Windows_CaptureWindowItemCreateException_GetLocalizedMessage_System_Globalization_CultureInfo_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  nameWithType: CaptureWindowItemCreateException.GetLocalizedMessage(CultureInfo)
+- uid: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.GetLocalizedMessage*
+  name: GetLocalizedMessage
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.html#Zaya_Screenshot_Impl_Windows_CaptureWindowItemCreateException_GetLocalizedMessage_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.GetLocalizedMessage
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.GetLocalizedMessage
+  nameWithType: CaptureWindowItemCreateException.GetLocalizedMessage
+- uid: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.WindowHandleHex
+  name: WindowHandleHex
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.html#Zaya_Screenshot_Impl_Windows_CaptureWindowItemCreateException_WindowHandleHex
+  commentId: P:Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.WindowHandleHex
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.WindowHandleHex
+  nameWithType: CaptureWindowItemCreateException.WindowHandleHex
+- uid: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.WindowHandleHex*
+  name: WindowHandleHex
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.html#Zaya_Screenshot_Impl_Windows_CaptureWindowItemCreateException_WindowHandleHex_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.WindowHandleHex
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.WindowHandleHex
+  nameWithType: CaptureWindowItemCreateException.WindowHandleHex
 - uid: Zaya.Screenshot.Impl.Windows.Models
   name: Zaya.Screenshot.Impl.Windows.Models
   href: api/Zaya.Screenshot.Impl.Windows.Models.html
@@ -179,6 +637,15 @@ references:
   fullName.vb: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.New
   nameWithType: CaptureService.CaptureService
   nameWithType.vb: CaptureService.New
+- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
+  name: CreateSessionAsync(ICaptureRegion, IReadOnlyDictionary<string, object>, CancellationToken)
+  href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_
+  commentId: M:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
+  name.vb: CreateSessionAsync(ICaptureRegion, IReadOnlyDictionary(Of String, Object), CancellationToken)
+  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion, System.Collections.Generic.IReadOnlyDictionary<string, object>, System.Threading.CancellationToken)
+  fullName.vb: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion, System.Collections.Generic.IReadOnlyDictionary(Of String, Object), System.Threading.CancellationToken)
+  nameWithType: CaptureService.CreateSessionAsync(ICaptureRegion, IReadOnlyDictionary<string, object>, CancellationToken)
+  nameWithType.vb: CaptureService.CreateSessionAsync(ICaptureRegion, IReadOnlyDictionary(Of String, Object), CancellationToken)
 - uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
   name: CreateSessionAsync(ICaptureRegion, CancellationToken)
   href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_
@@ -244,22 +711,6 @@ references:
   isSpec: "True"
   fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.EngineId
   nameWithType: CaptureService.EngineId
-- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
-  name: InitializeAsync(IReadOnlyDictionary<string, object?>?, CancellationToken)
-  href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_InitializeAsync_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_
-  commentId: M:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
-  name.vb: InitializeAsync(IReadOnlyDictionary(Of String, Object), CancellationToken)
-  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary<string, object?>?, System.Threading.CancellationToken)
-  fullName.vb: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary(Of String, Object), System.Threading.CancellationToken)
-  nameWithType: CaptureService.InitializeAsync(IReadOnlyDictionary<string, object?>?, CancellationToken)
-  nameWithType.vb: CaptureService.InitializeAsync(IReadOnlyDictionary(Of String, Object), CancellationToken)
-- uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync*
-  name: InitializeAsync
-  href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_InitializeAsync_
-  commentId: Overload:Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync
-  isSpec: "True"
-  fullName: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync
-  nameWithType: CaptureService.InitializeAsync
 - uid: Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.IsAvailable
   name: IsAvailable
   href: api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html#Zaya_Screenshot_Impl_Windows_Services_Impl_CaptureService_IsAvailable
@@ -510,6 +961,95 @@ references:
   isSpec: "True"
   fullName: Zaya.Screenshot.Models.RectWindowRegion.WindowHandle
   nameWithType: RectWindowRegion.WindowHandle
+- uid: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException
+  name: ScreenshotPixelFormatNotSupportedException
+  href: api/Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.html
+  commentId: T:Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException
+  fullName: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException
+  nameWithType: ScreenshotPixelFormatNotSupportedException
+- uid: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.#ctor(System.String)
+  name: ScreenshotPixelFormatNotSupportedException(string)
+  href: api/Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.html#Zaya_Screenshot_Models_ScreenshotPixelFormatNotSupportedException__ctor_System_String_
+  commentId: M:Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.ScreenshotPixelFormatNotSupportedException(string)
+  fullName.vb: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.New(String)
+  nameWithType: ScreenshotPixelFormatNotSupportedException.ScreenshotPixelFormatNotSupportedException(string)
+  nameWithType.vb: ScreenshotPixelFormatNotSupportedException.New(String)
+- uid: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.#ctor*
+  name: ScreenshotPixelFormatNotSupportedException
+  href: api/Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.html#Zaya_Screenshot_Models_ScreenshotPixelFormatNotSupportedException__ctor_
+  commentId: Overload:Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.ScreenshotPixelFormatNotSupportedException
+  fullName.vb: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.New
+  nameWithType: ScreenshotPixelFormatNotSupportedException.ScreenshotPixelFormatNotSupportedException
+  nameWithType.vb: ScreenshotPixelFormatNotSupportedException.New
+- uid: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.FormatName
+  name: FormatName
+  href: api/Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.html#Zaya_Screenshot_Models_ScreenshotPixelFormatNotSupportedException_FormatName
+  commentId: P:Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.FormatName
+  fullName: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.FormatName
+  nameWithType: ScreenshotPixelFormatNotSupportedException.FormatName
+- uid: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.FormatName*
+  name: FormatName
+  href: api/Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.html#Zaya_Screenshot_Models_ScreenshotPixelFormatNotSupportedException_FormatName_
+  commentId: Overload:Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.FormatName
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.FormatName
+  nameWithType: ScreenshotPixelFormatNotSupportedException.FormatName
+- uid: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  name: GetLocalizedMessage(CultureInfo)
+  href: api/Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.html#Zaya_Screenshot_Models_ScreenshotPixelFormatNotSupportedException_GetLocalizedMessage_System_Globalization_CultureInfo_
+  commentId: M:Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  fullName: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  nameWithType: ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage(CultureInfo)
+- uid: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage*
+  name: GetLocalizedMessage
+  href: api/Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.html#Zaya_Screenshot_Models_ScreenshotPixelFormatNotSupportedException_GetLocalizedMessage_
+  commentId: Overload:Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage
+  nameWithType: ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage
+- uid: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException
+  name: ScreenshotSkiaBgr24NotSupportedException
+  href: api/Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.html
+  commentId: T:Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException
+  fullName: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException
+  nameWithType: ScreenshotSkiaBgr24NotSupportedException
+- uid: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.#ctor
+  name: ScreenshotSkiaBgr24NotSupportedException()
+  href: api/Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.html#Zaya_Screenshot_Models_ScreenshotSkiaBgr24NotSupportedException__ctor
+  commentId: M:Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.#ctor
+  name.vb: New()
+  fullName: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.ScreenshotSkiaBgr24NotSupportedException()
+  fullName.vb: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.New()
+  nameWithType: ScreenshotSkiaBgr24NotSupportedException.ScreenshotSkiaBgr24NotSupportedException()
+  nameWithType.vb: ScreenshotSkiaBgr24NotSupportedException.New()
+- uid: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.#ctor*
+  name: ScreenshotSkiaBgr24NotSupportedException
+  href: api/Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.html#Zaya_Screenshot_Models_ScreenshotSkiaBgr24NotSupportedException__ctor_
+  commentId: Overload:Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.ScreenshotSkiaBgr24NotSupportedException
+  fullName.vb: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.New
+  nameWithType: ScreenshotSkiaBgr24NotSupportedException.ScreenshotSkiaBgr24NotSupportedException
+  nameWithType.vb: ScreenshotSkiaBgr24NotSupportedException.New
+- uid: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  name: GetLocalizedMessage(CultureInfo)
+  href: api/Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.html#Zaya_Screenshot_Models_ScreenshotSkiaBgr24NotSupportedException_GetLocalizedMessage_System_Globalization_CultureInfo_
+  commentId: M:Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  fullName: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  nameWithType: ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage(CultureInfo)
+- uid: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage*
+  name: GetLocalizedMessage
+  href: api/Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.html#Zaya_Screenshot_Models_ScreenshotSkiaBgr24NotSupportedException_GetLocalizedMessage_
+  commentId: Overload:Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage
+  nameWithType: ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage
 - uid: Zaya.Screenshot.Services
   name: Zaya.Screenshot.Services
   href: api/Zaya.Screenshot.Services.html
@@ -522,6 +1062,15 @@ references:
   commentId: T:Zaya.Screenshot.Services.ICaptureService
   fullName: Zaya.Screenshot.Services.ICaptureService
   nameWithType: ICaptureService
+- uid: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
+  name: CreateSessionAsync(ICaptureRegion, IReadOnlyDictionary<string, object>, CancellationToken)
+  href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_
+  commentId: M:Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
+  name.vb: CreateSessionAsync(ICaptureRegion, IReadOnlyDictionary(Of String, Object), CancellationToken)
+  fullName: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion, System.Collections.Generic.IReadOnlyDictionary<string, object>, System.Threading.CancellationToken)
+  fullName.vb: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion, System.Collections.Generic.IReadOnlyDictionary(Of String, Object), System.Threading.CancellationToken)
+  nameWithType: ICaptureService.CreateSessionAsync(ICaptureRegion, IReadOnlyDictionary<string, object>, CancellationToken)
+  nameWithType.vb: ICaptureService.CreateSessionAsync(ICaptureRegion, IReadOnlyDictionary(Of String, Object), CancellationToken)
 - uid: Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion,System.Threading.CancellationToken)
   name: CreateSessionAsync(ICaptureRegion, CancellationToken)
   href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_CreateSessionAsync_Zaya_Screenshot_Models_ICaptureRegion_System_Threading_CancellationToken_
@@ -574,22 +1123,6 @@ references:
   isSpec: "True"
   fullName: Zaya.Screenshot.Services.ICaptureService.EngineId
   nameWithType: ICaptureService.EngineId
-- uid: Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
-  name: InitializeAsync(IReadOnlyDictionary<string, object?>?, CancellationToken)
-  href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_InitializeAsync_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_Threading_CancellationToken_
-  commentId: M:Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)
-  name.vb: InitializeAsync(IReadOnlyDictionary(Of String, Object), CancellationToken)
-  fullName: Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary<string, object?>?, System.Threading.CancellationToken)
-  fullName.vb: Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary(Of String, Object), System.Threading.CancellationToken)
-  nameWithType: ICaptureService.InitializeAsync(IReadOnlyDictionary<string, object?>?, CancellationToken)
-  nameWithType.vb: ICaptureService.InitializeAsync(IReadOnlyDictionary(Of String, Object), CancellationToken)
-- uid: Zaya.Screenshot.Services.ICaptureService.InitializeAsync*
-  name: InitializeAsync
-  href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_InitializeAsync_
-  commentId: Overload:Zaya.Screenshot.Services.ICaptureService.InitializeAsync
-  isSpec: "True"
-  fullName: Zaya.Screenshot.Services.ICaptureService.InitializeAsync
-  nameWithType: ICaptureService.InitializeAsync
 - uid: Zaya.Screenshot.Services.ICaptureService.IsAvailable
   name: IsAvailable
   href: api/Zaya.Screenshot.Services.ICaptureService.html#Zaya_Screenshot_Services_ICaptureService_IsAvailable
@@ -635,19 +1168,6 @@ references:
   isSpec: "True"
   fullName: Zaya.Screenshot.Services.ICaptureSession.CaptureAsync
   nameWithType: ICaptureSession.CaptureAsync
-- uid: Zaya.Screenshot.Services.ICaptureSession.Pause
-  name: Pause()
-  href: api/Zaya.Screenshot.Services.ICaptureSession.html#Zaya_Screenshot_Services_ICaptureSession_Pause
-  commentId: M:Zaya.Screenshot.Services.ICaptureSession.Pause
-  fullName: Zaya.Screenshot.Services.ICaptureSession.Pause()
-  nameWithType: ICaptureSession.Pause()
-- uid: Zaya.Screenshot.Services.ICaptureSession.Pause*
-  name: Pause
-  href: api/Zaya.Screenshot.Services.ICaptureSession.html#Zaya_Screenshot_Services_ICaptureSession_Pause_
-  commentId: Overload:Zaya.Screenshot.Services.ICaptureSession.Pause
-  isSpec: "True"
-  fullName: Zaya.Screenshot.Services.ICaptureSession.Pause
-  nameWithType: ICaptureSession.Pause
 - uid: Zaya.Screenshot.Services.ICaptureSession.Region
   name: Region
   href: api/Zaya.Screenshot.Services.ICaptureSession.html#Zaya_Screenshot_Services_ICaptureSession_Region
@@ -661,16 +1181,3 @@ references:
   isSpec: "True"
   fullName: Zaya.Screenshot.Services.ICaptureSession.Region
   nameWithType: ICaptureSession.Region
-- uid: Zaya.Screenshot.Services.ICaptureSession.Resume
-  name: Resume()
-  href: api/Zaya.Screenshot.Services.ICaptureSession.html#Zaya_Screenshot_Services_ICaptureSession_Resume
-  commentId: M:Zaya.Screenshot.Services.ICaptureSession.Resume
-  fullName: Zaya.Screenshot.Services.ICaptureSession.Resume()
-  nameWithType: ICaptureSession.Resume()
-- uid: Zaya.Screenshot.Services.ICaptureSession.Resume*
-  name: Resume
-  href: api/Zaya.Screenshot.Services.ICaptureSession.html#Zaya_Screenshot_Services_ICaptureSession_Resume_
-  commentId: Overload:Zaya.Screenshot.Services.ICaptureSession.Resume
-  isSpec: "True"
-  fullName: Zaya.Screenshot.Services.ICaptureSession.Resume
-  nameWithType: ICaptureSession.Resume

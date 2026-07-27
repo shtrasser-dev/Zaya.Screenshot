@@ -21,7 +21,8 @@ public sealed record RectDesktopRegion : ICaptureRegion
     public required int DisplayIndex { get; init; }
 
     /// <summary>
-    /// The rectangular area on the display to capture, in screen coordinates.
+    /// The rectangular area to capture, in coordinates relative to the top-left
+    /// of the selected display (not the virtual desktop / multi-monitor screen space).
     /// </summary>
     public required Rectangle Rectangle { get; init; }
 }

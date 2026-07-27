@@ -1,15 +1,25 @@
 # Zaya.Screenshot
 
-High-performance screen capture library for Windows .NET 8.0+ applications. Captures windows and monitors using Direct3D 11 with efficient `ReadOnlySpan<byte>` pixel data access and configurable output formats.
+High-performance screen capture for Windows .NET 8.0+ — Windows Graphics Capture + Direct3D 11, with `IRawImage` / `ReadOnlySpan<byte>` pixel access and configurable output formats.
+
+## Packages
+
+| Package | Version | Role |
+|---------|---------|------|
+| **Zaya.Screenshot** | 0.3.1 | Abstractions: `ICaptureService`, `ICaptureSession`, region types, `PixelFormatExtensions` |
+| **Zaya.Screenshot.Impl.Windows** | 0.3.1 | Windows Graphics Capture + D3D11 (`CaptureService`, `CapturedFrame`) |
+
+Docs: [API & articles](https://shtrasser-dev.github.io/Zaya.Screenshot)
 
 ## Features
 
 - Capture full desktops, individual windows, or rectangular sub-regions
-- Multiple pixel formats: BGRA32, RGB24, BGR24, Gray8
-- High-performance `ReadOnlySpan<byte>` access to pixel data
-- Frame-level pause/resume control
-- Built-in localization (en, ru-RU)
-- Explicit engine initialization lifecycle
+- Pixel formats: BGRA32, RGB24, BGR24, Gray8
+- High-performance `ReadOnlySpan<byte>` access via `IRawImage`
+- Engine metadata (`EngineId`, localized name/description, `Settings`) for plugin hosts
+- Optional helpers mapping `PixelFormat` to SkiaSharp / ImageSharp type names
+
+There is no separate `InitializeAsync` / pause-resume API: create a session and call `CaptureAsync`.
 
 ## Platform
 
@@ -19,29 +29,33 @@ High-performance screen capture library for Windows .NET 8.0+ applications. Capt
 ## Installation
 
 ```xml
-<PackageReference Include="Zaya.Screenshot.Impl.Windows" Version="0.2.0" />
+<PackageReference Include="Zaya.Screenshot" Version="0.3.1" />
+<PackageReference Include="Zaya.Screenshot.Impl.Windows" Version="0.3.1" />
 ```
 
 ## Quick Start
 
 ```csharp
+using System.Globalization;
 using Zaya.Screenshot.Impl.Windows.Services.Impl;
 using Zaya.Screenshot.Models;
 
 using var service = new CaptureService();
 
-// Initialize before use
-await service.InitializeAsync(null);
+Console.WriteLine(service.DisplayName.GetValue(CultureInfo.CurrentUICulture));
+Console.WriteLine(service.IsAvailable);
 
 // Capture entire primary monitor
 var region = new FullScreenDesktopRegion();
 using var session = await service.CreateSessionAsync(region);
 using var frame = await session.CaptureAsync();
 
+if (frame is null)
+    return;
+
 var pixelData = frame.GetPixelData();
 Console.WriteLine($"Captured {frame.Width}x{frame.Height}, format: {frame.Format.Name}");
 
-// Copy to byte array for persistence
 byte[] copy = frame.ToByteArray();
 ```
 
@@ -49,6 +63,7 @@ byte[] copy = frame.ToByteArray();
 
 ```csharp
 var region = new FullScreenWindowRegion { WindowHandle = hwnd };
+using var session = await service.CreateSessionAsync(region);
 ```
 
 ### Capture a Rectangular Sub-Region
@@ -57,6 +72,7 @@ var region = new FullScreenWindowRegion { WindowHandle = hwnd };
 var region = new RectDesktopRegion
 {
     DisplayIndex = 0,
+    // Coordinates relative to the top-left of that display (not the virtual desktop)
     Rectangle = new Rectangle(100, 100, 400, 300)
 };
 ```
@@ -66,38 +82,22 @@ var region = new RectDesktopRegion
 ```csharp
 var region = new FullScreenDesktopRegion
 {
-    PixelFormat = PixelFormat.Gray8 // 1 byte per pixel, fastest for OCR
+    PixelFormat = PixelFormat.Gray8 // 1 byte per pixel, useful for OCR
 };
-```
-
-### Pause and Resume
-
-```csharp
-session.Pause();
-// ... capture can be suspended and resumed
-session.Resume();
-```
-
-### Engine Metadata
-
-```csharp
-using var service = new CaptureService();
-
-// Read metadata before initialization
-var name = service.DisplayName.GetValue(CultureInfo.CurrentUICulture);
-var settings = service.Settings; // IReadOnlyList<SettingDescriptor>
-
-// Initialize (heavy D3D device creation)
-await service.InitializeAsync(null);
-
-// Engine is ready
-Console.WriteLine(service.IsAvailable); // true
 ```
 
 ## Architecture
 
-- **Zaya.Screenshot** — core abstractions: interfaces (`ICaptureService`, `ICaptureSession`, `ICapturedFrame`, `ICaptureRegion`), region types, and pixel formats
-- **Zaya.Screenshot.Impl.Windows** — implementation using Windows Graphics Capture API and Direct3D 11
+```
+Resolve ICaptureService (new / DI / plugin host)
+  → Read DisplayName / Description / Settings / IsAvailable
+  → CreateSessionAsync(region[, settings])
+  → CaptureAsync() → IRawImage
+  → Dispose session / service
+```
+
+- **Zaya.Screenshot** — interfaces and region models
+- **Zaya.Screenshot.Impl.Windows** — Windows Graphics Capture + Direct3D 11
 
 ## License
 

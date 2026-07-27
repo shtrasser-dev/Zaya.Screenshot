@@ -4,6 +4,7 @@ using Windows.Graphics.Capture;
 using Windows.Graphics.DirectX;
 using WinRT;
 using Zaya.Primitives;
+using Zaya.Screenshot.Impl.Windows.Constants;
 using Zaya.Screenshot.Impl.Windows.Services.Impl.WinApi;
 using Zaya.Screenshot.Models;
 using Zaya.Screenshot.Services;
@@ -13,12 +14,15 @@ namespace Zaya.Screenshot.Impl.Windows.Services.Impl;
 /// <summary>
 /// Implementation of <see cref="ICaptureService"/> using Windows Graphics Capture API and Direct3D 11.
 /// Supports capturing windows and monitors in full-screen or rectangular regions.
-/// Call <see cref="InitializeAsync"/> before creating sessions.
+/// Pass engine settings directly to <see cref="CreateSessionAsync(ICaptureRegion, IReadOnlyDictionary{string, object}, CancellationToken)"/>.
 /// </summary>
 public sealed class CaptureService : ICaptureService
 {
     private Direct3DConverterService? _converter;
+    private int _activeSessions;
     private bool _disposed;
+
+    private static readonly IReadOnlyList<SettingDescriptor> SettingsList = [];
 
     private static LocalizedString Loc(string key)
         => new(key, culture => Properties.Resources.ResourceManager.GetString(key, culture)!);
@@ -27,37 +31,23 @@ public sealed class CaptureService : ICaptureService
     public string EngineId => "graphics-capture";
 
     /// <inheritdoc />
-    public LocalizedString DisplayName => Loc("Cap_EngineName");
+    public LocalizedString DisplayName => Loc(LocalizationConstants.Engine.Name);
 
     /// <inheritdoc />
-    public LocalizedString Description => Loc("Cap_EngineDesc");
+    public LocalizedString Description => Loc(LocalizationConstants.Engine.Desc);
 
     /// <inheritdoc />
-    public IReadOnlyList<SettingDescriptor> Settings { get; } = [];
+    public IReadOnlyList<SettingDescriptor> Settings { get; } = SettingsList;
 
     /// <inheritdoc />
-    public bool IsAvailable => _converter is not null;
+    public bool IsAvailable => OperatingSystem.IsWindowsVersionAtLeast(10, 0, 19041);
 
     /// <summary>
     /// Initializes a new instance of the <see cref="CaptureService"/> class.
-    /// The constructor is lightweight — Direct3D initialization is deferred to <see cref="InitializeAsync"/>.
+    /// The constructor is lightweight — Direct3D initialization is deferred to <see cref="CreateSessionAsync(ICaptureRegion, IReadOnlyDictionary{string, object}, CancellationToken)"/>.
     /// </summary>
     public CaptureService()
     {
-    }
-
-    /// <inheritdoc />
-    public Task InitializeAsync(IReadOnlyDictionary<string, object?>? engineSettings, CancellationToken cancellationToken = default)
-    {
-        ObjectDisposedException.ThrowIf(_disposed, this);
-        if (_converter is not null)
-            return Task.CompletedTask;
-
-        if (!GraphicsCaptureSession.IsSupported())
-            throw new NotSupportedException("Windows Graphics Capture is not supported on this system.");
-
-        _converter = Direct3DConverterService.Create();
-        return Task.CompletedTask;
     }
 
     /// <inheritdoc />
@@ -65,45 +55,96 @@ public sealed class CaptureService : ICaptureService
         ICaptureRegion region,
         CancellationToken cancellationToken = default)
     {
-        ObjectDisposedException.ThrowIf(_disposed, this);
-        if (_converter is null)
-            throw new InvalidOperationException("Capture engine is not initialized. Call InitializeAsync first.");
+        var settingDescriptorList = new SettingDescriptorList(SettingsList);
+        return await CreateSessionAsync(region, settingDescriptorList, cancellationToken);
+    }
 
-        if (region == null)
-            throw new ArgumentNullException(nameof(region));
+    /// <inheritdoc />
+    public async Task<ICaptureSession> CreateSessionAsync(
+        ICaptureRegion region,
+        IReadOnlyDictionary<string, object> engineSettings,
+        CancellationToken cancellationToken = default)
+    {
+        var settingDescriptorList = new SettingDescriptorList(SettingsList);
+        settingDescriptorList.Bind(engineSettings);
+        return await CreateSessionAsync(region, settingDescriptorList, cancellationToken);
+    }
+
+    private async Task<ICaptureSession> CreateSessionAsync(
+        ICaptureRegion region,
+        SettingDescriptorList settingDescriptorList,
+        CancellationToken cancellationToken = default)
+    {
+        ObjectDisposedException.ThrowIf(_disposed, this);
+        ArgumentNullException.ThrowIfNull(region);
+        cancellationToken.ThrowIfCancellationRequested();
+
+        if (_converter is null)
+        {
+            if (!GraphicsCaptureSession.IsSupported())
+                throw new CaptureNotSupportedException();
+
+            _converter = Direct3DConverterService.Create();
+        }
 
         var (captureItem, captureSize, isMonitorCapture) = CreateCaptureItem(region);
 
         if (captureItem == null)
-            throw new InvalidOperationException("Failed to create GraphicsCaptureItem.");
+            throw new CaptureItemCreateException();
 
-        var framePool = Direct3D11CaptureFramePool.CreateFreeThreaded(
-            _converter.WinRTDevice,
-            DirectXPixelFormat.B8G8R8A8UIntNormalized,
-            2,
-            captureSize);
-
-        var session = framePool.CreateCaptureSession(captureItem);
-        try { session.IsCursorCaptureEnabled = false; } catch { }
-
-        session.StartCapture();
-
-        var captureSession = new CaptureSession(
-            _converter,
-            region,
-            framePool,
-            session);
-
-        if (isMonitorCapture)
+        Direct3D11CaptureFramePool? framePool = null;
+        GraphicsCaptureSession? session = null;
+        CaptureSession? captureSession = null;
+        try
         {
-            for (var i = 0; i < 3; i++)
-            {
-                var frame = await captureSession.CaptureAsync();
-                frame?.Dispose();
-            }
-        }
+            framePool = Direct3D11CaptureFramePool.CreateFreeThreaded(
+                _converter.WinRTDevice,
+                DirectXPixelFormat.B8G8R8A8UIntNormalized,
+                2,
+                captureSize);
 
-        return captureSession;
+            session = framePool.CreateCaptureSession(captureItem);
+            try { session.IsCursorCaptureEnabled = false; } catch { }
+
+            session.StartCapture();
+
+            Interlocked.Increment(ref _activeSessions);
+            captureSession = new CaptureSession(
+                _converter,
+                region,
+                framePool,
+                session,
+                OnSessionDisposed);
+
+            // Ownership transferred to CaptureSession.
+            framePool = null;
+            session = null;
+
+            if (isMonitorCapture)
+            {
+                for (var i = 0; i < 3; i++)
+                {
+                    cancellationToken.ThrowIfCancellationRequested();
+                    var frame = await captureSession.CaptureAsync(cancellationToken);
+                    frame?.Dispose();
+                }
+            }
+
+            return captureSession;
+        }
+        catch
+        {
+            captureSession?.Dispose();
+            try { session?.Dispose(); } catch { }
+            try { framePool?.Dispose(); } catch { }
+            throw;
+        }
+    }
+
+    private void OnSessionDisposed()
+    {
+        if (Interlocked.Decrement(ref _activeSessions) == 0 && _disposed)
+            _converter?.Dispose();
     }
 
     private (GraphicsCaptureItem? Item, SizeInt32 Size, bool IsMonitor) CreateCaptureItem(
@@ -117,12 +158,16 @@ public sealed class CaptureService : ICaptureService
             case FullScreenWindowRegion windowRegion:
                 hwnd = windowRegion.WindowHandle;
                 var windowItem = CreateForWindow(hwnd);
+                if (windowItem is null)
+                    throw new CaptureWindowItemCreateException(hwnd);
                 captureSize = GetWindowCaptureSize(hwnd, windowItem);
                 return (windowItem, captureSize, false);
 
             case RectWindowRegion windowRegion:
                 hwnd = windowRegion.WindowHandle;
                 var rectWindowItem = CreateForWindow(hwnd);
+                if (rectWindowItem is null)
+                    throw new CaptureWindowItemCreateException(hwnd);
                 captureSize = GetWindowCaptureSize(hwnd, rectWindowItem);
                 return (rectWindowItem, captureSize, false);
 
@@ -139,10 +184,9 @@ public sealed class CaptureService : ICaptureService
                 return (rectDesktopItem, captureSize, true);
 
             default:
-                throw new NotSupportedException($"Region type '{region.GetType().Name}' is not supported.");
+                throw new CaptureRegionNotSupportedException(region.GetType().Name);
         }
     }
-
 
     private static GraphicsCaptureItem? CreateForWindow(nint hwnd)
     {
@@ -217,8 +261,7 @@ public sealed class CaptureService : ICaptureService
             return IntPtr.Zero;
 
         if ((uint)displayIndex >= (uint)monitors.Length)
-            throw new ArgumentOutOfRangeException(nameof(displayIndex),
-                $"Display index {displayIndex} is out of range. Available monitors: {monitors.Length}.");
+            throw new CaptureDisplayIndexException(displayIndex, monitors.Length);
 
         return monitors[displayIndex];
     }
@@ -228,6 +271,7 @@ public sealed class CaptureService : ICaptureService
     {
         if (_disposed) return;
         _disposed = true;
-        _converter?.Dispose();
+        if (Volatile.Read(ref _activeSessions) == 0)
+            _converter?.Dispose();
     }
 }

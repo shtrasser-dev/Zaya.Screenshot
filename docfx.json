@@ -3,7 +3,7 @@
     {
       "src": [
         {
-          "files": ["src/Zaya.Screenshot/Zaya.Screenshot.csproj", "src/Zaya.Screenshot.Impl.Windows/Zaya.Screenshot.Impl.Windows.csproj", "../Zaya.Primitives/src/Zaya.Primitives/Zaya.Primitives.csproj"],
+          "files": ["src/Zaya.Screenshot/Zaya.Screenshot.csproj", "src/Zaya.Screenshot.Impl.Windows/Zaya.Screenshot.Impl.Windows.csproj"],
           "src": "."
         }
       ],
@@ -13,6 +13,9 @@
     }
   ],
   "build": {
+    "xref": [
+      "https://shtrasser-dev.github.io/Zaya.Primitives/xrefmap.yml"
+    ],
     "content": [
       {
         "files": [

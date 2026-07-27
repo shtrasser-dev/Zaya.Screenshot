@@ -1,19 +1,28 @@
 # Zaya.Screenshot
 
-High-performance screen capture library for Windows .NET 8.0+ applications. Captures windows and monitors using Direct3D 11 with efficient `ReadOnlySpan<byte>` pixel data access and configurable output formats.
+High-performance screen capture for Windows .NET 8.0+ — Windows Graphics Capture + Direct3D 11, with `IRawImage` / `ReadOnlySpan<byte>` pixel access.
+
+## Packages
+
+| Package | Version | Role |
+|---------|---------|------|
+| **Zaya.Screenshot** | 0.3.1 | Abstractions: `ICaptureService`, `ICaptureSession`, region types |
+| **Zaya.Screenshot.Impl.Windows** | 0.3.1 | Windows Graphics Capture + D3D11 (`CaptureService`) |
 
 ## Features
 
 - Capture full desktops, individual windows, or rectangular sub-regions
-- Multiple pixel formats: BGRA32, RGB24, BGR24, Gray8
-- High-performance `ReadOnlySpan<byte>` access to pixel data
-- Frame-level pause/resume control
-- Built-in SkiaSharp and ImageSharp format conversion helpers
+- Pixel formats: BGRA32, RGB24, BGR24, Gray8
+- High-performance `ReadOnlySpan<byte>` access via `IRawImage`
+- Optional helpers mapping `PixelFormat` to SkiaSharp / ImageSharp type names
+
+There is no separate `InitializeAsync`: create a session with `CreateSessionAsync` and call `CaptureAsync`.
 
 ## Installation
 
 ```xml
-<PackageReference Include="Zaya.Screenshot" Version="0.1.0" />
+<PackageReference Include="Zaya.Screenshot" Version="0.3.1" />
+<PackageReference Include="Zaya.Screenshot.Impl.Windows" Version="0.3.1" />
 ```
 
 ## Platform
@@ -29,19 +38,20 @@ using Zaya.Screenshot.Models;
 
 using var service = new CaptureService();
 
-// Capture entire primary monitor
 var region = new FullScreenDesktopRegion();
 using var session = await service.CreateSessionAsync(region);
 using var frame = await session.CaptureAsync();
 
+if (frame is null)
+    return;
+
 var pixelData = frame.GetPixelData();
 Console.WriteLine($"Captured {frame.Width}x{frame.Height}, format: {frame.Format.Name}");
 
-// Copy to byte array for persistence
 byte[] copy = frame.ToByteArray();
 ```
 
 ## Next Steps
 
-- **Getting Started** — detailed usage guide and capture scenarios
-- **API Reference** — complete API documentation generated from source code
+- **[Getting Started](articles/getting-started.md)** — detailed usage guide and capture scenarios
+- **[API Reference](xref:Zaya.Screenshot.Services)** — complete API documentation generated from source code

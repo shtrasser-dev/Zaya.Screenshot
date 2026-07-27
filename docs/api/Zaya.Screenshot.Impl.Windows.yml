@@ -5,6 +5,16 @@ items:
   id: Zaya.Screenshot.Impl.Windows
   children:
   - Zaya.Screenshot.Impl.Windows.CaptureConfig
+  - Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException
+  - Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException
+  - Zaya.Screenshot.Impl.Windows.CaptureDeviceException
+  - Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException
+  - Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException
+  - Zaya.Screenshot.Impl.Windows.CaptureItemCreateException
+  - Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException
+  - Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException
+  - Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException
+  - Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException
   langs:
   - csharp
   - vb
@@ -21,3 +31,63 @@ references:
   name: CaptureConfig
   nameWithType: CaptureConfig
   fullName: Zaya.Screenshot.Impl.Windows.CaptureConfig
+- uid: Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException
+  href: Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.html
+  name: CaptureNotSupportedException
+  nameWithType: CaptureNotSupportedException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureItemCreateException
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureItemCreateException
+  href: Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.html
+  name: CaptureItemCreateException
+  nameWithType: CaptureItemCreateException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureItemCreateException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException
+  href: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.html
+  name: CaptureWindowItemCreateException
+  nameWithType: CaptureWindowItemCreateException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException
+  href: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.html
+  name: CaptureRegionNotSupportedException
+  nameWithType: CaptureRegionNotSupportedException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException
+  href: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.html
+  name: CaptureDisplayIndexException
+  nameWithType: CaptureDisplayIndexException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException
+  href: Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.html
+  name: CaptureFrameTimeoutException
+  nameWithType: CaptureFrameTimeoutException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException
+  href: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.html
+  name: CaptureCropInvalidException
+  nameWithType: CaptureCropInvalidException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException
+  href: Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.html
+  name: CaptureCropExceedsBoundsException
+  nameWithType: CaptureCropExceedsBoundsException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException
+- uid: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException
+  commentId: T:Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException
+  href: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.html
+  name: CapturePixelFormatNotSupportedException
+  nameWithType: CapturePixelFormatNotSupportedException
+  fullName: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureDeviceException
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureDeviceException
+  href: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.html
+  name: CaptureDeviceException
+  nameWithType: CaptureDeviceException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureDeviceException

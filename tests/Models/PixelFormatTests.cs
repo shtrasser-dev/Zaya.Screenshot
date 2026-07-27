@@ -15,8 +15,15 @@ public class PixelFormatTests
     [Fact]
     public void ToSkiaSharpColorTypeValue_ReturnsCorrectValue()
     {
-        Assert.Equal(5, PixelFormat.Bgra32.ToSkiaSharpColorTypeValue());  // SKColorType.Bgra8888
-        Assert.Equal(11, PixelFormat.Rgb24.ToSkiaSharpColorTypeValue());  // SKColorType.Rgb888x
+        Assert.Equal(6, PixelFormat.Bgra32.ToSkiaSharpColorTypeValue()); // SKColorType.Bgra8888
+        Assert.Equal(5, PixelFormat.Rgb24.ToSkiaSharpColorTypeValue());  // SKColorType.Rgb888x
+        Assert.Equal(9, PixelFormat.Gray8.ToSkiaSharpColorTypeValue());  // SKColorType.Gray8
+    }
+
+    [Fact]
+    public void ToSkiaSharpColorTypeValue_Bgr24_Throws()
+    {
+        Assert.Throws<ScreenshotSkiaBgr24NotSupportedException>(() => PixelFormat.Bgr24.ToSkiaSharpColorTypeValue());
     }
 
     [Fact]
@@ -29,11 +36,9 @@ public class PixelFormatTests
     [Fact]
     public void ToImageSharpPixelType_ReturnsType_WhenImageSharpIsReferenced()
     {
-        // Если ImageSharp не загружен — тест пропускается
         var type = PixelFormat.Bgra32.ToImageSharpPixelType();
         if (type == null)
         {
-            // Если ImageSharp не загружен, тест не падает, а проходит с предупреждением
             Assert.True(true, "ImageSharp not referenced, skipping type test.");
             return;
         }

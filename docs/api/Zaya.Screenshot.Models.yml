@@ -10,6 +10,8 @@ items:
   - Zaya.Screenshot.Models.PixelFormatExtensions
   - Zaya.Screenshot.Models.RectDesktopRegion
   - Zaya.Screenshot.Models.RectWindowRegion
+  - Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException
+  - Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException
   langs:
   - csharp
   - vb
@@ -57,6 +59,18 @@ references:
   name: RectWindowRegion
   nameWithType: RectWindowRegion
   fullName: Zaya.Screenshot.Models.RectWindowRegion
+- uid: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException
+  commentId: T:Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException
+  href: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.html
+  name: ScreenshotPixelFormatNotSupportedException
+  nameWithType: ScreenshotPixelFormatNotSupportedException
+  fullName: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException
+- uid: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException
+  commentId: T:Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException
+  href: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.html
+  name: ScreenshotSkiaBgr24NotSupportedException
+  nameWithType: ScreenshotSkiaBgr24NotSupportedException
+  fullName: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException
 - uid: Zaya.Screenshot.Models
   commentId: N:Zaya.Screenshot.Models
   href: Zaya.html

@@ -19,14 +19,4 @@ public interface ICaptureSession : IDisposable
     /// <param name="cancellationToken">Cancellation token.</param>
     /// <returns>The captured raw image, or null if no frame is available.</returns>
     Task<IRawImage?> CaptureAsync(CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Resumes the capture session if paused.
-    /// </summary>
-    void Resume();
-
-    /// <summary>
-    /// Pauses the capture session.
-    /// </summary>
-    void Pause();
 }

@@ -12,13 +12,15 @@ public static class PixelFormatExtensions
     /// </summary>
     public static int ToSkiaSharpColorTypeValue(this PixelFormat format)
     {
+        // Values match SkiaSharp.SKColorType (SkiaSharp 2.x / 3.x).
         return format switch
         {
-            var f when f.Equals(PixelFormat.Bgra32) => 5,  // SKColorType.Bgra8888
-            var f when f.Equals(PixelFormat.Rgb24) => 11,  // SKColorType.Rgb888x
-            var f when f.Equals(PixelFormat.Bgr24) => 11,  // SKColorType.Rgb888x
-            var f when f.Equals(PixelFormat.Gray8) => 4,   // SKColorType.Alpha8 (оттенки серого)
-            _ => throw new NotSupportedException($"Format '{format.Name}' is not supported.")
+            var f when f.Equals(PixelFormat.Bgra32) => 6, // SKColorType.Bgra8888
+            var f when f.Equals(PixelFormat.Rgb24) => 5,  // SKColorType.Rgb888x (padded 32-bit)
+            var f when f.Equals(PixelFormat.Gray8) => 9,  // SKColorType.Gray8
+            var f when f.Equals(PixelFormat.Bgr24) =>
+                throw new ScreenshotSkiaBgr24NotSupportedException(),
+            _ => throw new ScreenshotPixelFormatNotSupportedException(format.Name)
         };
     }
 
@@ -33,7 +35,7 @@ public static class PixelFormatExtensions
             var f when f.Equals(PixelFormat.Rgb24) => "SixLabors.ImageSharp.PixelFormats.Rgb24",
             var f when f.Equals(PixelFormat.Bgr24) => "SixLabors.ImageSharp.PixelFormats.Bgr24",
             var f when f.Equals(PixelFormat.Gray8) => "SixLabors.ImageSharp.PixelFormats.L8",  // L8 = Grayscale
-            _ => throw new NotSupportedException($"Format '{format.Name}' is not supported.")
+            _ => throw new ScreenshotPixelFormatNotSupportedException(format.Name)
         };
     }
 

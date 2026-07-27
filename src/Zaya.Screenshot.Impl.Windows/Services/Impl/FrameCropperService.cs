@@ -1,6 +1,7 @@
 using System.Buffers;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Zaya.Primitives;
+using Zaya.Screenshot.Impl.Windows;
 using Zaya.Screenshot.Models;
 using IBuffer = Windows.Storage.Streams.IBuffer;
 
@@ -88,11 +89,10 @@ internal sealed class FrameCropperService
         dstHeight = cropH;
 
         if (cropX < 0 || cropY < 0 || cropW <= 0 || cropH <= 0)
-            throw new ArgumentException($"Crop rectangle ({cropX},{cropY},{cropW},{cropH}) is invalid.");
+            throw new CaptureCropInvalidException(cropX, cropY, cropW, cropH);
 
         if (cropX + cropW > srcWidth || cropY + cropH > srcHeight)
-            throw new ArgumentException(
-                $"Crop rectangle ({cropX},{cropY},{cropW},{cropH}) exceeds source bounds ({srcWidth}x{srcHeight}).");
+            throw new CaptureCropExceedsBoundsException(cropX, cropY, cropW, cropH, srcWidth, srcHeight);
 
         int outputBpp = region.PixelFormat.BytesPerPixel;
         int dstTotalBytes = dstWidth * dstHeight * outputBpp;
@@ -120,8 +120,7 @@ internal sealed class FrameCropperService
         else
         {
             ArrayPool<byte>.Shared.Return(result);
-            throw new NotSupportedException(
-                $"Pixel format '{region.PixelFormat.Name}' (Bpp={outputBpp}) is not supported.");
+            throw new CapturePixelFormatNotSupportedException(region.PixelFormat.Name, outputBpp);
         }
 
         return result;

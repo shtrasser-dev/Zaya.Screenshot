@@ -6,11 +6,6 @@ namespace Zaya.Screenshot.Impl.Windows.Services.Impl.WinApi;
 
 internal static class WinApiInterop
 {
-    private const int MONITOR_DEFAULTTONEAREST = 2;
-
-    [DllImport("user32.dll")]
-    public static extern nint MonitorFromWindow(nint hwnd, uint dwFlags);
-
     [DllImport("user32.dll")]
     public static extern bool GetMonitorInfoW(nint hMonitor, ref MONITORINFO lpmi);
 
@@ -79,11 +74,6 @@ internal static class WinApiInterop
                 Guid itemIid = new("79C3F95B-31F7-4EC2-A464-632EF5D30760");
 
                 IntPtr itemPtr = interop.CreateForWindow(hwnd, ref itemIid);
-                if (itemPtr == IntPtr.Zero)
-                {
-                    nint monitor = MonitorFromWindow(hwnd, MONITOR_DEFAULTTONEAREST);
-                    itemPtr = interop.CreateForMonitor(monitor, ref itemIid);
-                }
                 if (itemPtr == IntPtr.Zero)
                     return null;
 

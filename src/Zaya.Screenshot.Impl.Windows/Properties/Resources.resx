@@ -18,4 +18,34 @@
   <data name="Cap_EngineDesc" xml:space="preserve">
     <value>High-performance screen capture using Windows Graphics Capture API and Direct3D 11</value>
   </data>
+  <data name="Cap_Err_NotSupported" xml:space="preserve">
+    <value>Windows Graphics Capture is not supported on this system.</value>
+  </data>
+  <data name="Cap_Err_ItemCreateFailed" xml:space="preserve">
+    <value>Failed to create GraphicsCaptureItem.</value>
+  </data>
+  <data name="Cap_Err_WindowItemCreateFailed" xml:space="preserve">
+    <value>Failed to create capture item for window {0}.</value>
+  </data>
+  <data name="Cap_Err_RegionNotSupported" xml:space="preserve">
+    <value>Region type '{0}' is not supported.</value>
+  </data>
+  <data name="Cap_Err_DisplayIndexOutOfRange" xml:space="preserve">
+    <value>Display index {0} is out of range. Available monitors: {1}.</value>
+  </data>
+  <data name="Cap_Err_FrameTimeout" xml:space="preserve">
+    <value>No frame received within timeout.</value>
+  </data>
+  <data name="Cap_Err_CropInvalid" xml:space="preserve">
+    <value>Crop rectangle ({0},{1},{2},{3}) is invalid.</value>
+  </data>
+  <data name="Cap_Err_CropExceedsBounds" xml:space="preserve">
+    <value>Crop rectangle ({0},{1},{2},{3}) exceeds source bounds ({4}x{5}).</value>
+  </data>
+  <data name="Cap_Err_PixelFormatNotSupported" xml:space="preserve">
+    <value>Pixel format '{0}' (Bpp={1}) is not supported.</value>
+  </data>
+  <data name="Cap_Err_DeviceFailed" xml:space="preserve">
+    <value>Capture device error: {0}</value>
+  </data>
 </root>

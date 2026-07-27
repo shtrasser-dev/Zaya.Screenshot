@@ -62,17 +62,40 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="zayascreenshot">Zaya.Screenshot</h1>
 
-<p>High-performance screen capture library for Windows .NET 8.0+ applications. Captures windows and monitors using Direct3D 11 with efficient <code>ReadOnlySpan&lt;byte&gt;</code> pixel data access and configurable output formats.</p>
+<p>High-performance screen capture for Windows .NET 8.0+ — Windows Graphics Capture + Direct3D 11, with <code>IRawImage</code> / <code>ReadOnlySpan&lt;byte&gt;</code> pixel access.</p>
+<h2 id="packages">Packages</h2>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Version</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zaya.Screenshot</strong></td>
+<td>0.3.1</td>
+<td>Abstractions: <code>ICaptureService</code>, <code>ICaptureSession</code>, region types</td>
+</tr>
+<tr>
+<td><strong>Zaya.Screenshot.Impl.Windows</strong></td>
+<td>0.3.1</td>
+<td>Windows Graphics Capture + D3D11 (<code>CaptureService</code>)</td>
+</tr>
+</tbody>
+</table>
 <h2 id="features">Features</h2>
 <ul>
 <li>Capture full desktops, individual windows, or rectangular sub-regions</li>
-<li>Multiple pixel formats: BGRA32, RGB24, BGR24, Gray8</li>
-<li>High-performance <code>ReadOnlySpan&lt;byte&gt;</code> access to pixel data</li>
-<li>Frame-level pause/resume control</li>
-<li>Built-in SkiaSharp and ImageSharp format conversion helpers</li>
+<li>Pixel formats: BGRA32, RGB24, BGR24, Gray8</li>
+<li>High-performance <code>ReadOnlySpan&lt;byte&gt;</code> access via <code>IRawImage</code></li>
+<li>Optional helpers mapping <code>PixelFormat</code> to SkiaSharp / ImageSharp type names</li>
 </ul>
+<p>There is no separate <code>InitializeAsync</code>: create a session with <code>CreateSessionAsync</code> and call <code>CaptureAsync</code>.</p>
 <h2 id="installation">Installation</h2>
-<pre><code class="lang-xml">&lt;PackageReference Include=&quot;Zaya.Screenshot&quot; Version=&quot;0.1.0&quot; /&gt;
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;Zaya.Screenshot&quot; Version=&quot;0.3.1&quot; /&gt;
+&lt;PackageReference Include=&quot;Zaya.Screenshot.Impl.Windows&quot; Version=&quot;0.3.1&quot; /&gt;
 </code></pre>
 <h2 id="platform">Platform</h2>
 <ul>
@@ -85,21 +108,22 @@ using Zaya.Screenshot.Models;
 
 using var service = new CaptureService();
 
-// Capture entire primary monitor
 var region = new FullScreenDesktopRegion();
 using var session = await service.CreateSessionAsync(region);
 using var frame = await session.CaptureAsync();
 
+if (frame is null)
+    return;
+
 var pixelData = frame.GetPixelData();
 Console.WriteLine($&quot;Captured {frame.Width}x{frame.Height}, format: {frame.Format.Name}&quot;);
 
-// Copy to byte array for persistence
 byte[] copy = frame.ToByteArray();
 </code></pre>
 <h2 id="next-steps">Next Steps</h2>
 <ul>
-<li><strong>Getting Started</strong> — detailed usage guide and capture scenarios</li>
-<li><strong>API Reference</strong> — complete API documentation generated from source code</li>
+<li><strong><a href="articles/getting-started.html">Getting Started</a></strong> — detailed usage guide and capture scenarios</li>
+<li><strong><a class="xref" href="api/Zaya.Screenshot.Services.html">API Reference</a></strong> — complete API documentation generated from source code</li>
 </ul>
 
 </article>

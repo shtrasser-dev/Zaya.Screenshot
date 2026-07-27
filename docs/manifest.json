@@ -14,7 +14,147 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Zaya.Screenshot.Impl.Windows.CaptureConfig",
-      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.CaptureConfig.yml\" sourcestartlinenumber=\"1\">Typed configuration for <xref href=\"Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService\" data-throw-if-not-resolved=\"false\"></xref>.\nConverts to the dictionary format expected by <code>InitializeAsync</code>.\nEmpty for now — no engine-specific settings yet.</p>\n"
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.CaptureConfig.yml\" sourcestartlinenumber=\"1\">Typed configuration for <xref href=\"Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService\" data-throw-if-not-resolved=\"false\"></xref>.\nConverts to the dictionary format expected by <code>CreateSessionAsync</code>.\nEmpty for now — no engine-specific settings yet.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.yml\" sourcestartlinenumber=\"1\">Thrown when the crop rectangle exceeds the captured surface bounds.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.yml\" sourcestartlinenumber=\"1\">Thrown when the crop rectangle is invalid (negative origin or non-positive size).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.CaptureDeviceException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Impl.Windows.CaptureDeviceException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Impl.Windows.CaptureDeviceException",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.CaptureDeviceException.yml\" sourcestartlinenumber=\"1\">Thrown when Direct3D / WinRT device setup fails.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.yml\" sourcestartlinenumber=\"1\">Thrown when the requested display index is outside the available monitor range.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.yml\" sourcestartlinenumber=\"1\">Thrown when no capture frame arrives within the session timeout.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Impl.Windows.CaptureItemCreateException",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.yml\" sourcestartlinenumber=\"1\">Thrown when a <code>GraphicsCaptureItem</code> cannot be created.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.yml\" sourcestartlinenumber=\"1\">Thrown when Windows Graphics Capture is not supported on the current system.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.yml\" sourcestartlinenumber=\"1\">Thrown when the requested pixel format cannot be produced by the capture pipeline.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.yml\" sourcestartlinenumber=\"1\">Thrown when the capture region type is not supported.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.yml\" sourcestartlinenumber=\"1\">Thrown when a capture item cannot be created for a specific window handle.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -56,7 +196,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService",
-      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.yml\" sourcestartlinenumber=\"1\">Implementation of <xref href=\"Zaya.Screenshot.Services.ICaptureService\" data-throw-if-not-resolved=\"false\"></xref> using Windows Graphics Capture API and Direct3D 11.\nSupports capturing windows and monitors in full-screen or rectangular regions.\nCall <xref href=\"Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary%7bSystem.String%2cSystem.Object%7d%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref> before creating sessions.</p>\n"
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.yml\" sourcestartlinenumber=\"1\">Implementation of <xref href=\"Zaya.Screenshot.Services.ICaptureService\" data-throw-if-not-resolved=\"false\"></xref> using Windows Graphics Capture API and Direct3D 11.\nSupports capturing windows and monitors in full-screen or rectangular regions.\nPass engine settings directly to <xref href=\"Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion%2cSystem.Collections.Generic.IReadOnlyDictionary%7bSystem.String%2cSystem.Object%7d%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -172,6 +312,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.yml\" sourcestartlinenumber=\"1\">Thrown when a <xref href=\"Zaya.Primitives.PixelFormat\" data-throw-if-not-resolved=\"false\"></xref> cannot be mapped to a target graphics API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.yml\" sourcestartlinenumber=\"1\">Thrown when mapping <xref href=\"Zaya.Primitives.PixelFormat.Bgr24\" data-throw-if-not-resolved=\"false\"></xref> to SkiaSharp, which has no Bgr24 color type.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "docs/api/Zaya.Screenshot.Models.yml",
       "output": {
         ".html": {
@@ -196,7 +364,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Zaya.Screenshot.Services.ICaptureService",
-      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Services.ICaptureService.yml\" sourcestartlinenumber=\"1\">Service for creating screen capture sessions targeting a specific window or monitor region.\nCall <xref href=\"Zaya.Screenshot.Services.ICaptureService.InitializeAsync(System.Collections.Generic.IReadOnlyDictionary%7bSystem.String%2cSystem.Object%7d%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref> before creating sessions.</p>\n"
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Services.ICaptureService.yml\" sourcestartlinenumber=\"1\">Service for creating screen capture sessions targeting a specific window or monitor region.\nPass engine settings directly to <xref href=\"Zaya.Screenshot.Services.ICaptureService.CreateSessionAsync(Zaya.Screenshot.Models.ICaptureRegion%2cSystem.Collections.Generic.IReadOnlyDictionary%7bSystem.String%2cSystem.Object%7d%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",

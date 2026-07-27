@@ -77,8 +77,38 @@ Classes
 </h3>
       <h4><a class="xref" href="Zaya.Screenshot.Impl.Windows.CaptureConfig.html">CaptureConfig</a></h4>
       <section><p>Typed configuration for <a class="xref" href="Zaya.Screenshot.Impl.Windows.Services.Impl.CaptureService.html">CaptureService</a>.
-Converts to the dictionary format expected by <code>InitializeAsync</code>.
+Converts to the dictionary format expected by <code>CreateSessionAsync</code>.
 Empty for now — no engine-specific settings yet.</p>
+</section>
+      <h4><a class="xref" href="Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException.html">CaptureCropExceedsBoundsException</a></h4>
+      <section><p>Thrown when the crop rectangle exceeds the captured surface bounds.</p>
+</section>
+      <h4><a class="xref" href="Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.html">CaptureCropInvalidException</a></h4>
+      <section><p>Thrown when the crop rectangle is invalid (negative origin or non-positive size).</p>
+</section>
+      <h4><a class="xref" href="Zaya.Screenshot.Impl.Windows.CaptureDeviceException.html">CaptureDeviceException</a></h4>
+      <section><p>Thrown when Direct3D / WinRT device setup fails.</p>
+</section>
+      <h4><a class="xref" href="Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException.html">CaptureDisplayIndexException</a></h4>
+      <section><p>Thrown when the requested display index is outside the available monitor range.</p>
+</section>
+      <h4><a class="xref" href="Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException.html">CaptureFrameTimeoutException</a></h4>
+      <section><p>Thrown when no capture frame arrives within the session timeout.</p>
+</section>
+      <h4><a class="xref" href="Zaya.Screenshot.Impl.Windows.CaptureItemCreateException.html">CaptureItemCreateException</a></h4>
+      <section><p>Thrown when a <code>GraphicsCaptureItem</code> cannot be created.</p>
+</section>
+      <h4><a class="xref" href="Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException.html">CaptureNotSupportedException</a></h4>
+      <section><p>Thrown when Windows Graphics Capture is not supported on the current system.</p>
+</section>
+      <h4><a class="xref" href="Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException.html">CapturePixelFormatNotSupportedException</a></h4>
+      <section><p>Thrown when the requested pixel format cannot be produced by the capture pipeline.</p>
+</section>
+      <h4><a class="xref" href="Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.html">CaptureRegionNotSupportedException</a></h4>
+      <section><p>Thrown when the capture region type is not supported.</p>
+</section>
+      <h4><a class="xref" href="Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.html">CaptureWindowItemCreateException</a></h4>
+      <section><p>Thrown when a capture item cannot be created for a specific window handle.</p>
 </section>
 
 

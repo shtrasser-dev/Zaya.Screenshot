@@ -128,11 +128,14 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Rectangle
     path: src/Zaya.Screenshot/Models/RectDesktopRegion.cs
-    startLine: 25
+    startLine: 26
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Models
-  summary: The rectangular area on the display to capture, in screen coordinates.
+  summary: >-
+    The rectangular area to capture, in coordinates relative to the top-left
+
+    of the selected display (not the virtual desktop / multi-monitor screen space).
   example: []
   syntax:
     content: public required Rectangle Rectangle { get; init; }

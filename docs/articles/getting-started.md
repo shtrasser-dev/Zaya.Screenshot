@@ -1,10 +1,17 @@
 # Getting Started
 
+## Overview
+
+Zaya.Screenshot provides screen-capture abstractions (`ICaptureService`, `ICaptureSession`, `ICaptureRegion`) and a Windows implementation based on Graphics Capture + Direct3D 11. Frames are returned as `IRawImage` (`ReadOnlySpan<byte>` pixel data).
+
 ## Basic Capture Scenarios
 
 ### Capture Entire Primary Monitor
 
 ```csharp
+using Zaya.Screenshot.Impl.Windows.Services.Impl;
+using Zaya.Screenshot.Models;
+
 using var service = new CaptureService();
 var region = new FullScreenDesktopRegion();
 using var session = await service.CreateSessionAsync(region);
@@ -30,6 +37,7 @@ var region = new FullScreenWindowRegion { WindowHandle = hwnd };
 var region = new RectDesktopRegion
 {
     DisplayIndex = 0,
+    // Origin is the top-left of the selected display, not the virtual screen
     Rectangle = new Rectangle(100, 100, 400, 300)
 };
 ```
@@ -45,14 +53,18 @@ var region = new FullScreenDesktopRegion
 
 Available formats: `Bgra32` (default), `Rgb24`, `Bgr24`, `Gray8`.
 
-## Pause and Resume
+## Cancellation
 
 ```csharp
-session.Pause();
-// ... capture resumes when needed
-session.Resume();
+var cts = new CancellationTokenSource(TimeSpan.FromSeconds(5));
+using var session = await service.CreateSessionAsync(region, cts.Token);
+using var frame = await session.CaptureAsync(cts.Token);
 ```
 
 ## Cleanup
 
-Both `CaptureService` and `ICaptureSession` implement `IDisposable`. Each captured frame is also disposable — returned to the shared array pool on dispose for memory efficiency.
+`ICaptureService`, `ICaptureSession`, and each captured `IRawImage` implement `IDisposable`. Dispose frames promptly so buffers can return to the shared array pool. Dispose sessions before disposing the service (the service owns the shared Direct3D device).
+
+## Next steps
+
+- **[API Reference](xref:Zaya.Screenshot.Services)** — generated from source

@@ -6,9 +6,7 @@ items:
   parent: Zaya.Screenshot.Services
   children:
   - Zaya.Screenshot.Services.ICaptureSession.CaptureAsync(System.Threading.CancellationToken)
-  - Zaya.Screenshot.Services.ICaptureSession.Pause
   - Zaya.Screenshot.Services.ICaptureSession.Region
-  - Zaya.Screenshot.Services.ICaptureSession.Resume
   langs:
   - csharp
   - vb
@@ -100,62 +98,6 @@ items:
       description: The captured raw image, or null if no frame is available.
     content.vb: Function CaptureAsync(cancellationToken As CancellationToken = Nothing) As Task(Of IRawImage)
   overload: Zaya.Screenshot.Services.ICaptureSession.CaptureAsync*
-- uid: Zaya.Screenshot.Services.ICaptureSession.Resume
-  commentId: M:Zaya.Screenshot.Services.ICaptureSession.Resume
-  id: Resume
-  parent: Zaya.Screenshot.Services.ICaptureSession
-  langs:
-  - csharp
-  - vb
-  name: Resume()
-  nameWithType: ICaptureSession.Resume()
-  fullName: Zaya.Screenshot.Services.ICaptureSession.Resume()
-  type: Method
-  source:
-    remote:
-      path: src/Zaya.Screenshot/Services/ICaptureSession.cs
-      branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
-    id: Resume
-    path: src/Zaya.Screenshot/Services/ICaptureSession.cs
-    startLine: 25
-  assemblies:
-  - Zaya.Screenshot
-  namespace: Zaya.Screenshot.Services
-  summary: Resumes the capture session if paused.
-  example: []
-  syntax:
-    content: void Resume()
-    content.vb: Sub [Resume]()
-  overload: Zaya.Screenshot.Services.ICaptureSession.Resume*
-- uid: Zaya.Screenshot.Services.ICaptureSession.Pause
-  commentId: M:Zaya.Screenshot.Services.ICaptureSession.Pause
-  id: Pause
-  parent: Zaya.Screenshot.Services.ICaptureSession
-  langs:
-  - csharp
-  - vb
-  name: Pause()
-  nameWithType: ICaptureSession.Pause()
-  fullName: Zaya.Screenshot.Services.ICaptureSession.Pause()
-  type: Method
-  source:
-    remote:
-      path: src/Zaya.Screenshot/Services/ICaptureSession.cs
-      branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
-    id: Pause
-    path: src/Zaya.Screenshot/Services/ICaptureSession.cs
-    startLine: 30
-  assemblies:
-  - Zaya.Screenshot
-  namespace: Zaya.Screenshot.Services
-  summary: Pauses the capture session.
-  example: []
-  syntax:
-    content: void Pause()
-    content.vb: Sub Pause()
-  overload: Zaya.Screenshot.Services.ICaptureSession.Pause*
 references:
 - uid: Zaya.Screenshot.Services
   commentId: N:Zaya.Screenshot.Services
@@ -406,15 +348,3 @@ references:
     name: Tasks
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
-- uid: Zaya.Screenshot.Services.ICaptureSession.Resume*
-  commentId: Overload:Zaya.Screenshot.Services.ICaptureSession.Resume
-  href: Zaya.Screenshot.Services.ICaptureSession.html#Zaya_Screenshot_Services_ICaptureSession_Resume
-  name: Resume
-  nameWithType: ICaptureSession.Resume
-  fullName: Zaya.Screenshot.Services.ICaptureSession.Resume
-- uid: Zaya.Screenshot.Services.ICaptureSession.Pause*
-  commentId: Overload:Zaya.Screenshot.Services.ICaptureSession.Pause
-  href: Zaya.Screenshot.Services.ICaptureSession.html#Zaya_Screenshot_Services_ICaptureSession_Pause
-  name: Pause
-  nameWithType: ICaptureSession.Pause
-  fullName: Zaya.Screenshot.Services.ICaptureSession.Pause

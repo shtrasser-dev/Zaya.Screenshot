@@ -7,6 +7,36 @@ items:
   - uid: Zaya.Screenshot.Impl.Windows.CaptureConfig
     name: CaptureConfig
     type: Class
+  - uid: Zaya.Screenshot.Impl.Windows.CaptureCropExceedsBoundsException
+    name: CaptureCropExceedsBoundsException
+    type: Class
+  - uid: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException
+    name: CaptureCropInvalidException
+    type: Class
+  - uid: Zaya.Screenshot.Impl.Windows.CaptureDeviceException
+    name: CaptureDeviceException
+    type: Class
+  - uid: Zaya.Screenshot.Impl.Windows.CaptureDisplayIndexException
+    name: CaptureDisplayIndexException
+    type: Class
+  - uid: Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException
+    name: CaptureFrameTimeoutException
+    type: Class
+  - uid: Zaya.Screenshot.Impl.Windows.CaptureItemCreateException
+    name: CaptureItemCreateException
+    type: Class
+  - uid: Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException
+    name: CaptureNotSupportedException
+    type: Class
+  - uid: Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException
+    name: CapturePixelFormatNotSupportedException
+    type: Class
+  - uid: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException
+    name: CaptureRegionNotSupportedException
+    type: Class
+  - uid: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException
+    name: CaptureWindowItemCreateException
+    type: Class
 - uid: Zaya.Screenshot.Impl.Windows.Models
   name: Zaya.Screenshot.Impl.Windows.Models
   type: Namespace
@@ -42,6 +72,12 @@ items:
     type: Class
   - uid: Zaya.Screenshot.Models.RectWindowRegion
     name: RectWindowRegion
+    type: Class
+  - uid: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException
+    name: ScreenshotPixelFormatNotSupportedException
+    type: Class
+  - uid: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException
+    name: ScreenshotSkiaBgr24NotSupportedException
     type: Class
 - uid: Zaya.Screenshot.Services
   name: Zaya.Screenshot.Services

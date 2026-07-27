@@ -2,7 +2,6 @@
 setlocal enabledelayedexpansion
 
 set ROOT=%~dp0
-set BUILD_DIR=%TEMP%\Zaya.Screenshot\build
 set STAGEDIR=%TEMP%\Zaya.Screenshot\staging
 
 if "%CI%"=="true" (
@@ -13,23 +12,8 @@ if "%CI%"=="true" (
 
 echo === Building Zaya.Screenshot.Impl.Windows (%BUILD_CONFIG%) ===
 
-rmdir /s /q "%BUILD_DIR%" 2>nul
-
-dotnet publish "%ROOT%src\Zaya.Screenshot.Impl.Windows\Zaya.Screenshot.Impl.Windows.csproj" -c %BUILD_CONFIG% -o "%BUILD_DIR%" --no-self-contained
+dotnet build "%ROOT%src\Zaya.Screenshot.Impl.Windows\Zaya.Screenshot.Impl.Windows.csproj" -c %BUILD_CONFIG%
 if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
-
-set TFM_DIR=%BUILD_DIR%
-
-echo === Copying DLLs ===
-
-rmdir /s /q "%STAGEDIR%" 2>nul
-mkdir "%STAGEDIR%"
-
-copy /y "%TFM_DIR%\Zaya.Screenshot.Impl.Windows.dll" "%STAGEDIR%"
-if %ERRORLEVEL% neq 0 (
-    echo ERROR: DLL not found
-    exit /b 1
-)
 
 echo === Detecting versions ===
 
@@ -44,7 +28,25 @@ set IMPL_LINE=!IMPL_LINE:^<Version^>=!
 set IMPL_LINE=!IMPL_LINE:^</Version^>=!
 if "!IMPL_LINE!"=="" set IMPL_LINE=1.0.0
 
-echo === Generating plugin.json ===
+echo === Preparing output directory ===
+
+rmdir /s /q "%ROOT%out" 2>nul
+mkdir "%ROOT%out" 2>nul
+
+echo === Creating plugin.zip ===
+
+rmdir /s /q "%STAGEDIR%" 2>nul
+mkdir "%STAGEDIR%"
+
+set TFM_DIR=%ROOT%src\Zaya.Screenshot.Impl.Windows\bin\%BUILD_CONFIG%\net8.0-windows10.0.22621.0
+
+copy /y "%TFM_DIR%\Zaya.Screenshot.Impl.Windows.dll" "%STAGEDIR%"
+if %ERRORLEVEL% neq 0 (
+    echo ERROR: DLL not found
+    exit /b 1
+)
+
+call :CopySatellites "%TFM_DIR%" "%STAGEDIR%"
 
 set PLUGIN_JSON=%STAGEDIR%\plugin.json
 
@@ -57,14 +59,13 @@ echo   "pluginVersion": "!IMPL_LINE!">>"%PLUGIN_JSON%"
 echo }>>"%PLUGIN_JSON%"
 
 set PLUGIN_ZIP=Zaya.Screenshot.Impl.Windows-!IMPL_LINE!.zip
-echo === Creating plugin.zip ===
-
-rmdir /s /q "%ROOT%out" 2>nul
-mkdir "%ROOT%out" 2>nul
 powershell -Command "Compress-Archive -Path '%STAGEDIR%\*' -DestinationPath '%ROOT%out\%PLUGIN_ZIP%' -Force"
 echo   out\%PLUGIN_ZIP%
 
 echo === Packing NuGet packages ===
+
+dotnet pack "%ROOT%src\Zaya.Screenshot.Impl.Windows\Zaya.Screenshot.Impl.Windows.csproj" -c %BUILD_CONFIG% -o "%ROOT%out" --no-build
+if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
 
 dotnet pack "%ROOT%src\Zaya.Screenshot\Zaya.Screenshot.csproj" -c %BUILD_CONFIG% -o "%ROOT%out" --no-build
 if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
@@ -72,6 +73,15 @@ if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
 echo === Cleaning up ===
 
 rmdir /s /q "%STAGEDIR%" 2>nul
-rmdir /s /q "%BUILD_DIR%" 2>nul
 
 echo === Done: version !IMPL_LINE! ===
+goto :eof
+
+:CopySatellites
+    for /d %%d in ("%~1\*") do (
+        if exist "%%d\*.resources.dll" (
+            mkdir "%~2\%%~nxd" 2>nul
+            copy /y "%%d\*" "%~2\%%~nxd\"
+        )
+    )
+    exit /b

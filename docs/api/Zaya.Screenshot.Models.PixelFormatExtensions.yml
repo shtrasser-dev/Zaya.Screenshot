@@ -94,7 +94,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: ToImageSharpPixelTypeName
     path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
-    startLine: 27
+    startLine: 29
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Models
@@ -128,7 +128,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: ToImageSharpPixelType
     path: src/Zaya.Screenshot/Models/PixelFormatExtensions.cs
-    startLine: 42
+    startLine: 44
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Models

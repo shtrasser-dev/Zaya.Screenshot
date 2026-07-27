@@ -25,18 +25,8 @@ public class CaptureServiceIntegrationTests : IAsyncDisposable
     }
 
     [Fact]
-    public async Task CreateSession_WithoutInitialize_Throws()
-    {
-        var region = new FullScreenDesktopRegion();
-        await Assert.ThrowsAsync<InvalidOperationException>(() =>
-            _captureService.CreateSessionAsync(region, TestContext.Current.CancellationToken));
-    }
-
-    [Fact]
     public async Task CaptureFullScreen_ReturnsNonBlackFrame()
     {
-        await _captureService.InitializeAsync(null, TestContext.Current.CancellationToken);
-
         var region = new FullScreenDesktopRegion();
 
         using var session = await _captureService.CreateSessionAsync(region, TestContext.Current.CancellationToken);
@@ -51,8 +41,6 @@ public class CaptureServiceIntegrationTests : IAsyncDisposable
     [Fact]
     public async Task CaptureRectRegion_ReturnsCorrectSizeAndNonBlack()
     {
-        await _captureService.InitializeAsync(null, TestContext.Current.CancellationToken);
-
         var rect = new Rectangle(100, 100, 200, 150);
         var region = new RectDesktopRegion
         {
