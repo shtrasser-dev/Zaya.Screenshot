@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <!-- Plugin/host channel: MAJOR.MINOR must match Zaya.Primitives (x.y.0). -->
+    <Version>0.4.0</Version>
+    <ZayaPrimitivesVersion>0.4.0</ZayaPrimitivesVersion>
+  </PropertyGroup>
+</Project>

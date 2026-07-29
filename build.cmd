@@ -15,23 +15,27 @@ echo === Building Zaya.Screenshot.Impl.Windows (%BUILD_CONFIG%) ===
 dotnet build "%ROOT%src\Zaya.Screenshot.Impl.Windows\Zaya.Screenshot.Impl.Windows.csproj" -c %BUILD_CONFIG%
 if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
 
-echo === Detecting versions ===
+echo === Detecting version ===
 
-for /f "tokens=*" %%a in ('findstr /i "<Version>" "%ROOT%src\Zaya.Screenshot\Zaya.Screenshot.csproj"') do set INF_LINE=%%a
-set INF_LINE=!INF_LINE:^<Version^>=!
-set INF_LINE=!INF_LINE:^</Version^>=!
-set INF_MAJOR=!INF_LINE:~0,1!
-if "!INF_MAJOR!"=="" set INF_MAJOR=1
+for /f "usebackq delims=" %%a in (`dotnet msbuild "%ROOT%src\Zaya.Screenshot.Impl.Windows\Zaya.Screenshot.Impl.Windows.csproj" -getProperty:Version -nologo -v:q`) do set VER=%%a
+set VER=!VER: =!
+if "!VER!"=="" set VER=0.4.0
 
-for /f "tokens=*" %%a in ('findstr /i "<Version>" "%ROOT%src\Zaya.Screenshot.Impl.Windows\Zaya.Screenshot.Impl.Windows.csproj"') do set IMPL_LINE=%%a
-set IMPL_LINE=!IMPL_LINE:^<Version^>=!
-set IMPL_LINE=!IMPL_LINE:^</Version^>=!
-if "!IMPL_LINE!"=="" set IMPL_LINE=1.0.0
+for /f "tokens=1,2,3 delims=." %%a in ("!VER!") do (
+    set VER_MAJOR=%%a
+    set VER_MINOR=%%b
+    set VER_PATCH=%%c
+)
+set CHANNEL=!VER_MAJOR!.!VER_MINOR!
+echo   Version=!VER!  Channel=!CHANNEL!
 
 echo === Preparing output directory ===
 
 rmdir /s /q "%ROOT%out" 2>nul
 mkdir "%ROOT%out" 2>nul
+
+echo !VER!>"%ROOT%out\version.txt"
+echo !CHANNEL!>"%ROOT%out\channel.txt"
 
 echo === Creating plugin.zip ===
 
@@ -54,11 +58,13 @@ echo {>"%PLUGIN_JSON%"
 echo   "id": "GraphicsCapture",>>"%PLUGIN_JSON%"
 echo   "type": "capture",>>"%PLUGIN_JSON%"
 echo   "interface": "Zaya.Screenshot",>>"%PLUGIN_JSON%"
-echo   "interfaceVersion": "!INF_MAJOR!.0.0",>>"%PLUGIN_JSON%"
-echo   "pluginVersion": "!IMPL_LINE!">>"%PLUGIN_JSON%"
+echo   "interfaceVersion": "!VER!",>>"%PLUGIN_JSON%"
+echo   "pluginVersion": "!VER!",>>"%PLUGIN_JSON%"
+echo   "primitivesChannel": "!CHANNEL!">>"%PLUGIN_JSON%"
 echo }>>"%PLUGIN_JSON%"
 
-set PLUGIN_ZIP=Zaya.Screenshot.Impl.Windows-!IMPL_LINE!.zip
+REM Stable asset name (no version in filename) for host updater.
+set PLUGIN_ZIP=Zaya.Screenshot.Impl.Windows.zip
 powershell -Command "Compress-Archive -Path '%STAGEDIR%\*' -DestinationPath '%ROOT%out\%PLUGIN_ZIP%' -Force"
 echo   out\%PLUGIN_ZIP%
 
@@ -74,7 +80,7 @@ echo === Cleaning up ===
 
 rmdir /s /q "%STAGEDIR%" 2>nul
 
-echo === Done: version !IMPL_LINE! ===
+echo === Done: version !VER! channel !CHANNEL! ===
 goto :eof
 
 :CopySatellites
