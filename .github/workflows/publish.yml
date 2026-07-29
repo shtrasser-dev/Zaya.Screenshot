@@ -167,7 +167,8 @@ jobs:
                   ref: `tags/${tagName}`,
                 });
               } catch (e) {
-                if (e.status !== 404) throw e;
+                // Missing tag: API may return 404 or 422 ("Reference does not exist").
+                if (e.status !== 404 && e.status !== 422) throw e;
               }
 
               const release = await github.rest.repos.createRelease({
