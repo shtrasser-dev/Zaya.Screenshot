@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <!-- Plugin/host channel: MAJOR.MINOR must match Zaya.Primitives (x.y.0). -->
+    <!-- Default Version = Zaya.Screenshot abstractions (interface). Override Impl for plugin-only bumps. -->
     <Version>0.4.0</Version>
     <ZayaPrimitivesVersion>0.4.0</ZayaPrimitivesVersion>
   </PropertyGroup>

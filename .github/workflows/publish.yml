@@ -33,6 +33,7 @@ jobs:
             out/*.zip
             out/version.txt
             out/channel.txt
+            out/plugins.versions.txt
           retention-days: 1
 
   publish-github:
@@ -137,11 +138,23 @@ jobs:
             const tag = `plugin-v${version}`;
             const latestTag = `plugin-v${channel}-latest`;
             const releaseName = `Plugin v${version}`;
+
+            let assetVersions = [];
+            const versionsPath = 'plugin/plugins.versions.txt';
+            if (fs.existsSync(versionsPath)) {
+              assetVersions = fs.readFileSync(versionsPath, 'utf8')
+                .split(/\r?\n/)
+                .map(l => l.trim())
+                .filter(Boolean);
+            }
+
             const body = [
               `version: ${version}`,
               `primitivesChannel: ${channel}`,
               '',
-              `Plugin release for Zaya.Screenshot v${version} (Primitives channel ${channel}).`,
+              ...assetVersions,
+              '',
+              `Plugin release for Zaya.Screenshot (Primitives channel ${channel}).`,
             ].join('\n');
 
             async function createOrReplaceRelease(tagName, name, releaseBody, makeLatest) {

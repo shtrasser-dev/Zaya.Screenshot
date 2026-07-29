@@ -15,34 +15,42 @@ echo === Building Zaya.Screenshot.Impl.Windows (%BUILD_CONFIG%) ===
 dotnet build "%ROOT%src\Zaya.Screenshot.Impl.Windows\Zaya.Screenshot.Impl.Windows.csproj" -c %BUILD_CONFIG%
 if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
 
-echo === Detecting version ===
+echo === Detecting versions ===
 
-for /f "usebackq delims=" %%a in (`dotnet msbuild "%ROOT%src\Zaya.Screenshot.Impl.Windows\Zaya.Screenshot.Impl.Windows.csproj" -getProperty:Version -nologo -v:q`) do set VER=%%a
-set VER=!VER: =!
-if "!VER!"=="" set VER=0.4.0
+for /f "usebackq delims=" %%a in (`dotnet msbuild "%ROOT%src\Zaya.Screenshot\Zaya.Screenshot.csproj" -getProperty:Version -nologo -v:q`) do set IFACE=%%a
+set IFACE=!IFACE: =!
+if "!IFACE!"=="" set IFACE=0.4.0
 
-for /f "tokens=1,2,3 delims=." %%a in ("!VER!") do (
-    set VER_MAJOR=%%a
-    set VER_MINOR=%%b
-    set VER_PATCH=%%c
-)
-set CHANNEL=!VER_MAJOR!.!VER_MINOR!
-echo   Version=!VER!  Channel=!CHANNEL!
+for /f "usebackq delims=" %%a in (`dotnet msbuild "%ROOT%src\Zaya.Screenshot\Zaya.Screenshot.csproj" -getProperty:ZayaPrimitivesVersion -nologo -v:q`) do set PRIM=%%a
+set PRIM=!PRIM: =!
+if "!PRIM!"=="" set PRIM=0.4.0
+
+for /f "tokens=1,2 delims=." %%a in ("!PRIM!") do set CHANNEL=%%a.%%b
+if "!CHANNEL!"=="." set CHANNEL=0.4
+
+for /f "usebackq delims=" %%a in (`dotnet msbuild "%ROOT%src\Zaya.Screenshot.Impl.Windows\Zaya.Screenshot.Impl.Windows.csproj" -getProperty:Version -nologo -v:q`) do set VER_WIN=%%a
+set VER_WIN=!VER_WIN: =!
+if "!VER_WIN!"=="" set VER_WIN=!IFACE!
+
+set MAXVER=!VER_WIN!
+
+echo   Interface=!IFACE!  Channel=!CHANNEL!  Plugin=!VER_WIN!
 
 echo === Preparing output directory ===
 
 rmdir /s /q "%ROOT%out" 2>nul
 mkdir "%ROOT%out" 2>nul
 
-echo !VER!>"%ROOT%out\version.txt"
+echo !MAXVER!>"%ROOT%out\version.txt"
 echo !CHANNEL!>"%ROOT%out\channel.txt"
+del "%ROOT%out\plugins.versions.txt" 2>nul
 
 echo === Creating plugin.zip ===
 
 rmdir /s /q "%STAGEDIR%" 2>nul
 mkdir "%STAGEDIR%"
 
-set TFM_DIR=%ROOT%src\Zaya.Screenshot.Impl.Windows\bin\%BUILD_CONFIG%\net8.0-windows10.0.22621.0
+set TFM_DIR=%ROOT%src\Zaya.Screenshot.Impl.Windows\bin\%BUILD_CONFIG%\net8.0-windows10.0.19041.0
 
 copy /y "%TFM_DIR%\Zaya.Screenshot.Impl.Windows.dll" "%STAGEDIR%"
 if %ERRORLEVEL% neq 0 (
@@ -58,15 +66,15 @@ echo {>"%PLUGIN_JSON%"
 echo   "id": "GraphicsCapture",>>"%PLUGIN_JSON%"
 echo   "type": "capture",>>"%PLUGIN_JSON%"
 echo   "interface": "Zaya.Screenshot",>>"%PLUGIN_JSON%"
-echo   "interfaceVersion": "!VER!",>>"%PLUGIN_JSON%"
-echo   "pluginVersion": "!VER!",>>"%PLUGIN_JSON%"
+echo   "interfaceVersion": "!IFACE!",>>"%PLUGIN_JSON%"
+echo   "pluginVersion": "!VER_WIN!",>>"%PLUGIN_JSON%"
 echo   "primitivesChannel": "!CHANNEL!">>"%PLUGIN_JSON%"
 echo }>>"%PLUGIN_JSON%"
 
-REM Stable asset name (no version in filename) for host updater.
 set PLUGIN_ZIP=Zaya.Screenshot.Impl.Windows.zip
 powershell -Command "Compress-Archive -Path '%STAGEDIR%\*' -DestinationPath '%ROOT%out\%PLUGIN_ZIP%' -Force"
-echo   out\%PLUGIN_ZIP%
+echo   out\%PLUGIN_ZIP%  pluginVersion=!VER_WIN!
+echo %PLUGIN_ZIP%=!VER_WIN!>>"%ROOT%out\plugins.versions.txt"
 
 echo === Packing NuGet packages ===
 
@@ -80,7 +88,7 @@ echo === Cleaning up ===
 
 rmdir /s /q "%STAGEDIR%" 2>nul
 
-echo === Done: version !VER! channel !CHANNEL! ===
+echo === Done: interface !IFACE! channel !CHANNEL! release !MAXVER! ===
 goto :eof
 
 :CopySatellites
