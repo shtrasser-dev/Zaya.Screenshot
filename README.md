@@ -6,10 +6,10 @@ High-performance screen capture for Windows .NET 8.0+ — Windows Graphics Captu
 
 | Package | Version | Role |
 |---------|---------|------|
-| **Zaya.Screenshot** | 0.4.0 | Abstractions: `ICaptureService`, `ICaptureSession`, region types, `PixelFormatExtensions` |
-| **Zaya.Screenshot.Impl.Windows** | 0.4.0 | Windows Graphics Capture + D3D11 (`CaptureService`, `CapturedFrame`) |
+| **Zaya.Screenshot** | 1.0.0 | Abstractions: `ICaptureService`, `ICaptureSession`, region types, `PixelFormatExtensions` |
+| **Zaya.Screenshot.Impl.Windows** | 1.0.0.0 | Windows Graphics Capture + D3D11 (`CaptureService`, `CapturedFrame`) |
 
-Requires [Zaya.Primitives](https://github.com/shtrasser-dev/Zaya.Primitives) **0.4.0** (compatibility channel `0.4`). See [versioning](docs/versioning.md).
+Requires [Zaya.Primitives](https://github.com/shtrasser-dev/Zaya.Primitives) **1.0.0**. Update channel: `plugin-v1.0-latest`. See [versioning](docs/versioning.md).
 
 Docs: [API & articles](https://shtrasser-dev.github.io/Zaya.Screenshot)
 
@@ -31,11 +31,11 @@ There is no separate `InitializeAsync` / pause-resume API: create a session and 
 ## Installation
 
 ```xml
-<PackageReference Include="Zaya.Screenshot" Version="0.4.0" />
-<PackageReference Include="Zaya.Screenshot.Impl.Windows" Version="0.4.0" />
+<PackageReference Include="Zaya.Screenshot" Version="1.0.0" />
+<PackageReference Include="Zaya.Screenshot.Impl.Windows" Version="1.0.0.0" />
 ```
 
-Plugin zip for ScreenTranslator hosts: `Zaya.Screenshot.Impl.Windows.zip` from GitHub Releases (`plugin-v0.4-latest`).
+Plugin zip for ScreenTranslator hosts: `Zaya.Screenshot.Impl.Windows.zip` from GitHub Releases (`plugin-v1.0-latest`).
 
 ## Quick Start
 

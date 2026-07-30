@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: CaptureDisplayIndexException
     path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: DisplayIndex
     path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: MonitorCount
     path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: .ctor
     path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: GetLocalizedMessage
     path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs

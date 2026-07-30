@@ -452,6 +452,16 @@
         }
       },
       "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/versioning.md",
+      "output": {
+        ".html": {
+          "relative_path": "versioning.html"
+        }
+      },
+      "version": ""
     }
   ],
   "groups": [

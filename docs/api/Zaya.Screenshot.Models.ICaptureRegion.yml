@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot/Models/ICaptureRegion.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: ICaptureRegion
     path: src/Zaya.Screenshot/Models/ICaptureRegion.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot/Models/ICaptureRegion.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: PixelFormat
     path: src/Zaya.Screenshot/Models/ICaptureRegion.cs

@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/CaptureConfig.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: CaptureConfig
     path: src/Zaya.Screenshot.Impl.Windows/CaptureConfig.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/CaptureConfig.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: ToDictionary
     path: src/Zaya.Screenshot.Impl.Windows/CaptureConfig.cs

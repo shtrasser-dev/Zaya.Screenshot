@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: CaptureService
     path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: EngineId
     path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: DisplayName
     path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Description
     path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
@@ -170,7 +170,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Settings
     path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
@@ -203,7 +203,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: IsAvailable
     path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
@@ -236,7 +236,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: .ctor
     path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
@@ -270,7 +270,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: CreateSessionAsync
     path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
@@ -310,7 +310,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: CreateSessionAsync
     path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
@@ -356,7 +356,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Dispose
     path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs

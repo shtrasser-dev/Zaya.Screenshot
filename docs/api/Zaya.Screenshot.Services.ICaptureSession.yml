@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot/Services/ICaptureSession.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: ICaptureSession
     path: src/Zaya.Screenshot/Services/ICaptureSession.cs
@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot/Services/ICaptureSession.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Region
     path: src/Zaya.Screenshot/Services/ICaptureSession.cs
@@ -77,7 +77,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot/Services/ICaptureSession.cs
-      branch: main
+      branch: 639d203e3e2120074081615029e25088806c00a0
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: CaptureAsync
     path: src/Zaya.Screenshot/Services/ICaptureSession.cs

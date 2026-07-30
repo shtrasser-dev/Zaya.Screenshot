@@ -19,14 +19,10 @@ echo === Detecting versions ===
 
 for /f "usebackq delims=" %%a in (`dotnet msbuild "%ROOT%src\Zaya.Screenshot\Zaya.Screenshot.csproj" -getProperty:Version -nologo -v:q`) do set IFACE=%%a
 set IFACE=!IFACE: =!
-if "!IFACE!"=="" set IFACE=0.4.0
+if "!IFACE!"=="" set IFACE=1.0.0
 
-for /f "usebackq delims=" %%a in (`dotnet msbuild "%ROOT%src\Zaya.Screenshot\Zaya.Screenshot.csproj" -getProperty:ZayaPrimitivesVersion -nologo -v:q`) do set PRIM=%%a
-set PRIM=!PRIM: =!
-if "!PRIM!"=="" set PRIM=0.4.0
-
-for /f "tokens=1,2 delims=." %%a in ("!PRIM!") do set CHANNEL=%%a.%%b
-if "!CHANNEL!"=="." set CHANNEL=0.4
+for /f "tokens=1,2 delims=." %%a in ("!IFACE!") do set CHANNEL=%%a.%%b
+if "!CHANNEL!"=="." set CHANNEL=1.0
 
 for /f "usebackq delims=" %%a in (`dotnet msbuild "%ROOT%src\Zaya.Screenshot.Impl.Windows\Zaya.Screenshot.Impl.Windows.csproj" -getProperty:Version -nologo -v:q`) do set VER_WIN=%%a
 set VER_WIN=!VER_WIN: =!
@@ -34,7 +30,7 @@ if "!VER_WIN!"=="" set VER_WIN=!IFACE!
 
 set MAXVER=!VER_WIN!
 
-echo   Interface=!IFACE!  Channel=!CHANNEL!  Plugin=!VER_WIN!
+echo   Interface=!IFACE!  UpdateChannel=!CHANNEL!  Plugin=!VER_WIN!
 
 echo === Preparing output directory ===
 
@@ -67,8 +63,7 @@ echo   "id": "GraphicsCapture",>>"%PLUGIN_JSON%"
 echo   "type": "capture",>>"%PLUGIN_JSON%"
 echo   "interface": "Zaya.Screenshot",>>"%PLUGIN_JSON%"
 echo   "interfaceVersion": "!IFACE!",>>"%PLUGIN_JSON%"
-echo   "pluginVersion": "!VER_WIN!",>>"%PLUGIN_JSON%"
-echo   "primitivesChannel": "!CHANNEL!">>"%PLUGIN_JSON%"
+echo   "pluginVersion": "!VER_WIN!">>"%PLUGIN_JSON%"
 echo }>>"%PLUGIN_JSON%"
 
 set PLUGIN_ZIP=Zaya.Screenshot.Impl.Windows.zip
@@ -88,7 +83,7 @@ echo === Cleaning up ===
 
 rmdir /s /q "%STAGEDIR%" 2>nul
 
-echo === Done: interface !IFACE! channel !CHANNEL! release !MAXVER! ===
+echo === Done: interface !IFACE! updateChannel !CHANNEL! release !MAXVER! ===
 goto :eof
 
 :CopySatellites

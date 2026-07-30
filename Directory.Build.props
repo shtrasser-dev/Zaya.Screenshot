@@ -1,7 +1,7 @@
 <Project>
   <PropertyGroup>
-    <!-- Default Version = Zaya.Screenshot abstractions (interface). Override Impl for plugin-only bumps. -->
-    <Version>0.4.0</Version>
-    <ZayaPrimitivesVersion>0.4.0</ZayaPrimitivesVersion>
+    <!-- Pin to published Zaya.Primitives; Major becomes Version Major for all projects. -->
+    <ZayaPrimitivesVersion>1.0.0</ZayaPrimitivesVersion>
+    <ZayaPrimitivesMajor>$([System.Version]::Parse('$(ZayaPrimitivesVersion)').Major)</ZayaPrimitivesMajor>
   </PropertyGroup>
 </Project>

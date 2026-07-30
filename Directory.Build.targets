@@ -1,0 +1,44 @@
+<Project>
+  <!--
+    interface: Version = Major.Interface.0
+               set ZayaVersionInterface in abstractions csproj
+    plugin:    Version = Major.{interface}.ImpMajor.ImpMinor
+               set ZayaVersionImpMajor / ZayaVersionImpMinor in Impl csproj;
+               Interface is read from ZayaInterfaceCsproj
+  -->
+  <PropertyGroup Condition="'$(ZayaVersionRole)' == 'interface'">
+    <Version>$(ZayaPrimitivesMajor).$(ZayaVersionInterface).0</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(ZayaVersionRole)' == 'plugin'">
+    <ZayaInterfaceCsproj Condition="'$(ZayaInterfaceCsproj)' == ''">$(MSBuildThisFileDirectory)src\Zaya.Screenshot\Zaya.Screenshot.csproj</ZayaInterfaceCsproj>
+    <ZayaVersionInterface>$([System.Text.RegularExpressions.Regex]::Match($([System.IO.File]::ReadAllText('$(ZayaInterfaceCsproj)')), '&lt;ZayaVersionInterface&gt;(\d+)&lt;/ZayaVersionInterface&gt;').Groups[1].Value)</ZayaVersionInterface>
+    <Version>$(ZayaPrimitivesMajor).$(ZayaVersionInterface).$(ZayaVersionImpMajor).$(ZayaVersionImpMinor)</Version>
+  </PropertyGroup>
+
+  <!-- Tests / other projects: Major.0.0 -->
+  <PropertyGroup Condition="'$(ZayaVersionRole)' != 'interface' AND '$(ZayaVersionRole)' != 'plugin'">
+    <Version>$(ZayaPrimitivesMajor).0.0</Version>
+  </PropertyGroup>
+
+  <Target Name="ValidateZayaVersion" BeforeTargets="BeforeBuild;GenerateNuspec">
+    <Error
+      Condition="'$(ZayaPrimitivesVersion)' == ''"
+      Text="ZayaPrimitivesVersion must be set in Directory.Build.props." />
+    <Error
+      Condition="'$(ZayaVersionRole)' == 'interface' AND '$(ZayaVersionInterface)' == ''"
+      Text="Interface project must set ZayaVersionInterface." />
+    <Error
+      Condition="'$(ZayaVersionRole)' == 'interface' AND ('$(ZayaVersionImpMajor)' != '' OR '$(ZayaVersionImpMinor)' != '')"
+      Text="Interface project must not set ZayaVersionImpMajor / ZayaVersionImpMinor; interface Version is Major.Interface.0." />
+    <Error
+      Condition="'$(ZayaVersionRole)' == 'plugin' AND ('$(ZayaVersionImpMajor)' == '' OR '$(ZayaVersionImpMinor)' == '')"
+      Text="Plugin project must set ZayaVersionImpMajor and ZayaVersionImpMinor." />
+    <Error
+      Condition="'$(ZayaVersionRole)' == 'plugin' AND '$(ZayaVersionInterface)' == ''"
+      Text="Could not read ZayaVersionInterface from interface csproj '$(ZayaInterfaceCsproj)'." />
+    <Error
+      Condition="$([System.Version]::Parse('$(Version)').Major) != $([System.Version]::Parse('$(ZayaPrimitivesVersion)').Major)"
+      Text="Version $(Version) major must equal Zaya.Primitives major $([System.Version]::Parse('$(ZayaPrimitivesVersion)').Major) (ZayaPrimitivesVersion=$(ZayaPrimitivesVersion))." />
+  </Target>
+</Project>

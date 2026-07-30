@@ -150,11 +150,11 @@ jobs:
 
             const body = [
               `version: ${version}`,
-              `primitivesChannel: ${channel}`,
+              `interfaceChannel: ${channel}`,
               '',
               ...assetVersions,
               '',
-              `Plugin release for Zaya.Screenshot (Primitives channel ${channel}).`,
+              `Plugin release for Zaya.Screenshot (interface channel ${channel}).`,
             ].join('\n');
 
             async function createOrReplaceRelease(tagName, name, releaseBody, makeLatest) {
@@ -205,6 +205,6 @@ jobs:
               }
             }
 
-            // Immutable versioned release + floating channel-latest for updaters.
+            // Immutable versioned release + floating plugin-v{interfaceMajor.Minor}-latest.
             await createOrReplaceRelease(tag, releaseName, body, true);
             await createOrReplaceRelease(latestTag, releaseName, body, false);

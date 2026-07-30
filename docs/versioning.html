@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Zaya.Screenshot </title>
+      <title>Versioning (Zaya.Screenshot) </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Zaya.Screenshot ">
+      <meta name="title" content="Versioning (Zaya.Screenshot) ">
     
     
       <link rel="shortcut icon" href="favicon.ico">
@@ -15,7 +15,7 @@
       <link rel="stylesheet" href="styles/docfx.css">
       <link rel="stylesheet" href="styles/main.css">
       <meta property="docfx:navrel" content="toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
+      <meta property="docfx:tocrel" content="articles/toc.html">
     
     
     
@@ -57,74 +57,72 @@
         </div>
       </header>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="zayascreenshot">Zaya.Screenshot</h1>
+<h1 id="versioning-zayascreenshot">Versioning (Zaya.Screenshot)</h1>
 
-<p>High-performance screen capture for Windows .NET 8.0+ — Windows Graphics Capture + Direct3D 11, with <code>IRawImage</code> / <code>ReadOnlySpan&lt;byte&gt;</code> pixel access.</p>
-<h2 id="packages">Packages</h2>
 <table>
 <thead>
 <tr>
-<th>Package</th>
-<th>Version</th>
-<th>Role</th>
+<th>Axis</th>
+<th>Source</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Zaya.Screenshot</strong></td>
-<td>1.0.0</td>
-<td>Abstractions: <code>ICaptureService</code>, <code>ICaptureSession</code>, region types</td>
+<td><strong>ZayaPrimitivesVersion</strong></td>
+<td><code>Directory.Build.props</code> (supplies <strong>Major</strong>)</td>
+<td><code>1.0.0</code></td>
 </tr>
 <tr>
-<td><strong>Zaya.Screenshot.Impl.Windows</strong></td>
-<td>1.0.0.0</td>
-<td>Windows Graphics Capture + D3D11 (<code>CaptureService</code>)</td>
+<td><strong>interfaceVersion</strong></td>
+<td><code>Zaya.Screenshot.csproj</code> → only <strong><code>ZayaVersionInterface</code></strong> → <code>Major.Interface.0</code></td>
+<td><code>1.0.0</code></td>
+</tr>
+<tr>
+<td><strong>pluginVersion</strong></td>
+<td>Impl → <strong><code>ZayaVersionImpMajor</code></strong> + <strong><code>ZayaVersionImpMinor</code></strong>; Interface read from abstractions csproj → <code>Major.Interface.ImpMajor.ImpMinor</code></td>
+<td><code>1.0.0.0</code></td>
+</tr>
+<tr>
+<td><strong>updateChannel</strong></td>
+<td>Interface <code>MAJOR.Interface</code></td>
+<td><code>1.0</code> → <code>plugin-v1.0-latest</code></td>
 </tr>
 </tbody>
 </table>
-<h2 id="features">Features</h2>
+<p>Rules:</p>
 <ul>
-<li>Capture full desktops, individual windows, or rectangular sub-regions</li>
-<li>Pixel formats: BGRA32, RGB24, BGR24, Gray8</li>
-<li>High-performance <code>ReadOnlySpan&lt;byte&gt;</code> access via <code>IRawImage</code></li>
-<li>Optional helpers mapping <code>PixelFormat</code> to SkiaSharp / ImageSharp type names</li>
+<li>Abstractions: only <code>ZayaVersionInterface</code>. Version always ends with <code>.0</code>. Contract/assembly change → bump Interface.</li>
+<li>Plugin: only <code>ZayaVersionImpMajor</code> / <code>ZayaVersionImpMinor</code> (4th segment allowed). Interface digit is taken from abstractions automatically.</li>
+<li>Do not set <code>&lt;Version&gt;</code> manually. <code>Directory.Build.targets</code> builds it and checks Major vs Primitives.</li>
+<li>Host loads a zip only if <code>interfaceVersion</code> <strong>exactly</strong> matches host’s <code>Zaya.Screenshot</code> version.</li>
+<li>Updater uses <code>plugin-v{updateChannel}-latest</code> (not Primitives).</li>
 </ul>
-<p>There is no separate <code>InitializeAsync</code>: create a session with <code>CreateSessionAsync</code> and call <code>CaptureAsync</code>.</p>
-<h2 id="installation">Installation</h2>
-<pre><code class="lang-xml">&lt;PackageReference Include=&quot;Zaya.Screenshot&quot; Version=&quot;1.0.0&quot; /&gt;
-&lt;PackageReference Include=&quot;Zaya.Screenshot.Impl.Windows&quot; Version=&quot;1.0.0.0&quot; /&gt;
+<h2 id="pluginjson">plugin.json</h2>
+<pre><code class="lang-json">{
+  &quot;id&quot;: &quot;GraphicsCapture&quot;,
+  &quot;type&quot;: &quot;capture&quot;,
+  &quot;interface&quot;: &quot;Zaya.Screenshot&quot;,
+  &quot;interfaceVersion&quot;: &quot;1.0.0&quot;,
+  &quot;pluginVersion&quot;: &quot;1.0.0.0&quot;
+}
 </code></pre>
-<h2 id="platform">Platform</h2>
-<ul>
-<li>Windows 10 version 19041 (20H1) or later</li>
-<li>Direct3D 11 compatible GPU with BGRA support</li>
-</ul>
-<h2 id="quick-start">Quick Start</h2>
-<pre><code class="lang-csharp">using Zaya.Screenshot.Impl.Windows.Services.Impl;
-using Zaya.Screenshot.Models;
-
-using var service = new CaptureService();
-
-var region = new FullScreenDesktopRegion();
-using var session = await service.CreateSessionAsync(region);
-using var frame = await session.CaptureAsync();
-
-if (frame is null)
-    return;
-
-var pixelData = frame.GetPixelData();
-Console.WriteLine($&quot;Captured {frame.Width}x{frame.Height}, format: {frame.Format.Name}&quot;);
-
-byte[] copy = frame.ToByteArray();
-</code></pre>
-<h2 id="next-steps">Next Steps</h2>
-<ul>
-<li><strong><a href="articles/getting-started.html">Getting Started</a></strong> — detailed usage guide and capture scenarios</li>
-<li><strong><a class="xref" href="api/Zaya.Screenshot.Services.html">API Reference</a></strong> — complete API documentation generated from source code</li>
-</ul>
+<h2 id="bumping">Bumping</h2>
+<ol>
+<li>Interface: raise <code>ZayaVersionInterface</code> in <code>Zaya.Screenshot.csproj</code>, update host, republish plugins.</li>
+<li>Plugin only: raise <code>ZayaVersionImpMajor</code> and/or <code>ZayaVersionImpMinor</code> in Impl csproj.</li>
+<li>Run <code>build.cmd</code> / Publish workflow.</li>
+</ol>
 
 </article>
           </div>
@@ -134,7 +132,7 @@ byte[] copy = frame.ToByteArray();
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/639d203e3e2120074081615029e25088806c00a0/docs/index.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/639d203e3e2120074081615029e25088806c00a0/docs/versioning.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
