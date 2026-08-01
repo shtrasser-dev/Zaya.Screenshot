@@ -41,6 +41,12 @@ echo !MAXVER!>"%ROOT%out\version.txt"
 echo !CHANNEL!>"%ROOT%out\channel.txt"
 del "%ROOT%out\plugins.versions.txt" 2>nul
 
+> "%ROOT%out\interfaces.json" (
+echo [
+echo   {"interface":"Zaya.Screenshot","channel":"!CHANNEL!","version":"!MAXVER!","assets":["Zaya.Screenshot.Impl.Windows.zip"]}
+echo ]
+)
+
 echo === Creating plugin.zip ===
 
 rmdir /s /q "%STAGEDIR%" 2>nul

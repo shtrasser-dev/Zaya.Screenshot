@@ -5,7 +5,7 @@
 | **ZayaPrimitivesVersion** | `Directory.Build.props` (supplies **Major**) | `1.0.0` |
 | **interfaceVersion** | `Zaya.Screenshot.csproj` → only **`ZayaVersionInterface`** → `Major.Interface.0` | `1.0.0` |
 | **pluginVersion** | Impl → **`ZayaVersionImpMajor`** + **`ZayaVersionImpMinor`**; Interface read from abstractions csproj → `Major.Interface.ImpMajor.ImpMinor` | `1.0.0.0` |
-| **updateChannel** | Interface `MAJOR.Interface` | `1.0` → `plugin-v1.0-latest` |
+| **updateChannel** | Interface `MAJOR.Interface` | `1.0` → `plugin-Zaya.Screenshot-v1.0-latest` |
 
 Rules:
 
@@ -13,7 +13,8 @@ Rules:
 - Plugin: only `ZayaVersionImpMajor` / `ZayaVersionImpMinor` (4th segment allowed). Interface digit is taken from abstractions automatically.
 - Do not set `<Version>` manually. `Directory.Build.targets` builds it and checks Major vs Primitives.
 - Host loads a zip only if `interfaceVersion` **exactly** matches host’s `Zaya.Screenshot` version.
-- Updater uses `plugin-v{updateChannel}-latest` (not Primitives).
+- **One interface → one floating GitHub tag:** `plugin-Zaya.Screenshot-v{channel}-latest` (immutable: `plugin-Zaya.Screenshot-v{pluginVersion}`).
+- `build.cmd` writes `out/interfaces.json` for the Publish workflow.
 
 ## plugin.json
 

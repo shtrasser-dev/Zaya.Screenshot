@@ -34,6 +34,7 @@ jobs:
             out/version.txt
             out/channel.txt
             out/plugins.versions.txt
+            out/interfaces.json
           retention-days: 1
 
   publish-github:
@@ -127,20 +128,8 @@ jobs:
             const fs = require('fs');
             const path = require('path');
 
-            const version = fs.readFileSync('plugin/version.txt', 'utf8').trim();
-            const channel = fs.readFileSync('plugin/channel.txt', 'utf8').trim();
-            const zipFiles = fs.readdirSync('plugin').filter(f => f.endsWith('.zip'));
-            if (zipFiles.length === 0) {
-              core.setFailed('No zip file found');
-              return;
-            }
-
-            const tag = `plugin-v${version}`;
-            const latestTag = `plugin-v${channel}-latest`;
-            const releaseName = `Plugin v${version}`;
-
-            let assetVersions = [];
             const versionsPath = 'plugin/plugins.versions.txt';
+            let assetVersions = [];
             if (fs.existsSync(versionsPath)) {
               assetVersions = fs.readFileSync(versionsPath, 'utf8')
                 .split(/\r?\n/)
@@ -148,16 +137,19 @@ jobs:
                 .filter(Boolean);
             }
 
-            const body = [
-              `version: ${version}`,
-              `interfaceChannel: ${channel}`,
-              '',
-              ...assetVersions,
-              '',
-              `Plugin release for Zaya.Screenshot (interface channel ${channel}).`,
-            ].join('\n');
+            const interfacesPath = 'plugin/interfaces.json';
+            if (!fs.existsSync(interfacesPath)) {
+              core.setFailed('Missing interfaces.json (one floating release per interface).');
+              return;
+            }
 
-            async function createOrReplaceRelease(tagName, name, releaseBody, makeLatest) {
+            const groups = JSON.parse(fs.readFileSync(interfacesPath, 'utf8'));
+            if (!Array.isArray(groups) || groups.length === 0) {
+              core.setFailed('interfaces.json is empty');
+              return;
+            }
+
+            async function createOrReplaceRelease(tagName, name, releaseBody, zipFiles, makeLatest) {
               try {
                 const existing = await github.rest.repos.getReleaseByTag({
                   owner: context.repo.owner,
@@ -180,7 +172,6 @@ jobs:
                   ref: `tags/${tagName}`,
                 });
               } catch (e) {
-                // Missing tag: API may return 404 or 422 ("Reference does not exist").
                 if (e.status !== 404 && e.status !== 422) throw e;
               }
 
@@ -191,20 +182,54 @@ jobs:
                 name,
                 body: releaseBody,
                 make_latest: makeLatest ? 'true' : 'false',
-                generate_release_notes: tagName === tag,
+                generate_release_notes: false,
               });
 
               for (const zipFile of zipFiles) {
+                const zipPath = path.join('plugin', zipFile);
+                if (!fs.existsSync(zipPath)) {
+                  core.setFailed(`Missing asset ${zipFile} for ${tagName}`);
+                  return;
+                }
                 await github.rest.repos.uploadReleaseAsset({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   release_id: release.data.id,
                   name: zipFile,
-                  data: fs.readFileSync(path.join('plugin', zipFile)),
+                  data: fs.readFileSync(zipPath),
                 });
               }
             }
 
-            // Immutable versioned release + floating plugin-v{interfaceMajor.Minor}-latest.
-            await createOrReplaceRelease(tag, releaseName, body, true);
-            await createOrReplaceRelease(latestTag, releaseName, body, false);
+            // One immutable + one floating tag per interface package.
+            let first = true;
+            for (const g of groups) {
+              const iface = g.interface;
+              const channel = g.channel;
+              const version = g.version;
+              const zipFiles = g.assets || [];
+              if (!iface || !channel || !version || zipFiles.length === 0) {
+                core.setFailed(`Invalid interfaces.json entry: ${JSON.stringify(g)}`);
+                return;
+              }
+
+              const tag = `plugin-${iface}-v${version}`;
+              const latestTag = `plugin-${iface}-v${channel}-latest`;
+              const releaseName = `${iface} plugins v${version}`;
+              const body = [
+                `interface: ${iface}`,
+                `version: ${version}`,
+                `interfaceChannel: ${channel}`,
+                '',
+                ...assetVersions.filter(line => zipFiles.some(z => line.startsWith(z + '='))),
+                '',
+                `Plugin release for ${iface} (channel ${channel}).`,
+                '',
+                'Assets:',
+                ...zipFiles.map(f => `- \`${f}\``),
+              ].join('\n');
+
+              await createOrReplaceRelease(tag, releaseName, body, zipFiles, first);
+              await createOrReplaceRelease(latestTag, releaseName, body, zipFiles, false);
+              first = false;
+            }
