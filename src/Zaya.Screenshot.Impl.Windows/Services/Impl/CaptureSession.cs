@@ -16,7 +16,6 @@ internal sealed class CaptureSession : ICaptureSession
     private readonly Direct3D11CaptureFramePool _framePool;
     private readonly GraphicsCaptureSession _session;
     private readonly Action? _onDisposed;
-    private static readonly TimeSpan DefaultFrameTimeout = TimeSpan.FromSeconds(5);
 
     private bool _disposed;
 
@@ -106,27 +105,13 @@ internal sealed class CaptureSession : ICaptureSession
                 return result;
             }
 
-            using var cts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
-            cts.CancelAfter(DefaultFrameTimeout);
-            try
-            {
-                result = await tcs.Task.WaitAsync(cts.Token);
-                return result;
-            }
-            catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
-            {
-                throw;
-            }
-            catch (OperationCanceledException)
-            {
-                throw new CaptureFrameTimeoutException();
-            }
+            result = await tcs.Task.WaitAsync(cancellationToken);
+            return result;
         }
         finally
         {
             _framePool.FrameArrived -= OnFrameArrived;
 
-            // Dispose a frame that completed on the TCS but was not returned to the caller.
             if (tcs.Task.IsCompletedSuccessfully)
             {
                 var leftover = tcs.Task.Result;

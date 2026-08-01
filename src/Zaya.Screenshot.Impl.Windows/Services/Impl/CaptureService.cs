@@ -18,6 +18,9 @@ namespace Zaya.Screenshot.Impl.Windows.Services.Impl;
 /// </summary>
 public sealed class CaptureService : ICaptureService
 {
+    private static readonly TimeSpan MonitorWarmUpTimeout = TimeSpan.FromSeconds(5);
+    private const int MonitorWarmUpFrames = 2;
+
     private Direct3DConverterService? _converter;
     private int _activeSessions;
     private bool _disposed;
@@ -116,17 +119,27 @@ public sealed class CaptureService : ICaptureService
                 session,
                 OnSessionDisposed);
 
-            // Ownership transferred to CaptureSession.
             framePool = null;
             session = null;
 
             if (isMonitorCapture)
             {
-                for (var i = 0; i < 3; i++)
+                // Discard initial black/empty frames. Best-effort: if the surface stays
+                // unchanged, return the session anyway after the warm-up budget.
+                using var warmUpCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
+                warmUpCts.CancelAfter(MonitorWarmUpTimeout);
+                try
                 {
-                    cancellationToken.ThrowIfCancellationRequested();
-                    var frame = await captureSession.CaptureAsync(cancellationToken);
-                    frame?.Dispose();
+                    for (var i = 0; i < MonitorWarmUpFrames; i++)
+                    {
+                        cancellationToken.ThrowIfCancellationRequested();
+                        var frame = await captureSession.CaptureAsync(warmUpCts.Token);
+                        frame?.Dispose();
+                    }
+                }
+                catch (OperationCanceledException) when (!cancellationToken.IsCancellationRequested)
+                {
+                    // Timed out waiting for warm-up frames — not an error.
                 }
             }
 
