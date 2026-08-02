@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cap_EngineName" xml:space="preserve">
+    <value>Moteur Windows Graphics Capture</value>
+  </data>
+  <data name="Cap_EngineDesc" xml:space="preserve">
+    <value>Capture d'écran haute performance via Windows Graphics Capture API et Direct3D 11</value>
+  </data>
+  <data name="Cap_Err_NotSupported" xml:space="preserve">
+    <value>Windows Graphics Capture n'est pas pris en charge sur ce système.</value>
+  </data>
+  <data name="Cap_Err_ItemCreateFailed" xml:space="preserve">
+    <value>Échec de la création de GraphicsCaptureItem.</value>
+  </data>
+  <data name="Cap_Err_WindowItemCreateFailed" xml:space="preserve">
+    <value>Échec de la création de l'élément de capture pour la fenêtre {0}.</value>
+  </data>
+  <data name="Cap_Err_RegionNotSupported" xml:space="preserve">
+    <value>Le type de région '{0}' n'est pas pris en charge.</value>
+  </data>
+  <data name="Cap_Err_DisplayIndexOutOfRange" xml:space="preserve">
+    <value>L'index d'affichage {0} est hors plage. Moniteurs disponibles : {1}.</value>
+  </data>
+  <data name="Cap_Err_FrameTimeout" xml:space="preserve">
+    <value>Aucune image reçue dans le délai imparti.</value>
+  </data>
+  <data name="Cap_Err_CropInvalid" xml:space="preserve">
+    <value>Le rectangle de recadrage ({0},{1},{2},{3}) est invalide.</value>
+  </data>
+  <data name="Cap_Err_CropExceedsBounds" xml:space="preserve">
+    <value>Le rectangle de recadrage ({0},{1},{2},{3}) dépasse les limites de la source ({4}x{5}).</value>
+  </data>
+  <data name="Cap_Err_PixelFormatNotSupported" xml:space="preserve">
+    <value>Le format de pixel '{0}' (Bpp={1}) n'est pas pris en charge.</value>
+  </data>
+  <data name="Cap_Err_DeviceFailed" xml:space="preserve">
+    <value>Erreur du périphérique de capture : {0}</value>
+  </data>
+</root>

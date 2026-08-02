@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cap_EngineName" xml:space="preserve">
+    <value>Windows Graphics Capture 引擎</value>
+  </data>
+  <data name="Cap_EngineDesc" xml:space="preserve">
+    <value>使用 Windows Graphics Capture API 和 Direct3D 11 的高性能屏幕捕获</value>
+  </data>
+  <data name="Cap_Err_NotSupported" xml:space="preserve">
+    <value>此系统不支持 Windows Graphics Capture。</value>
+  </data>
+  <data name="Cap_Err_ItemCreateFailed" xml:space="preserve">
+    <value>无法创建 GraphicsCaptureItem。</value>
+  </data>
+  <data name="Cap_Err_WindowItemCreateFailed" xml:space="preserve">
+    <value>无法为窗口 {0} 创建捕获项。</value>
+  </data>
+  <data name="Cap_Err_RegionNotSupported" xml:space="preserve">
+    <value>不支持区域类型 '{0}'。</value>
+  </data>
+  <data name="Cap_Err_DisplayIndexOutOfRange" xml:space="preserve">
+    <value>显示器索引 {0} 超出范围。可用监视器数：{1}。</value>
+  </data>
+  <data name="Cap_Err_FrameTimeout" xml:space="preserve">
+    <value>在超时时间内未收到帧。</value>
+  </data>
+  <data name="Cap_Err_CropInvalid" xml:space="preserve">
+    <value>裁剪矩形 ({0},{1},{2},{3}) 无效。</value>
+  </data>
+  <data name="Cap_Err_CropExceedsBounds" xml:space="preserve">
+    <value>裁剪矩形 ({0},{1},{2},{3}) 超出源边界 ({4}x{5})。</value>
+  </data>
+  <data name="Cap_Err_PixelFormatNotSupported" xml:space="preserve">
+    <value>不支持像素格式 '{0}' (Bpp={1})。</value>
+  </data>
+  <data name="Cap_Err_DeviceFailed" xml:space="preserve">
+    <value>捕获设备错误：{0}</value>
+  </data>
+</root>

@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot/Services/ICaptureService.cs
-      branch: 639d203e3e2120074081615029e25088806c00a0
+      branch: main
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: ICaptureService
     path: src/Zaya.Screenshot/Services/ICaptureService.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot/Services/ICaptureService.cs
-      branch: 639d203e3e2120074081615029e25088806c00a0
+      branch: main
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: EngineId
     path: src/Zaya.Screenshot/Services/ICaptureService.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot/Services/ICaptureService.cs
-      branch: 639d203e3e2120074081615029e25088806c00a0
+      branch: main
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: DisplayName
     path: src/Zaya.Screenshot/Services/ICaptureService.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot/Services/ICaptureService.cs
-      branch: 639d203e3e2120074081615029e25088806c00a0
+      branch: main
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Description
     path: src/Zaya.Screenshot/Services/ICaptureService.cs
@@ -152,7 +152,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot/Services/ICaptureService.cs
-      branch: 639d203e3e2120074081615029e25088806c00a0
+      branch: main
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: IsAvailable
     path: src/Zaya.Screenshot/Services/ICaptureService.cs
@@ -183,7 +183,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot/Services/ICaptureService.cs
-      branch: 639d203e3e2120074081615029e25088806c00a0
+      branch: main
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Settings
     path: src/Zaya.Screenshot/Services/ICaptureService.cs
@@ -214,7 +214,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot/Services/ICaptureService.cs
-      branch: 639d203e3e2120074081615029e25088806c00a0
+      branch: main
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: CreateSessionAsync
     path: src/Zaya.Screenshot/Services/ICaptureService.cs
@@ -252,7 +252,7 @@ items:
   source:
     remote:
       path: src/Zaya.Screenshot/Services/ICaptureService.cs
-      branch: 639d203e3e2120074081615029e25088806c00a0
+      branch: main
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: CreateSessionAsync
     path: src/Zaya.Screenshot/Services/ICaptureService.cs

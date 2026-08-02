@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cap_EngineName" xml:space="preserve">
+    <value>Silnik Windows Graphics Capture</value>
+  </data>
+  <data name="Cap_EngineDesc" xml:space="preserve">
+    <value>Wydajne przechwytywanie ekranu za pomocą Windows Graphics Capture API i Direct3D 11</value>
+  </data>
+  <data name="Cap_Err_NotSupported" xml:space="preserve">
+    <value>Windows Graphics Capture nie jest obsługiwany w tym systemie.</value>
+  </data>
+  <data name="Cap_Err_ItemCreateFailed" xml:space="preserve">
+    <value>Nie udało się utworzyć GraphicsCaptureItem.</value>
+  </data>
+  <data name="Cap_Err_WindowItemCreateFailed" xml:space="preserve">
+    <value>Nie udało się utworzyć elementu przechwytywania dla okna {0}.</value>
+  </data>
+  <data name="Cap_Err_RegionNotSupported" xml:space="preserve">
+    <value>Typ regionu '{0}' nie jest obsługiwany.</value>
+  </data>
+  <data name="Cap_Err_DisplayIndexOutOfRange" xml:space="preserve">
+    <value>Indeks wyświetlacza {0} jest poza zakresem. Dostępne monitory: {1}.</value>
+  </data>
+  <data name="Cap_Err_FrameTimeout" xml:space="preserve">
+    <value>Nie odebrano klatki w czasie limitu.</value>
+  </data>
+  <data name="Cap_Err_CropInvalid" xml:space="preserve">
+    <value>Prostokąt przycięcia ({0},{1},{2},{3}) jest nieprawidłowy.</value>
+  </data>
+  <data name="Cap_Err_CropExceedsBounds" xml:space="preserve">
+    <value>Prostokąt przycięcia ({0},{1},{2},{3}) wykracza poza granice źródła ({4}x{5}).</value>
+  </data>
+  <data name="Cap_Err_PixelFormatNotSupported" xml:space="preserve">
+    <value>Format pikseli '{0}' (Bpp={1}) nie jest obsługiwany.</value>
+  </data>
+  <data name="Cap_Err_DeviceFailed" xml:space="preserve">
+    <value>Błąd urządzenia przechwytywania: {0}</value>
+  </data>
+</root>

@@ -8,7 +8,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <ZayaVersionRole>plugin</ZayaVersionRole>
     <ZayaVersionImpMajor>0</ZayaVersionImpMajor>
-    <ZayaVersionImpMinor>1</ZayaVersionImpMinor>
+    <ZayaVersionImpMinor>2</ZayaVersionImpMinor>
 
     <PackageId>Zaya.Screenshot.Impl.Windows</PackageId>
     <Description>High-performance screen capture library for Windows using Windows Graphics Capture API and Direct3D 11.</Description>

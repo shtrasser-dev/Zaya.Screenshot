@@ -91,12 +91,12 @@
 <tr>
 <td><strong>pluginVersion</strong></td>
 <td>Impl → <strong><code>ZayaVersionImpMajor</code></strong> + <strong><code>ZayaVersionImpMinor</code></strong>; Interface read from abstractions csproj → <code>Major.Interface.ImpMajor.ImpMinor</code></td>
-<td><code>1.0.0.0</code></td>
+<td><code>1.0.0.2</code></td>
 </tr>
 <tr>
 <td><strong>updateChannel</strong></td>
 <td>Interface <code>MAJOR.Interface</code></td>
-<td><code>1.0</code> → <code>plugin-v1.0-latest</code></td>
+<td><code>1.0</code> → <code>plugin-Zaya.Screenshot-v1.0-latest</code></td>
 </tr>
 </tbody>
 </table>
@@ -106,7 +106,8 @@
 <li>Plugin: only <code>ZayaVersionImpMajor</code> / <code>ZayaVersionImpMinor</code> (4th segment allowed). Interface digit is taken from abstractions automatically.</li>
 <li>Do not set <code>&lt;Version&gt;</code> manually. <code>Directory.Build.targets</code> builds it and checks Major vs Primitives.</li>
 <li>Host loads a zip only if <code>interfaceVersion</code> <strong>exactly</strong> matches host’s <code>Zaya.Screenshot</code> version.</li>
-<li>Updater uses <code>plugin-v{updateChannel}-latest</code> (not Primitives).</li>
+<li><strong>One interface → one floating GitHub tag:</strong> <code>plugin-Zaya.Screenshot-v{channel}-latest</code> (immutable: <code>plugin-Zaya.Screenshot-v{pluginVersion}</code>).</li>
+<li><code>build.cmd</code> writes <code>out/interfaces.json</code> for the Publish workflow.</li>
 </ul>
 <h2 id="pluginjson">plugin.json</h2>
 <pre><code class="lang-json">{
@@ -114,7 +115,7 @@
   &quot;type&quot;: &quot;capture&quot;,
   &quot;interface&quot;: &quot;Zaya.Screenshot&quot;,
   &quot;interfaceVersion&quot;: &quot;1.0.0&quot;,
-  &quot;pluginVersion&quot;: &quot;1.0.0.0&quot;
+  &quot;pluginVersion&quot;: &quot;1.0.0.2&quot;
 }
 </code></pre>
 <h2 id="bumping">Bumping</h2>
@@ -132,7 +133,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/639d203e3e2120074081615029e25088806c00a0/docs/versioning.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/docs/versioning.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

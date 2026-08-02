@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cap_EngineName" xml:space="preserve">
+    <value>Windows Graphics Capture 엔진</value>
+  </data>
+  <data name="Cap_EngineDesc" xml:space="preserve">
+    <value>Windows Graphics Capture API 및 Direct3D 11을 사용한 고성능 화면 캡처</value>
+  </data>
+  <data name="Cap_Err_NotSupported" xml:space="preserve">
+    <value>이 시스템에서는 Windows Graphics Capture가 지원되지 않습니다.</value>
+  </data>
+  <data name="Cap_Err_ItemCreateFailed" xml:space="preserve">
+    <value>GraphicsCaptureItem을 만들지 못했습니다.</value>
+  </data>
+  <data name="Cap_Err_WindowItemCreateFailed" xml:space="preserve">
+    <value>창 {0}에 대한 캡처 항목을 만들지 못했습니다.</value>
+  </data>
+  <data name="Cap_Err_RegionNotSupported" xml:space="preserve">
+    <value>영역 유형 '{0}'은(는) 지원되지 않습니다.</value>
+  </data>
+  <data name="Cap_Err_DisplayIndexOutOfRange" xml:space="preserve">
+    <value>디스플레이 인덱스 {0}이(가) 범위를 벗어났습니다. 사용 가능한 모니터: {1}.</value>
+  </data>
+  <data name="Cap_Err_FrameTimeout" xml:space="preserve">
+    <value>제한 시간 내에 프레임을 받지 못했습니다.</value>
+  </data>
+  <data name="Cap_Err_CropInvalid" xml:space="preserve">
+    <value>자르기 사각형 ({0},{1},{2},{3})이(가) 잘못되었습니다.</value>
+  </data>
+  <data name="Cap_Err_CropExceedsBounds" xml:space="preserve">
+    <value>자르기 사각형 ({0},{1},{2},{3})이(가) 소스 범위 ({4}x{5})를 초과합니다.</value>
+  </data>
+  <data name="Cap_Err_PixelFormatNotSupported" xml:space="preserve">
+    <value>픽셀 형식 '{0}' (Bpp={1})은(는) 지원되지 않습니다.</value>
+  </data>
+  <data name="Cap_Err_DeviceFailed" xml:space="preserve">
+    <value>캡처 장치 오류: {0}</value>
+  </data>
+</root>

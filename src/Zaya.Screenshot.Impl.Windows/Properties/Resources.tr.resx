@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cap_EngineName" xml:space="preserve">
+    <value>Windows Graphics Capture Motoru</value>
+  </data>
+  <data name="Cap_EngineDesc" xml:space="preserve">
+    <value>Windows Graphics Capture API ve Direct3D 11 ile yüksek performanslı ekran yakalama</value>
+  </data>
+  <data name="Cap_Err_NotSupported" xml:space="preserve">
+    <value>Windows Graphics Capture bu sistemde desteklenmiyor.</value>
+  </data>
+  <data name="Cap_Err_ItemCreateFailed" xml:space="preserve">
+    <value>GraphicsCaptureItem oluşturulamadı.</value>
+  </data>
+  <data name="Cap_Err_WindowItemCreateFailed" xml:space="preserve">
+    <value>{0} penceresi için yakalama öğesi oluşturulamadı.</value>
+  </data>
+  <data name="Cap_Err_RegionNotSupported" xml:space="preserve">
+    <value>'{0}' bölge türü desteklenmiyor.</value>
+  </data>
+  <data name="Cap_Err_DisplayIndexOutOfRange" xml:space="preserve">
+    <value>Ekran dizini {0} aralık dışında. Kullanılabilir monitörler: {1}.</value>
+  </data>
+  <data name="Cap_Err_FrameTimeout" xml:space="preserve">
+    <value>Zaman aşımı içinde kare alınamadı.</value>
+  </data>
+  <data name="Cap_Err_CropInvalid" xml:space="preserve">
+    <value>Kırpma dikdörtgeni ({0},{1},{2},{3}) geçersiz.</value>
+  </data>
+  <data name="Cap_Err_CropExceedsBounds" xml:space="preserve">
+    <value>Kırpma dikdörtgeni ({0},{1},{2},{3}) kaynak sınırlarını ({4}x{5}) aşıyor.</value>
+  </data>
+  <data name="Cap_Err_PixelFormatNotSupported" xml:space="preserve">
+    <value>Piksel biçimi '{0}' (Bpp={1}) desteklenmiyor.</value>
+  </data>
+  <data name="Cap_Err_DeviceFailed" xml:space="preserve">
+    <value>Yakalama aygıtı hatası: {0}</value>
+  </data>
+</root>

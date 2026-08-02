@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cap_EngineName" xml:space="preserve">
+    <value>Рушій Windows Graphics Capture</value>
+  </data>
+  <data name="Cap_EngineDesc" xml:space="preserve">
+    <value>Високопродуктивне захоплення екрана через Windows Graphics Capture API та Direct3D 11</value>
+  </data>
+  <data name="Cap_Err_NotSupported" xml:space="preserve">
+    <value>Windows Graphics Capture не підтримується на цій системі.</value>
+  </data>
+  <data name="Cap_Err_ItemCreateFailed" xml:space="preserve">
+    <value>Не вдалося створити GraphicsCaptureItem.</value>
+  </data>
+  <data name="Cap_Err_WindowItemCreateFailed" xml:space="preserve">
+    <value>Не вдалося створити елемент захоплення для вікна {0}.</value>
+  </data>
+  <data name="Cap_Err_RegionNotSupported" xml:space="preserve">
+    <value>Тип регіону '{0}' не підтримується.</value>
+  </data>
+  <data name="Cap_Err_DisplayIndexOutOfRange" xml:space="preserve">
+    <value>Індекс дисплея {0} поза діапазоном. Доступно моніторів: {1}.</value>
+  </data>
+  <data name="Cap_Err_FrameTimeout" xml:space="preserve">
+    <value>Кадр не отримано протягом тайм-ауту.</value>
+  </data>
+  <data name="Cap_Err_CropInvalid" xml:space="preserve">
+    <value>Неприпустимий прямокутник обрізки ({0},{1},{2},{3}).</value>
+  </data>
+  <data name="Cap_Err_CropExceedsBounds" xml:space="preserve">
+    <value>Прямокутник обрізки ({0},{1},{2},{3}) виходить за межі джерела ({4}x{5}).</value>
+  </data>
+  <data name="Cap_Err_PixelFormatNotSupported" xml:space="preserve">
+    <value>Формат пікселів '{0}' (Bpp={1}) не підтримується.</value>
+  </data>
+  <data name="Cap_Err_DeviceFailed" xml:space="preserve">
+    <value>Помилка пристрою захоплення: {0}</value>
+  </data>
+</root>
