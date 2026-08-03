@@ -1,4 +1,6 @@
-﻿using Windows.Graphics.Capture;
+﻿using Windows.Graphics;
+using Windows.Graphics.Capture;
+using Windows.Graphics.DirectX;
 using Zaya.Primitives;
 using Zaya.Screenshot.Impl.Windows.Models;
 using Zaya.Screenshot.Models;
@@ -11,12 +13,15 @@ namespace Zaya.Screenshot.Impl.Windows.Services.Impl;
 /// </summary>
 internal sealed class CaptureSession : ICaptureSession
 {
+    private const int FramePoolBufferCount = 2;
+
     private readonly Direct3DConverterService _converter;
     private readonly ICaptureRegion _region;
     private readonly Direct3D11CaptureFramePool _framePool;
     private readonly GraphicsCaptureSession _session;
     private readonly Action? _onDisposed;
 
+    private SizeInt32 _lastSize;
     private bool _disposed;
 
     public ICaptureRegion Region => _region;
@@ -26,12 +31,14 @@ internal sealed class CaptureSession : ICaptureSession
         ICaptureRegion region,
         Direct3D11CaptureFramePool framePool,
         GraphicsCaptureSession session,
+        SizeInt32 initialSize,
         Action? onDisposed = null)
     {
         _converter = converter;
         _region = region;
         _framePool = framePool;
         _session = session;
+        _lastSize = initialSize;
         _onDisposed = onDisposed;
     }
 
@@ -39,7 +46,7 @@ internal sealed class CaptureSession : ICaptureSession
     {
         ObjectDisposedException.ThrowIf(_disposed, this);
 
-        var frame = await WaitForFrameAsync(cancellationToken);
+        var frame = await WaitForUsableFrameAsync(cancellationToken);
         if (frame == null)
             return null;
 
@@ -72,7 +79,47 @@ internal sealed class CaptureSession : ICaptureSession
             outputFormat);
     }
 
-    private async Task<Direct3D11CaptureFrame?> WaitForFrameAsync(CancellationToken cancellationToken)
+    /// <summary>
+    /// Waits for a frame whose <see cref="Direct3D11CaptureFrame.ContentSize"/> matches the
+    /// current frame-pool buffers. When the captured window is restored or resized, WGC
+    /// reports a new content size while the pool still has the old buffers — recreate and
+    /// wait for the next frame (Microsoft SimpleCapture pattern).
+    /// </summary>
+    private async Task<Direct3D11CaptureFrame?> WaitForUsableFrameAsync(CancellationToken cancellationToken)
+    {
+        while (true)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+            ObjectDisposedException.ThrowIf(_disposed, this);
+
+            var frame = await WaitForNextFrameAsync(cancellationToken);
+            if (frame is null)
+                return null;
+
+            var contentSize = frame.ContentSize;
+
+            // Minimized / empty content — discard and keep waiting (do not Recreate with 0).
+            if (contentSize.Width <= 0 || contentSize.Height <= 0)
+            {
+                frame.Dispose();
+                continue;
+            }
+
+            if (contentSize.Width == _lastSize.Width && contentSize.Height == _lastSize.Height)
+                return frame;
+
+            // Size changed: drop this frame, resize the pool, wait for a matching one.
+            frame.Dispose();
+            _framePool.Recreate(
+                _converter.WinRTDevice,
+                DirectXPixelFormat.B8G8R8A8UIntNormalized,
+                FramePoolBufferCount,
+                contentSize);
+            _lastSize = contentSize;
+        }
+    }
+
+    private async Task<Direct3D11CaptureFrame?> WaitForNextFrameAsync(CancellationToken cancellationToken)
     {
         var tcs = new TaskCompletionSource<Direct3D11CaptureFrame?>(
             TaskCreationOptions.RunContinuationsAsynchronously);

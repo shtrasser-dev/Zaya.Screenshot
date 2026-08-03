@@ -7,7 +7,7 @@ High-performance screen capture for Windows .NET 8.0+ — Windows Graphics Captu
 | Package | Version | Role |
 |---------|---------|------|
 | **Zaya.Screenshot** | 1.0.0 | Abstractions: `ICaptureService`, `ICaptureSession`, region types |
-| **Zaya.Screenshot.Impl.Windows** | 1.0.0.2 | Windows Graphics Capture + D3D11 (`CaptureService`) |
+| **Zaya.Screenshot.Impl.Windows** | 1.0.0.3 | Windows Graphics Capture + D3D11 (`CaptureService`) |
 
 ## Features
 
@@ -22,7 +22,7 @@ There is no separate `InitializeAsync`: create a session with `CreateSessionAsyn
 
 ```xml
 <PackageReference Include="Zaya.Screenshot" Version="1.0.0" />
-<PackageReference Include="Zaya.Screenshot.Impl.Windows" Version="1.0.0.2" />
+<PackageReference Include="Zaya.Screenshot.Impl.Windows" Version="1.0.0.3" />
 ```
 
 ## Platform

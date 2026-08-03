@@ -360,7 +360,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: Dispose
     path: src/Zaya.Screenshot.Impl.Windows/Services/Impl/CaptureService.cs
-    startLine: 282
+    startLine: 283
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows.Services.Impl

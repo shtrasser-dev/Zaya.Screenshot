@@ -4,7 +4,7 @@
 |------|--------|---------|
 | **ZayaPrimitivesVersion** | `Directory.Build.props` (supplies **Major**) | `1.0.0` |
 | **interfaceVersion** | `Zaya.Screenshot.csproj` → only **`ZayaVersionInterface`** → `Major.Interface.0` | `1.0.0` |
-| **pluginVersion** | Impl → **`ZayaVersionImpMajor`** + **`ZayaVersionImpMinor`**; Interface read from abstractions csproj → `Major.Interface.ImpMajor.ImpMinor` | `1.0.0.2` |
+| **pluginVersion** | Impl → **`ZayaVersionImpMajor`** + **`ZayaVersionImpMinor`**; Interface read from abstractions csproj → `Major.Interface.ImpMajor.ImpMinor` | `1.0.0.3` |
 | **updateChannel** | Interface `MAJOR.Interface` | `1.0` → `plugin-Zaya.Screenshot-v1.0-latest` |
 
 Rules:
@@ -24,7 +24,7 @@ Rules:
   "type": "capture",
   "interface": "Zaya.Screenshot",
   "interfaceVersion": "1.0.0",
-  "pluginVersion": "1.0.0.2"
+  "pluginVersion": "1.0.0.3"
 }
 ```
 

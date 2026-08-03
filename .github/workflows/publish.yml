@@ -2,6 +2,12 @@ name: Publish
 
 on:
   workflow_dispatch:
+    inputs:
+      changelog:
+        description: 'Release notes (shown on GitHub Releases; optional)'
+        required: false
+        type: string
+        default: ''
 
 jobs:
   build:
@@ -123,6 +129,8 @@ jobs:
           path: plugin
 
       - uses: actions/github-script@v7
+        env:
+          RELEASE_CHANGELOG: ${{ inputs.changelog }}
         with:
           script: |
             const fs = require('fs');
@@ -216,7 +224,8 @@ jobs:
               const tag = `plugin-${iface}-v${version}`;
               const latestTag = `plugin-${iface}-v${channel}-latest`;
               const releaseName = `${iface} plugins v${version}`;
-              const body = [
+              const changelog = (process.env.RELEASE_CHANGELOG || '').trim();
+              const meta = [
                 `interface: ${iface}`,
                 `version: ${version}`,
                 `interfaceChannel: ${channel}`,
@@ -228,6 +237,7 @@ jobs:
                 'Assets:',
                 ...zipFiles.map(f => `- \`${f}\``),
               ].join('\n');
+              const body = changelog ? `${changelog}\n\n---\n\n${meta}` : meta;
 
               await createOrReplaceRelease(tag, releaseName, body, zipFiles, first);
               await createOrReplaceRelease(latestTag, releaseName, body, zipFiles, false);

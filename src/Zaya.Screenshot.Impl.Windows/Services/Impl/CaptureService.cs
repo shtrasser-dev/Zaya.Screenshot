@@ -117,6 +117,7 @@ public sealed class CaptureService : ICaptureService
                 region,
                 framePool,
                 session,
+                captureSize,
                 OnSessionDisposed);
 
             framePool = null;
