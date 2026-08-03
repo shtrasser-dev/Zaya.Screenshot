@@ -36,6 +36,9 @@
   <data name="Cap_Err_FrameTimeout" xml:space="preserve">
     <value>Кадр не отримано протягом тайм-ауту.</value>
   </data>
+  <data name="Cap_Err_TargetClosed" xml:space="preserve">
+    <value>Ціль захоплення була закрита.</value>
+  </data>
   <data name="Cap_Err_CropInvalid" xml:space="preserve">
     <value>Неприпустимий прямокутник обрізки ({0},{1},{2},{3}).</value>
   </data>

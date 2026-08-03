@@ -115,6 +115,7 @@ public sealed class CaptureService : ICaptureService
             captureSession = new CaptureSession(
                 _converter,
                 region,
+                captureItem,
                 framePool,
                 session,
                 captureSize,
@@ -204,7 +205,7 @@ public sealed class CaptureService : ICaptureService
 
     private static GraphicsCaptureItem? CreateForWindow(nint hwnd)
     {
-        if (hwnd == IntPtr.Zero) return null;
+        if (hwnd == IntPtr.Zero || !WinApiInterop.IsWindow(hwnd)) return null;
         return WinApiInterop.CreateCaptureItemForWindow(hwnd);
     }
 

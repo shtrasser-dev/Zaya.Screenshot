@@ -36,6 +36,9 @@
   <data name="Cap_Err_FrameTimeout" xml:space="preserve">
     <value>Nie odebrano klatki w czasie limitu.</value>
   </data>
+  <data name="Cap_Err_TargetClosed" xml:space="preserve">
+    <value>Cel przechwytywania został zamknięty.</value>
+  </data>
   <data name="Cap_Err_CropInvalid" xml:space="preserve">
     <value>Prostokąt przycięcia ({0},{1},{2},{3}) jest nieprawidłowy.</value>
   </data>

@@ -36,6 +36,9 @@
   <data name="Cap_Err_FrameTimeout" xml:space="preserve">
     <value>제한 시간 내에 프레임을 받지 못했습니다.</value>
   </data>
+  <data name="Cap_Err_TargetClosed" xml:space="preserve">
+    <value>캡처 대상이 닫혔습니다.</value>
+  </data>
   <data name="Cap_Err_CropInvalid" xml:space="preserve">
     <value>자르기 사각형 ({0},{1},{2},{3})이(가) 잘못되었습니다.</value>
   </data>

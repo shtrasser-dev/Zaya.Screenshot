@@ -3,6 +3,7 @@ using Windows.Graphics.Capture;
 using Windows.Graphics.DirectX;
 using Zaya.Primitives;
 using Zaya.Screenshot.Impl.Windows.Models;
+using Zaya.Screenshot.Impl.Windows.Services.Impl.WinApi;
 using Zaya.Screenshot.Models;
 using Zaya.Screenshot.Services;
 
@@ -17,18 +18,23 @@ internal sealed class CaptureSession : ICaptureSession
 
     private readonly Direct3DConverterService _converter;
     private readonly ICaptureRegion _region;
+    private readonly GraphicsCaptureItem _captureItem;
     private readonly Direct3D11CaptureFramePool _framePool;
     private readonly GraphicsCaptureSession _session;
     private readonly Action? _onDisposed;
+    private readonly CancellationTokenSource _lifetimeCts = new();
+    private readonly nint _windowHandle;
 
     private SizeInt32 _lastSize;
     private bool _disposed;
+    private volatile bool _captureTargetClosed;
 
     public ICaptureRegion Region => _region;
 
     public CaptureSession(
         Direct3DConverterService converter,
         ICaptureRegion region,
+        GraphicsCaptureItem captureItem,
         Direct3D11CaptureFramePool framePool,
         GraphicsCaptureSession session,
         SizeInt32 initialSize,
@@ -36,15 +42,29 @@ internal sealed class CaptureSession : ICaptureSession
     {
         _converter = converter;
         _region = region;
+        _captureItem = captureItem;
         _framePool = framePool;
         _session = session;
         _lastSize = initialSize;
         _onDisposed = onDisposed;
+        _windowHandle = region switch
+        {
+            FullScreenWindowRegion windowRegion => windowRegion.WindowHandle,
+            RectWindowRegion windowRegion => windowRegion.WindowHandle,
+            _ => 0
+        };
+
+        _captureItem.Closed += OnCaptureItemClosed;
+
+        // Window may already be gone between item creation and session start.
+        if (_windowHandle != 0 && !WinApiInterop.IsWindow(_windowHandle))
+            SignalCaptureTargetClosed();
     }
 
     public async Task<IRawImage?> CaptureAsync(CancellationToken cancellationToken = default)
     {
         ObjectDisposedException.ThrowIf(_disposed, this);
+        ThrowIfCaptureTargetClosed();
 
         var frame = await WaitForUsableFrameAsync(cancellationToken);
         if (frame == null)
@@ -91,6 +111,7 @@ internal sealed class CaptureSession : ICaptureSession
         {
             cancellationToken.ThrowIfCancellationRequested();
             ObjectDisposedException.ThrowIf(_disposed, this);
+            ThrowIfCaptureTargetClosed();
 
             var frame = await WaitForNextFrameAsync(cancellationToken);
             if (frame is null)
@@ -142,6 +163,10 @@ internal sealed class CaptureSession : ICaptureSession
             }
         }
 
+        using var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(
+            cancellationToken,
+            _lifetimeCts.Token);
+
         _framePool.FrameArrived += OnFrameArrived;
         try
         {
@@ -152,8 +177,19 @@ internal sealed class CaptureSession : ICaptureSession
                 return result;
             }
 
-            result = await tcs.Task.WaitAsync(cancellationToken);
-            return result;
+            try
+            {
+                result = await tcs.Task.WaitAsync(linkedCts.Token);
+                return result;
+            }
+            catch (OperationCanceledException) when (_captureTargetClosed)
+            {
+                throw new CaptureTargetClosedException();
+            }
+            catch (OperationCanceledException) when (_disposed)
+            {
+                throw new ObjectDisposedException(nameof(CaptureSession));
+            }
         }
         finally
         {
@@ -168,10 +204,43 @@ internal sealed class CaptureSession : ICaptureSession
         }
     }
 
+    private void OnCaptureItemClosed(GraphicsCaptureItem sender, object args)
+        => SignalCaptureTargetClosed();
+
+    private void SignalCaptureTargetClosed()
+    {
+        _captureTargetClosed = true;
+        try
+        {
+            _lifetimeCts.Cancel();
+        }
+        catch (ObjectDisposedException)
+        {
+        }
+    }
+
+    private void ThrowIfCaptureTargetClosed()
+    {
+        if (_captureTargetClosed)
+            throw new CaptureTargetClosedException();
+
+        if (_windowHandle != 0 && !WinApiInterop.IsWindow(_windowHandle))
+        {
+            SignalCaptureTargetClosed();
+            throw new CaptureTargetClosedException();
+        }
+    }
+
     public void Dispose()
     {
         if (_disposed) return;
         _disposed = true;
+
+        try { _captureItem.Closed -= OnCaptureItemClosed; } catch { }
+
+        try { _lifetimeCts.Cancel(); } catch { }
+        try { _lifetimeCts.Dispose(); } catch { }
+
         try { _session.Dispose(); } catch { }
         try { _framePool.Dispose(); } catch { }
         _onDisposed?.Invoke();

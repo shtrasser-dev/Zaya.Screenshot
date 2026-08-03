@@ -36,6 +36,9 @@
   <data name="Cap_Err_FrameTimeout" xml:space="preserve">
     <value>No frame received within timeout.</value>
   </data>
+  <data name="Cap_Err_TargetClosed" xml:space="preserve">
+    <value>Capture target was closed.</value>
+  </data>
   <data name="Cap_Err_CropInvalid" xml:space="preserve">
     <value>Crop rectangle ({0},{1},{2},{3}) is invalid.</value>
   </data>

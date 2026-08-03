@@ -155,6 +155,23 @@ public sealed class CaptureFrameTimeoutException : LocalizedException
 }
 
 /// <summary>
+/// Thrown when the capture target is closed (e.g. <c>GraphicsCaptureItem.Closed</c>
+/// or the window HWND is no longer valid) while waiting for a frame.
+/// </summary>
+public sealed class CaptureTargetClosedException : LocalizedException
+{
+    /// <summary>
+    /// Initializes a new instance of the <see cref="CaptureTargetClosedException"/> class.
+    /// </summary>
+    public CaptureTargetClosedException() : base(LocalizationConstants.Exceptions.TargetClosed) { }
+
+    /// <inheritdoc />
+    public override string GetLocalizedMessage(CultureInfo culture)
+        => Properties.Resources.ResourceManager.GetString(LocalizationConstants.Exceptions.TargetClosed, culture)
+           ?? base.GetLocalizedMessage(culture);
+}
+
+/// <summary>
 /// Thrown when the crop rectangle is invalid (negative origin or non-positive size).
 /// </summary>
 public sealed class CaptureCropInvalidException : LocalizedException

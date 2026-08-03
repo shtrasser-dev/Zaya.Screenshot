@@ -36,6 +36,9 @@
   <data name="Cap_Err_FrameTimeout" xml:space="preserve">
     <value>Aucune image reçue dans le délai imparti.</value>
   </data>
+  <data name="Cap_Err_TargetClosed" xml:space="preserve">
+    <value>La cible de capture a été fermée.</value>
+  </data>
   <data name="Cap_Err_CropInvalid" xml:space="preserve">
     <value>Le rectangle de recadrage ({0},{1},{2},{3}) est invalide.</value>
   </data>

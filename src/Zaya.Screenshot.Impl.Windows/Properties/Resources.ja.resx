@@ -36,6 +36,9 @@
   <data name="Cap_Err_FrameTimeout" xml:space="preserve">
     <value>タイムアウト内にフレームを受信できませんでした。</value>
   </data>
+  <data name="Cap_Err_TargetClosed" xml:space="preserve">
+    <value>キャプチャ対象が閉じられました。</value>
+  </data>
   <data name="Cap_Err_CropInvalid" xml:space="preserve">
     <value>切り抜き矩形 ({0},{1},{2},{3}) が無効です。</value>
   </data>

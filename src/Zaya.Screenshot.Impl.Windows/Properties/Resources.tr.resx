@@ -36,6 +36,9 @@
   <data name="Cap_Err_FrameTimeout" xml:space="preserve">
     <value>Zaman aşımı içinde kare alınamadı.</value>
   </data>
+  <data name="Cap_Err_TargetClosed" xml:space="preserve">
+    <value>Yakalama hedefi kapatıldı.</value>
+  </data>
   <data name="Cap_Err_CropInvalid" xml:space="preserve">
     <value>Kırpma dikdörtgeni ({0},{1},{2},{3}) geçersiz.</value>
   </data>

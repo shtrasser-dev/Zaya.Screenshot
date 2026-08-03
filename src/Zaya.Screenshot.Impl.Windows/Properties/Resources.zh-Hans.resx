@@ -36,6 +36,9 @@
   <data name="Cap_Err_FrameTimeout" xml:space="preserve">
     <value>在超时时间内未收到帧。</value>
   </data>
+  <data name="Cap_Err_TargetClosed" xml:space="preserve">
+    <value>捕获目标已关闭。</value>
+  </data>
   <data name="Cap_Err_CropInvalid" xml:space="preserve">
     <value>裁剪矩形 ({0},{1},{2},{3}) 无效。</value>
   </data>

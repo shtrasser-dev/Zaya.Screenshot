@@ -16,6 +16,7 @@ internal static class LocalizationConstants
         public const string RegionNotSupported = "Cap_Err_RegionNotSupported";
         public const string DisplayIndexOutOfRange = "Cap_Err_DisplayIndexOutOfRange";
         public const string FrameTimeout = "Cap_Err_FrameTimeout";
+        public const string TargetClosed = "Cap_Err_TargetClosed";
         public const string CropInvalid = "Cap_Err_CropInvalid";
         public const string CropExceedsBounds = "Cap_Err_CropExceedsBounds";
         public const string PixelFormatNotSupported = "Cap_Err_PixelFormatNotSupported";

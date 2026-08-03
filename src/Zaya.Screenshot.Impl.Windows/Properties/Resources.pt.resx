@@ -36,6 +36,9 @@
   <data name="Cap_Err_FrameTimeout" xml:space="preserve">
     <value>Nenhum quadro recebido dentro do tempo limite.</value>
   </data>
+  <data name="Cap_Err_TargetClosed" xml:space="preserve">
+    <value>O alvo da captura foi fechado.</value>
+  </data>
   <data name="Cap_Err_CropInvalid" xml:space="preserve">
     <value>O retângulo de recorte ({0},{1},{2},{3}) é inválido.</value>
   </data>

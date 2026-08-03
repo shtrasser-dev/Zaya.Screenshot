@@ -36,6 +36,9 @@
   <data name="Cap_Err_FrameTimeout" xml:space="preserve">
     <value>Innerhalb des Timeouts wurde kein Frame empfangen.</value>
   </data>
+  <data name="Cap_Err_TargetClosed" xml:space="preserve">
+    <value>Das Capture-Ziel wurde geschlossen.</value>
+  </data>
   <data name="Cap_Err_CropInvalid" xml:space="preserve">
     <value>Zuschneiderechteck ({0},{1},{2},{3}) ist ungültig.</value>
   </data>
