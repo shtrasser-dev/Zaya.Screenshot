@@ -22,7 +22,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: CapturePixelFormatNotSupportedException
     path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
-    startLine: 211
+    startLine: 228
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows
@@ -71,7 +71,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: FormatName
     path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
-    startLine: 219
+    startLine: 236
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows
@@ -102,7 +102,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: .ctor
     path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
-    startLine: 224
+    startLine: 241
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows
@@ -138,7 +138,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: GetLocalizedMessage
     path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
-    startLine: 232
+    startLine: 249
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows

@@ -1,36 +1,38 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Zaya.Screenshot.Impl.Windows.CaptureDeviceException
-  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureDeviceException
-  id: CaptureDeviceException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException
+  id: CaptureTargetClosedException
   parent: Zaya.Screenshot.Impl.Windows
   children:
-  - Zaya.Screenshot.Impl.Windows.CaptureDeviceException.#ctor(System.String)
-  - Zaya.Screenshot.Impl.Windows.CaptureDeviceException.Detail
-  - Zaya.Screenshot.Impl.Windows.CaptureDeviceException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  - Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.#ctor
+  - Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.GetLocalizedMessage(System.Globalization.CultureInfo)
   langs:
   - csharp
   - vb
-  name: CaptureDeviceException
-  nameWithType: CaptureDeviceException
-  fullName: Zaya.Screenshot.Impl.Windows.CaptureDeviceException
+  name: CaptureTargetClosedException
+  nameWithType: CaptureTargetClosedException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException
   type: Class
   source:
     remote:
       path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
       branch: main
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
-    id: CaptureDeviceException
+    id: CaptureTargetClosedException
     path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
-    startLine: 261
+    startLine: 160
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows
-  summary: Thrown when Direct3D / WinRT device setup fails.
+  summary: >-
+    Thrown when the capture target is closed (e.g. <code>GraphicsCaptureItem.Closed</code>
+
+    or the window HWND is no longer valid) while waiting for a frame.
   example: []
   syntax:
-    content: 'public sealed class CaptureDeviceException : LocalizedException, ISerializable'
-    content.vb: Public NotInheritable Class CaptureDeviceException Inherits LocalizedException Implements ISerializable
+    content: 'public sealed class CaptureTargetClosedException : LocalizedException, ISerializable'
+    content.vb: Public NotInheritable Class CaptureTargetClosedException Inherits LocalizedException Implements ISerializable
   inheritance:
   - System.Object
   - System.Exception
@@ -53,47 +55,16 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.Detail
-  commentId: P:Zaya.Screenshot.Impl.Windows.CaptureDeviceException.Detail
-  id: Detail
-  parent: Zaya.Screenshot.Impl.Windows.CaptureDeviceException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.#ctor
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.#ctor
+  id: '#ctor'
+  parent: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException
   langs:
   - csharp
   - vb
-  name: Detail
-  nameWithType: CaptureDeviceException.Detail
-  fullName: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.Detail
-  type: Property
-  source:
-    remote:
-      path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
-      branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
-    id: Detail
-    path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
-    startLine: 268
-  assemblies:
-  - Zaya.Screenshot.Impl.Windows
-  namespace: Zaya.Screenshot.Impl.Windows
-  summary: Gets the technical failure detail.
-  example: []
-  syntax:
-    content: public string Detail { get; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public ReadOnly Property Detail As String
-  overload: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.Detail*
-- uid: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.#ctor(System.String)
-  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureDeviceException.#ctor(System.String)
-  id: '#ctor(System.String)'
-  parent: Zaya.Screenshot.Impl.Windows.CaptureDeviceException
-  langs:
-  - csharp
-  - vb
-  name: CaptureDeviceException(string)
-  nameWithType: CaptureDeviceException.CaptureDeviceException(string)
-  fullName: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.CaptureDeviceException(string)
+  name: CaptureTargetClosedException()
+  nameWithType: CaptureTargetClosedException.CaptureTargetClosedException()
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.CaptureTargetClosedException()
   type: Constructor
   source:
     remote:
@@ -102,33 +73,29 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: .ctor
     path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
-    startLine: 274
+    startLine: 165
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows
-  summary: Initializes a new instance of the <xref href="Zaya.Screenshot.Impl.Windows.CaptureDeviceException" data-throw-if-not-resolved="false"></xref> class.
+  summary: Initializes a new instance of the <xref href="Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException" data-throw-if-not-resolved="false"></xref> class.
   example: []
   syntax:
-    content: public CaptureDeviceException(string detail)
-    parameters:
-    - id: detail
-      type: System.String
-      description: Technical detail (API name and/or HRESULT).
-    content.vb: Public Sub New(detail As String)
-  overload: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.#ctor*
-  nameWithType.vb: CaptureDeviceException.New(String)
-  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.New(String)
-  name.vb: New(String)
-- uid: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureDeviceException.GetLocalizedMessage(System.Globalization.CultureInfo)
+    content: public CaptureTargetClosedException()
+    content.vb: Public Sub New()
+  overload: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.#ctor*
+  nameWithType.vb: CaptureTargetClosedException.New()
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.New()
+  name.vb: New()
+- uid: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.GetLocalizedMessage(System.Globalization.CultureInfo)
   id: GetLocalizedMessage(System.Globalization.CultureInfo)
-  parent: Zaya.Screenshot.Impl.Windows.CaptureDeviceException
+  parent: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException
   langs:
   - csharp
   - vb
   name: GetLocalizedMessage(CultureInfo)
-  nameWithType: CaptureDeviceException.GetLocalizedMessage(CultureInfo)
-  fullName: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  nameWithType: CaptureTargetClosedException.GetLocalizedMessage(CultureInfo)
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.GetLocalizedMessage(System.Globalization.CultureInfo)
   type: Method
   source:
     remote:
@@ -137,7 +104,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: GetLocalizedMessage
     path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
-    startLine: 280
+    startLine: 168
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows
@@ -159,7 +126,7 @@ items:
       description: The localized error message.
     content.vb: Public Overrides Function GetLocalizedMessage(culture As CultureInfo) As String
   overridden: Zaya.Primitives.LocalizedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  overload: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.GetLocalizedMessage*
+  overload: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.GetLocalizedMessage*
 references:
 - uid: Zaya.Screenshot.Impl.Windows
   commentId: N:Zaya.Screenshot.Impl.Windows
@@ -576,37 +543,20 @@ references:
     name: Serialization
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization
-- uid: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.Detail*
-  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureDeviceException.Detail
-  href: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.html#Zaya_Screenshot_Impl_Windows_CaptureDeviceException_Detail
-  name: Detail
-  nameWithType: CaptureDeviceException.Detail
-  fullName: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.Detail
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: Zaya.Screenshot.Impl.Windows.CaptureDeviceException
-  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureDeviceException
-  href: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.html
-  name: CaptureDeviceException
-  nameWithType: CaptureDeviceException
-  fullName: Zaya.Screenshot.Impl.Windows.CaptureDeviceException
-- uid: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.#ctor*
-  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureDeviceException.#ctor
-  href: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.html#Zaya_Screenshot_Impl_Windows_CaptureDeviceException__ctor_System_String_
-  name: CaptureDeviceException
-  nameWithType: CaptureDeviceException.CaptureDeviceException
-  fullName: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.CaptureDeviceException
-  nameWithType.vb: CaptureDeviceException.New
-  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.New
+- uid: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException
+  href: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.html
+  name: CaptureTargetClosedException
+  nameWithType: CaptureTargetClosedException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.#ctor*
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.#ctor
+  href: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.html#Zaya_Screenshot_Impl_Windows_CaptureTargetClosedException__ctor
+  name: CaptureTargetClosedException
+  nameWithType: CaptureTargetClosedException.CaptureTargetClosedException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.CaptureTargetClosedException
+  nameWithType.vb: CaptureTargetClosedException.New
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.New
   name.vb: New
 - uid: Zaya.Primitives.LocalizedException.GetLocalizedMessage(System.Globalization.CultureInfo)
   commentId: M:Zaya.Primitives.LocalizedException.GetLocalizedMessage(System.Globalization.CultureInfo)
@@ -636,12 +586,12 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
   - name: )
-- uid: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.GetLocalizedMessage*
-  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureDeviceException.GetLocalizedMessage
-  href: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.html#Zaya_Screenshot_Impl_Windows_CaptureDeviceException_GetLocalizedMessage_System_Globalization_CultureInfo_
+- uid: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.GetLocalizedMessage*
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.GetLocalizedMessage
+  href: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.html#Zaya_Screenshot_Impl_Windows_CaptureTargetClosedException_GetLocalizedMessage_System_Globalization_CultureInfo_
   name: GetLocalizedMessage
-  nameWithType: CaptureDeviceException.GetLocalizedMessage
-  fullName: Zaya.Screenshot.Impl.Windows.CaptureDeviceException.GetLocalizedMessage
+  nameWithType: CaptureTargetClosedException.GetLocalizedMessage
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.GetLocalizedMessage
 - uid: System.Globalization.CultureInfo
   commentId: T:System.Globalization.CultureInfo
   parent: System.Globalization
@@ -650,6 +600,17 @@ references:
   name: CultureInfo
   nameWithType: CultureInfo
   fullName: System.Globalization.CultureInfo
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: System.Globalization
   commentId: N:System.Globalization
   isExternal: true

@@ -5,11 +5,11 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class CaptureDeviceException </title>
+      <title>Class CaptureTargetClosedException </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class CaptureDeviceException ">
+      <meta name="title" content="Class CaptureTargetClosedException ">
     
-    <meta name="description" content="Thrown when Direct3D / WinRT device setup fails.">
+    <meta name="description" content="Thrown when the capture target is closed (e.g. GraphicsCaptureItem.Closed or the window HWND is no longer valid) while waiting for a frame.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -66,12 +66,13 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Zaya.Screenshot.Impl.Windows.CaptureDeviceException">
+            <article class="content wrap" id="_content" data-uid="Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException">
 
 
 
-  <h1 id="Zaya_Screenshot_Impl_Windows_CaptureDeviceException" data-uid="Zaya.Screenshot.Impl.Windows.CaptureDeviceException" class="text-break">Class CaptureDeviceException</h1>
-  <div class="markdown level0 summary"><p>Thrown when Direct3D / WinRT device setup fails.</p>
+  <h1 id="Zaya_Screenshot_Impl_Windows_CaptureTargetClosedException" data-uid="Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException" class="text-break">Class CaptureTargetClosedException</h1>
+  <div class="markdown level0 summary"><p>Thrown when the capture target is closed (e.g. <code>GraphicsCaptureItem.Closed</code>
+or the window HWND is no longer valid) while waiting for a frame.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -79,7 +80,7 @@
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></div>
     <div class="level2"><a class="xref" href="https://shtrasser-dev.github.io/Zaya.Primitives/api/Zaya.Primitives.LocalizedException.html">LocalizedException</a></div>
-    <div class="level3"><span class="xref">CaptureDeviceException</span></div>
+    <div class="level3"><span class="xref">CaptureTargetClosedException</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -135,90 +136,39 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Zaya.html">Zaya</a>.<a class="xref" href="Zaya.Screenshot.html">Screenshot</a>.<a class="xref" href="Zaya.Screenshot.Impl.html">Impl</a>.<a class="xref" href="Zaya.Screenshot.Impl.Windows.html">Windows</a></h6>
   <h6><strong>Assembly</strong>: Zaya.Screenshot.Impl.Windows.dll</h6>
-  <h5 id="Zaya_Screenshot_Impl_Windows_CaptureDeviceException_syntax">Syntax</h5>
+  <h5 id="Zaya_Screenshot_Impl_Windows_CaptureTargetClosedException_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class CaptureDeviceException : LocalizedException, ISerializable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class CaptureTargetClosedException : LocalizedException, ISerializable</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_CaptureDeviceException__ctor_System_String_.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.CaptureDeviceException.%23ctor(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_CaptureTargetClosedException__ctor.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.%23ctor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs/#L275">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs/#L166">View Source</a>
   </span>
-  <a id="Zaya_Screenshot_Impl_Windows_CaptureDeviceException__ctor_" data-uid="Zaya.Screenshot.Impl.Windows.CaptureDeviceException.#ctor*"></a>
-  <h4 id="Zaya_Screenshot_Impl_Windows_CaptureDeviceException__ctor_System_String_" data-uid="Zaya.Screenshot.Impl.Windows.CaptureDeviceException.#ctor(System.String)">CaptureDeviceException(string)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Zaya.Screenshot.Impl.Windows.CaptureDeviceException.html">CaptureDeviceException</a> class.</p>
+  <a id="Zaya_Screenshot_Impl_Windows_CaptureTargetClosedException__ctor_" data-uid="Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.#ctor*"></a>
+  <h4 id="Zaya_Screenshot_Impl_Windows_CaptureTargetClosedException__ctor" data-uid="Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.#ctor">CaptureTargetClosedException()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.html">CaptureTargetClosedException</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CaptureDeviceException(string detail)</code></pre>
+    <pre><code class="lang-csharp hljs">public CaptureTargetClosedException()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">detail</span></td>
-        <td><p>Technical detail (API name and/or HRESULT).</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_CaptureDeviceException_Detail.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.CaptureDeviceException.Detail%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs/#L269">View Source</a>
-  </span>
-  <a id="Zaya_Screenshot_Impl_Windows_CaptureDeviceException_Detail_" data-uid="Zaya.Screenshot.Impl.Windows.CaptureDeviceException.Detail*"></a>
-  <h4 id="Zaya_Screenshot_Impl_Windows_CaptureDeviceException_Detail" data-uid="Zaya.Screenshot.Impl.Windows.CaptureDeviceException.Detail">Detail</h4>
-  <div class="markdown level1 summary"><p>Gets the technical failure detail.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Detail { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_CaptureDeviceException_GetLocalizedMessage_System_Globalization_CultureInfo_.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.CaptureDeviceException.GetLocalizedMessage(System.Globalization.CultureInfo)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_CaptureTargetClosedException_GetLocalizedMessage_System_Globalization_CultureInfo_.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.GetLocalizedMessage(System.Globalization.CultureInfo)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs/#L281">View Source</a>
+    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs/#L169">View Source</a>
   </span>
-  <a id="Zaya_Screenshot_Impl_Windows_CaptureDeviceException_GetLocalizedMessage_" data-uid="Zaya.Screenshot.Impl.Windows.CaptureDeviceException.GetLocalizedMessage*"></a>
-  <h4 id="Zaya_Screenshot_Impl_Windows_CaptureDeviceException_GetLocalizedMessage_System_Globalization_CultureInfo_" data-uid="Zaya.Screenshot.Impl.Windows.CaptureDeviceException.GetLocalizedMessage(System.Globalization.CultureInfo)">GetLocalizedMessage(CultureInfo)</h4>
+  <a id="Zaya_Screenshot_Impl_Windows_CaptureTargetClosedException_GetLocalizedMessage_" data-uid="Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.GetLocalizedMessage*"></a>
+  <h4 id="Zaya_Screenshot_Impl_Windows_CaptureTargetClosedException_GetLocalizedMessage_System_Globalization_CultureInfo_" data-uid="Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.GetLocalizedMessage(System.Globalization.CultureInfo)">GetLocalizedMessage(CultureInfo)</h4>
   <div class="markdown level1 summary"><p>Returns the user-facing localized message for the specified culture.
 The base implementation returns the key as a fallback.
 Override to resolve via a resource manager.</p>
@@ -277,10 +227,10 @@ Override to resolve via a resource manager.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_CaptureDeviceException.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.CaptureDeviceException%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/new/main/apiSpec/new?filename=Zaya_Screenshot_Impl_Windows_CaptureTargetClosedException.md&amp;value=---%0Auid%3A%20Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                   </li>
                   <li>
-                    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs/#L262" class="contribution-link">View Source</a>
+                    <a href="https://github.com/shtrasser-dev/Zaya.Screenshot/blob/main/src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs/#L161" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

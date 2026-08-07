@@ -34,6 +34,9 @@ items:
   - uid: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException
     name: CaptureRegionNotSupportedException
     type: Class
+  - uid: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException
+    name: CaptureTargetClosedException
+    type: Class
   - uid: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException
     name: CaptureWindowItemCreateException
     type: Class

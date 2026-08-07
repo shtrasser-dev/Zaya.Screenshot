@@ -21,7 +21,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: CaptureCropExceedsBoundsException
     path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
-    startLine: 185
+    startLine: 202
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows
@@ -70,7 +70,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: .ctor
     path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
-    startLine: 192
+    startLine: 209
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows
@@ -114,7 +114,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: GetLocalizedMessage
     path: src/Zaya.Screenshot.Impl.Windows/CaptureExceptions.cs
-    startLine: 199
+    startLine: 216
   assemblies:
   - Zaya.Screenshot.Impl.Windows
   namespace: Zaya.Screenshot.Impl.Windows

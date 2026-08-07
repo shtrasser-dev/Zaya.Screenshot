@@ -14,6 +14,7 @@ items:
   - Zaya.Screenshot.Impl.Windows.CaptureNotSupportedException
   - Zaya.Screenshot.Impl.Windows.CapturePixelFormatNotSupportedException
   - Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException
+  - Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException
   - Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException
   langs:
   - csharp
@@ -67,6 +68,12 @@ references:
   name: CaptureFrameTimeoutException
   nameWithType: CaptureFrameTimeoutException
   fullName: Zaya.Screenshot.Impl.Windows.CaptureFrameTimeoutException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException
+  href: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.html
+  name: CaptureTargetClosedException
+  nameWithType: CaptureTargetClosedException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException
 - uid: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException
   commentId: T:Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException
   href: Zaya.Screenshot.Impl.Windows.CaptureCropInvalidException.html

@@ -433,6 +433,44 @@ references:
   isSpec: "True"
   fullName: Zaya.Screenshot.Impl.Windows.CaptureRegionNotSupportedException.RegionType
   nameWithType: CaptureRegionNotSupportedException.RegionType
+- uid: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException
+  name: CaptureTargetClosedException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.html
+  commentId: T:Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException
+  nameWithType: CaptureTargetClosedException
+- uid: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.#ctor
+  name: CaptureTargetClosedException()
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.html#Zaya_Screenshot_Impl_Windows_CaptureTargetClosedException__ctor
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.#ctor
+  name.vb: New()
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.CaptureTargetClosedException()
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.New()
+  nameWithType: CaptureTargetClosedException.CaptureTargetClosedException()
+  nameWithType.vb: CaptureTargetClosedException.New()
+- uid: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.#ctor*
+  name: CaptureTargetClosedException
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.html#Zaya_Screenshot_Impl_Windows_CaptureTargetClosedException__ctor_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.CaptureTargetClosedException
+  fullName.vb: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.New
+  nameWithType: CaptureTargetClosedException.CaptureTargetClosedException
+  nameWithType.vb: CaptureTargetClosedException.New
+- uid: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  name: GetLocalizedMessage(CultureInfo)
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.html#Zaya_Screenshot_Impl_Windows_CaptureTargetClosedException_GetLocalizedMessage_System_Globalization_CultureInfo_
+  commentId: M:Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.GetLocalizedMessage(System.Globalization.CultureInfo)
+  nameWithType: CaptureTargetClosedException.GetLocalizedMessage(CultureInfo)
+- uid: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.GetLocalizedMessage*
+  name: GetLocalizedMessage
+  href: api/Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.html#Zaya_Screenshot_Impl_Windows_CaptureTargetClosedException_GetLocalizedMessage_
+  commentId: Overload:Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.GetLocalizedMessage
+  isSpec: "True"
+  fullName: Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.GetLocalizedMessage
+  nameWithType: CaptureTargetClosedException.GetLocalizedMessage
 - uid: Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException
   name: CaptureWindowItemCreateException
   href: api/Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.html

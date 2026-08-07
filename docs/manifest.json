@@ -144,6 +144,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException",
+      "Summary": "<p sourcefile=\"docs/api/Zaya.Screenshot.Impl.Windows.CaptureTargetClosedException.yml\" sourcestartlinenumber=\"1\">Thrown when the capture target is closed (e.g. <code>GraphicsCaptureItem.Closed</code>\nor the window HWND is no longer valid) while waiting for a frame.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "docs/api/Zaya.Screenshot.Impl.Windows.CaptureWindowItemCreateException.yml",
       "output": {
         ".html": {
