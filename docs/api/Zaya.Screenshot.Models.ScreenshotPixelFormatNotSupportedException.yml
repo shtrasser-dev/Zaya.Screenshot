@@ -7,7 +7,6 @@ items:
   children:
   - Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.#ctor(System.String)
   - Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.FormatName
-  - Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
   langs:
   - csharp
   - vb
@@ -22,19 +21,20 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: ScreenshotPixelFormatNotSupportedException
     path: src/Zaya.Screenshot/ScreenshotExceptions.cs
-    startLine: 9
+    startLine: 5
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Models
   summary: Thrown when a <xref href="Zaya.Primitives.PixelFormat" data-throw-if-not-resolved="false"></xref> cannot be mapped to a target graphics API.
   example: []
   syntax:
-    content: 'public sealed class ScreenshotPixelFormatNotSupportedException : LocalizedException, ISerializable'
-    content.vb: Public NotInheritable Class ScreenshotPixelFormatNotSupportedException Inherits LocalizedException Implements ISerializable
+    content: 'public sealed class ScreenshotPixelFormatNotSupportedException : NotSupportedException, ISerializable'
+    content.vb: Public NotInheritable Class ScreenshotPixelFormatNotSupportedException Inherits NotSupportedException Implements ISerializable
   inheritance:
   - System.Object
   - System.Exception
-  - Zaya.Primitives.LocalizedException
+  - System.SystemException
+  - System.NotSupportedException
   implements:
   - System.Runtime.Serialization.ISerializable
   inheritedMembers:
@@ -71,7 +71,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: FormatName
     path: src/Zaya.Screenshot/ScreenshotExceptions.cs
-    startLine: 16
+    startLine: 10
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Models
@@ -102,7 +102,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: .ctor
     path: src/Zaya.Screenshot/ScreenshotExceptions.cs
-    startLine: 21
+    startLine: 16
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Models
@@ -113,52 +113,12 @@ items:
     parameters:
     - id: formatName
       type: System.String
+      description: Name of the unsupported pixel format.
     content.vb: Public Sub New(formatName As String)
   overload: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.#ctor*
   nameWithType.vb: ScreenshotPixelFormatNotSupportedException.New(String)
   fullName.vb: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.New(String)
   name.vb: New(String)
-- uid: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  commentId: M:Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  id: GetLocalizedMessage(System.Globalization.CultureInfo)
-  parent: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException
-  langs:
-  - csharp
-  - vb
-  name: GetLocalizedMessage(CultureInfo)
-  nameWithType: ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage(CultureInfo)
-  fullName: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  type: Method
-  source:
-    remote:
-      path: src/Zaya.Screenshot/ScreenshotExceptions.cs
-      branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
-    id: GetLocalizedMessage
-    path: src/Zaya.Screenshot/ScreenshotExceptions.cs
-    startLine: 28
-  assemblies:
-  - Zaya.Screenshot
-  namespace: Zaya.Screenshot.Models
-  summary: >-
-    Returns the user-facing localized message for the specified culture.
-
-    The base implementation returns the key as a fallback.
-
-    Override to resolve via a resource manager.
-  example: []
-  syntax:
-    content: public override string GetLocalizedMessage(CultureInfo culture)
-    parameters:
-    - id: culture
-      type: System.Globalization.CultureInfo
-      description: The target culture for localization.
-    return:
-      type: System.String
-      description: The localized error message.
-    content.vb: Public Overrides Function GetLocalizedMessage(culture As CultureInfo) As String
-  overridden: Zaya.Primitives.LocalizedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  overload: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage*
 references:
 - uid: Zaya.Primitives.PixelFormat
   commentId: T:Zaya.Primitives.PixelFormat
@@ -216,13 +176,22 @@ references:
   name: Exception
   nameWithType: Exception
   fullName: System.Exception
-- uid: Zaya.Primitives.LocalizedException
-  commentId: T:Zaya.Primitives.LocalizedException
-  parent: Zaya.Primitives
+- uid: System.SystemException
+  commentId: T:System.SystemException
+  parent: System
   isExternal: true
-  name: LocalizedException
-  nameWithType: LocalizedException
-  fullName: Zaya.Primitives.LocalizedException
+  href: https://learn.microsoft.com/dotnet/api/system.systemexception
+  name: SystemException
+  nameWithType: SystemException
+  fullName: System.SystemException
+- uid: System.NotSupportedException
+  commentId: T:System.NotSupportedException
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.notsupportedexception
+  name: NotSupportedException
+  nameWithType: NotSupportedException
+  fullName: System.NotSupportedException
 - uid: System.Runtime.Serialization.ISerializable
   commentId: T:System.Runtime.Serialization.ISerializable
   parent: System.Runtime.Serialization
@@ -606,72 +575,3 @@ references:
   nameWithType.vb: ScreenshotPixelFormatNotSupportedException.New
   fullName.vb: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.New
   name.vb: New
-- uid: Zaya.Primitives.LocalizedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  commentId: M:Zaya.Primitives.LocalizedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  parent: Zaya.Primitives.LocalizedException
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
-  name: GetLocalizedMessage(CultureInfo)
-  nameWithType: LocalizedException.GetLocalizedMessage(CultureInfo)
-  fullName: Zaya.Primitives.LocalizedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  spec.csharp:
-  - uid: Zaya.Primitives.LocalizedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-    name: GetLocalizedMessage
-    isExternal: true
-  - name: (
-  - uid: System.Globalization.CultureInfo
-    name: CultureInfo
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
-  - name: )
-  spec.vb:
-  - uid: Zaya.Primitives.LocalizedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-    name: GetLocalizedMessage
-    isExternal: true
-  - name: (
-  - uid: System.Globalization.CultureInfo
-    name: CultureInfo
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
-  - name: )
-- uid: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage*
-  commentId: Overload:Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage
-  href: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.html#Zaya_Screenshot_Models_ScreenshotPixelFormatNotSupportedException_GetLocalizedMessage_System_Globalization_CultureInfo_
-  name: GetLocalizedMessage
-  nameWithType: ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage
-  fullName: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage
-- uid: System.Globalization.CultureInfo
-  commentId: T:System.Globalization.CultureInfo
-  parent: System.Globalization
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
-  name: CultureInfo
-  nameWithType: CultureInfo
-  fullName: System.Globalization.CultureInfo
-- uid: System.Globalization
-  commentId: N:System.Globalization
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Globalization
-  nameWithType: System.Globalization
-  fullName: System.Globalization
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Globalization
-    name: Globalization
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.globalization
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Globalization
-    name: Globalization
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.globalization

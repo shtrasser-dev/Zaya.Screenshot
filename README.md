@@ -6,12 +6,12 @@ High-performance screen capture for Windows .NET 8.0+ — Windows Graphics Captu
 
 | Package | Version | Role |
 |---------|---------|------|
-| **Zaya.Screenshot** | 1.0.0 | Abstractions: `ICaptureService`, `ICaptureSession`, region types, `PixelFormatExtensions` |
-| **Zaya.Screenshot.Impl.Windows** | 1.0.0.4 | Windows Graphics Capture + D3D11 (`CaptureService`, `CapturedFrame`) |
+| **Zaya.Screenshot** | 1.1.0 | Abstractions: `ICaptureService`, `ICaptureSession`, region types, `PixelFormatExtensions` |
+| **Zaya.Screenshot.Impl.Windows** | 1.1.0.0 | Windows Graphics Capture + D3D11 (`CaptureService`, `CapturedFrame`) |
 
 Requires [Zaya.Primitives](https://github.com/shtrasser-dev/Zaya.Primitives) **1.0.0**.
 
-Update channel (GitHub Releases): [`plugin-Zaya.Screenshot-v1.0-latest`](https://github.com/shtrasser-dev/Zaya.Screenshot/releases/tag/plugin-Zaya.Screenshot-v1.0-latest)
+Update channel (GitHub Releases): [`plugin-Zaya.Screenshot-v1.1-latest`](https://github.com/shtrasser-dev/Zaya.Screenshot/releases/tag/plugin-Zaya.Screenshot-v1.1-latest)
 
 See [versioning](docs/versioning.md).
 
@@ -23,7 +23,7 @@ Docs: [API & articles](https://shtrasser-dev.github.io/Zaya.Screenshot)
 - Pixel formats: BGRA32, RGB24, BGR24, Gray8
 - High-performance `ReadOnlySpan<byte>` access via `IRawImage`
 - Engine metadata (`EngineId`, localized name/description, `Settings`) for plugin hosts
-- Failures surface as `LocalizedException` for host UI
+- Windows engine failures surface as `LocalizedException` for host UI
 - UI/error strings for the Windows engine: `en`, `ru`, `zh-Hans`, `uk`, `de`, `pt`, `ja`, `ko`, `fr`, `tr`, `pl`
 - Optional helpers mapping `PixelFormat` to SkiaSharp / ImageSharp type names
 
@@ -37,8 +37,8 @@ There is no separate `InitializeAsync` / pause-resume API: create a session and 
 ## Installation
 
 ```xml
-<PackageReference Include="Zaya.Screenshot" Version="1.0.0" />
-<PackageReference Include="Zaya.Screenshot.Impl.Windows" Version="1.0.0.4" />
+<PackageReference Include="Zaya.Screenshot" Version="1.1.0" />
+<PackageReference Include="Zaya.Screenshot.Impl.Windows" Version="1.1.0.0" />
 ```
 
 Plugin zip for ScreenTranslator hosts: `Zaya.Screenshot.Impl.Windows.zip` from the floating tag above.

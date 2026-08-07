@@ -6,7 +6,6 @@ items:
   parent: Zaya.Screenshot.Models
   children:
   - Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.#ctor
-  - Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
   langs:
   - csharp
   - vb
@@ -21,19 +20,20 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: ScreenshotSkiaBgr24NotSupportedException
     path: src/Zaya.Screenshot/ScreenshotExceptions.cs
-    startLine: 40
+    startLine: 26
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Models
   summary: Thrown when mapping <xref href="Zaya.Primitives.PixelFormat.Bgr24" data-throw-if-not-resolved="false"></xref> to SkiaSharp, which has no Bgr24 color type.
   example: []
   syntax:
-    content: 'public sealed class ScreenshotSkiaBgr24NotSupportedException : LocalizedException, ISerializable'
-    content.vb: Public NotInheritable Class ScreenshotSkiaBgr24NotSupportedException Inherits LocalizedException Implements ISerializable
+    content: 'public sealed class ScreenshotSkiaBgr24NotSupportedException : NotSupportedException, ISerializable'
+    content.vb: Public NotInheritable Class ScreenshotSkiaBgr24NotSupportedException Inherits NotSupportedException Implements ISerializable
   inheritance:
   - System.Object
   - System.Exception
-  - Zaya.Primitives.LocalizedException
+  - System.SystemException
+  - System.NotSupportedException
   implements:
   - System.Runtime.Serialization.ISerializable
   inheritedMembers:
@@ -70,7 +70,7 @@ items:
       repo: https://github.com/shtrasser-dev/Zaya.Screenshot
     id: .ctor
     path: src/Zaya.Screenshot/ScreenshotExceptions.cs
-    startLine: 45
+    startLine: 31
   assemblies:
   - Zaya.Screenshot
   namespace: Zaya.Screenshot.Models
@@ -83,47 +83,6 @@ items:
   nameWithType.vb: ScreenshotSkiaBgr24NotSupportedException.New()
   fullName.vb: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.New()
   name.vb: New()
-- uid: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  commentId: M:Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  id: GetLocalizedMessage(System.Globalization.CultureInfo)
-  parent: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException
-  langs:
-  - csharp
-  - vb
-  name: GetLocalizedMessage(CultureInfo)
-  nameWithType: ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage(CultureInfo)
-  fullName: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  type: Method
-  source:
-    remote:
-      path: src/Zaya.Screenshot/ScreenshotExceptions.cs
-      branch: main
-      repo: https://github.com/shtrasser-dev/Zaya.Screenshot
-    id: GetLocalizedMessage
-    path: src/Zaya.Screenshot/ScreenshotExceptions.cs
-    startLine: 49
-  assemblies:
-  - Zaya.Screenshot
-  namespace: Zaya.Screenshot.Models
-  summary: >-
-    Returns the user-facing localized message for the specified culture.
-
-    The base implementation returns the key as a fallback.
-
-    Override to resolve via a resource manager.
-  example: []
-  syntax:
-    content: public override string GetLocalizedMessage(CultureInfo culture)
-    parameters:
-    - id: culture
-      type: System.Globalization.CultureInfo
-      description: The target culture for localization.
-    return:
-      type: System.String
-      description: The localized error message.
-    content.vb: Public Overrides Function GetLocalizedMessage(culture As CultureInfo) As String
-  overridden: Zaya.Primitives.LocalizedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  overload: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage*
 references:
 - uid: Zaya.Primitives.PixelFormat.Bgr24
   commentId: F:Zaya.Primitives.PixelFormat.Bgr24
@@ -180,13 +139,22 @@ references:
   name: Exception
   nameWithType: Exception
   fullName: System.Exception
-- uid: Zaya.Primitives.LocalizedException
-  commentId: T:Zaya.Primitives.LocalizedException
-  parent: Zaya.Primitives
+- uid: System.SystemException
+  commentId: T:System.SystemException
+  parent: System
   isExternal: true
-  name: LocalizedException
-  nameWithType: LocalizedException
-  fullName: Zaya.Primitives.LocalizedException
+  href: https://learn.microsoft.com/dotnet/api/system.systemexception
+  name: SystemException
+  nameWithType: SystemException
+  fullName: System.SystemException
+- uid: System.NotSupportedException
+  commentId: T:System.NotSupportedException
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.notsupportedexception
+  name: NotSupportedException
+  nameWithType: NotSupportedException
+  fullName: System.NotSupportedException
 - uid: System.Runtime.Serialization.ISerializable
   commentId: T:System.Runtime.Serialization.ISerializable
   parent: System.Runtime.Serialization
@@ -479,28 +447,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Zaya.Primitives
-  commentId: N:Zaya.Primitives
-  isExternal: true
-  name: Zaya.Primitives
-  nameWithType: Zaya.Primitives
-  fullName: Zaya.Primitives
-  spec.csharp:
-  - uid: Zaya
-    name: Zaya
-    isExternal: true
-  - name: .
-  - uid: Zaya.Primitives
-    name: Primitives
-    isExternal: true
-  spec.vb:
-  - uid: Zaya
-    name: Zaya
-    isExternal: true
-  - name: .
-  - uid: Zaya.Primitives
-    name: Primitives
-    isExternal: true
 - uid: System.Runtime.Serialization
   commentId: N:System.Runtime.Serialization
   isExternal: true
@@ -553,83 +499,3 @@ references:
   nameWithType.vb: ScreenshotSkiaBgr24NotSupportedException.New
   fullName.vb: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.New
   name.vb: New
-- uid: Zaya.Primitives.LocalizedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  commentId: M:Zaya.Primitives.LocalizedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  parent: Zaya.Primitives.LocalizedException
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
-  name: GetLocalizedMessage(CultureInfo)
-  nameWithType: LocalizedException.GetLocalizedMessage(CultureInfo)
-  fullName: Zaya.Primitives.LocalizedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  spec.csharp:
-  - uid: Zaya.Primitives.LocalizedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-    name: GetLocalizedMessage
-    isExternal: true
-  - name: (
-  - uid: System.Globalization.CultureInfo
-    name: CultureInfo
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
-  - name: )
-  spec.vb:
-  - uid: Zaya.Primitives.LocalizedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-    name: GetLocalizedMessage
-    isExternal: true
-  - name: (
-  - uid: System.Globalization.CultureInfo
-    name: CultureInfo
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
-  - name: )
-- uid: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage*
-  commentId: Overload:Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage
-  href: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.html#Zaya_Screenshot_Models_ScreenshotSkiaBgr24NotSupportedException_GetLocalizedMessage_System_Globalization_CultureInfo_
-  name: GetLocalizedMessage
-  nameWithType: ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage
-  fullName: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage
-- uid: System.Globalization.CultureInfo
-  commentId: T:System.Globalization.CultureInfo
-  parent: System.Globalization
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
-  name: CultureInfo
-  nameWithType: CultureInfo
-  fullName: System.Globalization.CultureInfo
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: System.Globalization
-  commentId: N:System.Globalization
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Globalization
-  nameWithType: System.Globalization
-  fullName: System.Globalization
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Globalization
-    name: Globalization
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.globalization
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Globalization
-    name: Globalization
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.globalization

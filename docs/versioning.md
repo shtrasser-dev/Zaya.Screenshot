@@ -3,9 +3,9 @@
 | Axis | Source | Example |
 |------|--------|---------|
 | **ZayaPrimitivesVersion** | `Directory.Build.props` (supplies **Major**) | `1.0.0` |
-| **interfaceVersion** | `Zaya.Screenshot.csproj` → only **`ZayaVersionInterface`** → `Major.Interface.0` | `1.0.0` |
-| **pluginVersion** | Impl → **`ZayaVersionImpMajor`** + **`ZayaVersionImpMinor`**; Interface read from abstractions csproj → `Major.Interface.ImpMajor.ImpMinor` | `1.0.0.4` |
-| **updateChannel** | Interface `MAJOR.Interface` | `1.0` → `plugin-Zaya.Screenshot-v1.0-latest` |
+| **interfaceVersion** | `Zaya.Screenshot.csproj` → only **`ZayaVersionInterface`** → `Major.Interface.0` | `1.1.0` |
+| **pluginVersion** | Impl → **`ZayaVersionImpMajor`** + **`ZayaVersionImpMinor`**; Interface read from abstractions csproj → `Major.Interface.ImpMajor.ImpMinor` | `1.1.0.0` |
+| **updateChannel** | Interface `MAJOR.Interface` | `1.1` → `plugin-Zaya.Screenshot-v1.1-latest` |
 
 Rules:
 
@@ -23,8 +23,8 @@ Rules:
   "id": "GraphicsCapture",
   "type": "capture",
   "interface": "Zaya.Screenshot",
-  "interfaceVersion": "1.0.0",
-  "pluginVersion": "1.0.0.4"
+  "interfaceVersion": "1.1.0",
+  "pluginVersion": "1.1.0.0"
 }
 ```
 

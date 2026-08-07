@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <ZayaVersionRole>interface</ZayaVersionRole>
-    <ZayaVersionInterface>0</ZayaVersionInterface>
+    <ZayaVersionInterface>1</ZayaVersionInterface>
 
     <PackageId>Zaya.Screenshot</PackageId>
     <Description>Core abstractions for Zaya.Screenshot: interfaces, pixel formats, and capture region types.</Description>

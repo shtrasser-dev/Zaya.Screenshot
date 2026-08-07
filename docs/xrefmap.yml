@@ -1037,19 +1037,6 @@ references:
   isSpec: "True"
   fullName: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.FormatName
   nameWithType: ScreenshotPixelFormatNotSupportedException.FormatName
-- uid: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  name: GetLocalizedMessage(CultureInfo)
-  href: api/Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.html#Zaya_Screenshot_Models_ScreenshotPixelFormatNotSupportedException_GetLocalizedMessage_System_Globalization_CultureInfo_
-  commentId: M:Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  fullName: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  nameWithType: ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage(CultureInfo)
-- uid: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage*
-  name: GetLocalizedMessage
-  href: api/Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.html#Zaya_Screenshot_Models_ScreenshotPixelFormatNotSupportedException_GetLocalizedMessage_
-  commentId: Overload:Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage
-  isSpec: "True"
-  fullName: Zaya.Screenshot.Models.ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage
-  nameWithType: ScreenshotPixelFormatNotSupportedException.GetLocalizedMessage
 - uid: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException
   name: ScreenshotSkiaBgr24NotSupportedException
   href: api/Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.html
@@ -1075,19 +1062,6 @@ references:
   fullName.vb: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.New
   nameWithType: ScreenshotSkiaBgr24NotSupportedException.ScreenshotSkiaBgr24NotSupportedException
   nameWithType.vb: ScreenshotSkiaBgr24NotSupportedException.New
-- uid: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  name: GetLocalizedMessage(CultureInfo)
-  href: api/Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.html#Zaya_Screenshot_Models_ScreenshotSkiaBgr24NotSupportedException_GetLocalizedMessage_System_Globalization_CultureInfo_
-  commentId: M:Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  fullName: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage(System.Globalization.CultureInfo)
-  nameWithType: ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage(CultureInfo)
-- uid: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage*
-  name: GetLocalizedMessage
-  href: api/Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.html#Zaya_Screenshot_Models_ScreenshotSkiaBgr24NotSupportedException_GetLocalizedMessage_
-  commentId: Overload:Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage
-  isSpec: "True"
-  fullName: Zaya.Screenshot.Models.ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage
-  nameWithType: ScreenshotSkiaBgr24NotSupportedException.GetLocalizedMessage
 - uid: Zaya.Screenshot.Services
   name: Zaya.Screenshot.Services
   href: api/Zaya.Screenshot.Services.html
